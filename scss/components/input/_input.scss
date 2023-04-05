@@ -1,0 +1,10 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.form-control,
+.form-select {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

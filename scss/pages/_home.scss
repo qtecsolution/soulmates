@@ -1,0 +1,70 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.integration {
+  @include flex-center-column;
+  gap: size(24);
+
+  @include breakpoint(tab992) {
+    gap: size(48);
+  }
+
+  &-content {
+    @include border-single(top, solid, 1, $sectionborder);
+    @include flex-column;
+    gap: size(40);
+    padding: size(60) 0;
+  
+    @include breakpoint(tab992) {
+      gap: size(60);
+      padding: size(60) 0 size(120);
+    }
+  }
+  
+  &-header {
+    @include flex-center-column;
+    gap: size(24);
+    text-align: center;
+
+    @include breakpoint(tab992) {
+      gap: size(40);
+    }
+
+    .integration-title {
+      color: $headingcolor;
+      font-weight: 700;
+    }
+
+    .integration-text {
+      color: $headingcolor;
+      font-size: size(14);
+      font-weight: 400;
+    }
+  }
+
+  &-body {
+    background: $white;
+    @include radius(10);
+    padding: size(16);
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: size(10);
+
+    .card-integration {
+      background: $brandcardbg;
+      @include radius(10);
+      @include flex-center;
+      overflow: hidden;
+      padding: size(20);
+
+      &[data-integration="rectangle"] {
+        width: size(200);
+        height: size(86);
+      }
+
+      &[data-integration="square"] {
+        @include square(86);
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  @include wh100;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.up-btn {
+  opacity: 1;
+  padding: size(12);
+  border: 0;
+}
+
+.btn-buy {
+  @include setBgColor($btnbg, $white);
+  background-size: 100% 100%;
+  // background-position: right bottom;
+  @include radius(8);
+  display: inline-block;
+  font-size: size(14);
+  font-weight: 700;
+  height: size(44);
+  padding: size(12) size(28);
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    background-size: 100% 50%;
+  }
+}
+
+.btn-subscribe {
+  @include setBgColor($buttonbg, $white);
+  border: 0;
+  @include radius(8);
+  @include flex-center;
+  font-size: size(12);
+  font-weight: 600;
+  width: size(91);
+  height: size(36);
+  padding: size(12) size(20);
+  @include transitionsbackground;
+
+  @include hover {
+    @include setBgColor($navyblue, $white);
+  }
+}

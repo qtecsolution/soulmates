@@ -1,0 +1,108 @@
+@use "../../global"as *;
+@use "../../partials"as *;
+
+
+
+.offcanvas {
+  height: 100vh;
+  width: size(280);
+
+  @include breakpoint(mobile768) {
+    width: size(320);
+  }
+
+  &.offcanvas-top {
+    border-bottom: 0;
+  }
+
+  &.offcanvas-bottom {
+    border-top: 0;
+  }
+
+  &.offcanvas-start {
+    border-right: 0;
+  }
+
+  &.offcanvas-end {
+    border-left: 0;
+  }
+
+  &.offcanvas-start {
+    border-right: 0;
+  }
+
+  &-header {
+    // padding-bottom: 0;
+
+    .logo {
+      @include square(60);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .btn-close {
+      @include setBgColor($white, $headingcolor);
+      @include flex;
+      gap: size(10);
+      @include square(20);
+      @include flex-center;
+      overflow: hidden;
+      @include radius(0);
+      @include transitionsall;
+
+      svg {
+        @include wh100;
+      }
+
+      @include hover {
+        opacity: 1;
+        @include rotate(180);
+
+        svg {
+          path {
+            fill: $dangercolor;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    padding-top: 0;
+
+    .mobilelist {
+      @include list-vertical;
+
+      &-link {
+        color: $headingcolor;
+        font-size: size(14);
+        font-weight: 700;
+        padding: size(10);
+        letter-spacing: size(1.6);
+        @include flex-center;
+        @include w100;
+        text-transform: uppercase;
+        @include transitionscolor;
+
+        &:hover:not(.active) {
+          color: $buttonbg;
+        }
+
+        &.active {
+          color: $buttonbg;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: size(8);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      // background: darken($primary, 25%);
+      @include radius(8);
+    }
+  }
+}

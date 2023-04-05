@@ -1,0 +1,116 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.footer {
+  background: $footerbg;
+  padding: size(54) 0;
+
+  &-details {
+    @include flex-center-column;
+    gap: size(40);
+    max-width: size(320);
+    text-align: center;
+    margin-inline: auto;
+
+    @include breakpoint(mobile768) {
+      margin: 0;
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .logo {
+      @include square(80);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .newsletter {
+      @include flex-center-vert;
+      background: $white;
+      @include radius(8);
+      padding: size(4);
+      position: relative;
+  
+      .inputbox {
+        height: size(36);
+        width: calc(100% - size(91));
+  
+        .form-control {
+          @include setBgColor(transparent, $headingcolor);
+          @include radius(0);
+          font-size: size(13);
+          @include wh100;
+          border: 0;
+  
+          &::placeholder {
+            color: $textplaceholder-1;
+          }
+
+          &:focus {
+            border: 0;
+            box-shadow: none;
+            outline: none;
+          }
+        }
+
+        .valid-feedback,
+        .invalid-feedback {
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+      }
+  
+      .submitbox {
+        width: size(91);
+      }
+    }
+
+    .basisthumb {
+      width: size(225);
+      height: size(80);
+      @include flex-center;
+      overflow: hidden;
+    }
+  }
+
+  &-info {
+    @include flex-column;
+    gap: size(24);
+
+    .title {
+      color: $texttitle;
+      font-size: size(16);
+      font-weight: 600;
+      font-feature-settings: 'salt';
+    }
+
+    .footerlist {
+      @include list-vertical;
+      gap: size(24);
+
+      &-link {
+        color: $white;
+        font-size: size(16);
+        font-weight: 400;
+        @include transitionscolor;
+
+        @include hover {
+          color: $buttonbg;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: $white;
+    font-size: size(14);
+    font-weight: 400;
+
+    span {
+      color: inherit;
+      font: inherit;
+    }
+  }
+}

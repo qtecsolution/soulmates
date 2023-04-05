@@ -1,0 +1,71 @@
+// DEFAULT COLORS
+$bodybg: hsl(204, 45%, 98%); //#F7FAFC
+$white: hsl(0, 0%, 100%); //#ffffff
+$black: hsl(0, 0%, 0%); //#000000
+
+// THEME-COLORS
+
+// BACKGROUND-COLORS
+$footerbg: hsl(214, 89%, 7%); //#021022
+$buttonbg: hsl(213, 98%, 51%); //#0876FC
+
+
+$overlagybg: hsl(218, 17%, 19%); //#282E38
+
+// ICON-BACKGROUNDS
+$iconbg-1: hsl(45, 91%, 87%); //#FCEDC0
+$iconbg-2: hsl(194, 100%, 79%); //#94E6FF
+
+$badgebg: rgba(255, 132, 63, 0.2);
+$badgetext: hsl(29, 100%, 50%); //#FF7A00
+
+$brandcardbg: hsl(260, 18%, 97%); //#F6F5F8
+
+// TEXT-COLORS
+$headingcolor: hsl(218, 30%, 24%); //#2A374E
+$textcolor: hsl(218, 12%, 44%); //#636D7E
+$labeltext: hsl(210, 21%, 33%); //#425466
+
+$category: hsl(0, 0%, 66%); //#A9A9A9
+
+$gray-600: hsl(216, 15%, 52%); //#718096
+$gray-700: hsl(218, 17%, 35%); //#4A5568
+
+$textplaceholder-1: hsl(210, 6%, 51%); //#7A828A
+$textplaceholder-2: hsl(240, 6%, 73%); //#B5B5BD
+$texttitle: hsl(0, 0%, 62%); //#9D9D9D
+
+// SUCCESS COLOR
+$successbg: rgba(41, 196, 131, 0.2);
+$successcolor: hsl(155, 100%, 26%); //#00874E
+
+$successlight: hsl(188, 98%, 49%); //#02D7F8
+$lightsuccess: hsl(191, 100%, 88%); //#C2F4FF
+
+$navyblue: hsl(215, 85%, 26%); //#0A387A
+$purblebg: hsl(257, 50%, 50%); //#6541C0
+
+// DANGER COLOR
+$dangercolor: hsl(343, 79%, 50%); //#E31B54
+
+
+// LINEAR-BACKGROUNDS
+$btnbg: linear-gradient(151.47deg, $successlight 9.01%, $buttonbg 84.28%);
+$sectionbg: linear-gradient(135deg, $navyblue 0%, $purblebg 100%);
+$contactbg: linear-gradient(135deg, $lightsuccess 0%, $white 100%);
+
+// BORDER-COLORS
+$inputborder: hsl(222, 16%, 85%); //#D1D5DE
+$forminputborder: hsl(214, 32%, 91%); //#E2E8F0
+$sectionborder: hsl(0, 0%, 88%); //#E0E0E0
+
+// SHADOWS
+
+// BOX-SHADOWS
+$cardshadow: 0 .25rem .25rem rgba(74, 85, 104, 0.1);
+$headershadow: 0 0 .0625rem rgba(12, 26, 75, 0.24), 0 .1875rem .5rem -0.0625rem rgba(50, 50, 71, 0.05);
+$blogshadow: 0 .25rem .25rem rgba($black, 0.05);
+
+
+// LETTER-SPECING
+$specing-1: size(0.24);

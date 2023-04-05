@@ -1,0 +1,30 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+
+.blog {
+  padding: size(60) 0;
+  
+  @include breakpoint(tab992) {
+    padding: size(60) 0 size(120);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(40);
+  
+    @include breakpoint(tab992) {
+      gap: size(60);
+    }
+  }
+
+  &-header {
+    @include flex-center;
+    text-align: center;
+
+    .blog-title {
+      color: $headingcolor;
+      font-weight: 700;
+    }
+  }
+}
