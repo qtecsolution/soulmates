@@ -1,8 +1,6 @@
 @use '../global' as *;
 @use '../partials' as *;
 
-
-
 .section-title {
   color: $white;
   @include font($calista, 32, normal, normal, 44.8);
