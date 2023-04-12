@@ -2,6 +2,46 @@
 @use "../partials" as *;
 
 /*
+ EMPTY-BANNER-SECTION START
+*/
+.empty-banner {
+  position: relative;
+  @include w100;
+  height: size(260);
+
+  @include breakpoint(mobile576) {
+    height: size(330);
+  }
+
+  @include breakpoint(mobile768) {
+    height: size(400);
+  }
+
+  @include breakpoint(tab992) {
+    height: size(540);
+  }
+
+  .empty-thumbnail {
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  .overlay {
+    background: rgba($overlaybg, 0.6);
+    position: absolute;
+    inset: 0;
+    @include wh100;
+    z-index: 1;
+  }
+}
+
+/*
  ATTENDING-SECTION START
 */
 .attending {
@@ -67,40 +107,6 @@
 
     @include breakpoint(tab992) {
       gap: size(40);
-    }
-
-    .countdown-title {
-      color: $white;
-      @include font($calista, 32, normal, normal, 44.8);
-
-      @include breakpoint(mobile576) {
-        font-size: size(36);
-      }
-
-      @include breakpoint(mobile768) {
-        font-size: size(44);
-      }
-
-      @include breakpoint(desktop1200) {
-        font-size: size(53);
-      }
-    }
-
-    .countdown-text {
-      color: $white;
-      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
-
-      @include breakpoint(mobile576) {
-        font-size: size(18);
-      }
-
-      @include breakpoint(mobile768) {
-        font-size: size(20);
-      }
-
-      @include breakpoint(desktop1200) {
-        font-size: size(22);
-      }
     }
 
     .countdown-clock {

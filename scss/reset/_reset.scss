@@ -103,12 +103,12 @@ video {
   margin: 0;
 
   &::selection {
-    // @include setBgColor($buttonbg, $white);
+    @include setBgColor($countdowntext, $white);
   }
 }
 
 body {
-  // @include setBgColor($bodybg, $textcolor);
+  @include setBgColor($bodybg, $textprimary);
   font-family: $tt-nooks-script-trial;
   letter-spacing: size(0.48);
   text-rendering: optimizeSpeed;
@@ -122,11 +122,10 @@ h3,
 h4,
 h5,
 h6 {
-  // color: $headingcolor;
   margin: 0;
 
   &::selection {
-    // @include setBgColor($buttonbg, $white);
+    @include setBgColor($countdowntext, $white);
   }
 }
 
