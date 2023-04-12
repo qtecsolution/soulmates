@@ -103,13 +103,14 @@ video {
   margin: 0;
 
   &::selection {
-    @include setBgColor($buttonbg, $white);
+    // @include setBgColor($buttonbg, $white);
   }
 }
 
 body {
-  @include setBgColor($bodybg, $textcolor);
-  @include font($primaryFont, 14, normal, normal, 19.6);
+  // @include setBgColor($bodybg, $textcolor);
+  font-family: $tt-nooks-script-trial;
+  letter-spacing: size(0.48);
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
   margin: 0;
@@ -121,11 +122,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: $headingcolor;
+  // color: $headingcolor;
   margin: 0;
 
   &::selection {
-    @include setBgColor($buttonbg, $white);
+    // @include setBgColor($buttonbg, $white);
   }
 }
 

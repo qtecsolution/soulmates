@@ -1,16 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soulmates</title>
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.svg" type="image/svg+xml">
   <!-- BOOTSTRAP CSS [5.3.0-alpha3] -->
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+
+<body class="m-0 p-0">
+
+  <!-- ATTENDING-SECTION START -->
+  <section class="attending">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-6 mx-md-auto">
+          <div class="attending-details">
+            <h2 class="attending-title">Are You Attending?</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </section>
+  <!-- ATTENDING-SECTION END -->
+
+  <!-- COUNTDOWN-SECTION START -->
+  <section class="countdown">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-6 mx-md-auto">
+          <div class="countdown-details">
+            <h2 class="countdown-title">Don’t  Miss  it</h2>
+            <p class="countdown-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Suspendisse varius enim in eros elementum tristique. 
+              Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, 
+              ut commodo diam libero vitae erat.
+            </p>
+
+            <div class="countdown-clock" id="countdown">
+              <div class="countdown-time">
+                <span class="days"></span>
+                <span class="count-title">Days</span>
+              </div>
+
+              <div class="countdown-time">
+                <span class="hours"></span>
+                <span class="count-title">Hours</span>
+              </div>
+
+              <div class="countdown-time">
+                <span class="minutes"></span>
+                <span class="count-title">Minutes</span>
+              </div>
+
+              <div class="countdown-time">
+                <span class="seconds"></span>
+                <span class="count-title">Seconds</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </section>
+  <!-- COUNTDOWN-SECTION END -->
   
   <!-- BOOTSTRAP JS [5.3.0-alpha3] -->
   <script src="../assets/js/bootsrap/bootstrap.bundle.min.js"></script>
+  <!-- COUNT-DOWN TIMER -->
+  <script src="../assets/js/countdown/countdown.js"></script>
 </body>
+
 </html>

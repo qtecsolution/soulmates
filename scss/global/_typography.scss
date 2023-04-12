@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
-
-$primaryFont: "Titillium Web", sans-serif;
+$calista: 'callista';
+$zagora: 'zagora';
+$tt-nooks-script-trial: 'TT Nooks Script Trial';
 
 // FONT SIZE PIXEL TO REM
 @function calculateRem($size, $base: 16) {

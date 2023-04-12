@@ -1,115 +1,51 @@
 @use '../global' as *;
 @use '../partials' as *;
 
-
-/**====================================================
-**                  HEADING-TEXTS                    **
-**==================================================**/
-.bigtitle-1 {
-  @include font($primaryFont, 32, medium, normal, 44.8);
-
-  @include breakpoint(mobile768) {
-    font-size: size(40);
-  }
-
-  @include breakpoint(tab992) {
-    font-size: size(50);
-  }
-
-  @include breakpoint(desktop1200) {
-    font-size: size(60);
-  }
-
-  @include breakpoint(desktop1400) {
-    font-size: size(70);
-  }
+// ZAGORA FONT
+@font-face {
+  font-family: 'Zagora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Zagora'), url('../fonts/zagora/Zagora-mLEPG.woff') format('woff');
 }
 
-.bigtitle-2 {
-  @include font($primaryFont, 32, medium, normal, 44.8);
-
-  @include breakpoint(mobile768) {
-    font-size: size(40);
-  }
-
-  @include breakpoint(tab992) {
-    font-size: size(48);
-  }
-
-  @include breakpoint(desktop1200) {
-    font-size: size(60);
-  }
+// CALLISTA FONT
+@font-face {
+  font-family: 'Callista';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Callista'), url('../fonts/callista/Callista-vmqlE.woff') format('woff');
 }
 
-h1 {
-  @include font($primaryFont, 26, medium, normal, 36.4);
-
-  @include breakpoint(mobile768) {
-    font-size: size(32);
-  }
-
-  @include breakpoint(tab992) {
-    font-size: size(40);
-  }
-
-  @include breakpoint(desktop1200) {
-    font-size: size(48);
-  }
+// TT NOOKS SCRIPT TRIAL
+@font-face {
+  font-family: 'TT Nooks Script Trial';
+  font-style: normal;
+  font-weight: 300;
+  src: local('TT Nooks Script Trial'), 
+        url('../fonts/tt-nooks-script-trial/TT Nooks Script Trial Light.woff') format('woff');
 }
 
-h3 {
-  @include font($primaryFont, 22, normal, normal, 30.8);
-
-  @include breakpoint(mobile768) {
-    font-size: size(25);
-  }
-
-  @include breakpoint(tab992) {
-    font-size: size(28);
-  }
-
-  @include breakpoint(desktop1200) {
-    font-size: size(31);
-  }
+@font-face {
+  font-family: 'TT Nooks Script Trial';
+  font-style: normal;
+  font-weight: 400;
+  src: local('TT Nooks Script Trial'), 
+        url('../fonts/tt-nooks-script-trial/TT Nooks Script Trial Regular.woff') format('woff');
 }
 
-h4 {
-  @include font($primaryFont, 19, normal, normal, 26.6);
-
-  @include breakpoint(mobile768) {
-    font-size: size(21);
-  }
-
-  @include breakpoint(tab992) {
-    font-size: size(24);
-  }
+@font-face {
+  font-family: 'TT Nooks Script Trial';
+  font-style: normal;
+  font-weight: 700;
+  src: local('TT Nooks Script Trial'), 
+        url('../fonts/tt-nooks-script-trial/TT Nooks Script Trial Bold.woff') format('woff');
 }
 
-h5 {
-  @include font($primaryFont, 16, normal, normal, 24);
-
-  @include breakpoint(mobile768) {
-    font-size: size(18);
-  }
-
-  @include breakpoint(tab992) {
-    font-size: size(20);
-  }
+@font-face {
+  font-family: 'TT Nooks Script Trial';
+  font-style: normal;
+  font-weight: 900;
+  src: local('TT Nooks Script Trial'), 
+        url('../fonts/tt-nooks-script-trial/TT Nooks Script Trial Black.woff') format('woff');
 }
-
-h6 {
-  @include font($primaryFont, 16, normal, normal, 24);
-
-  @include breakpoint(mobile768) {
-    font-size: size(17);
-  }
-
-  @include breakpoint(tab992) {
-    font-size: size(18);
-  }
-}
-
-
-/**====================================================
-**                  OTHER-TEXTS                      **
-**==================================================**/

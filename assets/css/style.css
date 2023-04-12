@@ -1,0 +1,677 @@
+/**=====================================================**
+                ANIMATION-STYLES
+=======================================================**/
+@keyframes slideDownIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slideDownInMobile {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0.625rem);
+  }
+  0% {
+    transform: translateY(-1.25rem);
+  }
+}
+@keyframes slideUpIn {
+  0% {
+    transform: translateY(-1.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(1.25rem);
+  }
+}
+@keyframes slideUpInMobile {
+  0% {
+    transform: translateY(2.5rem);
+  }
+  100% {
+    transform: translateY(1.5625rem);
+  }
+  0% {
+    transform: translateY(2.5rem);
+  }
+}
+@keyframes slideLeftIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-6.25rem);
+  }
+}
+@keyframes slideRightIn {
+  0% {
+    transform: translateX(6.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(6.25rem);
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/**=====================================================**
+                BREAKPOINT-VARIABLES
+=======================================================**/
+/**=====================================================**
+                BREAKPOINT-FUNCTIONS
+=======================================================**/
+/**=====================================================**
+                    BREAKPOINT-MIXIN
+=======================================================**/
+/**=====================================================**
+                    BREAKPOINT-USAGE
+=======================================================**/
+@font-face {
+  font-family: "Zagora";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Zagora"), url("../fonts/zagora/Zagora-mLEPG.woff") format("woff");
+}
+@font-face {
+  font-family: "Callista";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Callista"), url("../fonts/callista/Callista-vmqlE.woff") format("woff");
+}
+@font-face {
+  font-family: "TT Nooks Script Trial";
+  font-style: normal;
+  font-weight: 300;
+  src: local("TT Nooks Script Trial"), url("../fonts/tt-nooks-script-trial/TT Nooks Script Trial Light.woff") format("woff");
+}
+@font-face {
+  font-family: "TT Nooks Script Trial";
+  font-style: normal;
+  font-weight: 400;
+  src: local("TT Nooks Script Trial"), url("../fonts/tt-nooks-script-trial/TT Nooks Script Trial Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "TT Nooks Script Trial";
+  font-style: normal;
+  font-weight: 700;
+  src: local("TT Nooks Script Trial"), url("../fonts/tt-nooks-script-trial/TT Nooks Script Trial Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "TT Nooks Script Trial";
+  font-style: normal;
+  font-weight: 900;
+  src: local("TT Nooks Script Trial"), url("../fonts/tt-nooks-script-trial/TT Nooks Script Trial Black.woff") format("woff");
+}
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+html:focus-within {
+  scroll-behavior: inherit;
+}
+
+* {
+  box-sizing: inherit;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+button,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+header,
+hgroup,
+html,
+i,
+input,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+main,
+nav,
+object,
+ol,
+output,
+option,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+select,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+}
+body {
+  font-family: "TT Nooks Script Trial";
+  letter-spacing: 0.03rem;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+input,
+select,
+textarea {
+  border: none;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+input[type=search]::-webkit-search-decoration:focus,
+input[type=search]::-webkit-search-cancel-button:focus,
+input[type=search]::-webkit-search-results-button:focus,
+input[type=search]::-webkit-search-results-decoration:focus {
+  outline: none;
+}
+
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+  color: transparent;
+}
+
+input[type=date]::before {
+  content: attr(data-placeholder);
+  width: 100%;
+}
+
+input[type=date]:focus::before,
+input[type=date]:valid::before {
+  display: none;
+}
+
+table tr {
+  vertical-align: middle;
+}
+table tr th, table tr td {
+  vertical-align: middle;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+button:focus,
+[type=button]:focus,
+[type=reset]:focus,
+[type=submit]:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.up-btn {
+  opacity: 1;
+  padding: 0.75rem;
+  border: 0;
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.offcanvas {
+  height: 100vh;
+  width: 17.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .offcanvas {
+    width: 20rem;
+  }
+}
+.offcanvas.offcanvas-top {
+  border-bottom: 0;
+}
+.offcanvas.offcanvas-bottom {
+  border-top: 0;
+}
+.offcanvas.offcanvas-start {
+  border-right: 0;
+}
+.offcanvas.offcanvas-end {
+  border-left: 0;
+}
+.offcanvas.offcanvas-start {
+  border-right: 0;
+}
+.offcanvas-header .logo {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.offcanvas-header .btn-close {
+  display: flex;
+  gap: 0.625rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  transition: all 350ms ease-in-out;
+}
+.offcanvas-header .btn-close svg {
+  width: 100%;
+  height: 100%;
+}
+.offcanvas-header .btn-close:not([disabled]):hover {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+.offcanvas-body {
+  padding-top: 0;
+}
+.offcanvas-body::-webkit-scrollbar {
+  background: transparent;
+  width: 0.5rem;
+}
+.offcanvas-body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.modal-content {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.modal-header {
+  border-bottom: 0;
+}
+.modal-header .btn-close {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 1;
+}
+.modal-header .btn-close svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.modal-header .btn-close:not([disabled]):hover svg {
+  transform: rotate(90deg);
+}
+.tooltip-inner {
+  font-size: 0.75rem;
+}
+/*
+ ATTENDING-SECTION START
+*/
+.attending {
+  background: url(../images/attending/attending-bg.png) no-repeat center center/cover;
+  padding: 5rem 0;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .attending {
+    padding: 7.1875rem 0;
+  }
+}
+.attending-details {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .attending-details {
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .attending-details {
+    gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .attending-details {
+    gap: 3.625rem;
+  }
+}
+.attending .overlay {
+  background: rgba(11, 19, 65, 0.6);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/*
+ COUNTDOWN-SECTION START
+*/
+.countdown {
+  background: url(../images/counter-banner/counter-banner-1.png) no-repeat center center/cover;
+  padding: 5rem 0;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .countdown {
+    padding: 7.1875rem 0;
+  }
+}
+.countdown-details {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .countdown-details {
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .countdown-details {
+    gap: 2.5rem;
+  }
+}
+.countdown-details .countdown-title {
+  color: hsl(0, 0%, 100%);
+  font-family: "callista";
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .countdown-details .countdown-title {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .countdown-details .countdown-title {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .countdown-details .countdown-title {
+    font-size: 3.3125rem;
+  }
+}
+.countdown-details .countdown-text {
+  color: hsl(0, 0%, 100%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .countdown-details .countdown-text {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .countdown-details .countdown-text {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .countdown-details .countdown-text {
+    font-size: 1.375rem;
+  }
+}
+.countdown-details .countdown-clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.countdown-details .countdown-clock .countdown-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+.countdown-details .countdown-clock .countdown-time .days,
+.countdown-details .countdown-clock .countdown-time .hours,
+.countdown-details .countdown-clock .countdown-time .minutes,
+.countdown-details .countdown-clock .countdown-time .seconds {
+  width: 4rem;
+  height: 4rem;
+  background: hsl(0, 0%, 100%);
+  color: hsl(237, 31%, 41%);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TT Nooks Script Trial";
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.3333333333;
+}
+@media screen and (min-width: 75rem) {
+  .countdown-details .countdown-clock .countdown-time .days,
+  .countdown-details .countdown-clock .countdown-time .hours,
+  .countdown-details .countdown-clock .countdown-time .minutes,
+  .countdown-details .countdown-clock .countdown-time .seconds {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.5rem;
+  }
+}
+.countdown-details .countdown-clock .countdown-time .count-title {
+  color: hsl(0, 0%, 100%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.375;
+}
+.countdown .overlay {
+  background: rgba(11, 19, 65, 0.6);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/*
+ ERROR-SECTION START
+*/
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+  background: hsl(0, 0%, 100%);
+}
+.error-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 36rem) {
+  .error-thumbnail {
+    width: 18.75rem;
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .error-thumbnail {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+.error-thumbnail svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.error-thumbnail .st0::-moz-selection, .error-thumbnail .st1::-moz-selection, .error-thumbnail .st2::-moz-selection, .error-thumbnail .st3::-moz-selection, .error-thumbnail .st4::-moz-selection, .error-thumbnail .st5::-moz-selection {
+  background: transparent;
+  color: hsl(1, 71%, 54%);
+}
+.error-thumbnail .st0::selection,
+.error-thumbnail .st1::selection,
+.error-thumbnail .st2::selection,
+.error-thumbnail .st3::selection,
+.error-thumbnail .st4::selection,
+.error-thumbnail .st5::selection {
+  background: transparent;
+  color: hsl(1, 71%, 54%);
+}

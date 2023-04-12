@@ -1,70 +1,146 @@
 @use "../global" as *;
 @use "../partials" as *;
 
-.integration {
-  @include flex-center-column;
-  gap: size(24);
+/*
+ ATTENDING-SECTION START
+*/
+.attending {
+  background: url(../images/attending/attending-bg.png) no-repeat center center/cover;
+  padding: size(80) 0;
+  position: relative;
 
   @include breakpoint(tab992) {
-    gap: size(48);
+    padding: size(115) 0;
   }
 
-  &-content {
-    @include border-single(top, solid, 1, $sectionborder);
-    @include flex-column;
-    gap: size(40);
-    padding: size(60) 0;
-  
-    @include breakpoint(tab992) {
-      gap: size(60);
-      padding: size(60) 0 size(120);
-    }
-  }
-  
-  &-header {
+  &-details {
+    position: relative;
+    z-index: 2;
     @include flex-center-column;
-    gap: size(24);
+    gap: size(20);
     text-align: center;
+
+    @include breakpoint(mobile768) {
+      gap: size(32);
+    }
 
     @include breakpoint(tab992) {
       gap: size(40);
     }
 
-    .integration-title {
-      color: $headingcolor;
-      font-weight: 700;
-    }
-
-    .integration-text {
-      color: $headingcolor;
-      font-size: size(14);
-      font-weight: 400;
+    @include breakpoint(desktop1200) {
+      gap: size(58);
     }
   }
+  
+  .overlay {
+    background: rgba($overlaybg, 0.6);
+    position: absolute;
+    inset: 0;
+    @include wh100;
+    z-index: 1;
+  }
+}
 
-  &-body {
-    background: $white;
-    @include radius(10);
-    padding: size(16);
-    @include flex-center;
-    flex-wrap: wrap;
-    gap: size(10);
+/*
+ COUNTDOWN-SECTION START
+*/
+.countdown {
+  background: url(../images/counter-banner/counter-banner-1.png) no-repeat center center/cover;
+  padding: size(80) 0;
+  position: relative;
 
-    .card-integration {
-      background: $brandcardbg;
-      @include radius(10);
-      @include flex-center;
-      overflow: hidden;
-      padding: size(20);
+  @include breakpoint(tab992) {
+    padding: size(115) 0;
+  }
 
-      &[data-integration="rectangle"] {
-        width: size(200);
-        height: size(86);
+  &-details {
+    position: relative;
+    z-index: 2;
+    @include flex-center-column;
+    gap: size(20);
+    text-align: center;
+
+    @include breakpoint(mobile768) {
+      gap: size(32);
+    }
+
+    @include breakpoint(tab992) {
+      gap: size(40);
+    }
+
+    .countdown-title {
+      color: $white;
+      @include font($calista, 32, normal, normal, 44.8);
+
+      @include breakpoint(mobile576) {
+        font-size: size(36);
       }
 
-      &[data-integration="square"] {
-        @include square(86);
+      @include breakpoint(mobile768) {
+        font-size: size(44);
+      }
+
+      @include breakpoint(desktop1200) {
+        font-size: size(53);
       }
     }
+
+    .countdown-text {
+      color: $white;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+
+      @include breakpoint(mobile768) {
+        font-size: size(20);
+      }
+
+      @include breakpoint(desktop1200) {
+        font-size: size(22);
+      }
+    }
+
+    .countdown-clock {
+      @include flex-center;
+      gap: size(24);
+
+      .countdown-time {
+        @include flex-center-column;
+        gap: size(20);
+        text-align: center;
+
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+          @include square(64);
+          @include setBgColor($white, $countdowntext);
+          @include circle;
+          @include flex-center;
+          @include font($tt-nooks-script-trial, 18, bold, normal, 24);
+
+          @include breakpoint(desktop1200) {
+            @include square(80);
+            font-size: size(24);
+          }
+        }
+  
+        .count-title {
+          color: $white;
+          @include font($tt-nooks-script-trial, 24, light, normal, 33);
+        }
+      }
+    }
+  }
+  
+  .overlay {
+    background: rgba($overlaybg, 0.6);
+    position: absolute;
+    inset: 0;
+    @include wh100;
+    z-index: 1;
   }
 }
