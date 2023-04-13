@@ -8,6 +8,8 @@
   <title>Soulmates</title>
   <!-- FAVICON -->
   <link rel="shortcut icon" href="../assets/images/logo/favicon.svg" type="image/svg+xml">
+  <!-- NICE-SELECT-2 CSS -->
+  <link rel="stylesheet" href="../assets/css/nice-select/nice-select2.css">
   <!-- BOOTSTRAP CSS [5.3.0-alpha3] -->
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
   <!-- CUSTOM CSS -->
@@ -112,6 +114,106 @@
   </div>
   <!-- EMPTY-BANNER SECTION END -->
 
+  <!-- CONTACT-SECTION START -->
+  <section class="contact">
+    <div class="container">
+      <div class="row g-4 align-items-md-center">
+        <div class="col-lg-7 col-12">
+          <form class="contact-form needs-validation" novalidate>
+            <h2 class="section-title">Will You Attend the Celebration?</h2>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="confirm-attend">
+                  <div class="custom-radio">
+                    <input type="radio" name="radio-stacked" id="will-there" class="radio-input" hidden checked>
+                    <label for="will-there" class="radio-label">I will be there</label>
+                  </div>
+
+                  <div class="custom-radio">
+                    <input type="radio" name="radio-stacked" id="not-come" class="radio-input" hidden>
+                    <label for="not-come" class="radio-label">Sorry, I can't come</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <input type="text" class="form-control" id="name" placeholder="Name" autocomplete="off" required>
+                <div class="invalid-feedback">
+                  Please choose a name.
+                </div>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <input type="email" class="form-control" id="email" placeholder="Email" autocomplete="off" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email.
+                </div>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <select class="nice-select wide" id="numberofguests" autocomplete="off" required>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid state.
+                </div>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <select class="nice-select wide" id="mealpreferences" autocomplete="off" required>
+                  <option>Chicken</option>
+                  <option>Beef</option>
+                  <option>Pork</option>
+                  <option>Baked Beans</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid state.
+                </div>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+
+              <div class="col-12">
+                <textarea class="form-control" id="message" rows="3" placeholder="Message" autocomplete="off" required></textarea>
+                <div class="invalid-feedback">
+                  Please give a message.
+                </div>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+
+              <div class="col-12 mt-5">
+                <button class="btn-submit" type="submit">SUBMIT</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-lg-5 d-none d-lg-block">
+          <figure class="contact-thumbnail">
+            <img src="../assets/images/contact/contact-thumbnail.png" alt="contact-thumbnail">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CONTACT-SECTION END -->
+
   <!-- FOOTER-SECTION START -->
   <footer class="footer">
     <div class="container">
@@ -186,6 +288,11 @@
   <script src="../assets/js/bootsrap/bootstrap.bundle.min.js"></script>
   <!-- COUNT-DOWN TIMER -->
   <script src="../assets/js/countdown/countdown.js"></script>
+  <!-- FORM-VALIDATION -->
+  <script src="../assets/js/validation/validation.js"></script>
+  <!-- NICE-SELECT-2 JS -->
+  <script src="../assets/js/nice-select/nice-select2.js"></script>
+  <script src="../assets/js/nice-select/contactselect.js"></script>
 </body>
 
 </html>

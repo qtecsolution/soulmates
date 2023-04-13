@@ -22,3 +22,24 @@ button,
   padding: size(12);
   border: 0;
 }
+
+.btn-submit {
+  border: 0;
+  @include setBgColor($white, $countdowntext);
+  @include radius(50);
+  @include flex-center;
+  @include font($tt-nooks-script-trial, 16, bold, normal, 22.4);
+  @include w100;
+  padding: size(14);
+  text-align: center;
+  text-transform: uppercase;
+  @include transitionsall;
+
+  @include breakpoint(tab992) {
+    font-size: size(18);
+  }
+
+  @include hover {
+    @include setBgColor($overlaybg, $white);
+  }
+}

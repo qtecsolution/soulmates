@@ -445,8 +445,46 @@ button:focus,
   border: 0;
 }
 
+.btn-submit {
+  border: 0;
+  background: hsl(0, 0%, 100%);
+  color: hsl(237, 31%, 41%);
+  border-radius: 3.125rem;
+  border-radius: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+  width: 100%;
+  padding: 0.875rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 350ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .btn-submit {
+    font-size: 1.125rem;
+  }
+}
+.btn-submit:not([disabled]):hover {
+  background: hsl(231, 71%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+
 .form-control:focus,
 .form-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  box-shadow: none;
+}
+.form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
   outline: none;
   box-shadow: none;
 }
@@ -661,6 +699,51 @@ button:focus,
   right: 0;
 }
 
+.custom-radio .radio-input:checked ~ .radio-label::after {
+  opacity: 1;
+  visibility: visible;
+}
+.custom-radio .radio-label {
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+  padding-left: 1.875rem;
+}
+@media screen and (min-width: 62rem) {
+  .custom-radio .radio-label {
+    font-size: 1.125rem;
+  }
+}
+.custom-radio .radio-label::before, .custom-radio .radio-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.custom-radio .radio-label::before {
+  width: 1.125rem;
+  height: 1.125rem;
+  border: solid 0.0625rem hsl(0, 0%, 100%);
+  border-radius: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.custom-radio .radio-label::after {
+  background: hsl(0, 0%, 100%);
+  width: 0.5625rem;
+  height: 0.5625rem;
+  border-radius: 100%;
+  left: 0.28125rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 350ms ease-in-out;
+}
+
 /*
  EMPTY-BANNER-SECTION START
 */
@@ -844,6 +927,82 @@ button:focus,
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+/*
+ CONTACT-SECTION START
+*/
+.contact {
+  background: hsl(232, 36%, 35%);
+  padding: 5rem 0;
+}
+@media screen and (min-width: 62rem) {
+  .contact {
+    padding: 7.1875rem 0;
+  }
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.contact-form .confirm-attend {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .contact-form .confirm-attend {
+    gap: 5rem;
+  }
+}
+.contact-form .form-control {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+  border-radius: 0rem;
+  border-radius: 0rem;
+  border: 0;
+  border-bottom: solid 0.0625rem hsl(0, 0%, 100%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+  padding: 0.875rem 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .contact-form .form-control {
+    font-size: 1.125rem;
+  }
+}
+.contact-form .form-control::-moz-placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.contact-form .form-control::placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.contact-form .nice-select {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+  border-radius: 0rem;
+  border-radius: 0rem;
+  border: 0;
+  border-bottom: solid 0.0625rem hsl(0, 0%, 100%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+  padding: 0.875rem 1.25rem;
+  height: auto;
+}
+@media screen and (min-width: 62rem) {
+  .contact-form .nice-select {
+    font-size: 1.125rem;
+  }
+}
+.contact-form .nice-select .option {
+  color: hsl(237, 31%, 41%);
 }
 
 /*

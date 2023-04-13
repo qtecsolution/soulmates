@@ -150,3 +150,64 @@
     z-index: 1;
   }
 }
+
+/*
+ CONTACT-SECTION START
+*/
+.contact {
+  background: $footertitle;
+  padding: size(80) 0;
+
+  @include breakpoint(tab992) {
+    padding: size(115) 0;
+  }
+
+  &-form {
+    @include flex-column;
+    gap: size(80);
+
+    .confirm-attend {
+      @include flex-center-vert;
+      gap: size(40);
+
+      @include breakpoint(tab992) {
+        gap: size(80);  
+      }
+    }
+
+    .form-control {
+      @include setBgColor(transparent, $white);
+      @include radius(0);
+      border: 0;
+      @include border-single(bottom, solid, 1, $white);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      padding: size(14) size(20);
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+
+    .nice-select {
+      @include setBgColor(transparent, $white);
+      @include radius(0);
+      border: 0;
+      @include border-single(bottom, solid, 1, $white);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      padding: size(14) size(20);
+      height: auto;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      .option {
+        color: $countdowntext;
+      }
+    }
+  }
+}
