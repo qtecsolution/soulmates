@@ -152,6 +152,38 @@
 }
 
 /*
+ MARQUEE-SLIDER-SECTION START
+*/
+.marqueeslider {
+  padding: size(80) 0;
+
+  @include breakpoint(tab992) {
+    padding: size(115) 0;
+  }
+
+  @include breakpoint(desktop1200) {
+    padding: size(190) 0 size(200);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(80);
+    text-align: center;
+  }
+
+  &-header {
+    .section-title {
+      color: $footertitle;
+      font-family: $tt-nooks-script-trial;
+    }
+
+    .section-text {
+      color: $textcolor;
+    }
+  }
+}
+
+/*
  CONTACT-SECTION START
 */
 .contact {
@@ -165,6 +197,13 @@
   &-form {
     @include flex-column;
     gap: size(80);
+    padding-left: size(12);
+    padding-right: size(12);
+    
+    @include breakpoint(tab992) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     .confirm-attend {
       @include flex-center-vert;
@@ -208,6 +247,16 @@
       .option {
         color: $countdowntext;
       }
+    }
+  }
+
+  &-thumbnail {
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+    
+    img {
+      @include wh100;
     }
   }
 }

@@ -930,6 +930,38 @@ button:focus,
 }
 
 /*
+ MARQUEE-SLIDER-SECTION START
+*/
+.marqueeslider {
+  padding: 5rem 0;
+}
+@media screen and (min-width: 62rem) {
+  .marqueeslider {
+    padding: 7.1875rem 0;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .marqueeslider {
+    padding: 11.875rem 0 12.5rem;
+  }
+}
+.marqueeslider-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  text-align: center;
+}
+.marqueeslider-header .section-title {
+  color: hsl(232, 36%, 35%);
+  font-family: "TT Nooks Script Trial";
+}
+.marqueeslider-header .section-text {
+  color: hsl(230, 14%, 41%);
+}
+
+/*
  CONTACT-SECTION START
 */
 .contact {
@@ -945,6 +977,14 @@ button:focus,
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+@media screen and (min-width: 62rem) {
+  .contact-form {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .contact-form .confirm-attend {
   display: flex;
@@ -1003,6 +1043,18 @@ button:focus,
 }
 .contact-form .nice-select .option {
   color: hsl(237, 31%, 41%);
+}
+.contact-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.contact-thumbnail img {
+  width: 100%;
+  height: 100%;
 }
 
 /*
