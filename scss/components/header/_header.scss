@@ -2,5 +2,67 @@
 @use "../../partials" as *;
 
 .header {
-  
+  background: $overlaybg;
+  padding: size(24) size(8);
+
+  &-nav {
+    @include flex-center-between;
+    
+    .logo {
+      max-width: size(64);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+
+    .nav-center {
+      @include flex-center-column;
+      text-align: center;
+
+      .couple-name {
+        color: $white;
+        @include font($zagora, 18, normal, normal, 25.2);
+        text-transform: capitalize;
+
+        @include breakpoint(mobile768) {
+          font-size: size(24);
+        }
+      
+        @include breakpoint(tab992) {
+          font-size: size(28);
+        }
+      
+        @include breakpoint(desktop1200) {
+          font-size: size(32);
+        }
+      }
+
+      .center-icons {
+        display: none;
+      
+        @include breakpoint(tab992) {
+          @include flex-center;
+        }
+
+        .center-icon {
+          @include square(75);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+
+    .hamburger-menu {
+      @include square(36);
+      @include flex-center;
+    }
+  }
 }
