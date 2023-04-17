@@ -133,7 +133,11 @@
     }
 
     &-pagination {
-      bottom: size(32);
+      bottom: size(48);
+      
+      @include breakpoint(tab992) {
+        bottom: size(32);
+      }
 
       &-bullet {
         position: relative;
