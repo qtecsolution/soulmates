@@ -42,6 +42,39 @@
         z-index: 1;
       }
     }
+
+    &-pagination {
+      bottom: size(48);
+
+      &-bullet {
+        position: relative;
+        @include square(40);
+        @include circle;
+        @include border(solid, 1, transparent);
+        margin: 0;
+        background: transparent;
+        opacity: 1;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform(translate(-50%, -50%));
+          @include square(10);
+          @include circle;
+          background: $bulletbg;
+        }
+
+        &.swiper-pagination-bullet-active {
+          border-color: $white;
+  
+          &::after {
+            background: $white;
+          }
+        }
+      }
+    }
   }
 }
 
