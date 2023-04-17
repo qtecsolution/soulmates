@@ -146,7 +146,11 @@
     }
 
     &-pagination {
-      bottom: size(48);
+      bottom: size(54);
+      
+      @include breakpoint(mobile768) {
+        bottom: size(48);
+      }
 
       @include breakpoint(tab992) {
         bottom: size(32);

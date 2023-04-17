@@ -1155,7 +1155,12 @@ button:not([disabled]):hover,
   z-index: 1;
 }
 .home-slider .swiper-pagination {
-  bottom: 3rem;
+  bottom: 3.375rem;
+}
+@media screen and (min-width: 48rem) {
+  .home-slider .swiper-pagination {
+    bottom: 3rem;
+  }
 }
 @media screen and (min-width: 62rem) {
   .home-slider .swiper-pagination {
