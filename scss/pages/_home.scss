@@ -1,5 +1,63 @@
 @use "../global" as *;
 @use "../partials" as *;
+/*
+ HOME-SLIDER-SECTION START
+*/
+.home-slider {
+  @include w100;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: size(24);
+  
+  @include breakpoint(tab992) {
+    // margin-bottom: size(168);
+  }
+
+  .swiper {
+    @include h100;
+
+    &-slide {
+      position: relative;
+  
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+  
+      .slider-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        z-index: 10;
+      }
+  
+      .overlay {
+        background: rgba($overlaybg, 0.6);
+        position: absolute;
+        inset: 0;
+        @include wh100;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+/*
+ LOVELY-COUPLE-SECTION START
+*/
+.lovely-couple {
+  background: url(../images/lovely-couple/lovely-couple.png) no-repeat center center/cover;
+  padding: size(32) 0 size(64);
+  position: relative;
+
+  @include breakpoint(tab992) {
+    padding: size(48) 0 size(96);
+  }
+}
+
 
 /*
  EMPTY-BANNER-SECTION START

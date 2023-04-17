@@ -2,8 +2,13 @@
 @use "../../partials" as *;
 
 .header {
-  background: $overlaybg;
+  background: transparent;
   padding: size(24) size(8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include w100;
+  z-index: 1000;
 
   &-nav {
     @include flex-center-between;
@@ -64,5 +69,12 @@
       @include square(36);
       @include flex-center;
     }
+  }
+
+  &.header-scrolled {
+    background: $overlaybg;
+    position: fixed;
+    @extend %animation;
+    @extend %slideDownIn;
   }
 }

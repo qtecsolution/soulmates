@@ -1,6 +1,11 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
+.header.header-scrolled {
+  animation-duration: 350ms;
+  animation-fill-mode: both;
+}
+
 @keyframes slideDownIn {
   0% {
     transform: translateY(-100%);
@@ -12,6 +17,10 @@
     transform: translateY(-100%);
   }
 }
+.header.header-scrolled {
+  animation-name: slideDownIn;
+}
+
 @keyframes slideDownInMobile {
   0% {
     transform: translateY(-1.25rem);
@@ -512,8 +521,13 @@ button:not([disabled]):hover,
 }
 
 .header {
-  background: hsl(231, 71%, 15%);
+  background: transparent;
   padding: 1.5rem 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .header-nav {
   display: flex;
@@ -594,6 +608,10 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
 }
+.header.header-scrolled {
+  background: hsl(231, 71%, 15%);
+  position: fixed;
+}
 
 .form-control:focus,
 .form-select:focus {
@@ -611,11 +629,16 @@ button:not([disabled]):hover,
 
 .offcanvas {
   height: 100vh;
-  width: 17.5rem !important;
+  width: 18.75rem !important;
+}
+@media screen and (min-width: 36rem) {
+  .offcanvas {
+    width: 25rem !important;
+  }
 }
 @media screen and (min-width: 48rem) {
   .offcanvas {
-    width: 26.25rem !important;
+    width: 33rem !important;
   }
 }
 @media screen and (min-width: 62rem) {
@@ -964,6 +987,59 @@ button:not([disabled]):hover,
   opacity: 0;
   visibility: hidden;
   transition: transform 350ms ease-in-out;
+}
+
+/*
+ HOME-SLIDER-SECTION START
+*/
+.home-slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 1.5rem;
+}
+.home-slider .swiper {
+  height: 100%;
+}
+.home-slider .swiper-slide {
+  position: relative;
+}
+.home-slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home-slider .swiper-slide .slider-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.home-slider .swiper-slide .overlay {
+  background: rgba(11, 19, 65, 0.6);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/*
+ LOVELY-COUPLE-SECTION START
+*/
+.lovely-couple {
+  background: url(../images/lovely-couple/lovely-couple.png) no-repeat center center/cover;
+  padding: 2rem 0 4rem;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .lovely-couple {
+    padding: 3rem 0 6rem;
+  }
 }
 
 /*

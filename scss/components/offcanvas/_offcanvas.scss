@@ -5,10 +5,14 @@
 
 .offcanvas {
   height: 100vh;
-  width: size(280) !important;
+  width: size(300) !important;
+
+  @include breakpoint(mobile576) {
+    width: size(400) !important;
+  }
 
   @include breakpoint(mobile768) {
-    width: size(420) !important;
+    width: size(528) !important;
   }
 
   @include breakpoint(tab992) {
