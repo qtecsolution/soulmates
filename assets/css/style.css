@@ -520,6 +520,76 @@ button:not([disabled]):hover,
   color: hsl(0, 0%, 100%);
 }
 
+.card-lovely {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+@media screen and (min-width: 62rem) {
+  .card-lovely {
+    gap: 3rem;
+  }
+}
+.card-lovely .profile-picture {
+  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  width: 100%;
+  min-height: 16.25rem;
+  max-height: 29.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-lovely .profile-picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 350ms ease-in-out;
+}
+.card-lovely .profile-picture img:not([disabled]):hover {
+  transform: scale(1.1);
+}
+.card-lovely-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+@media screen and (min-width: 62rem) {
+  .card-lovely-body {
+    gap: 2rem;
+  }
+}
+.card-lovely-body .name {
+  color: hsl(232, 36%, 35%);
+  font-weight: 400;
+}
+@media screen and (min-width: 62rem) {
+  .card-lovely-body .name {
+    font-size: 1.5rem;
+  }
+}
+.card-lovely-body .section-text {
+  color: hsl(230, 14%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .card-lovely-body .section-text {
+    font-size: 1.125rem;
+  }
+}
+
 .header {
   background: transparent;
   padding: 1.5rem 0.5rem;
@@ -1235,6 +1305,40 @@ button:not([disabled]):hover,
 }
 .lovely-couple-details .textinfo .section-text {
   color: hsl(232, 36%, 35%);
+}
+
+/*
+ COUPLE-SECTION START
+*/
+.copules {
+  padding: 0rem 0.5rem 5rem;
+}
+@media screen and (min-width: 62rem) {
+  .copules {
+    padding: 0rem 0.5rem 7.5rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .copules {
+    padding: 0rem 0.5rem 10rem;
+  }
+}
+.copules .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 17.0625rem;
+  height: 17.0625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+.copules .icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 /*

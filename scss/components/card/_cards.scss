@@ -1,3 +1,60 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.card-lovely {
+  @include flex-center-column;
+  gap: size(32);
+  position: relative;
+  z-index: 10;
+
+  @include breakpoint(tab992) {
+    gap: size(48);
+  }
+
+  .profile-picture {
+    box-shadow: $cardshadow;
+    @include w100;
+    min-height: size(260);
+    max-height: size(470);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(20);
+    text-align: center;
+
+    @include breakpoint(tab992) {
+      gap: size(32);
+    }
+
+    .name {
+      color: $footertitle;
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .section-text {
+      color: $textcolor;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+    }
+  }
+}

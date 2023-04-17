@@ -34,9 +34,10 @@ $red: hsl(1, 71%, 54%); //#dd3936
 
 
 // SHADOWS
+$shade-1: rgba(72, 75, 137, 0.2);
 
 // BOX-SHADOWS
-
+$cardshadow: .25rem .25rem 1rem .1875rem $shade-1;
 
 
 // LETTER-SPECING

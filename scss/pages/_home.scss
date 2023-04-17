@@ -227,6 +227,36 @@
 }
 
 /*
+ COUPLE-SECTION START
+*/
+.copules {
+  padding: size(0) size(8) size(80);
+
+  @include breakpoint(tab992) {
+    padding: size(0) size(8) size(120);
+  }
+
+  @include breakpoint(desktop1200) {
+    padding: size(0) size(8) size(160);
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    @include square(273);
+    @include flex-center;
+    overflow: hidden;
+    z-index: 1;
+
+    svg {
+      @include wh100;
+    }
+  }
+}
+
+/*
  EMPTY-BANNER-SECTION START
 */
 .empty-banner {
