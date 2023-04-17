@@ -772,7 +772,7 @@ button:not([disabled]):hover,
   color: hsl(0, 0%, 0%);
 }
 .offcanvas-body .sidemenu .icon {
-  position: fixed;
+  position: absolute;
   bottom: -0.625rem;
   left: 0rem;
   width: 5rem;
@@ -1144,7 +1144,7 @@ button:not([disabled]):hover,
   z-index: 1;
 }
 .home-slider .swiper-pagination {
-  bottom: 3rem;
+  bottom: 2.5rem;
 }
 @media screen and (min-width: 62rem) {
   .home-slider .swiper-pagination {

@@ -133,8 +133,8 @@
     }
 
     &-pagination {
-      bottom: size(48);
-      
+      bottom: size(40);
+
       @include breakpoint(tab992) {
         bottom: size(32);
       }
