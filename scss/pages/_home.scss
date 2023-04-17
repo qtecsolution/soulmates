@@ -1,5 +1,6 @@
 @use "../global" as *;
 @use "../partials" as *;
+
 /*
  HOME-SLIDER-SECTION START
 */
@@ -14,7 +15,7 @@
   @include breakpoint(tab992) {
     // margin-bottom: size(168);
   }
-
+  
   .swiper {
     @include h100;
 
@@ -133,7 +134,7 @@
     }
 
     &-pagination {
-      bottom: size(40);
+      bottom: size(48);
 
       @include breakpoint(tab992) {
         bottom: size(32);
@@ -208,7 +209,6 @@
     }
   }
 }
-
 
 /*
  EMPTY-BANNER-SECTION START

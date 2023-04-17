@@ -1,8 +1,6 @@
 @use "../../global"as *;
 @use "../../partials"as *;
 
-
-
 .offcanvas {
   height: 100vh;
   width: size(300) !important;
@@ -169,7 +167,6 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      // background: darken($primary, 25%);
       @include radius(8);
     }
   }
