@@ -1001,6 +1001,17 @@ button:not([disabled]):hover,
   margin-bottom: 1.5rem;
 }
 .home-slider .swiper {
+  position: relative;
+  height: 100%;
+}
+.home-slider .swiper .parallax-bg {
+  background: hsl(0, 0%, 100%);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
   height: 100%;
 }
 .home-slider .swiper-slide {

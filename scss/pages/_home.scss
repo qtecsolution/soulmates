@@ -15,9 +15,21 @@
   @include breakpoint(tab992) {
     // margin-bottom: size(168);
   }
-  
+
   .swiper {
+    position: relative;
     @include h100;
+
+    .parallax-bg {
+      background: $white;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 130%;
+      height: 100%;
+    }
 
     &-slide {
       position: relative;
