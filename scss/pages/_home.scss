@@ -514,6 +514,52 @@
 }
 
 /*
+ OURGALLERY-SECTION START
+*/
+.ourgallery {
+  padding: size(80) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(80);
+    text-align: center;
+  }
+
+  &-header {
+    background: url(../images/gallery/our-moments.png) no-repeat center center/cover;
+    @include flex-center-column;
+    gap: size(16);
+
+    .section-title {
+      color: $footertitle;
+      font-family: $tt-nooks-script-trial;
+    }
+
+    .section-text {
+      color: $textcolor;
+    }
+  }
+
+  .swiper {
+    &-slide {
+
+    }
+
+    .icon {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      @include translateX(-50%);
+      
+    }
+  }
+}
+
+/*
  COUNTDOWN-SECTION START
 */
 .countdown {
