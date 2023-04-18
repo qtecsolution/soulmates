@@ -701,6 +701,68 @@ button:not([disabled]):hover,
   }
 }
 
+.card-guest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .card-guest {
+    gap: 2rem;
+  }
+}
+.card-guest-header {
+  width: 100%;
+  min-height: 17.5rem;
+  max-height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-guest-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 350ms ease-in-out;
+}
+.card-guest-header img:not([disabled]):hover {
+  transform: scale(1.1);
+}
+.card-guest-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+.card-guest-body .guest-name {
+  color: hsl(232, 36%, 35%);
+  font-weight: 400;
+}
+@media screen and (min-width: 62rem) {
+  .card-guest-body .guest-name {
+    font-size: 1.5rem;
+  }
+}
+.card-guest-body .guest-relation {
+  color: hsl(230, 14%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .card-guest-body .guest-relation {
+    font-size: 1.125rem;
+  }
+}
+
 .header {
   background: transparent;
   padding: 1.5rem 0.5rem;
@@ -1875,12 +1937,43 @@ button:not([disabled]):hover,
   gap: 5rem;
   text-align: center;
 }
+.marqueeslider-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
 .marqueeslider-header .section-title {
   color: hsl(232, 36%, 35%);
   font-family: "TT Nooks Script Trial";
 }
 .marqueeslider-header .section-text {
   color: hsl(230, 14%, 41%);
+}
+.marqueeslider .guests {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  width: 100%;
+}
+@media screen and (min-width: 62rem) {
+  .marqueeslider .guests {
+    gap: 1.25rem;
+  }
+}
+.marqueeslider .guests .js-marquee {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  width: 100%;
+}
+@media screen and (min-width: 62rem) {
+  .marqueeslider .guests .js-marquee {
+    gap: 1.25rem;
+  }
 }
 
 /*
@@ -1911,7 +2004,7 @@ button:not([disabled]):hover,
 .contact-form .confirm-attend {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 @media screen and (min-width: 62rem) {
   .contact-form .confirm-attend {

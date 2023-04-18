@@ -611,6 +611,9 @@
   }
 
   &-header {
+    @include flex-center-column;
+    gap: size(16);
+
     .section-title {
       color: $footertitle;
       font-family: $tt-nooks-script-trial;
@@ -618,6 +621,28 @@
 
     .section-text {
       color: $textcolor;
+    }
+  }
+
+  .guests {
+    @include flex-center-vert;
+    gap: size(16);
+    overflow: hidden;
+    @include w100;
+
+    @include breakpoint(tab992) {
+      gap: size(20);
+    }
+
+    .js-marquee {
+      @include flex-center-vert;
+      gap: size(16);
+      overflow: hidden;
+      @include w100;
+  
+      @include breakpoint(tab992) {
+        gap: size(20);
+      }
     }
   }
 }
@@ -646,7 +671,7 @@
 
     .confirm-attend {
       @include flex-center-vert;
-      gap: size(40);
+      gap: size(32);
 
       @include breakpoint(tab992) {
         gap: size(80);  

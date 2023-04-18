@@ -152,3 +152,54 @@
     }
   }
 }
+
+.card-guest {
+  @include flex-center-column;
+  gap: size(20);
+
+  @include breakpoint(tab992) {
+    gap: size(32);
+  }
+
+  &-header {
+    @include w100;
+    min-height: size(280);
+    max-height: size(400);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(4);
+    text-align: center;
+
+    .guest-name {
+      color: $footertitle;
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .guest-relation {
+      color: $textcolor;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+    }
+  }
+}
