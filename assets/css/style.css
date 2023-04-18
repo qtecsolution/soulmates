@@ -138,6 +138,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 html:focus-within {
