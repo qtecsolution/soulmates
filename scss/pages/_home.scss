@@ -557,7 +557,7 @@
           @include setBgColor($white, $countdowntext);
           @include circle;
           @include flex-center;
-          @include font($tt-nooks-script-trial, 18, bold, normal, 24);
+          @include font($tt-nooks-script-trial, 18, bold, normal, 25.2);
 
           @include breakpoint(desktop1200) {
             @include square(80);
@@ -567,7 +567,15 @@
   
         .count-title {
           color: $white;
-          @include font($tt-nooks-script-trial, 24, light, normal, 33);
+          @include font($tt-nooks-script-trial, 18, light, normal, 25.2);
+
+          @include breakpoint(tab992) {
+            font-size: size(20);
+          }
+
+          @include breakpoint(desktop1200) {
+            font-size: size(24);
+          }
         }
       }
     }

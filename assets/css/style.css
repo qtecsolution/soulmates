@@ -1812,7 +1812,7 @@ button:not([disabled]):hover,
   font-size: 1.125rem;
   font-weight: 700;
   font-style: normal;
-  line-height: 1.3333333333;
+  line-height: 1.4;
 }
 @media screen and (min-width: 75rem) {
   .countdown-details .countdown-clock .countdown-time .days,
@@ -1827,10 +1827,20 @@ button:not([disabled]):hover,
 .countdown-details .countdown-clock .countdown-time .count-title {
   color: hsl(0, 0%, 100%);
   font-family: "TT Nooks Script Trial";
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 300;
   font-style: normal;
-  line-height: 1.375;
+  line-height: 1.4;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-details .countdown-clock .countdown-time .count-title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .countdown-details .countdown-clock .countdown-time .count-title {
+    font-size: 1.5rem;
+  }
 }
 .countdown .overlay {
   background: rgba(11, 19, 65, 0.6);
