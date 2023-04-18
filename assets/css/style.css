@@ -591,6 +591,50 @@ button:not([disabled]):hover,
   }
 }
 
+.card-wedding {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.card-wedding .icon {
+  width: 5.5rem;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-wedding .icon svg {
+  width: 100%;
+}
+.card-wedding .weddinginfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.card-wedding .weddinginfo .wedding-title {
+  color: hsl(232, 36%, 35%);
+  font-weight: 400;
+}
+@media screen and (min-width: 62rem) {
+  .card-wedding .weddinginfo .wedding-title {
+    font-size: 1.5rem;
+  }
+}
+.card-wedding .weddinginfo .wedding-text {
+  color: hsl(230, 14%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 62rem) {
+  .card-wedding .weddinginfo .wedding-text {
+    font-size: 1.125rem;
+  }
+}
+
 .header {
   background: transparent;
   padding: 1.5rem 0.5rem;
@@ -1356,6 +1400,75 @@ button:not([disabled]):hover,
 }
 .whenwhere-content {
   background: url(../images/wedding/wedding.png) no-repeat center center/cover;
+}
+.whenwhere-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-details {
+    gap: 4.375rem;
+  }
+}
+.whenwhere-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-header {
+    gap: 2rem;
+  }
+}
+.whenwhere-header .title {
+  font-size: 1.75rem;
+  color: hsl(232, 36%, 35%);
+  font-weight: 400;
+}
+@media screen and (min-width: 48rem) {
+  .whenwhere-header .title {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-header .title {
+    font-size: 2.625rem;
+  }
+}
+.whenwhere-header .text {
+  color: hsl(230, 14%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-header .text {
+    font-size: 1.125rem;
+  }
+}
+.whenwhere .location {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 22.5rem;
+  max-height: 33.125rem;
+  overflow: hidden;
+  padding: 1rem;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere .location {
+    padding: 1.25rem;
+  }
+}
+.whenwhere .location img {
+  width: 100%;
+  height: 100%;
 }
 .whenwhere .icon {
   width: 10rem;

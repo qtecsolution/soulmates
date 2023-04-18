@@ -58,3 +58,41 @@
     }
   }
 }
+
+.card-wedding {
+  @include flex-column;
+  gap: size(4);
+
+  .icon {
+    @include square(88);
+    @include flex-center;
+    overflow: hidden;
+
+    svg {
+      @include w100;
+    }
+  }
+
+  .weddinginfo {
+    @include flex-column;
+    gap: size(12);
+
+    .wedding-title {
+      color: $footertitle;
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .wedding-text {
+      color: $textcolor;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+    }
+  }
+}

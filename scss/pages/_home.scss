@@ -271,6 +271,66 @@
     background: url(../images/wedding/wedding.png) no-repeat center center/cover;
   }
 
+  &-details {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(70);
+    }
+  }
+
+  &-header {
+    @include flex-column;
+    gap: size(20);
+
+    @include breakpoint(tab992) {
+      gap: size(32);
+    }
+
+    .title {
+      font-size: size(28);
+      color: $footertitle;
+      font-weight: 400;
+
+      @include breakpoint(mobile768) {
+        font-size: size(32);
+      }
+
+      @include breakpoint(tab992) {
+        font-size: size(42);
+      }
+    }
+    
+    .text {
+      color: $textcolor;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+    }
+  }
+
+  .location {
+    background: $white;
+    box-shadow: $cardshadow;
+    @include flex-center;
+    @include w100;
+    min-height: size(360);
+    max-height: size(530);
+    overflow: hidden;
+    padding: size(16);
+    
+    @include breakpoint(tab992) {
+      padding: size(20);
+    }
+
+    img {
+      @include wh100;
+    }
+  }
+
   .icon {
     @include square(160);
     @include flex-center;
