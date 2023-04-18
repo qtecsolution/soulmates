@@ -355,6 +355,84 @@
 }
 
 /*
+ MORE-EVENTS-SECTION START
+*/
+.more-events {
+  padding: size(80) size(8);
+  
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  @include breakpoint(desktop1200) {
+    padding: size(154) size(8);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(40);
+  
+    @include breakpoint(tab992) {
+      gap: size(72);
+    }
+  }
+
+  &-header {
+    background: url(../images/events/celebration.png) no-repeat center center/cover;
+    @include flex-center-column;
+    gap: size(20);
+    text-align: center;
+
+    @include breakpoint(tab992) {
+      gap: size(32);
+    }
+
+    .section-title {
+      color: $footertitle;
+      @include font($tt-nooks-script-trial, 32, normal, normal, 44.8);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(36);
+      }
+    
+      @include breakpoint(mobile768) {
+        font-size: size(44);
+      }
+    }
+
+    .section-text {
+      color: $footertitle;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+    }
+  }
+ 
+  .scheduleinfo {
+    @include w100;
+    @include flex-center;
+    position: relative;
+    margin-top: size(64);
+
+    .section-link {
+      position: relative;
+      margin-top: size(-32);
+      z-index: 10;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      z-index: 1;
+    }
+  }
+}
+
+/*
  EMPTY-BANNER-SECTION START
 */
 .empty-banner {

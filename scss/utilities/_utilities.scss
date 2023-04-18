@@ -53,3 +53,9 @@
     @include setBgColor($countdowntext, $white);
   }
 }
+
+.link-outline {
+  @include border(solid, 1, $countdowntext);
+  width: size(250);
+  height: size(54);
+}
