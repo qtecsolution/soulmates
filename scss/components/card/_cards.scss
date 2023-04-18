@@ -203,3 +203,55 @@
     }
   }
 }
+
+.love-card {
+  @include flex-column;
+  gap: size(24);
+
+  &-thumbnail {
+    @include w100;
+    min-height: size(280);
+    max-height: size(480);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-detail {
+    @include flex-column;
+    gap: size(8);
+    text-align: left;
+  
+    .date,
+    .lovetext {
+      color: $textcolor;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+    }
+
+    .lovetitle {
+      color: $footertitle;
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .info {
+      max-width: size(380);
+    }
+  }
+}

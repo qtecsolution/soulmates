@@ -763,6 +763,64 @@ button:not([disabled]):hover,
   }
 }
 
+.love-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.love-card-thumbnail {
+  width: 100%;
+  min-height: 17.5rem;
+  max-height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.love-card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 350ms ease-in-out;
+}
+.love-card-thumbnail img:not([disabled]):hover {
+  transform: scale(1.1);
+}
+.love-card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+.love-card-detail .date,
+.love-card-detail .lovetext {
+  color: hsl(230, 14%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .love-card-detail .date,
+  .love-card-detail .lovetext {
+    font-size: 1.125rem;
+  }
+}
+.love-card-detail .lovetitle {
+  color: hsl(232, 36%, 35%);
+  font-weight: 400;
+}
+@media screen and (min-width: 62rem) {
+  .love-card-detail .lovetitle {
+    font-size: 1.5rem;
+  }
+}
+.love-card-detail .info {
+  max-width: 23.75rem;
+}
+
 .header {
   background: transparent;
   padding: 1.5rem 0.5rem;
@@ -1795,6 +1853,46 @@ button:not([disabled]):hover,
   color: hsl(232, 36%, 35%);
   font-family: "TT Nooks Script Trial";
 }
+.lovestory-body .lovestory-leftcontent,
+.lovestory-body .lovestory-midcontent,
+.lovestory-body .lovestory-rightcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .lovestory-body .lovestory-midcontent {
+    padding-top: 8.75rem;
+  }
+}
+.lovestory-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.lovestory-footer .section-title {
+  color: hsl(232, 36%, 35%);
+  position: relative;
+  z-index: 10;
+}
+.lovestory-footer .icon {
+  width: 20.375rem;
+  height: 20.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lovestory-footer .icon svg {
+  width: 100%;
+}
+
 /*
  ATTENDING-SECTION START
 */
