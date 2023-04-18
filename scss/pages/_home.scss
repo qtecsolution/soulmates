@@ -473,6 +473,39 @@
 }
 
 /*
+ LOVESTORY-SECTION START
+*/
+.lovestory {
+  padding: size(80) size(8) size(96);
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8) size(140);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(80);
+    text-align: center;
+  }
+
+  &-header {
+    @include w100;
+    background: url(../images/love-story/love-story.png) no-repeat center center/cover;
+    @include flex-center;
+    text-align: center;
+
+    .section-title {
+      color: $footertitle;
+      font-family: $tt-nooks-script-trial;
+    }
+  }
+
+  &-body {
+    
+  }
+}
+
+/*
  ATTENDING-SECTION START
 */
 .attending {
