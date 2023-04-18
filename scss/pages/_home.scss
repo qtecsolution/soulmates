@@ -517,10 +517,10 @@
  OURGALLERY-SECTION START
 */
 .ourgallery {
-  padding: size(80) size(8);
+  padding: size(80) size(8) size(96);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(115) size(8) size(140);
   }
 
   &-content {
@@ -551,11 +551,19 @@
     .icon {
       position: absolute;
       left: 50%;
-      top: 70%;
+      top: 75%;
       bottom: 0;
       @include translateX(-50%);
-      @include square(300);
+      @include square(150);
       @include flex-center;
+
+      @include breakpoint(mobile768) {
+        @include square(200);
+      }
+
+      @include breakpoint(tab992) {
+        @include square(250);
+      }
 
       svg {
         @include w100;
