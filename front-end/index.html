@@ -557,36 +557,26 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12">
-            <div class="swiper gallery-slider position-relative">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        <div class="ourgallery-body">
+          <div class="row">
+            <div class="col-12">
+              <div class="swiper gallery-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="../assets/images/gallery/gallery-photo/gallery-1.png">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../assets/images/gallery/gallery-photo/gallery-2.png">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../assets/images/gallery/gallery-photo/gallery-3.png">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../assets/images/gallery/gallery-photo/gallery-4.png">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../assets/images/gallery/gallery-photo/gallery-5.png">
+                  </div>
                 </div>
               </div>
 
@@ -995,6 +985,8 @@
   <!-- SWIPER-JS -->
   <script src="../assets/js/swiper/swiper-bundle.min.js"></script>
   <script src="../assets/js/home-slider/homeslider.js"></script>
+  <!-- GALLERY-SLIDER -->
+  <script src="../assets/js/home-slider/galleryslider.js"></script>
   <!-- COUNT-DOWN TIMER -->
   <script src="../assets/js/countdown/countdown.js"></script>
   <!-- FORM-VALIDATION -->
@@ -1004,23 +996,6 @@
   <script src="../assets/js/nice-select/contactselect.js"></script>
   <!-- VANILLA-MAREUEE-SLIDER -->
   <script src="../assets/js/vanilla-marquee/guest-slider.js" type="module"></script>
-  
-  <script>
-    const gallerySlider = new Swiper(".gallery-slider", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      loop: true,
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-    });
-  </script>
 </body>
 
 </html>

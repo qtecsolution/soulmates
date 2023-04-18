@@ -544,18 +544,52 @@
     }
   }
 
-  .swiper {
-    &-slide {
-
-    }
+  &-body {
+    position: relative;
+    @include w100;
 
     .icon {
       position: absolute;
       left: 50%;
+      top: 70%;
       bottom: 0;
       @include translateX(-50%);
-      
+      @include square(300);
+      @include flex-center;
+
+      svg {
+        @include w100;
+      }
     }
+  }
+
+  .swiper {
+    @include w100;
+
+    &-slide {
+      box-shadow: $cardshadow;
+      @include square(150);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+
+      @include breakpoint(mobile576) {
+        @include square(200);
+      }
+
+      @include breakpoint(mobile768) {
+        @include square(300);
+      }
+
+      @include breakpoint(tab992) {
+        @include square(400);
+      }
+    }
+
   }
 }
 

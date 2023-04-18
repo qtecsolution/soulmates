@@ -1845,11 +1845,60 @@ button:not([disabled]):hover,
 .ourgallery-header .section-text {
   color: hsl(230, 14%, 41%);
 }
-.ourgallery .swiper .icon {
+.ourgallery-body {
+  position: relative;
+  width: 100%;
+}
+.ourgallery-body .icon {
   position: absolute;
   left: 50%;
+  top: 70%;
   bottom: 0;
   transform: translateX(-50%);
+  width: 18.75rem;
+  height: 18.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ourgallery-body .icon svg {
+  width: 100%;
+}
+.ourgallery .swiper {
+  width: 100%;
+}
+.ourgallery .swiper-slide {
+  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  width: 9.375rem;
+  height: 9.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.ourgallery .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 36rem) {
+  .ourgallery .swiper-slide {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .ourgallery .swiper-slide {
+    width: 18.75rem;
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .ourgallery .swiper-slide {
+    width: 25rem;
+    height: 25rem;
+  }
 }
 
 /*
