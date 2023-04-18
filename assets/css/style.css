@@ -1343,6 +1343,49 @@ button:not([disabled]):hover,
 }
 
 /*
+ WHEN-WHERE-SECTION START
+*/
+.whenwhere {
+  padding: 5rem 0.5rem;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere {
+    padding: 7.1875rem 0.5rem;
+  }
+}
+.whenwhere-content {
+  background: url(../images/wedding/wedding.png) no-repeat center center/cover;
+}
+.whenwhere .icon {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere .icon {
+    width: 16.25rem;
+    height: 16.25rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .whenwhere .icon {
+    width: 22.5rem;
+    height: 22.5rem;
+  }
+}
+.whenwhere .icon svg {
+  width: 100%;
+}
+
+/*
  EMPTY-BANNER-SECTION START
 */
 .empty-banner {
@@ -1393,12 +1436,12 @@ button:not([disabled]):hover,
 */
 .attending {
   background: url(../images/attending/attending-bg.png) no-repeat center center/cover;
-  padding: 5rem 0;
+  padding: 5rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
   .attending {
-    padding: 7.1875rem 0;
+    padding: 7.1875rem 0.5rem;
   }
 }
 .attending-details {
@@ -1440,12 +1483,12 @@ button:not([disabled]):hover,
 */
 .countdown {
   background: url(../images/counter-banner/counter-banner-1.png) no-repeat center center/cover;
-  padding: 5rem 0;
+  padding: 5rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
   .countdown {
-    padding: 7.1875rem 0;
+    padding: 7.1875rem 0.5rem;
   }
 }
 .countdown-details {
@@ -1531,16 +1574,16 @@ button:not([disabled]):hover,
  MARQUEE-SLIDER-SECTION START
 */
 .marqueeslider {
-  padding: 5rem 0;
+  padding: 5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .marqueeslider {
-    padding: 7.1875rem 0;
+    padding: 7.1875rem 0.5rem;
   }
 }
 @media screen and (min-width: 75rem) {
   .marqueeslider {
-    padding: 11.875rem 0 12.5rem;
+    padding: 11.875rem 0.5rem 12.5rem;
   }
 }
 .marqueeslider-content {
@@ -1564,11 +1607,11 @@ button:not([disabled]):hover,
 */
 .contact {
   background: hsl(232, 36%, 35%);
-  padding: 5rem 0;
+  padding: 5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .contact {
-    padding: 7.1875rem 0;
+    padding: 7.1875rem 0.5rem;
   }
 }
 .contact-form {

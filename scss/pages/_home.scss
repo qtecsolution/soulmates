@@ -257,6 +257,44 @@
 }
 
 /*
+ WHEN-WHERE-SECTION START
+*/
+.whenwhere {
+  padding: size(80) size(8);
+  position: relative;
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  &-content {
+    background: url(../images/wedding/wedding.png) no-repeat center center/cover;
+  }
+
+  .icon {
+    @include square(160);
+    @include flex-center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+
+    @include breakpoint(tab992) {
+      @include square(260);
+    }
+
+    @include breakpoint(desktop1200) {
+      @include square(360);
+    }
+  
+    svg {
+      @include w100;
+    }
+  }
+}
+
+/*
  EMPTY-BANNER-SECTION START
 */
 .empty-banner {
@@ -301,11 +339,11 @@
 */
 .attending {
   background: url(../images/attending/attending-bg.png) no-repeat center center/cover;
-  padding: size(80) 0;
+  padding: size(80) size(8);
   position: relative;
 
   @include breakpoint(tab992) {
-    padding: size(115) 0;
+    padding: size(115) size(8);
   }
 
   &-details {
@@ -342,11 +380,11 @@
 */
 .countdown {
   background: url(../images/counter-banner/counter-banner-1.png) no-repeat center center/cover;
-  padding: size(80) 0;
+  padding: size(80) size(8);
   position: relative;
 
   @include breakpoint(tab992) {
-    padding: size(115) 0;
+    padding: size(115) size(8);
   }
 
   &-details {
@@ -410,14 +448,14 @@
  MARQUEE-SLIDER-SECTION START
 */
 .marqueeslider {
-  padding: size(80) 0;
+  padding: size(80) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) 0;
+    padding: size(115) size(8);
   }
 
   @include breakpoint(desktop1200) {
-    padding: size(190) 0 size(200);
+    padding: size(190) size(8) size(200);
   }
 
   &-content {
@@ -443,10 +481,10 @@
 */
 .contact {
   background: $footertitle;
-  padding: size(80) 0;
+  padding: size(80) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) 0;
+    padding: size(115) size(8);
   }
 
   &-form {
