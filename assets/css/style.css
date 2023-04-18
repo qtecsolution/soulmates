@@ -707,6 +707,8 @@ button:not([disabled]):hover,
   justify-content: center;
   flex-direction: column;
   gap: 1.25rem;
+  min-width: 18.75rem;
+  max-width: 22.5rem;
 }
 @media screen and (min-width: 62rem) {
   .card-guest {

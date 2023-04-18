@@ -156,6 +156,8 @@
 .card-guest {
   @include flex-center-column;
   gap: size(20);
+  min-width: size(300);
+  max-width: size(360);
 
   @include breakpoint(tab992) {
     gap: size(32);
