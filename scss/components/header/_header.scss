@@ -22,6 +22,14 @@
         @include wh100;
         object-fit: cover;
       }
+
+      .logo-light {
+        display: block;
+      }
+
+      .logo-dark {
+        display: none;
+      }
     }
 
     .nav-center {
@@ -68,13 +76,59 @@
     .hamburger-menu {
       @include square(36);
       @include flex-center;
+      position: relative;
+      z-index: 99999;
     }
   }
 
   &.header-scrolled {
-    background: $overlaybg;
+    background: $white;
+    box-shadow: $cardshadow;
     position: fixed;
     @extend %animation;
     @extend %slideDownIn;
+
+    .logo {
+      .logo-light {
+        display: none;
+      }
+      
+      .logo-dark {
+        display: block;
+      }
+    }
+
+    .nav-center {
+      .couple-name {
+        color: $footertitle;
+      }
+
+      .center-icons {
+        .left-bar,
+        .right-bar {
+          svg {
+            line {
+              stroke: $footertitle;
+            }
+          }
+        }
+      }
+    }
+
+    .hamburger-menu {
+      .btn-hamburger {
+        .line {
+          background: $footertitle;
+        }
+      }
+      
+      .btn-burger {
+        svg {
+          line {
+            stroke: $footertitle;
+          }
+        }
+      }
+    }
   }
 }

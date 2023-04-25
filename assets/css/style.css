@@ -139,7 +139,9 @@ html {
   box-sizing: border-box;
   font-size: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 html:focus-within {
   scroll-behavior: inherit;
@@ -328,7 +330,7 @@ body {
   font-family: "TT Nooks Script Trial";
   letter-spacing: 0.03rem;
   text-rendering: optimizeSpeed;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0;
 }
 
@@ -392,6 +394,8 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 input[type=search]::-webkit-search-decoration,
@@ -471,6 +475,8 @@ button:not([disabled]):hover,
   gap: 0.5rem;
   width: 1.75rem;
   height: 1.75rem;
+  position: relative;
+  z-index: 99999;
 }
 .btn-hamburger .line {
   width: 100%;
@@ -489,6 +495,21 @@ button:not([disabled]):hover,
 }
 .btn-hamburger.is-active .line:nth-child(2) {
   transform: translateY(-0.9375rem) rotate(-45deg);
+}
+
+.btn-burger {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 1.75rem;
+  height: 0.875rem;
+}
+.btn-burger svg {
+  width: 100%;
+  height: 100%;
 }
 
 .btn-submit {
@@ -851,6 +872,12 @@ button:not([disabled]):hover,
   -o-object-fit: cover;
      object-fit: cover;
 }
+.header-nav .logo .logo-light {
+  display: block;
+}
+.header-nav .logo .logo-dark {
+  display: none;
+}
 .header-nav .nav-center {
   display: flex;
   align-items: center;
@@ -910,10 +937,32 @@ button:not([disabled]):hover,
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 99999;
 }
 .header.header-scrolled {
-  background: hsl(231, 71%, 15%);
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
   position: fixed;
+}
+.header.header-scrolled .logo .logo-light {
+  display: none;
+}
+.header.header-scrolled .logo .logo-dark {
+  display: block;
+}
+.header.header-scrolled .nav-center .couple-name {
+  color: hsl(232, 36%, 35%);
+}
+.header.header-scrolled .nav-center .center-icons .left-bar svg line,
+.header.header-scrolled .nav-center .center-icons .right-bar svg line {
+  stroke: hsl(232, 36%, 35%);
+}
+.header.header-scrolled .hamburger-menu .btn-hamburger .line {
+  background: hsl(232, 36%, 35%);
+}
+.header.header-scrolled .hamburger-menu .btn-burger svg line {
+  stroke: hsl(232, 36%, 35%);
 }
 
 .form-control:focus,
@@ -949,8 +998,14 @@ button:not([disabled]):hover,
     width: 62% !important;
   }
 }
+@media screen and (min-width: 64rem) {
+  .offcanvas {
+    width: 100% !important;
+  }
+}
 .offcanvas.offcanvas-top {
   border-bottom: 0;
+  height: 100vh;
 }
 .offcanvas.offcanvas-bottom {
   border-top: 0;
@@ -1093,6 +1148,161 @@ button:not([disabled]):hover,
 }
 .offcanvas-body .sidemenu .icon svg {
   width: 100%;
+}
+.offcanvas-body .menu-thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.offcanvas-body .menu-thumb .caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+.offcanvas-body .menu-thumb .caption .caption-title {
+  color: hsl(0, 0%, 100%);
+  font-family: "callista";
+  font-weight: 400;
+}
+.offcanvas-body .menu-thumb .caption .caption-event {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 18.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .offcanvas-body .menu-thumb .caption .caption-event {
+    min-width: 29.75rem;
+  }
+}
+.offcanvas-body .menu-thumb .caption .caption-event .title,
+.offcanvas-body .menu-thumb .caption .caption-event .caption-text {
+  color: hsl(0, 0%, 100%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3571428571;
+}
+.offcanvas-body .menu-thumb .caption .caption-event .event {
+  background: hsl(0, 0%, 100%);
+  border-radius: 6.25rem;
+  border-radius: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .offcanvas-body .menu-thumb .caption .caption-event .event {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+.offcanvas-body .menu-thumb .caption .caption-event .event .day-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .offcanvas-body .menu-thumb .caption .caption-event .event .day-date {
+    width: 50%;
+  }
+}
+.offcanvas-body .menu-thumb .caption .caption-event .event .day-date .day,
+.offcanvas-body .menu-thumb .caption .caption-event .event .day-date .date {
+  color: hsl(232, 36%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 62rem) {
+  .offcanvas-body .menu-thumb .caption .caption-event .event .day-date .day,
+  .offcanvas-body .menu-thumb .caption .caption-event .event .day-date .date {
+    font-size: 1.125rem;
+  }
+}
+.offcanvas-body .menu-thumb .caption .caption-event .event .divider {
+  width: 100%;
+  height: 0.0625rem;
+  margin: 0.5rem auto;
+  background: hsl(232, 36%, 35%);
+}
+@media screen and (min-width: 48rem) {
+  .offcanvas-body .menu-thumb .caption .caption-event .event .divider {
+    width: 0.0625rem;
+    height: 2.125rem;
+    margin: 0;
+  }
+}
+.offcanvas-body .menu-thumb .caption .caption-event .event .locationbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .offcanvas-body .menu-thumb .caption .caption-event .event .locationbox {
+    width: 50%;
+    padding-left: 1rem;
+  }
+}
+.offcanvas-body .menu-thumb .caption .caption-event .event .locationbox .location {
+  color: hsl(232, 36%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 62rem) {
+  .offcanvas-body .menu-thumb .caption .caption-event .event .locationbox .location {
+    font-size: 1.125rem;
+  }
+}
+.offcanvas-body .menu-thumb .overlay {
+  background: rgba(11, 19, 65, 0.6);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.offcanvas-body .menu-thumb .btn-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 1.875rem;
+  height: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1000;
+}
+.offcanvas-body .menu-thumb .btn-close svg {
+  width: 100%;
+  height: 100%;
+}
+.offcanvas-body .menu-thumb .btn-close:not([disabled]):hover {
+  opacity: 1;
 }
 .offcanvas-body::-webkit-scrollbar {
   background: transparent;
@@ -1301,7 +1511,6 @@ button:not([disabled]):hover,
   position: relative;
   top: 0;
   left: 0;
-  margin-bottom: 1.5rem;
 }
 .home-slider .swiper {
   position: relative;
@@ -1499,48 +1708,6 @@ button:not([disabled]):hover,
 }
 
 /*
- LOVELY-COUPLE-SECTION START
-*/
-.lovely-couple {
-  background: url(../images/lovely-couple/lovely-couple.png) no-repeat center center/cover;
-  padding: 2rem 0.5rem 4rem;
-  position: relative;
-}
-@media screen and (min-width: 62rem) {
-  .lovely-couple {
-    padding: 3rem 0.5rem 6rem;
-  }
-}
-.lovely-couple-details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-.lovely-couple-details .icon {
-  width: 6rem;
-  height: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.lovely-couple-details .icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.lovely-couple-details .textinfo {
-  max-width: 37.75rem;
-  margin-inline: auto;
-}
-.lovely-couple-details .textinfo .section-text {
-  color: hsl(232, 36%, 35%);
-}
-
-/*
  COUPLE-SECTION START
 */
 .copules {
@@ -1572,6 +1739,45 @@ button:not([disabled]):hover,
 .copules .icon svg {
   width: 100%;
   height: 100%;
+}
+.copules .lovely-couple {
+  background: url(../images/lovely-couple/lovely-couple.png) no-repeat center center/cover;
+  padding: 2rem 0.5rem 4rem;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .copules .lovely-couple {
+    padding: 4rem 0.5rem 6rem;
+  }
+}
+.copules .lovely-couple-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.copules .lovely-couple-details .icon {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.copules .lovely-couple-details .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.copules .lovely-couple-details .textinfo {
+  max-width: 37.75rem;
+  margin-inline: auto;
+}
+.copules .lovely-couple-details .textinfo .section-text {
+  color: hsl(232, 36%, 35%);
 }
 
 /*
@@ -2303,6 +2509,19 @@ button:not([disabled]):hover,
 .contact-thumbnail img {
   width: 100%;
   height: 100%;
+}
+
+#meetus,
+#ourstory,
+#whenwhere,
+#events,
+#ourgallery,
+#groomsmen,
+#bridesmaid,
+#contact {
+  overflow: auto;
+  scroll-padding-top: 10.4375rem;
+  scroll-margin-top: 10.4375rem;
 }
 
 /*

@@ -33,6 +33,8 @@ button,
   gap: size(8);
   width: size(28);
   height: size(28);
+  position: relative;
+  z-index: 99999;
 
   .line {
     @include w100;
@@ -55,6 +57,17 @@ button,
         @include transform(translateY(size(-15)) rotate(-45deg));
       }
     }
+  }
+}
+
+.btn-burger {
+  @include transparent-button;
+  @include flex-center-column;
+  width: size(28);
+  height: size(14);
+  
+  svg {
+    @include wh100;
   }
 }
 

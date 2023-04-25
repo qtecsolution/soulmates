@@ -10,7 +10,6 @@
   position: relative;
   top: 0;
   left: 0;
-  margin-bottom: size(24);
   
   @include breakpoint(tab992) {
     // margin-bottom: size(168);
@@ -189,44 +188,6 @@
 }
 
 /*
- LOVELY-COUPLE-SECTION START
-*/
-.lovely-couple {
-  background: url(../images/lovely-couple/lovely-couple.png) no-repeat center center/cover;
-  padding: size(32) size(8) size(64);
-  position: relative;
-
-  @include breakpoint(tab992) {
-    padding: size(48) size(8) size(96);
-  }
-
-  &-details {
-    @include flex-center-column;
-    text-align: center;
-
-    .icon {
-      @include square(96);
-      @include flex-center;
-      overflow: hidden;
-
-      img {
-        @include wh100;
-        object-fit: cover;
-      }
-    }
-
-    .textinfo {
-      max-width: size(604);
-      margin-inline: auto;
-
-      .section-text {
-        color: $footertitle;
-      }
-    }
-  }
-}
-
-/*
  COUPLE-SECTION START
 */
 .copules {
@@ -252,6 +213,42 @@
 
     svg {
       @include wh100;
+    }
+  }
+
+  .lovely-couple {
+    background: url(../images/lovely-couple/lovely-couple.png) no-repeat center center/cover;
+    padding: size(32) size(8) size(64);
+    position: relative;
+  
+    @include breakpoint(tab992) {
+      padding: size(64) size(8) size(96);
+    }
+  
+    &-details {
+      @include flex-center-column;
+      text-align: center;
+      gap: size(16);
+  
+      .icon {
+        @include square(96);
+        @include flex-center;
+        overflow: hidden;
+  
+        img {
+          @include wh100;
+          object-fit: cover;
+        }
+      }
+  
+      .textinfo {
+        max-width: size(604);
+        margin-inline: auto;
+  
+        .section-text {
+          color: $footertitle;
+        }
+      }
     }
   }
 }
@@ -881,4 +878,17 @@
       @include wh100;
     }
   }
+}
+
+#meetus,
+#ourstory,
+#whenwhere,
+#events,
+#ourgallery,
+#groomsmen,
+#bridesmaid,
+#contact {
+  overflow: auto;
+  scroll-padding-top: size(167);
+  scroll-margin-top: size(167);
 }
