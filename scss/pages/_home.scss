@@ -135,6 +135,47 @@
         }
       }
   
+      .slide-caption {
+        @include flex-center-column;
+        gap: size(24);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        text-align: center;
+        z-index: 10;
+
+        .slider-title {
+          color: $white;
+          font-family: $alexbrush;
+          font-weight: 400;
+        }
+
+        @media screen and (max-width: 31.25rem) {
+          .display-1 {
+            font-size: size(24);
+          }
+        }
+
+        .slide-event {
+          @include flex-center-column;
+          gap: size(24);
+
+          .date {
+            color: $white;
+            @include font($tt-nooks-script-trial, 18, normal, normal, 25.2);
+            
+            @include breakpoint(mobile768) {
+              font-family: size(22);
+            }
+
+            @include breakpoint(tab992) {
+              font-size: size(24);
+            }
+          }
+        }
+      }
+  
       .overlay {
         background: rgba($overlaybg, 0.6);
         position: absolute;
@@ -181,6 +222,36 @@
           &::after {
             background: $white;
           }
+        }
+      }
+    }
+
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      @include translateY(-50%);
+      z-index: 100;
+      @include w100;
+      padding-inline: size(48);
+      @include flex-center-between;
+
+      @media screen and (max-width: 31.25rem) {
+        top: 90%;
+      }
+
+      @media screen and (max-width: 31.25rem) {
+        padding-inline: size(24);
+      }
+
+      button {
+        background: transparent;
+        border: 0;
+        width: auto;
+        height: size(64);
+        @include flex-center;
+
+        svg {
+          @include w100;
         }
       }
     }

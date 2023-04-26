@@ -1,12 +1,12 @@
 up({
   // bottom position
-  bottom: '2.75rem',
+  bottom: '1.5rem',
   // right position
   right: '1.5rem',
   // width
-  width: '2.75rem',
+  width: '2.5rem',
   // height
-  height: '2.75rem',
+  height: '2.5rem',
   // background color
   bg: 'hsl(231, 71%, 15%)',
   // custom icon

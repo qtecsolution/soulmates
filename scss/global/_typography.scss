@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
 $calista: 'callista';
 $zagora: 'zagora';
 $tt-nooks-script-trial: 'TT Nooks Script Trial';
+$alexbrush: 'Alex Brush', cursive;
 
 // FONT SIZE PIXEL TO REM
 @function calculateRem($size, $base: 16) {

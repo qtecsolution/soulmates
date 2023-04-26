@@ -5,7 +5,7 @@
 // });
 
 
-const headerEl = document.querySelector('.header');
+const headerEl = document.querySelector('#header');
 
 window.addEventListener('scroll', () => {
   const scrollHeight = window.scrollY;

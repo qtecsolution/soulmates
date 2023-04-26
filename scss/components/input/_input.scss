@@ -4,8 +4,8 @@
 .form-control,
 .form-select {
   &:focus {
-    outline: none;
     box-shadow: none;
+    outline: none;
   }
 }
 
@@ -13,7 +13,18 @@
   box-shadow: none;
   
   &:focus {
-    outline: none;
     box-shadow: none;
+    outline: none;
   }
+}
+
+.was-validated .form-control:valid {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.contact-form .nice-select {
+  border-color: var(--bs-form-valid-border-color);
 }

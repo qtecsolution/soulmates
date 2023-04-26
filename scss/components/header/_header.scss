@@ -104,14 +104,7 @@
       }
 
       .center-icons {
-        .left-bar,
-        .right-bar {
-          svg {
-            line {
-              stroke: $footertitle;
-            }
-          }
-        }
+        display: none;
       }
     }
 
@@ -128,6 +121,118 @@
             stroke: $footertitle;
           }
         }
+      }
+    }
+  }
+}
+
+.header-2 {
+  padding: size(12) size(8);
+
+  .header-nav {
+    @include flex-center-between;
+    
+    @include breakpoint(tab992) {
+      justify-content: center;
+    }
+
+    .logo {
+      .logo-light {
+        @include breakpoint(tab992) {
+          display: none;
+        }
+      }
+    }
+
+    .nav-center {
+      @include flex-center;
+      
+      @include breakpoint(tab992) {
+        display: none;
+      }
+
+      .section-title {
+        color: $white;
+        font-family: $alexbrush;
+        font-size: size(24);
+
+        @include breakpoint(mobile576) {
+          font-size: size(36);
+        }
+      
+        @include breakpoint(mobile768) {
+          font-size: size(44);
+        }
+      
+        @include breakpoint(desktop1200) {
+          font-size: size(53);
+        }
+      }
+    }
+
+    .desktop-menu {
+      display: none;
+
+      @include breakpoint(tab992) {
+        @include flex-center;
+        padding-top: size(20);
+      }
+      
+      .desktoplist {
+        @include list-horizontal;
+        justify-content: center;
+        gap: size(32);
+    
+        @include breakpoint(desktop1024) {
+          gap: size(40);
+        }
+    
+        @include breakpoint(desktop1200) {
+          gap: size(48);
+        }
+
+        &-link {
+          color: $white;
+          font-weight: 400;
+          font-size: size(18);
+    
+          @include breakpoint(desktop1200) {
+            font-size: size(22);
+          }
+        }
+      }
+    }
+
+    .hamburger-menu {
+      @include flex-center;
+
+      @include breakpoint(tab992) {
+        display: none;
+      }
+    }
+  }
+
+  &.header-scrolled {
+    .header-nav {
+      @include breakpoint(tab992) {
+        justify-content: space-between;
+      }
+
+      .nav-center {
+        @include flex-center-column;
+        text-align: center;
+  
+        .section-title {
+          color: $footertitle;
+        }
+      }
+  
+      .desktop-menu {
+        display: none;
+      }
+  
+      .hamburger-menu {
+        @include flex-center;
       }
     }
   }
