@@ -460,9 +460,12 @@ button:not([disabled]):hover,
 }
 
 .up-btn {
-  opacity: 1;
   padding: 0.75rem;
   border: 0;
+  transition: all 350ms ease-in-out;
+}
+.up-btn:not([disabled]):hover {
+  opacity: 1;
 }
 
 .btn-hamburger {
@@ -2519,60 +2522,8 @@ button:not([disabled]):hover,
 #groomsmen,
 #bridesmaid,
 #contact {
-  overflow: auto;
   scroll-padding-top: 10.4375rem;
   scroll-margin-top: 10.4375rem;
-}
-
-/*
- ERROR-SECTION START
-*/
-.error {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  padding: 1rem;
-  background: hsl(0, 0%, 100%);
-}
-.error-thumbnail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-@media screen and (min-width: 36rem) {
-  .error-thumbnail {
-    width: 18.75rem;
-    height: 18.75rem;
-  }
-}
-@media screen and (min-width: 62rem) {
-  .error-thumbnail {
-    width: 30rem;
-    height: 30rem;
-  }
-}
-.error-thumbnail svg {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.error-thumbnail .st0::-moz-selection, .error-thumbnail .st1::-moz-selection, .error-thumbnail .st2::-moz-selection, .error-thumbnail .st3::-moz-selection, .error-thumbnail .st4::-moz-selection, .error-thumbnail .st5::-moz-selection {
-  background: transparent;
-  color: hsl(1, 71%, 54%);
-}
-.error-thumbnail .st0::selection,
-.error-thumbnail .st1::selection,
-.error-thumbnail .st2::selection,
-.error-thumbnail .st3::selection,
-.error-thumbnail .st4::selection,
-.error-thumbnail .st5::selection {
-  background: transparent;
-  color: hsl(1, 71%, 54%);
 }
 
 .section-title {

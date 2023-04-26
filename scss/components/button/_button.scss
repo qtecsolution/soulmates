@@ -22,9 +22,13 @@ button,
 }
 
 .up-btn {
-  opacity: 1;
   padding: size(12);
   border: 0;
+  @include transitionsall;
+
+  @include hover {
+    opacity: 1;
+  }
 }
 
 .btn-hamburger {
