@@ -1,6 +1,9 @@
 @use "../global" as *;
 @use "../partials" as *;
 
+/*
+ COUNTDOWN-SECTION-2 START
+*/
 .countdown-2 {
   padding: size(80) size(8);
   position: relative;
@@ -88,5 +91,56 @@
   .righticon {
     top: size(-20);
     right: size(-20);
+  }
+}
+
+/*
+ COUPLES-SECTION-2 START
+*/
+.couples-2 {
+  background: url(../images/section-background/background-2.png) no-repeat center center/cover;
+  padding: size(80) size(8);
+  position: relative;
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(44);
+    position: relative;
+    z-index: 10;
+
+    .icon {
+      @include square(125);
+      @include flex-center;
+      overflow: hidden;
+
+      @include breakpoint(tab992) {
+        @include square(225);
+      }
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .card-lovely {
+      &-body {
+        .name,
+        .section-text {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    background: rgba($overlaybg, 0.5);
+    position: absolute;
+    inset: 0;
+    @include wh100;
+    z-index: 1;
   }
 }

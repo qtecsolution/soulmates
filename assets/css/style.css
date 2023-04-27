@@ -2740,6 +2740,9 @@ button:not([disabled]):hover,
   scroll-margin-top: 10.4375rem;
 }
 
+/*
+ COUNTDOWN-SECTION-2 START
+*/
 .countdown-2 {
   padding: 5rem 0.5rem;
   position: relative;
@@ -2839,6 +2842,59 @@ button:not([disabled]):hover,
 .countdown-2 .righticon {
   top: -1.25rem;
   right: -1.25rem;
+}
+
+/*
+ COUPLES-SECTION-2 START
+*/
+.couples-2 {
+  background: url(../images/section-background/background-2.png) no-repeat center center/cover;
+  padding: 5rem 0.5rem;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .couples-2 {
+    padding: 7.1875rem 0.5rem;
+  }
+}
+.couples-2-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.75rem;
+  position: relative;
+  z-index: 10;
+}
+.couples-2-content .icon {
+  width: 7.8125rem;
+  height: 7.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 62rem) {
+  .couples-2-content .icon {
+    width: 14.0625rem;
+    height: 14.0625rem;
+  }
+}
+.couples-2-content .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.couples-2-content .card-lovely-body .name,
+.couples-2-content .card-lovely-body .section-text {
+  color: hsl(0, 0%, 100%);
+}
+.couples-2 .overlay {
+  background: rgba(11, 19, 65, 0.5);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .section-title {
