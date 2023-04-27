@@ -2740,6 +2740,107 @@ button:not([disabled]):hover,
   scroll-margin-top: 10.4375rem;
 }
 
+.countdown-2 {
+  padding: 5rem 0.5rem;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-2 {
+    padding: 7.1875rem 0.5rem 10.3125rem;
+  }
+}
+.countdown-2-info .title {
+  color: hsl(232, 36%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .countdown-2-info .title {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .countdown-2-info .title {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+.countdown-2-details .countdown-clock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+.countdown-2-details .countdown-clock .countdown-time {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.countdown-2-details .countdown-clock .countdown-time .days,
+.countdown-2-details .countdown-clock .countdown-time .hours,
+.countdown-2-details .countdown-clock .countdown-time .minutes,
+.countdown-2-details .countdown-clock .countdown-time .seconds {
+  color: hsl(237, 31%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-weight: 700;
+}
+.countdown-2-details .countdown-clock .countdown-time .count-title {
+  color: hsl(237, 31%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-2-details .countdown-clock .countdown-time .count-title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .countdown-2-details .countdown-clock .countdown-time .count-title {
+    font-size: 1.5rem;
+  }
+}
+.countdown-2 .lefticon,
+.countdown-2 .righticon {
+  width: 8.625rem;
+  height: 7.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-2 .lefticon,
+  .countdown-2 .righticon {
+    width: 14.875rem;
+    height: 13.5625rem;
+  }
+}
+.countdown-2 .lefticon svg,
+.countdown-2 .righticon svg {
+  width: 100%;
+}
+.countdown-2 .lefticon {
+  bottom: -1.25rem;
+  left: -1.25rem;
+}
+.countdown-2 .righticon {
+  top: -1.25rem;
+  right: -1.25rem;
+}
+
 .section-title {
   color: hsl(0, 0%, 100%);
   font-family: "callista";
