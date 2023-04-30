@@ -382,11 +382,7 @@
   padding: size(80) size(0);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(0);
-  }
-
-  @include breakpoint(desktop1200) {
-    padding: size(190) size(0) size(200);
+    padding: size(115) size(0) size(115);
   }
 
   &-content {

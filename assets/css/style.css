@@ -3428,12 +3428,7 @@ button:not([disabled]):hover,
 }
 @media screen and (min-width: 62rem) {
   .ourguests {
-    padding: 7.1875rem 0rem;
-  }
-}
-@media screen and (min-width: 75rem) {
-  .ourguests {
-    padding: 11.875rem 0rem 12.5rem;
+    padding: 7.1875rem 0rem 7.1875rem;
   }
 }
 .ourguests-content {
