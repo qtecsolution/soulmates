@@ -232,7 +232,8 @@
     overflow: hidden;
 
     img {
-      @include wh100;
+      @include w100;
+      min-height: size(430);
       @include transitiontransform;
 
       @include hover {
@@ -298,6 +299,30 @@
     padding: size(115) size(8);
   }
 
+  &-body {
+    @include flex-center-vert;
+    flex-wrap: wrap;
+
+    .card-gallery {
+      @include w100;
+
+      @include breakpoint(mobile576) {
+        width: calc(100% / 2);
+      }
+
+      @include breakpoint(mobile768) {
+        width: calc(100% / 3);
+      }
+
+      @include breakpoint(tab992) {
+        width: calc(100% / 4);
+      }
+
+      @include breakpoint(desktop1100) {
+        width: calc(100% / 5);
+      }
+    }
+  }
 }
 
 /*
@@ -347,5 +372,53 @@
   .righticon {
     top: size(0);
     right: size(-40);
+  }
+}
+
+/*
+ OUR-GUESTS-SECTION START
+*/
+.ourguests {
+  padding: size(80) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(0);
+  }
+
+  @include breakpoint(desktop1200) {
+    padding: size(190) size(0) size(200);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(80);
+    text-align: center;
+  }
+
+  .guestlist {
+    @include flex-center-vert;
+    gap: size(8);
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+    .card-flip {
+      @include w100;
+
+      @include breakpoint(mobile576) {
+        width: calc((100% / 2) - size(8));
+      }
+
+      @include breakpoint(mobile768) {
+        width: calc((100% / 3) - size(8));
+      }
+
+      @include breakpoint(tablet991) {
+        width: calc((100% / 4) - size(8));
+      }
+
+      @include breakpoint(desktop1100) {
+        width: calc((100% / 5) - size(8));
+      }
+    }
   }
 }

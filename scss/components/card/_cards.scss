@@ -257,3 +257,114 @@
     }
   }
 }
+
+.card-gallery {
+  @include w100;
+  min-height: size(250);
+  max-height: size(480);
+  @include flex-center;
+  overflow: hidden;
+
+  img {
+    @include w100;
+    min-height: size(250);
+    object-fit: cover;
+    @include transitiontransform;
+
+    @include hover {
+      @include scale(1.1);
+    }
+  }
+}
+
+.card-image {
+  @include w100;
+  min-height: size(240);
+  max-height: size(540);
+  @include flex-center;
+  overflow: hidden;
+
+  img {
+    @include wh100;
+    object-fit: cover;
+    @include transitiontransform;
+
+    @include hover {
+      @include scale(1.1);
+    }
+  }
+}
+
+.card-flip {
+  position: relative;
+  min-height: size(200);
+  max-height: size(420);
+
+  @include breakpoint(desktop1200) {
+    min-height: size(288);
+  }
+
+  .content {
+    position: absolute;
+    @include wh100;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+    .front,
+    .back {
+      position: absolute;
+      @include wh100;
+      backface-visibility: hidden;
+    }
+
+    .front {
+      img {
+        @include w100;
+        min-height: size(200);
+        @include transitiontransform;
+
+        @include breakpoint(desktop1200) {
+          min-height: size(288);
+        }
+    
+        @include hover {
+          @include scale(1.1);
+        }
+      }
+    }
+    
+    .back {
+      background: $cardbackbg;
+      @include flex-center-column;
+      gap: size(8);
+      padding: size(14);
+      text-align: center;
+      @include rotateY(180);
+
+      .name {
+        color: $footertitle;
+        font-weight: 400;
+  
+        @include breakpoint(tab992) {
+          font-size: size(24);
+        }
+      }
+
+      .relationship {
+        color: $textcolor;
+        @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      
+        @include breakpoint(mobile576) {
+          font-size: size(18);
+        }
+      }
+    }
+  }
+
+  @include hover {
+    .content {
+      @include rotateY(180);
+      transition: transform 0.5s;
+    }
+  }
+}
