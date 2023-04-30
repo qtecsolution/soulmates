@@ -63,6 +63,15 @@
   }
 }
 
+.section-link-3 {
+  @include setBgColor(transparent, $footertitle);
+  @include border(solid, 1, $footertitle);
+
+  @include hover {
+    @include setBgColor($footertitle, $white);
+  }
+}
+
 .link-outline {
   @include border(solid, 1, $countdowntext);
   width: size(250);

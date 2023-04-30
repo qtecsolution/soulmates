@@ -184,11 +184,11 @@
  WHEN-WHERE-2-SECTION START
 */
 .whenwhere-2 {
-  padding: size(80) size(8);
+  padding: size(80) size(8) size(0);
   position: relative;
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(115) size(8) size(0);
   }
   
   &-header {
@@ -285,5 +285,67 @@
         font-size: size(18);
       }
     }
+  }
+}
+
+/*
+  OURGALLERY-2-SECTION START
+*/
+.ourgallery-2 {
+  padding: size(80) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+}
+
+/*
+ ATTENDING-2-SECTION START
+*/
+.attending-2 {
+  position: relative;
+  padding: size(80) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  .attending-details {
+    gap: size(32);
+
+    .display-2,
+    .section-text {
+      color: $footertitle;
+    }
+  }
+
+  .lefticon,
+  .righticon {
+    width: size(138);
+    height: size(117);
+    @include flex-center;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+
+    @include breakpoint(tab992) {
+      width: size(238);
+      height: size(217);
+    }
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .lefticon {
+    bottom: 0;
+    left: size(-40);
+  }
+
+  .righticon {
+    top: size(0);
+    right: size(-40);
   }
 }

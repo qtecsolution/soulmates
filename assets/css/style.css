@@ -435,6 +435,13 @@ table tr th, table tr td {
   vertical-align: middle;
 }
 
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: "Alex Brush", cursive;
+}
+
 button,
 [type=button],
 [type=reset],
@@ -3095,12 +3102,12 @@ button:not([disabled]):hover,
  WHEN-WHERE-2-SECTION START
 */
 .whenwhere-2 {
-  padding: 5rem 0.5rem;
+  padding: 5rem 0.5rem 0rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
   .whenwhere-2 {
-    padding: 7.1875rem 0.5rem;
+    padding: 7.1875rem 0.5rem 0rem;
   }
 }
 .whenwhere-2-header {
@@ -3207,6 +3214,69 @@ button:not([disabled]):hover,
   }
 }
 
+/*
+  OURGALLERY-2-SECTION START
+*/
+.ourgallery-2 {
+  padding: 5rem 0.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .ourgallery-2 {
+    padding: 7.1875rem 0.5rem;
+  }
+}
+
+/*
+ ATTENDING-2-SECTION START
+*/
+.attending-2 {
+  position: relative;
+  padding: 5rem 0.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .attending-2 {
+    padding: 7.1875rem 0.5rem;
+  }
+}
+.attending-2 .attending-details {
+  gap: 2rem;
+}
+.attending-2 .attending-details .display-2,
+.attending-2 .attending-details .section-text {
+  color: hsl(232, 36%, 35%);
+}
+.attending-2 .lefticon,
+.attending-2 .righticon {
+  width: 8.625rem;
+  height: 7.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+@media screen and (min-width: 62rem) {
+  .attending-2 .lefticon,
+  .attending-2 .righticon {
+    width: 14.875rem;
+    height: 13.5625rem;
+  }
+}
+.attending-2 .lefticon svg,
+.attending-2 .righticon svg {
+  width: 100%;
+  height: 100%;
+}
+.attending-2 .lefticon {
+  bottom: 0;
+  left: -2.5rem;
+}
+.attending-2 .righticon {
+  top: 0rem;
+  right: -2.5rem;
+}
+
 .section-title {
   color: hsl(0, 0%, 100%);
   font-family: "callista";
@@ -3289,6 +3359,16 @@ button:not([disabled]):hover,
 .section-link-2:not([disabled]):hover {
   background: hsl(0, 0%, 100%);
   color: hsl(237, 31%, 41%);
+}
+
+.section-link-3 {
+  background: transparent;
+  color: hsl(232, 36%, 35%);
+  border: solid 0.0625rem hsl(232, 36%, 35%);
+}
+.section-link-3:not([disabled]):hover {
+  background: hsl(232, 36%, 35%);
+  color: hsl(0, 0%, 100%);
 }
 
 .link-outline {
