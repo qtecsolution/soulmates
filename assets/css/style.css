@@ -1187,7 +1187,7 @@ button:not([disabled]):hover,
 .offcanvas-body .sidemenu {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -1234,6 +1234,10 @@ button:not([disabled]):hover,
 }
 .offcanvas-body .sidemenu-header-icon svg {
   width: 100%;
+}
+.offcanvas-body .sidemenu .sidenav {
+  position: relative;
+  z-index: 200;
 }
 .offcanvas-body .sidemenu .sidenav .sidelist {
   margin: 0;
@@ -1284,10 +1288,101 @@ button:not([disabled]):hover,
 .offcanvas-body .sidemenu .icon svg {
   width: 100%;
 }
+.offcanvas-body .sidemenu-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-top: 6rem;
+}
+@media screen and (min-width: 62rem) {
+  .offcanvas-body .sidemenu-top {
+    margin-bottom: 2.5rem;
+  }
+}
+.offcanvas-body .sidemenu-top .title {
+  font-family: "Alex Brush", cursive;
+  position: relative;
+  z-index: 100;
+  margin-top: -5rem;
+}
+.offcanvas-body .sidemenu-top-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.5rem;
+  height: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+@media screen and (min-width: 62rem) {
+  .offcanvas-body .sidemenu-top-icon {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+.offcanvas-body .sidemenu-top-icon svg {
+  width: 100%;
+}
+.offcanvas-body .sidemenu-top-icon svg rect {
+  width: 100%;
+}
+.offcanvas-body .sidemenu .righticon {
+  position: absolute;
+  bottom: -0.625rem;
+  right: 0rem;
+  width: 5rem;
+  height: 6.5625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 48rem) {
+  .offcanvas-body .sidemenu .righticon {
+    width: 8.75rem;
+    height: 10.9375rem;
+  }
+}
+.offcanvas-body .sidemenu .righticon svg {
+  width: 100%;
+}
+.offcanvas-body .sidemenu .righticon svg rect {
+  width: 100%;
+}
+.offcanvas-body .sidemenu .btn-close {
+  background: transparent;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 1.875rem;
+  height: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1000;
+}
+.offcanvas-body .sidemenu .btn-close svg {
+  width: 100%;
+  height: 100%;
+}
+.offcanvas-body .sidemenu .btn-close:not([disabled]):hover {
+  opacity: 1;
+}
 .offcanvas-body .menu-thumb {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+}
+.offcanvas-body .menu-thumb img {
+  width: 100%;
+  min-height: 100vh;
 }
 .offcanvas-body .menu-thumb .caption {
   display: flex;
@@ -1421,6 +1516,7 @@ button:not([disabled]):hover,
   z-index: 1;
 }
 .offcanvas-body .menu-thumb .btn-close {
+  background: transparent;
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -1438,6 +1534,73 @@ button:not([disabled]):hover,
 }
 .offcanvas-body .menu-thumb .btn-close:not([disabled]):hover {
   opacity: 1;
+}
+.offcanvas-body .menu-thumbnail {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.offcanvas-body .menu-thumbnail img {
+  width: 100%;
+  min-height: 100vh;
+}
+.offcanvas-body .menu-thumbnail .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
+}
+.offcanvas-body .menu-thumbnail .info .title {
+  color: hsl(0, 0%, 100%);
+  font-family: "Alex Brush", cursive;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 36rem) {
+  .offcanvas-body .menu-thumbnail .info .title {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .offcanvas-body .menu-thumbnail .info .title {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .offcanvas-body .menu-thumbnail .info .title {
+    font-size: 3.3125rem;
+  }
+}
+.offcanvas-body .menu-thumbnail .info .date {
+  color: hsl(0, 0%, 100%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 48rem) {
+  .offcanvas-body .menu-thumbnail .info .date {
+    font-family: 1.375rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .offcanvas-body .menu-thumbnail .info .date {
+    font-size: 1.5rem;
+  }
+}
+.offcanvas-body .menu-thumbnail .overlay {
+  background: rgba(11, 19, 65, 0.6);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 .offcanvas-body::-webkit-scrollbar {
   background: transparent;
