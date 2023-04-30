@@ -2394,6 +2394,7 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 .empty-banner .empty-thumbnail img {
   width: 100%;
@@ -3060,6 +3061,152 @@ button:not([disabled]):hover,
   z-index: 1;
 }
 
+/*
+ LOVE-STORY-SECTION-2 START
+*/
+.lovestory-2 .lovestory-footer .section-title {
+  font-family: "Alex Brush", cursive;
+}
+
+/*
+ EMPTY-BANNER-2-SECTION START
+*/
+.empty-banner-2 .empty-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  z-index: 100;
+  overflow: hidden;
+}
+.empty-banner-2 .empty-info .section-title {
+  font-family: "Alex Brush", cursive;
+}
+.empty-banner-2 .empty-info .section-text {
+  margin-top: -1.5rem;
+}
+
+/*
+ WHEN-WHERE-2-SECTION START
+*/
+.whenwhere-2 {
+  padding: 5rem 0.5rem;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-2 {
+    padding: 7.1875rem 0.5rem;
+  }
+}
+.whenwhere-2-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-2-header {
+    margin-bottom: 5rem;
+  }
+}
+.whenwhere-2-header .title {
+  font-size: 1.75rem;
+  color: hsl(232, 36%, 35%);
+  font-weight: 400;
+}
+@media screen and (min-width: 48rem) {
+  .whenwhere-2-header .title {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-2-header .title {
+    font-size: 2.625rem;
+  }
+}
+.whenwhere-2-header .text {
+  color: hsl(230, 14%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-2-header .text {
+    font-size: 1.125rem;
+  }
+}
+.whenwhere-2 .whenwhere-thumb {
+  width: 100%;
+  min-height: 26.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.whenwhere-2 .whenwhere-thumb img {
+  width: 100%;
+  height: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.whenwhere-2 .whenwhere-thumb img:not([disabled]):hover {
+  transform: scale(1.1);
+}
+.whenwhere-2 .whenwhere-detail {
+  background: hsl(237, 31%, 41%);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  height: 100%;
+}
+.whenwhere-2 .whenwhere-detail .icon-title .icon {
+  width: 9.375rem;
+  height: 9.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.whenwhere-2 .whenwhere-detail .icon-title .icon svg {
+  width: 100%;
+}
+.whenwhere-2 .whenwhere-detail .icon-title .title {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-2 .whenwhere-detail .icon-title .title {
+    font-size: 1.5rem;
+  }
+}
+.whenwhere-2 .whenwhere-detail .textinfo {
+  max-width: 26.25rem;
+}
+.whenwhere-2 .whenwhere-detail .text {
+  color: hsl(0, 0%, 100%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 62rem) {
+  .whenwhere-2 .whenwhere-detail .text {
+    font-size: 1.125rem;
+  }
+}
+
 .section-title {
   color: hsl(0, 0%, 100%);
   font-family: "callista";
@@ -3132,6 +3279,16 @@ button:not([disabled]):hover,
 .section-link:not([disabled]):hover {
   background: hsl(237, 31%, 41%);
   color: hsl(0, 0%, 100%);
+}
+
+.section-link-2 {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(0, 0%, 100%);
+}
+.section-link-2:not([disabled]):hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(237, 31%, 41%);
 }
 
 .link-outline {

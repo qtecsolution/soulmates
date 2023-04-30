@@ -144,3 +144,146 @@
     z-index: 1;
   }
 }
+
+/*
+ LOVE-STORY-SECTION-2 START
+*/
+.lovestory-2 {
+  .lovestory-footer {
+    .section-title {
+      font-family: $alexbrush;
+    }
+  }
+}
+
+/*
+ EMPTY-BANNER-2-SECTION START
+*/
+.empty-banner-2 {
+  .empty-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    @include flex-center-column;
+    gap: size(40);
+    z-index: 100;
+    overflow: hidden;
+
+    .section-title {
+      font-family: $alexbrush;
+    }
+
+    .section-text {
+      margin-top: size(-24);
+    }
+  }
+}
+
+/*
+ WHEN-WHERE-2-SECTION START
+*/
+.whenwhere-2 {
+  padding: size(80) size(8);
+  position: relative;
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+  
+  &-header {
+    @include flex-center-column;
+    gap: size(32);
+    text-align: center;
+    margin-bottom: size(48);
+
+    @include breakpoint(tab992) {
+      margin-bottom: size(80);
+    }
+
+    .title {
+      font-size: size(28);
+      color: $footertitle;
+      font-weight: 400;
+
+      @include breakpoint(mobile768) {
+        font-size: size(32);
+      }
+
+      @include breakpoint(tab992) {
+        font-size: size(42);
+      }
+    }
+
+    .text {
+      color: $textcolor;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+    }
+  }
+
+  .whenwhere-thumb {
+    @include w100;
+    min-height: size(430);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  .whenwhere-detail {
+    background: $countdowntext;
+    padding: size(40);
+    @include flex-column;
+    gap: size(40);
+    @include wh100;
+
+    @include breakpoint(tab992) {
+      // padding: size(150);
+    }
+
+    .icon-title {
+      .icon {
+        @include square(150);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include w100;
+        }
+      }
+
+      .title {
+        color: $white;
+        font-weight: 400;
+  
+        @include breakpoint(tab992) {
+          font-size: size(24);
+        }
+      }
+    }
+
+    .textinfo {
+      max-width: size(420);
+    }
+
+    .text {
+      color: $white;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+    }
+  }
+}

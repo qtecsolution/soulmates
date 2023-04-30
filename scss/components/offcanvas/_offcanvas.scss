@@ -184,10 +184,6 @@
           position: relative;
           z-index: 100;
           margin-top: size(-80);
-          
-          // @include breakpoint(tab992) {
-          //   margin-top: size(32);
-          // }
         }
 
         &-icon {

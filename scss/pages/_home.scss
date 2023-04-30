@@ -524,6 +524,7 @@
     @include wh100;
     @include flex-center;
     overflow: hidden;
+    position: relative;
 
     img {
       @include wh100;
