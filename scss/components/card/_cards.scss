@@ -368,3 +368,89 @@
     }
   }
 }
+
+.whenwhere-card {
+  @include flex-column;
+  gap: size(32);
+  
+  @include breakpoint(tab992) {
+    gap: size(44);
+  }
+
+  &-thumb {
+    @include w100;
+    min-height: size(300);
+    max-height: size(440);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-detail {
+    background: rgba($countdowntext, 0.05);
+    @include flex-column;
+    gap: size(16);
+    position: relative;
+    padding: size(20);
+  
+    @include breakpoint(tab992) {
+      padding: size(32);
+    }
+
+    .title {
+      color: $countdowntext;
+      font-size: size(24);
+      color: $footertitle;
+      font-weight: 400;
+
+      @include breakpoint(mobile768) {
+        font-size: size(28);
+      }
+
+      @include breakpoint(tab992) {
+        font-size: size(34);
+      }
+    }
+
+    .textbox {
+      max-width: size(462);
+
+      .text {
+        color: $countdowntext;
+        @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+
+        @include breakpoint(tab992) {
+          font-size: size(18);
+        }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      @include translateY(-50%);
+      right: size(32);
+      @include square(100);
+      @include flex-center;
+      overflow: hidden;
+      z-index: -1;
+  
+      @include breakpoint(desktop1400) {
+        @include square(178);
+      }
+
+      svg {
+        @include wh100;
+      }
+    }
+  }
+}
