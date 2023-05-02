@@ -380,7 +380,7 @@
     }
   }
 
-  .location {
+  .maplocation {
     background: $white;
     box-shadow: $cardshadow;
     @include flex-center;
@@ -394,8 +394,10 @@
       padding: size(20);
     }
 
-    img {
-      @include wh100;
+    iframe {
+      @include w100;
+      min-height: size(350);
+      max-height: size(530);
     }
   }
 

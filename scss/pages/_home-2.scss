@@ -382,7 +382,7 @@
   padding: size(80) size(0);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(0) size(115);
+    padding: size(115) size(0);
   }
 
   &-content {
@@ -415,6 +415,162 @@
       @include breakpoint(desktop1100) {
         width: calc((100% / 5) - size(8));
       }
+    }
+  }
+}
+
+/*
+ LOCATION-SECTION START
+*/
+.locationmap {
+  padding: size(0) size(8) size(80);
+
+  @include breakpoint(tab992) {
+    padding: size(0) size(8) size(115);
+  }
+
+  &-box {
+    @include flex-center;
+    @include w100;
+    min-height: size(360);
+    max-height: size(530);
+
+    iframe {
+      @include w100;
+      min-height: size(350);
+      max-height: size(530);
+    }
+  }
+
+}
+
+/*
+ CONTACT-2-SECTION START
+*/
+.contact-2 {
+  background: $bodybg;
+  padding: size(80) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  .contact-form {
+    @include flex-column;
+    gap: size(80);
+    padding-left: size(12);
+    padding-right: size(12);
+    
+    @include breakpoint(tab992) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .section-title {
+      color: $footertitle;
+    }
+
+    .custom-radio {
+      .radio-input {
+        &:checked ~ .radio-label {
+          &::after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      .radio-label {
+        position: relative;
+        color: $radiotext;
+        cursor: pointer;
+        @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+        padding-left: size(30);
+
+        @include breakpoint(tab992) {
+          font-size: size(18);
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          @include translateY(-50%);
+          left: 0;
+        }
+
+        &::before {
+          @include square(18);
+          @include border(solid, 1, $radiotext);
+          @include circle;
+          @include transitiontransform;
+        }
+
+        &::after {
+          background: $radiotext;
+          @include square(9);
+          @include circle;
+          left: size(4.5);
+          opacity: 0;
+          visibility: hidden;
+          @include transitiontransform;
+        }
+      }
+    }
+
+    .confirm-attend {
+      @include flex-center-vert;
+      gap: size(32);
+
+      @include breakpoint(tab992) {
+        gap: size(80);  
+      }
+    }
+
+    .form-control {
+      @include setBgColor(transparent, $radiotext);
+      @include radius(0);
+      border: 0;
+      @include border-single(bottom, solid, 1, $radiotext);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      padding: size(14) size(20);
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      &::placeholder {
+        color: $radiotext;
+      }
+    }
+
+    .nice-select {
+      @include setBgColor(transparent, $radiotext);
+      @include radius(0);
+      border: 0;
+      @include border-single(bottom, solid, 1, $radiotext);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      padding: size(14) size(20);
+      height: auto;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      .option {
+        color: $countdowntext;
+      }
+    }
+  }
+
+  .contact-thumbnail {
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+    
+    img {
+      @include wh100;
     }
   }
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+@import url("https://fonts.cdnfonts.com/css/vivaldi");
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
@@ -549,6 +550,36 @@ button:not([disabled]):hover,
   }
 }
 .btn-submit:not([disabled]):hover {
+  background: hsl(231, 71%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn-submit-2 {
+  border: 0;
+  background: hsl(231, 37%, 35%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 3.125rem;
+  border-radius: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+  width: 100%;
+  padding: 0.875rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 350ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .btn-submit-2 {
+    font-size: 1.125rem;
+  }
+}
+.btn-submit-2:not([disabled]):hover {
   background: hsl(231, 71%, 15%);
   color: hsl(0, 0%, 100%);
 }
@@ -1877,6 +1908,62 @@ button:not([disabled]):hover,
   right: 0;
 }
 
+.footer-2 {
+  padding: 6rem 0;
+}
+@media screen and (min-width: 62rem) {
+  .footer-2 {
+    padding: 9rem 0 8rem;
+  }
+}
+.footer-2 .footer-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.footer-2 .footer-info .section-title {
+  color: hsl(232, 36%, 35%);
+  font-family: "Alex Brush", cursive;
+  text-transform: capitalize;
+}
+.footer-2 .footer-info .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: -1;
+}
+@media screen and (min-width: 36rem) {
+  .footer-2 .footer-info .icon {
+    width: 7.3125rem;
+    height: 8.625rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .footer-2 .footer-info .icon {
+    width: 13.5625rem;
+    height: 14.875rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .footer-2 .footer-info .icon {
+    width: 13.5625rem;
+    height: 14.875rem;
+  }
+}
+.footer-2 .footer-info .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 .custom-radio .radio-input:checked ~ .radio-label::after {
   opacity: 1;
   visibility: visible;
@@ -2345,7 +2432,7 @@ button:not([disabled]):hover,
     font-size: 1.125rem;
   }
 }
-.whenwhere .location {
+.whenwhere .maplocation {
   background: hsl(0, 0%, 100%);
   box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
   display: flex;
@@ -2358,13 +2445,14 @@ button:not([disabled]):hover,
   padding: 1rem;
 }
 @media screen and (min-width: 62rem) {
-  .whenwhere .location {
+  .whenwhere .maplocation {
     padding: 1.25rem;
   }
 }
-.whenwhere .location img {
+.whenwhere .maplocation iframe {
   width: 100%;
-  height: 100%;
+  min-height: 21.875rem;
+  max-height: 33.125rem;
 }
 .whenwhere .icon {
   width: 10rem;
@@ -3428,7 +3516,7 @@ button:not([disabled]):hover,
 }
 @media screen and (min-width: 62rem) {
   .ourguests {
-    padding: 7.1875rem 0rem 7.1875rem;
+    padding: 7.1875rem 0rem;
   }
 }
 .ourguests-content {
@@ -3468,6 +3556,174 @@ button:not([disabled]):hover,
   .ourguests .guestlist .card-flip {
     width: calc(20% - 0.5rem);
   }
+}
+
+/*
+ LOCATION-SECTION START
+*/
+.locationmap {
+  padding: 0rem 0.5rem 5rem;
+}
+@media screen and (min-width: 62rem) {
+  .locationmap {
+    padding: 0rem 0.5rem 7.1875rem;
+  }
+}
+.locationmap-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 22.5rem;
+  max-height: 33.125rem;
+}
+.locationmap-box iframe {
+  width: 100%;
+  min-height: 21.875rem;
+  max-height: 33.125rem;
+}
+
+/*
+ CONTACT-2-SECTION START
+*/
+.contact-2 {
+  background: hsl(0, 33%, 98%);
+  padding: 5rem 0.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .contact-2 {
+    padding: 7.1875rem 0.5rem;
+  }
+}
+.contact-2 .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+@media screen and (min-width: 62rem) {
+  .contact-2 .contact-form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.contact-2 .contact-form .section-title {
+  color: hsl(232, 36%, 35%);
+}
+.contact-2 .contact-form .custom-radio .radio-input:checked ~ .radio-label::after {
+  opacity: 1;
+  visibility: visible;
+}
+.contact-2 .contact-form .custom-radio .radio-label {
+  position: relative;
+  color: hsl(231, 37%, 35%);
+  cursor: pointer;
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+  padding-left: 1.875rem;
+}
+@media screen and (min-width: 62rem) {
+  .contact-2 .contact-form .custom-radio .radio-label {
+    font-size: 1.125rem;
+  }
+}
+.contact-2 .contact-form .custom-radio .radio-label::before, .contact-2 .contact-form .custom-radio .radio-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.contact-2 .contact-form .custom-radio .radio-label::before {
+  width: 1.125rem;
+  height: 1.125rem;
+  border: solid 0.0625rem hsl(231, 37%, 35%);
+  border-radius: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.contact-2 .contact-form .custom-radio .radio-label::after {
+  background: hsl(231, 37%, 35%);
+  width: 0.5625rem;
+  height: 0.5625rem;
+  border-radius: 100%;
+  left: 0.28125rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 350ms ease-in-out;
+}
+.contact-2 .contact-form .confirm-attend {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .contact-2 .contact-form .confirm-attend {
+    gap: 5rem;
+  }
+}
+.contact-2 .contact-form .form-control {
+  background: transparent;
+  color: hsl(231, 37%, 35%);
+  border-radius: 0rem;
+  border-radius: 0rem;
+  border: 0;
+  border-bottom: solid 0.0625rem hsl(231, 37%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+  padding: 0.875rem 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .contact-2 .contact-form .form-control {
+    font-size: 1.125rem;
+  }
+}
+.contact-2 .contact-form .form-control::-moz-placeholder {
+  color: hsl(231, 37%, 35%);
+}
+.contact-2 .contact-form .form-control::placeholder {
+  color: hsl(231, 37%, 35%);
+}
+.contact-2 .contact-form .nice-select {
+  background: transparent;
+  color: hsl(231, 37%, 35%);
+  border-radius: 0rem;
+  border-radius: 0rem;
+  border: 0;
+  border-bottom: solid 0.0625rem hsl(231, 37%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+  padding: 0.875rem 1.25rem;
+  height: auto;
+}
+@media screen and (min-width: 62rem) {
+  .contact-2 .contact-form .nice-select {
+    font-size: 1.125rem;
+  }
+}
+.contact-2 .contact-form .nice-select .option {
+  color: hsl(237, 31%, 41%);
+}
+.contact-2 .contact-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.contact-2 .contact-thumbnail img {
+  width: 100%;
+  height: 100%;
 }
 
 .section-title {
