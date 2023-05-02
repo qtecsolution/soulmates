@@ -146,3 +146,54 @@
     }
   }
 }
+
+.footer-3 {
+  padding: size(96) 0;
+
+  @include breakpoint(tab992) {
+    padding: size(144) 0 size(128);
+  }
+
+  .footer-info {
+    position: relative;
+    @include flex-center;
+    text-align: center;
+
+    .section-title {
+      color: $footertitle;
+      font-family: $vivaldi;
+      text-transform: capitalize;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+      width: size(96);
+      height: size(80);
+      @include flex-center;
+      overflow: hidden;
+      z-index: -1;
+      
+      @include breakpoint(mobile576) {
+        width: size(117);
+        height: size(138);
+      }
+      
+      @include breakpoint(mobile768) {
+        width: size(217);
+        height: size(238);
+      }
+      
+      @include breakpoint(tab992) {
+        width: size(217);
+        height: size(238);
+      }
+    
+      svg {
+        @include wh100;
+      }
+    }
+  }
+}

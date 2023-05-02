@@ -586,6 +586,44 @@
     }
   }
 
+  .loveslider {
+    @include flex-center-vert;
+    gap: size(8);
+    overflow: hidden;
+    @include w100;
+
+    .js-marquee {
+      @include flex-center-vert;
+      gap: size(8);
+      overflow: hidden;
+      @include w100;
+    }
+
+    .love-card {
+      min-width: size(300);
+      max-width: size(360);
+
+      &-detail {
+        align-items: center;
+        text-align: center;
+
+        .info {
+          max-width: size(320);
+          margin-inline: auto;
+        }
+
+        .lovetext {
+          @include line-clamp;
+        }
+      }
+
+      @include breakpoint(tab992) {
+        min-width: size(360);
+        max-width: size(460);
+      }
+    }
+  }
+
   &-footer {
     @include flex-center;
     position: relative;

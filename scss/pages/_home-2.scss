@@ -343,6 +343,10 @@
     .section-text {
       color: $footertitle;
     }
+
+    .display-2 {
+      font-family: $alexbrush;
+    }
   }
 
   .lefticon,
@@ -441,7 +445,6 @@
       max-height: size(530);
     }
   }
-
 }
 
 /*
@@ -468,6 +471,7 @@
 
     .section-title {
       color: $footertitle;
+      font-family: $alexbrush;
     }
 
     .custom-radio {

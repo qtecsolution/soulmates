@@ -1,3 +1,338 @@
 @use "../global" as *;
 @use "../partials" as *;
 
+/*
+ OURGALLERY-3-SECTION START
+*/
+.ourgallery-3 {
+  padding: size(80) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  .newgallery {
+    @include flex-center-vert;
+    flex-wrap: wrap;
+
+    .card-gallery {
+      @include w100;
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        object-fit: cover;
+        @include transitiontransform;
+    
+        @include hover {
+          @include scale(1.1);
+        }
+      }
+
+      @include breakpoint(mobile576) {
+        width: calc(100% / 2);
+      }
+
+      @include breakpoint(mobile768) {
+        width: calc(100% / 3);
+        height: size(248);
+      }
+
+      @include breakpoint(tab992) {
+        width: calc(100% / 4);
+      }
+
+      @include breakpoint(desktop1100) {
+        width: calc(100% / 5);
+      }
+
+      @include breakpoint(desktop1400) {
+        width: calc(100% / 8);
+      }
+    }
+  }
+}
+
+/*
+ LOVESTORY-3-SECTION START
+*/
+.lovestory-3 {
+  .lovestory-footer {
+    .section-title {
+      font-family: $vivaldi;
+    }
+  }
+}
+/*
+ LOCATIONMAP-2-SECTION START
+*/
+.locationmap-2 {
+  padding: size(0) size(8) size(80);
+  position: relative;
+
+  @include breakpoint(tab992) {
+    padding: size(0) size(8) size(115);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(80);
+    text-align: center;
+  }
+
+  .title {
+    color: $footertitle;
+    font-family: $tt-nooks-script-trial;
+  }
+
+  .locationmap-box {
+    @include flex-center;
+    @include w100;
+    min-height: size(360);
+    max-height: size(530);
+    @include border(solid, 20, $mapborder);
+    box-shadow: $cardshadow;
+    position: relative;
+    z-index: 100;
+
+    iframe {
+      @include w100;
+      min-height: size(350);
+      max-height: size(530);
+      position: relative;
+      z-index: 100;
+    }
+  }
+
+  .lefticon,
+  .righticon {
+    width: size(138);
+    height: size(117);
+    @include flex-center;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+
+    @include breakpoint(tab992) {
+      width: size(238);
+      height: size(217);
+    }
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .lefticon {
+    bottom: size(-0);
+    left: size(-42);
+  }
+
+  .righticon {
+    top: size(-20);
+    right: size(-42);
+  }
+}
+
+/*
+ EMPTY-BANNER-3-SECTION START
+*/
+.empty-banner-3 {
+  @include breakpoint(desktop1200) {
+    height: size(600);
+    max-height: size(600);
+  }
+
+  .empty-thumbnail {
+    @include breakpoint(desktop1200) {
+      height: size(600);
+      max-height: size(600);
+    }
+  }
+}
+
+/*
+ ATTENDING-3-SECTION START
+*/
+.attending-3 {
+  position: relative;
+  padding: size(80) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  .attending-details {
+    gap: size(32);
+
+    .display-2,
+    .section-text {
+      color: $footertitle;
+    }
+
+    .display-2 {
+      font-family: $vivaldi;
+    }
+  }
+
+  .lefticon,
+  .righticon {
+    width: size(138);
+    height: size(117);
+    @include flex-center;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    @include translateY(-50%);
+    z-index: 1;
+
+    @include breakpoint(tab992) {
+      width: size(238);
+      height: size(217);
+    }
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .lefticon {
+    left: size(-40);
+  }
+
+  .righticon {
+    right: size(-40);
+  }
+}
+/*
+ CONTACT-3-SECTION START
+*/
+.contact-3 {
+  background: $bodybg;
+  padding: size(80) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  .contact-form {
+    @include flex-column;
+    gap: size(80);
+    padding-left: size(12);
+    padding-right: size(12);
+    
+    @include breakpoint(tab992) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .section-title {
+      color: $footertitle;
+      font-family: $vivaldi;
+    }
+
+    .custom-radio {
+      .radio-input {
+        &:checked ~ .radio-label {
+          &::after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      .radio-label {
+        position: relative;
+        color: $radiotext;
+        cursor: pointer;
+        @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+        padding-left: size(30);
+
+        @include breakpoint(tab992) {
+          font-size: size(18);
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          @include translateY(-50%);
+          left: 0;
+        }
+
+        &::before {
+          @include square(18);
+          @include border(solid, 1, $radiotext);
+          @include circle;
+          @include transitiontransform;
+        }
+
+        &::after {
+          background: $radiotext;
+          @include square(9);
+          @include circle;
+          left: size(4.5);
+          opacity: 0;
+          visibility: hidden;
+          @include transitiontransform;
+        }
+      }
+    }
+
+    .confirm-attend {
+      @include flex-center-vert;
+      gap: size(32);
+
+      @include breakpoint(tab992) {
+        gap: size(80);  
+      }
+    }
+
+    .form-control {
+      @include setBgColor(transparent, $radiotext);
+      @include radius(0);
+      border: 0;
+      @include border-single(bottom, solid, 1, $radiotext);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      padding: size(14) size(20);
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      &::placeholder {
+        color: $radiotext;
+      }
+    }
+
+    .nice-select {
+      @include setBgColor(transparent, $radiotext);
+      @include radius(0);
+      border: 0;
+      @include border-single(bottom, solid, 1, $radiotext);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      padding: size(14) size(20);
+      height: auto;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      .option {
+        color: $countdowntext;
+      }
+    }
+  }
+
+  .contact-thumbnail {
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+    
+    img {
+      @include wh100;
+    }
+  }
+}
