@@ -21,6 +21,10 @@
     width: 100% !important;
   }
 
+  &.mobilemenu {
+    width: 100% !important;
+  }
+
   &.offcanvas-top {
     border-bottom: 0;
     height: 100vh;
@@ -108,6 +112,10 @@
           @include breakpoint(desktop1200) {
             font-size: size(32);
           }
+        }
+
+        .menutitle {
+          font-family: $vivaldi;
         }
 
         &-icon {

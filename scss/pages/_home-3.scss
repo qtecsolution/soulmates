@@ -2,13 +2,59 @@
 @use "../partials" as *;
 
 /*
+ HOME-SLIDER-SECTION START
+*/
+.home-slider {
+  .homefadeslider {
+    position: relative;
+
+    .swiper-slide {
+      .slider-title {
+        font-family: $vivaldi;
+      }
+    }
+
+    .arrow {
+      width: size(8);
+      height: size(64);
+      @include flex-center;
+      overflow: hidden;
+      position: absolute;
+      bottom: size(32);
+      left: 50%;
+      @include translateX(-50%);
+      z-index: 100;
+      animation: bounce 1600ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+      svg {
+        @include wh100;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          @include translateY(0);
+        }
+
+        30% {
+          @include translateY(size(-30));
+        }
+
+        60% {
+          @include translateY(size(-15));
+        }
+      }
+    }
+  }
+}
+
+/*
  OURGALLERY-3-SECTION START
 */
 .ourgallery-3 {
-  padding: size(80) size(8);
+  padding: size(80) size(0);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(115) size(0);
   }
 
   .newgallery {

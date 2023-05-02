@@ -81,7 +81,7 @@
     }
   }
 
-  &.header-scrolled {
+  &.header-fixed {
     background: $white;
     box-shadow: $cardshadow;
     position: fixed;
@@ -212,7 +212,7 @@
     }
   }
 
-  &.header-scrolled {
+  &.header-fixed {
     .header-nav {
       @include breakpoint(tab992) {
         justify-content: space-between;
@@ -236,4 +236,80 @@
       }
     }
   }
+}
+
+.header-3 {
+  background: $white;
+  height: size(80);
+  @include flex-center-vert;
+
+  .header-nav {
+    @include flex-center-between;
+
+    .nav-center {
+      .menulogo {
+        @include flex-center;
+
+        .section-title {
+          color: $footertitle;
+          @include font($vivaldi, 18, normal, normal, 25.2);
+          text-transform: capitalize;
+  
+          @include breakpoint(mobile768) {
+            font-size: size(24);
+          }
+        
+          @include breakpoint(tab992) {
+            font-size: size(28);
+          }
+        
+          @include breakpoint(desktop1200) {
+            font-size: size(32);
+          }
+        }
+      }
+    }
+
+    .desktop-menu {
+      display: none;
+
+      @include breakpoint(tab992) {
+        @include flex-center;
+      }
+
+      .desktoplist {
+        @include list-horizontal;
+        justify-content: flex-end;
+
+        @include breakpoint(desktop1600) {
+          gap: size(32);
+        }
+
+        &-link {
+          color: $footertitle;
+          font-weight: 400;
+          font-size: size(18);
+          padding: size(8) size(16);
+        }
+      }
+    }
+
+    .hamburger-menu {
+      @include flex-center;
+
+      @include breakpoint(tab992) {
+        display: none;
+      }
+    }
+  }
+}
+
+.sticky-header {
+  box-shadow: $cardshadow;
+  position: fixed;
+  top: 0;
+  @include w100;
+  z-index: 1030;
+  @extend %animation;
+  @extend %slideDownIn;
 }

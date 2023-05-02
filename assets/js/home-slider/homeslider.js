@@ -3,6 +3,7 @@ const homeSlider = new Swiper(".homeslider", {
     delay: 5000,
     disableOnInteraction: false,
   },
+	slidesPerView: 1,
   centeredSlides: true,
   grabCursor: true,
   loop: true,
