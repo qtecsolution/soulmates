@@ -101,6 +101,133 @@
 }
 
 /*
+ COUNTDOWN-3-SECTION START
+*/
+.countdown-3 {
+  padding: size(80) size(8);
+  position: relative;
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8) size(165);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(48);
+    text-align: center;
+    
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+  }
+
+  &-info {
+    .title {
+      color: $footertitle;
+      @include font($tt-nooks-script-trial, 20, normal, normal, 28);
+      text-align: center;
+
+      @include breakpoint(mobile576) {
+        font-size: size(24);
+      }
+    
+      @include breakpoint(mobile768) {
+        font-size: size(28);
+      }
+    
+      @include breakpoint(tab992) {
+        font-size: size(32);
+      }
+    }
+  }
+  
+  &-details {
+    background: $white;
+    box-shadow: $cardshadow;
+    flex-grow: 1;
+    @include w100;
+    padding: size(24);
+
+    @include breakpoint(tab992) {
+      padding: size(48);
+    }
+
+    .countdown-clock {
+      @include flex-center-between;
+      gap: size(20);
+
+      .countdown-time {
+        width: calc(100% / 4);
+        @include flex-center-column;
+        gap: size(4);
+
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+          color: $countdowntext;
+          font-family: $tt-nooks-script-trial;
+          font-weight: 700;
+        }
+
+        .count-title {
+          color: $countdowntext;
+          @include font($tt-nooks-script-trial, 18, light, normal, 25.2);
+
+          @include breakpoint(tab992) {
+            font-size: size(20);
+          }
+
+          @include breakpoint(desktop1200) {
+            font-size: size(24);
+          }
+        }
+      }
+    }
+  }
+
+
+  .lefticon,
+  .righticon {
+    width: size(138);
+    height: size(117);
+    @include flex-center;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+
+    @include breakpoint(tab992) {
+      width: size(238);
+      height: size(217);
+    }
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .lefticon {
+    align-self: flex-start;
+    margin : size(0) size(0) size(0) size(-80);
+    top: size(32);
+
+    @include breakpoint(tab992) {
+      margin: size(0);
+      top: size(0);
+    }
+  }
+
+  .righticon {
+    align-self: flex-end;
+    margin : size(-32) size(-80) size(0) size(0);
+
+    @include breakpoint(tab992) {
+      margin: size(0);
+    }
+  }
+}
+
+/*
  WHENWHERE-3-SECTION START
 */
 .whenwhere-3 {

@@ -39,5 +39,5 @@ function initializeClock(id, endtime) {
   let timeinterval = setInterval(updateClock, 1000);
 }
 
-let deadline = new Date(Date.parse(new Date()) + 360 * 24 * 60 * 60 * 1000);
+let deadline = new Date(Date.parse(new Date()) + 300 * 24 * 60 * 60 * 1000);
 initializeClock('countdown', deadline);

@@ -1362,10 +1362,10 @@ button:not([disabled]):hover,
 .header-3 .header-nav .nav-center .menulogo .section-title {
   color: hsl(232, 36%, 35%);
   font-family: "Vivaldi", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 400;
   font-style: normal;
-  line-height: 1.4;
+  line-height: 1.05;
   text-transform: capitalize;
 }
 @media screen and (min-width: 48rem) {
@@ -4114,6 +4114,152 @@ button:not([disabled]):hover,
 @media screen and (min-width: 87.5rem) {
   .ourgallery-3 .newgallery .card-gallery {
     width: 12.5%;
+  }
+}
+
+/*
+ COUNTDOWN-3-SECTION START
+*/
+.countdown-3 {
+  padding: 5rem 0.5rem;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-3 {
+    padding: 7.1875rem 0.5rem 10.3125rem;
+  }
+}
+.countdown-3-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-3-content {
+    gap: 5rem;
+  }
+}
+.countdown-3-info .title {
+  color: hsl(232, 36%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: center;
+}
+@media screen and (min-width: 36rem) {
+  .countdown-3-info .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .countdown-3-info .title {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .countdown-3-info .title {
+    font-size: 2rem;
+  }
+}
+.countdown-3-details {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  flex-grow: 1;
+  width: 100%;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-3-details {
+    padding: 3rem;
+  }
+}
+.countdown-3-details .countdown-clock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+.countdown-3-details .countdown-clock .countdown-time {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.countdown-3-details .countdown-clock .countdown-time .days,
+.countdown-3-details .countdown-clock .countdown-time .hours,
+.countdown-3-details .countdown-clock .countdown-time .minutes,
+.countdown-3-details .countdown-clock .countdown-time .seconds {
+  color: hsl(237, 31%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-weight: 700;
+}
+.countdown-3-details .countdown-clock .countdown-time .count-title {
+  color: hsl(237, 31%, 41%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-3-details .countdown-clock .countdown-time .count-title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .countdown-3-details .countdown-clock .countdown-time .count-title {
+    font-size: 1.5rem;
+  }
+}
+.countdown-3 .lefticon,
+.countdown-3 .righticon {
+  width: 8.625rem;
+  height: 7.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-3 .lefticon,
+  .countdown-3 .righticon {
+    width: 14.875rem;
+    height: 13.5625rem;
+  }
+}
+.countdown-3 .lefticon svg,
+.countdown-3 .righticon svg {
+  width: 100%;
+  height: 100%;
+}
+.countdown-3 .lefticon {
+  align-self: flex-start;
+  margin: 0rem 0rem 0rem -5rem;
+  top: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-3 .lefticon {
+    margin: 0rem;
+    top: 0rem;
+  }
+}
+.countdown-3 .righticon {
+  align-self: flex-end;
+  margin: -2rem -5rem 0rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-3 .righticon {
+    margin: 0rem;
   }
 }
 
