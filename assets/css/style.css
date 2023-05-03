@@ -2739,12 +2739,12 @@ button:not([disabled]):hover,
 }
 @media screen and (min-width: 62rem) {
   .more-events {
-    padding: 7.1875rem 0.5rem;
+    padding: 5rem 0.5rem;
   }
 }
 @media screen and (min-width: 75rem) {
   .more-events {
-    padding: 9.625rem 0.5rem;
+    padding: 6rem 0.5rem 9.625rem;
   }
 }
 .more-events-content {
@@ -2754,7 +2754,7 @@ button:not([disabled]):hover,
 }
 @media screen and (min-width: 62rem) {
   .more-events-content {
-    gap: 4.5rem;
+    gap: 5rem;
   }
 }
 .more-events-header {
@@ -3239,12 +3239,12 @@ button:not([disabled]):hover,
 }
 @media screen and (min-width: 62rem) {
   .marqueeslider {
-    padding: 7.1875rem 0.5rem;
+    padding: 5rem 0.5rem 7.1875rem;
   }
 }
 @media screen and (min-width: 75rem) {
   .marqueeslider {
-    padding: 11.875rem 0.5rem 12.5rem;
+    padding: 6rem 0.5rem 10rem;
   }
 }
 .marqueeslider-content {
@@ -4518,20 +4518,6 @@ button:not([disabled]):hover,
   .empty-banner-3 .empty-thumbnail {
     height: 37.5rem;
     max-height: 37.5rem;
-  }
-}
-
-/*
- MARQUEESLIDER-3-SECTION START
-*/
-@media screen and (min-width: 62rem) {
-  .marqueeslider-3 {
-    padding-top: 5rem;
-  }
-}
-@media screen and (min-width: 75rem) {
-  .marqueeslider-3 {
-    padding-top: 6rem;
   }
 }
 

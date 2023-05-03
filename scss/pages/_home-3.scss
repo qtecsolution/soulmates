@@ -466,19 +466,6 @@
 }
 
 /*
- MARQUEESLIDER-3-SECTION START
-*/
-.marqueeslider-3 {
-  @include breakpoint(tab992) {
-    padding-top: size(80);
-  }
-
-  @include breakpoint(desktop1200) {
-    padding-top: size(96);
-  }
-}
-
-/*
  ATTENDING-3-SECTION START
 */
 .attending-3 {

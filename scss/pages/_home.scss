@@ -431,11 +431,11 @@
   padding: size(80) size(8);
   
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(80) size(8);
   }
 
   @include breakpoint(desktop1200) {
-    padding: size(154) size(8);
+    padding: size(96) size(8) size(154);
   }
 
   &-content {
@@ -443,7 +443,7 @@
     gap: size(40);
   
     @include breakpoint(tab992) {
-      gap: size(72);
+      gap: size(80);
     }
   }
 
@@ -864,11 +864,11 @@
   padding: size(80) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(80) size(8) size(115);
   }
 
   @include breakpoint(desktop1200) {
-    padding: size(190) size(8) size(200);
+    padding: size(96) size(8) size(160);
   }
 
   &-content {
