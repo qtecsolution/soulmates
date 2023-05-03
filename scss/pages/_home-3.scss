@@ -48,6 +48,98 @@
 }
 
 /*
+ COUPLE-3-SECTION START
+*/
+.couples-3 {
+  background: url(../images/couple-section/section-bg.png) no-repeat center center/cover;
+  padding: size(80) size(8);
+  position: relative;
+
+  @include breakpoint(tab992) {
+    padding: size(115) size(8);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+    
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+    
+    @include breakpoint(desktop1200) {
+      gap: size(120);
+    }
+  }
+
+  .profile-picture {
+    @include w100;
+    min-height: size(260);
+    max-height: size(470);
+    @include flex-center;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+  }
+
+  .profile-info {
+    @include flex-column;
+    gap: size(20);
+    position: relative;
+    z-index: 100;
+
+    @include breakpoint(tab992) {
+      gap: size(32);
+    }
+
+    .profilename {
+      color: $white;
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .section-text {
+      color: $white;
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+    }
+  }
+
+  .overlay {
+    background: rgba($overlaybg, 0.5);
+    position: absolute;
+    inset: 0;
+    @include wh100;
+    z-index: 1;
+  }
+
+  .icon {
+    @include square(125);
+    @include flex-center;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    z-index: 10;
+
+    @include breakpoint(tab992) {
+      @include square(225);
+    }
+
+    svg {
+      @include wh100;
+    }
+  }
+}
+
+/*
  OURGALLERY-3-SECTION START
 */
 .ourgallery-3 {
@@ -284,6 +376,7 @@
     }
   }
 }
+
 /*
  LOCATIONMAP-2-SECTION START
 */
@@ -369,6 +462,19 @@
       height: size(600);
       max-height: size(600);
     }
+  }
+}
+
+/*
+ MARQUEESLIDER-3-SECTION START
+*/
+.marqueeslider-3 {
+  @include breakpoint(tab992) {
+    padding-top: size(80);
+  }
+
+  @include breakpoint(desktop1200) {
+    padding-top: size(96);
   }
 }
 

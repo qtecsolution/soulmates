@@ -72,6 +72,16 @@
   }
 }
 
+.section-link-4 {
+  @include setBgColor($white, $countdowntext);
+  @include border(solid, 1, rgba($countdowntext, 0.2));
+
+  @include hover {
+    @include setBgColor($countdowntext, $white);
+    border-color: $countdowntext;
+  }
+}
+
 .link-outline {
   @include border(solid, 1, $countdowntext);
   width: size(250);

@@ -4058,6 +4058,111 @@ button:not([disabled]):hover,
 }
 
 /*
+ COUPLE-3-SECTION START
+*/
+.couples-3 {
+  background: url(../images/couple-section/section-bg.png) no-repeat center center/cover;
+  padding: 5rem 0.5rem;
+  position: relative;
+}
+@media screen and (min-width: 62rem) {
+  .couples-3 {
+    padding: 7.1875rem 0.5rem;
+  }
+}
+.couples-3-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .couples-3-content {
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .couples-3-content {
+    gap: 7.5rem;
+  }
+}
+.couples-3 .profile-picture {
+  width: 100%;
+  min-height: 16.25rem;
+  max-height: 29.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+}
+.couples-3 .profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 100;
+}
+@media screen and (min-width: 62rem) {
+  .couples-3 .profile-info {
+    gap: 2rem;
+  }
+}
+.couples-3 .profile-info .profilename {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+@media screen and (min-width: 62rem) {
+  .couples-3 .profile-info .profilename {
+    font-size: 1.5rem;
+  }
+}
+.couples-3 .profile-info .section-text {
+  color: hsl(0, 0%, 100%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .couples-3 .profile-info .section-text {
+    font-size: 1.125rem;
+  }
+}
+.couples-3 .overlay {
+  background: rgba(11, 19, 65, 0.5);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.couples-3 .icon {
+  width: 7.8125rem;
+  height: 7.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+@media screen and (min-width: 62rem) {
+  .couples-3 .icon {
+    width: 14.0625rem;
+    height: 14.0625rem;
+  }
+}
+.couples-3 .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/*
  OURGALLERY-3-SECTION START
 */
 .ourgallery-3 {
@@ -4417,6 +4522,20 @@ button:not([disabled]):hover,
 }
 
 /*
+ MARQUEESLIDER-3-SECTION START
+*/
+@media screen and (min-width: 62rem) {
+  .marqueeslider-3 {
+    padding-top: 5rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .marqueeslider-3 {
+    padding-top: 6rem;
+  }
+}
+
+/*
  ATTENDING-3-SECTION START
 */
 .attending-3 {
@@ -4706,6 +4825,17 @@ button:not([disabled]):hover,
 .section-link-3:not([disabled]):hover {
   background: hsl(232, 36%, 35%);
   color: hsl(0, 0%, 100%);
+}
+
+.section-link-4 {
+  background: hsl(0, 0%, 100%);
+  color: hsl(237, 31%, 41%);
+  border: solid 0.0625rem rgba(72, 75, 137, 0.2);
+}
+.section-link-4:not([disabled]):hover {
+  background: hsl(237, 31%, 41%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(237, 31%, 41%);
 }
 
 .link-outline {
