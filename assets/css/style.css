@@ -2618,6 +2618,10 @@ button:not([disabled]):hover,
   color: hsl(232, 36%, 35%);
 }
 
+.copules-1 {
+  padding-top: 5rem;
+}
+
 /*
  WHEN-WHERE-SECTION START
 */
