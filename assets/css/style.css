@@ -140,10 +140,7 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 html:focus-within {
   scroll-behavior: inherit;
@@ -332,7 +329,8 @@ body {
   font-family: "TT Nooks Script Trial";
   letter-spacing: 0.03rem;
   text-rendering: optimizeSpeed;
-  overflow: hidden;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
   margin: 0;
 }
 
