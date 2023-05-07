@@ -86,7 +86,7 @@
               text-align: center;
 
               @include breakpoint(mobile768) {
-                width: 50%;
+                width: calc(50% - size(1));
               }
 
               .day,
@@ -272,9 +272,9 @@
     padding: size(0) size(8) size(160);
   }
 
-  .icon {
+  .lovelyicon {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     @include transform(translate(-50%, -50%));
     @include square(273);
@@ -305,6 +305,17 @@
         @include square(96);
         @include flex-center;
         overflow: hidden;
+        @include square(96);
+        @include flex-center;
+        overflow: hidden;
+  
+        @include breakpoint(tab992) {
+          @include square(140);
+        }
+  
+        @include breakpoint(desktop1200) {
+          @include square(190);
+        }
   
         img {
           @include wh100;
@@ -632,6 +643,15 @@
     @include flex-center;
     position: relative;
     text-align: center;
+    padding: size(64) size(0);
+
+    @include breakpoint(tab992) {
+      padding: size(80) size(0);
+    }
+    
+    @include breakpoint(desktop1200) {
+      padding: size(96) size(0);
+    }
 
     .section-title {
       color: $footertitle;

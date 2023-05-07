@@ -659,7 +659,7 @@ button:not([disabled]):hover,
   flex-direction: column;
   gap: 0.25rem;
 }
-.card-wedding .icon {
+.card-wedding .weddingicon {
   width: 5.5rem;
   height: 5.5rem;
   display: flex;
@@ -667,7 +667,7 @@ button:not([disabled]):hover,
   justify-content: center;
   overflow: hidden;
 }
-.card-wedding .icon svg {
+.card-wedding .weddingicon svg {
   width: 100%;
 }
 .card-wedding .weddinginfo {
@@ -1409,8 +1409,13 @@ button:not([disabled]):hover,
 .header-3 .header-nav .desktop-menu .desktoplist-link {
   color: hsl(232, 36%, 35%);
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .header-3 .header-nav .desktop-menu .desktoplist-link {
+    font-size: 1.125rem;
+  }
 }
 .header-3 .header-nav .hamburger-menu {
   display: flex;
@@ -1864,8 +1869,8 @@ button:not([disabled]):hover,
 .offcanvas-body .menu-thumb .btn-close {
   background: transparent;
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 4rem;
+  right: 3rem;
   width: 1.875rem;
   height: 0.875rem;
   display: flex;
@@ -2249,10 +2254,10 @@ button:not([disabled]):hover,
 }
 .custom-radio .radio-label::after {
   background: hsl(0, 0%, 100%);
-  width: 0.5625rem;
-  height: 0.5625rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 100%;
-  left: 0.28125rem;
+  left: 0.3125rem;
   opacity: 0;
   visibility: hidden;
   transition: transform 350ms ease-in-out;
@@ -2357,7 +2362,7 @@ button:not([disabled]):hover,
 }
 @media screen and (min-width: 48rem) {
   .home-slider .swiper-slide .slider-caption .slider-event .event .day-date {
-    width: 50%;
+    width: calc(50% - 0.0625rem);
   }
 }
 .home-slider .swiper-slide .slider-caption .slider-event .event .day-date .day,
@@ -2561,9 +2566,9 @@ button:not([disabled]):hover,
     padding: 0rem 0.5rem 10rem;
   }
 }
-.copules .icon {
+.copules .lovelyicon {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 17.0625rem;
@@ -2574,7 +2579,7 @@ button:not([disabled]):hover,
   overflow: hidden;
   z-index: 1;
 }
-.copules .icon svg {
+.copules .lovelyicon svg {
   width: 100%;
   height: 100%;
 }
@@ -2603,6 +2608,24 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 62rem) {
+  .copules .lovely-couple-details .icon {
+    width: 8.75rem;
+    height: 8.75rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .copules .lovely-couple-details .icon {
+    width: 11.875rem;
+    height: 11.875rem;
+  }
 }
 .copules .lovely-couple-details .icon img {
   width: 100%;
@@ -2962,6 +2985,17 @@ button:not([disabled]):hover,
   justify-content: center;
   position: relative;
   text-align: center;
+  padding: 4rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .lovestory-footer {
+    padding: 5rem 0rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .lovestory-footer {
+    padding: 6rem 0rem;
+  }
 }
 .lovestory-footer .section-title {
   color: hsl(232, 36%, 35%);
@@ -3586,7 +3620,8 @@ button:not([disabled]):hover,
   z-index: 100;
   overflow: hidden;
 }
-.empty-banner-2 .empty-info .section-title {
+.empty-banner-2 .empty-info .display-1 {
+  color: hsl(0, 0%, 100%);
   font-family: "Alex Brush", cursive;
 }
 .empty-banner-2 .empty-info .section-text {
@@ -3943,10 +3978,10 @@ button:not([disabled]):hover,
 }
 .contact-2 .contact-form .custom-radio .radio-label::after {
   background: hsl(231, 37%, 35%);
-  width: 0.5625rem;
-  height: 0.5625rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 100%;
-  left: 0.28125rem;
+  left: 0.3125rem;
   opacity: 0;
   visibility: hidden;
   transition: transform 350ms ease-in-out;
@@ -4426,6 +4461,15 @@ button:not([disabled]):hover,
     font-size: 1.125rem;
   }
 }
+.whenwhere-3-body {
+  background: rgba(72, 75, 137, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 4rem 0rem;
+}
 
 /*
  LOVESTORY-3-SECTION START
@@ -4644,10 +4688,10 @@ button:not([disabled]):hover,
 }
 .contact-3 .contact-form .custom-radio .radio-label::after {
   background: hsl(231, 37%, 35%);
-  width: 0.5625rem;
-  height: 0.5625rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 100%;
-  left: 0.28125rem;
+  left: 0.3125rem;
   opacity: 0;
   visibility: hidden;
   transition: transform 350ms ease-in-out;
@@ -4721,6 +4765,57 @@ button:not([disabled]):hover,
 .contact-3 .contact-thumbnail img {
   width: 100%;
   height: 100%;
+}
+
+/*
+ ERROR-SECTION START
+*/
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+  background: hsl(0, 0%, 100%);
+}
+.error-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 36rem) {
+  .error-thumbnail {
+    width: 18.75rem;
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .error-thumbnail {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+.error-thumbnail svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.error-thumbnail .st0::-moz-selection, .error-thumbnail .st1::-moz-selection, .error-thumbnail .st2::-moz-selection, .error-thumbnail .st3::-moz-selection, .error-thumbnail .st4::-moz-selection, .error-thumbnail .st5::-moz-selection {
+  background: transparent;
+  color: hsl(1, 71%, 54%);
+}
+.error-thumbnail .st0::selection,
+.error-thumbnail .st1::selection,
+.error-thumbnail .st2::selection,
+.error-thumbnail .st3::selection,
+.error-thumbnail .st4::selection,
+.error-thumbnail .st5::selection {
+  background: transparent;
+  color: hsl(1, 71%, 54%);
 }
 
 .section-title {

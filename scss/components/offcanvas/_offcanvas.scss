@@ -380,8 +380,8 @@
       .btn-close {
         background: transparent;
         position: absolute;
-        top: size(32);
-        right: size(32);
+        top: size(64);
+        right: size(48);
         width: size(30);
         height: size(14);
         @include flex-center;

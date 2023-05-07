@@ -63,7 +63,7 @@
   @include flex-column;
   gap: size(4);
 
-  .icon {
+  .weddingicon {
     @include square(88);
     @include flex-center;
     overflow: hidden;

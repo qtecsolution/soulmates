@@ -364,6 +364,12 @@
     }
   }
 
+  &-body {
+    background: $sectionbg;
+    @include flex-center-column;
+    gap: size(80);
+    padding: size(64) size(0);
+  }
 }
 
 /*
@@ -584,9 +590,9 @@
 
         &::after {
           background: $radiotext;
-          @include square(9);
+          @include square(8);
           @include circle;
-          left: size(4.5);
+          left: size(5);
           opacity: 0;
           visibility: hidden;
           @include transitiontransform;

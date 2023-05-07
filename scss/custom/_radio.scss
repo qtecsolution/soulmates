@@ -40,9 +40,9 @@
 
     &::after {
       background: $white;
-      @include square(9);
+      @include square(8);
       @include circle;
-      left: size(4.5);
+      left: size(5);
       opacity: 0;
       visibility: hidden;
       @include transitiontransform;

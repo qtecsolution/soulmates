@@ -170,7 +170,8 @@
     z-index: 100;
     overflow: hidden;
 
-    .section-title {
+    .display-1 {
+      color: $white;
       font-family: $alexbrush;
     }
 
@@ -513,9 +514,9 @@
 
         &::after {
           background: $radiotext;
-          @include square(9);
+          @include square(8);
           @include circle;
-          left: size(4.5);
+          left: size(5);
           opacity: 0;
           visibility: hidden;
           @include transitiontransform;

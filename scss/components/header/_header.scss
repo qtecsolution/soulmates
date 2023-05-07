@@ -288,8 +288,12 @@
         &-link {
           color: $footertitle;
           font-weight: 400;
-          font-size: size(18);
+          font-size: size(16);
           padding: size(8) size(16);
+
+          @include breakpoint(desktop1400) {
+            font-size: size(18);
+          }
         }
       }
     }
