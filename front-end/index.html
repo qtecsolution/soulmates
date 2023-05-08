@@ -1211,37 +1211,13 @@
 
   <!-- GSAP -->
   <script src="../assets/js/gsap/gsap.min.js"></script>
+  <script src="../assets/js/gsap/ScrollTrigger.min.js"></script>
   <script src="../assets/js/gsap/ScrollToPlugin.min.js"></script>
   <script src="../assets/js/gsap/CSSRulePlugin.min.js"></script>
-  <script src="../assets/js/gsap/ScrollTrigger.min.js"></script>
   <script src="../assets/js/gsap/TextPlugin.min.js"></script>
 
-  <!-- RELAX-JS -->
-  <script src="../assets/js/animejs/anime.min.js"></script>
-  <script src="../assets/js/waypoints/noframework.waypoints.min.js"></script>
-
-  <!-- ANIMATIONS -->
-  <!-- <script src="../assets/js/parallax/parallax.js"></script> -->
-
-  <script>
-    function parallax() {
-      let reveals = document.querySelectorAll(".parallax");
-
-      for (let i = 0; i < reveals.length; i++) {
-        let windowHeight = window.innerHeight;
-        let elementTop = reveals[i].getBoundingClientRect().top;
-        let elementVisible = 10;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-        }
-      }
-    }
-
-    window.addEventListener("scroll", parallax);
-  </script>
+  <!-- PARALLAX-JS -->
+  <script src="../assets/js/parallax/parallax.js"></script>
 </body>
 
 </html>
