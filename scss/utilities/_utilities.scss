@@ -87,3 +87,19 @@
   width: size(250);
   height: size(54);
 }
+
+.glopad {
+  margin: size(160) size(0);
+}
+
+.parallax {
+  position: relative;
+  transform: translateY(size(40));
+  opacity: 1;
+  transition: 1s all ease;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

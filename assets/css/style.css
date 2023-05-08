@@ -4926,3 +4926,18 @@ button:not([disabled]):hover,
   width: 15.625rem;
   height: 3.375rem;
 }
+
+.glopad {
+  margin: 10rem 0rem;
+}
+
+.parallax {
+  position: relative;
+  transform: translateY(2.5rem);
+  opacity: 1;
+  transition: 1s all ease;
+}
+.parallax.active {
+  transform: translateY(0);
+  opacity: 1;
+}
