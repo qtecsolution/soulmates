@@ -329,7 +329,6 @@ header.sticky {
 }
 
 .main-img .main-contain > div {
-  background-color: rgba(248, 248, 248, 0.5);
   z-index: 9;
   background-blend-mode: overlay;
   padding: 0 0 22px 0;
