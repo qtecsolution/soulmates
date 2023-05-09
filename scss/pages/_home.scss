@@ -523,15 +523,7 @@
 .empty-banner {
   position: relative;
   @include w100;
-  height: size(260);
-
-  @include breakpoint(mobile576) {
-    height: size(330);
-  }
-
-  @include breakpoint(mobile768) {
-    height: size(400);
-  }
+  height: size(420);
 
   @include breakpoint(tab992) {
     height: size(540);

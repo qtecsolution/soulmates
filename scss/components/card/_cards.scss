@@ -283,6 +283,11 @@
   max-height: size(540);
   @include flex-center;
   overflow: hidden;
+  padding-inline: size(20);
+
+  @include breakpoint(mobile576) {
+    padding-inline: size(0);
+  }
 
   img {
     @include wh100;

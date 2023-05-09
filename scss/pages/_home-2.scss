@@ -161,6 +161,7 @@
 */
 .empty-banner-2 {
   .empty-info {
+    @include w100;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -401,6 +402,11 @@
     gap: size(8);
     flex-wrap: wrap;
     overflow: hidden;
+    padding-inline: size(20);
+
+    @include breakpoint(mobile576) {
+      padding-inline: size(0);
+    }
     
     .card-flip {
       @include w100;
@@ -413,7 +419,7 @@
         width: calc((100% / 3) - size(8));
       }
 
-      @include breakpoint(tablet991) {
+      @include breakpoint(tab992) {
         width: calc((100% / 4) - size(8));
       }
 
