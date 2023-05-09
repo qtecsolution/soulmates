@@ -96,6 +96,13 @@ a:hover {
 .btn:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
 }
 
 section, .section-t-space {
@@ -1220,7 +1227,7 @@ ul.tabs li.current {
   }
 
   .responsive-img {
-    background: url("../../images/landing-page/respnsive-img.jpg");
+    background: url("../../images/landing-page/landing-background.jpg");
     background-blend-mode: overlay;
     background-color: rgba(241, 241, 241, 0.88);
   }
