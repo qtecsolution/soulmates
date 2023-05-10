@@ -55,12 +55,12 @@
   position: relative;
 
   .coupleinfo {
-    padding: size(80) size(8);
+    padding: size(80) size(8) size(192);
     position: relative;
     z-index: 100;
 
     @include breakpoint(tab992) {
-      padding: size(115) size(8);
+      padding: size(115) size(8) size(192);
     }
   }
 
@@ -283,6 +283,13 @@
     }
   }
 
+  .linkbox {
+    margin-top: size(-64);
+
+    @include breakpoint(tab992) {
+      margin-top: size(0);
+    }
+  }
 
   .lefticon,
   .righticon {
@@ -481,7 +488,7 @@
 */
 .attending-3 {
   position: relative;
-  padding: size(80) size(8);
+  padding: size(240) size(8) size(48);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);

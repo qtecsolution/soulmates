@@ -2480,12 +2480,7 @@ button:not([disabled]):hover,
   z-index: 1;
 }
 .home-slider .swiper-pagination {
-  bottom: 3.375rem;
-}
-@media screen and (min-width: 48rem) {
-  .home-slider .swiper-pagination {
-    bottom: 3rem;
-  }
+  bottom: 1rem;
 }
 @media screen and (min-width: 62rem) {
   .home-slider .swiper-pagination {
@@ -2494,13 +2489,19 @@ button:not([disabled]):hover,
 }
 .home-slider .swiper-pagination-bullet {
   position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 100%;
   border: solid 0.0625rem transparent;
   margin: 0;
   background: transparent;
   opacity: 1;
+}
+@media screen and (min-width: 62rem) {
+  .home-slider .swiper-pagination-bullet {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .home-slider .swiper-pagination-bullet::after {
   content: "";
@@ -4113,13 +4114,13 @@ button:not([disabled]):hover,
   position: relative;
 }
 .couples-3 .coupleinfo {
-  padding: 5rem 0.5rem;
+  padding: 5rem 0.5rem 12rem;
   position: relative;
   z-index: 100;
 }
 @media screen and (min-width: 62rem) {
   .couples-3 .coupleinfo {
-    padding: 7.1875rem 0.5rem;
+    padding: 7.1875rem 0.5rem 12rem;
   }
 }
 .couples-3-content {
@@ -4376,6 +4377,14 @@ button:not([disabled]):hover,
     font-size: 1.5rem;
   }
 }
+.countdown-3 .linkbox {
+  margin-top: -4rem;
+}
+@media screen and (min-width: 62rem) {
+  .countdown-3 .linkbox {
+    margin-top: 0rem;
+  }
+}
 .countdown-3 .lefticon,
 .countdown-3 .righticon {
   width: 8.625rem;
@@ -4587,7 +4596,7 @@ button:not([disabled]):hover,
 */
 .attending-3 {
   position: relative;
-  padding: 5rem 0.5rem;
+  padding: 15rem 0.5rem 3rem;
 }
 @media screen and (min-width: 62rem) {
   .attending-3 {

@@ -10,10 +10,6 @@
   position: relative;
   top: 0;
   left: 0;
-  
-  @include breakpoint(tab992) {
-    // margin-bottom: size(168);
-  }
 
   .swiper {
     position: relative;
@@ -186,11 +182,7 @@
     }
 
     &-pagination {
-      bottom: size(54);
-      
-      @include breakpoint(mobile768) {
-        bottom: size(48);
-      }
+      bottom: size(16);
 
       @include breakpoint(tab992) {
         bottom: size(32);
@@ -198,12 +190,16 @@
 
       &-bullet {
         position: relative;
-        @include square(40);
+        @include square(32);
         @include circle;
         @include border(solid, 1, transparent);
         margin: 0;
         background: transparent;
         opacity: 1;
+
+        @include breakpoint(tab992) {
+          @include square(40);
+        }
 
         &::after {
           content: '';
