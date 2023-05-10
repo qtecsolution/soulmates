@@ -3893,11 +3893,11 @@ button:not([disabled]):hover,
  LOCATION-SECTION START
 */
 .locationmap {
-  padding: 0rem 0.5rem 5rem;
+  padding: 5rem 0.5rem 5rem;
 }
 @media screen and (min-width: 62rem) {
   .locationmap {
-    padding: 0rem 0.5rem 7.1875rem;
+    padding: 6rem 0.5rem 7.1875rem;
   }
 }
 .locationmap-box {
