@@ -35,6 +35,7 @@
       }
   
       .slider-caption {
+        @include w100;
         @include flex-center-column;
         gap: size(32);
         position: absolute;
