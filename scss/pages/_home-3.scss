@@ -52,11 +52,16 @@
 */
 .couples-3 {
   background: url(../images/couple-section/section-bg.png) no-repeat center center/cover;
-  padding: size(80) size(8);
   position: relative;
 
-  @include breakpoint(tab992) {
-    padding: size(115) size(8);
+  .coupleinfo {
+    padding: size(80) size(8);
+    position: relative;
+    z-index: 100;
+
+    @include breakpoint(tab992) {
+      padding: size(115) size(8);
+    }
   }
 
   &-content {
@@ -387,11 +392,11 @@
  LOCATIONMAP-2-SECTION START
 */
 .locationmap-2 {
-  padding: size(0) size(8) size(80);
+  padding: size(80) size(8) size(80);
   position: relative;
 
   @include breakpoint(tab992) {
-    padding: size(0) size(8) size(115);
+    padding: size(96) size(8) size(115);
   }
 
   &-content {

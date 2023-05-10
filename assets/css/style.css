@@ -3025,6 +3025,10 @@ button:not([disabled]):hover,
     padding: 7.1875rem 0.5rem;
   }
 }
+.attending .attendinginfo {
+  position: relative;
+  z-index: 100;
+}
 .attending-details {
   position: relative;
   z-index: 2;
@@ -3173,6 +3177,10 @@ button:not([disabled]):hover,
   .countdown {
     padding: 7.1875rem 0.5rem;
   }
+}
+.countdown .countinfo {
+  position: relative;
+  z-index: 100;
 }
 .countdown-details {
   position: relative;
@@ -4102,11 +4110,15 @@ button:not([disabled]):hover,
 */
 .couples-3 {
   background: url(../images/couple-section/section-bg.png) no-repeat center center/cover;
-  padding: 5rem 0.5rem;
   position: relative;
 }
+.couples-3 .coupleinfo {
+  padding: 5rem 0.5rem;
+  position: relative;
+  z-index: 100;
+}
 @media screen and (min-width: 62rem) {
-  .couples-3 {
+  .couples-3 .coupleinfo {
     padding: 7.1875rem 0.5rem;
   }
 }
@@ -4483,12 +4495,12 @@ button:not([disabled]):hover,
  LOCATIONMAP-2-SECTION START
 */
 .locationmap-2 {
-  padding: 0rem 0.5rem 5rem;
+  padding: 5rem 0.5rem 5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
   .locationmap-2 {
-    padding: 0rem 0.5rem 7.1875rem;
+    padding: 6rem 0.5rem 7.1875rem;
   }
 }
 .locationmap-2-content {

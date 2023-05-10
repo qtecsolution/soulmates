@@ -679,6 +679,11 @@
     padding: size(115) size(8);
   }
 
+  .attendinginfo {
+    position: relative;
+    z-index: 100;
+  }
+
   &-details {
     position: relative;
     z-index: 2;
@@ -806,6 +811,11 @@
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);
+  }
+
+  .countinfo {
+    position: relative;
+    z-index: 100;
   }
 
   &-details {
