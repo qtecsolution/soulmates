@@ -13,15 +13,15 @@
 
 @keyframes slideDownIn {
 	0% {
-		@include transform(translateY(-100%));
+		@include translateY(-100%);
 	}
 
 	100% {
-		@include transform(translateY(0));
+		@include translateY(0);
 	}
 
 	0% {
-		@include transform(translateY(-100%));
+		@include translateY(-100%);
 	}
 }
 
@@ -31,15 +31,15 @@
 
 @keyframes slideDownInMobile {
 	0% {
-		@include transform(translateY(size(-20)));
+		@include translateY(size(-20));
 	}
 
 	100% {
-		@include transform(translateY(size(10)));
+		@include translateY(size(10));
 	}
 
 	0% {
-		@include transform(translateY(size(-20)));
+		@include translateY(size(-20));
 	}
 }
 
@@ -49,15 +49,15 @@
 
 @keyframes slideUpIn {
 	0% {
-		@include transform(translateY(size(-20)));
+		@include translateY(size(-20));
 	}
 
 	100% {
-		@include transform(translateY(0));
+		@include translateY(0);
 	}
 
 	0% {
-		@include transform(translateY(size(20)));
+		@include translateY(size(20));
 	}
 }
 
@@ -67,15 +67,15 @@
 
 @keyframes slideUpInMobile {
 	0% {
-		@include transform(translateY(size(40)));
+		@include translateY(size(40));
 	}
 
 	100% {
-		@include transform(translateY(size(25)));
+		@include translateY(size(25));
 	}
 
 	0% {
-		@include transform(translateY(size(40)));
+		@include translateY(size(40));
 	}
 }
 
@@ -85,15 +85,15 @@
 
 @keyframes slideLeftIn {
 	0% {
-		@include transform(translateX(size(100)));
+		@include translateX(size(100));
 	}
 
 	100% {
-		@include transform(translateX(0));
+		@include translateX(0);
 	}
 
 	0% {
-		@include transform(translateX(size(-100)));
+		@include translateX(size(-100));
 	}
 }
 
@@ -103,15 +103,15 @@
 
 @keyframes slideRightIn {
 	0% {
-		@include transform(translateX(size(100)));
+		@include translateX(size(100));
 	}
 
 	100% {
-		@include transform(translateX(0));
+		@include translateX(0);
 	}
 
 	0% {
-		@include transform(translateX(size(100)));
+		@include translateX(size(100));
 	}
 }
 
@@ -127,14 +127,25 @@
 
 @keyframes floating {
 	0% {
-		@include transform(translateY(0%));
+		@include translateY(0%);
 	}
 
 	50% {
-		@include transform(translateY(1%));
+		@include translateY(1%);
 	}
 
 	100% {
-		@include transform(translateY(0%));
+		@include translateY(0%);
 	}
+}
+
+
+@keyframes rotation {
+  from {
+		@include rotate(0);
+  }
+	
+	to {
+		@include rotate(360);
+  }
 }

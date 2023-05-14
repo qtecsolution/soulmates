@@ -1,0 +1,110 @@
+
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.settings {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+}
+
+#options-setting{
+	position:fixed; 
+	width:300px;
+	padding:25px;
+	background-color:#FFF;
+	top:170px;
+	left:-302px; 
+	z-index:1000;
+	box-shadow: 2px 2px 5px #888888;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+}
+
+#options-setting.move-right{
+	left:0px;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+}
+
+#setting-button-wrapper{
+	position:absolute; 
+	left:300px; 
+	top:-8px
+}
+
+.swatches{
+	display:inline-block; 
+	height:25px; 
+	width:25px; 
+	margin-right:3px;
+}
+
+#coral span{
+	background-color:#FF7F50; 
+}
+
+#coral-red span{
+	background-color:#FF4040; 
+}
+
+#lapis span{
+	background-color:#69477A; 
+}
+
+#light-teal span{
+	background-color:#18A7B5; 
+}
+
+#tan span{
+	background-color:#D2B48C; 
+}
+
+#reset-color span{
+	position:absolute; 
+	top:0; 
+	right:10px; 
+	border:3px solid #CCC; 
+	padding:0px 10px;
+}
+
+.navbar-setting-button{
+	display:inline-block; 
+	border:3px solid #CCC;
+	padding:8px 15px;
+}
+
+.navbar-setting-button{
+	display:inline-block; 
+	border:3px solid #CCC;
+	padding:8px 15px;
+}
+
+.pattern-setting-button{
+	display:inline-block; 
+	border:3px solid #CCC; 
+	padding:8px 16px;
+}
+
+.setting-info{
+	font-size:12px; 
+	line-height:16px; 
+	margin-top:10px;
+}
+
+.navbar-setting-button.active,
+.pattern-setting-button.active,
+a:hover .pattern-setting-button,
+a:hover .navbar-setting-button,
+#reset-color:hover span{
+	background-color:#f0394d;
+	color:#FFF;
+	border-color:#f0394d;
+}	

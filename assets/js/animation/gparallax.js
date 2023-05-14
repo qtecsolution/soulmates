@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);  
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray(".animitem").forEach(function(container) {
   let anim = container.querySelector(".anim");
