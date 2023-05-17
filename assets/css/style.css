@@ -1136,6 +1136,88 @@ button:not([disabled]):hover,
   height: 100%;
 }
 
+.card-blog {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card-blog-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card-blog-header .blog-thumbnail {
+  width: 100%;
+  max-height: 35.8125rem;
+  min-height: 15.625rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 48rem) {
+  .card-blog-header .blog-thumbnail {
+    min-height: 23.75rem;
+  }
+}
+.card-blog-header .blog-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 350ms ease-in-out;
+}
+.card-blog-header .blog-thumbnail img:not([disabled]):hover {
+  transform: scale(1.1);
+}
+.card-blog-header .date-category {
+  color: hsl(231, 37%, 35%);
+}
+.card-blog-header .date-category span {
+  color: inherit;
+  font: inherit;
+}
+.card-blog-header .date-category .date {
+  font-weight: 300;
+}
+.card-blog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.card-blog-body .blog-title {
+  color: hsl(231, 37%, 35%);
+  font-family: "TT Nooks Script Trial";
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-blog-body .section-text {
+  color: hsl(231, 37%, 35%);
+}
+.card-blog-body .readmore {
+  color: hsl(231, 37%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  transition: all 350ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .card-blog-body .readmore {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .card-blog-body .readmore {
+    font-size: 1.25rem;
+  }
+}
+.card-blog-body .readmore:not([disabled]):hover {
+  color: hsl(232, 36%, 35%);
+}
+.card-blog-body .social-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .header {
   background: transparent;
   padding: 1.5rem 0.5rem;
@@ -1471,6 +1553,53 @@ button:not([disabled]):hover,
   top: 0;
   width: 100%;
   z-index: 1030;
+}
+
+.blog-header {
+  background: hsl(0, 0%, 100%);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 62rem) {
+  .blog-header {
+    height: 5rem;
+  }
+}
+.blog-header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog-header-nav .nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.blog-header-nav .nav-center .couple-name {
+  color: hsl(232, 36%, 35%);
+  font-family: "zagora";
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 48rem) {
+  .blog-header-nav .nav-center .couple-name {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .blog-header-nav .nav-center .couple-name {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .blog-header-nav .nav-center .couple-name {
+    font-size: 2rem;
+  }
 }
 
 .form-control:focus,
@@ -2024,8 +2153,22 @@ button:not([disabled]):hover,
   transform: rotate(90deg);
 }
 .tooltip-inner {
+  background: hsl(232, 36%, 35%);
   font-size: 0.75rem;
 }
+.tooltip.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+  border-top-color: hsl(232, 36%, 35%);
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+  border-bottom-color: hsl(232, 36%, 35%);
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+  border-left-color: hsl(232, 36%, 35%);
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+  border-right-color: hsl(232, 36%, 35%);
+}
+
 .footer {
   padding: 6rem 0;
   position: relative;
@@ -4916,6 +5059,100 @@ a:hover .navbar-setting-button,
 .contact-3 .contact-thumbnail img {
   width: 100%;
   height: 100%;
+}
+
+.blogbanner {
+  height: 26.25rem;
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 62rem) {
+  .blogbanner {
+    margin-top: 5rem;
+  }
+}
+.blogbanner-detail {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+}
+.blogbanner-detail .display-1 {
+  font-family: "callista";
+}
+.blogbanner-detail .section-link {
+  font-size: 0.75rem;
+}
+.blogbanner .overlay {
+  background: rgba(11, 19, 65, 0.6);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.blogmain {
+  padding: 5rem 0.5rem 7.5rem;
+}
+.blogmain .leftinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8.75rem;
+}
+.blogmain .leftinfo .bloglist {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .blogmain .leftinfo .bloglist {
+    gap: 3.75rem;
+  }
+}
+.blogmain .leftinfo .blogpagination .pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.blogmain .leftinfo .blogpagination .pagination .page-item:not(:first-child) .page-link {
+  margin-left: 0;
+}
+.blogmain .leftinfo .blogpagination .pagination .page-item:first-child .page-link, .blogmain .leftinfo .blogpagination .pagination .page-item:last-child .page-link {
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+.blogmain .leftinfo .blogpagination .pagination .page-link {
+  background: hsl(220, 25%, 95%);
+  color: hsl(231, 37%, 35%);
+  border: 0rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TT Nooks Script Trial";
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+.blogmain .leftinfo .blogpagination .pagination .page-link:focus {
+  box-shadow: none;
+  outline: none;
+}
+.blogmain .rightinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 /*

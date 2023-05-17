@@ -1,2 +1,99 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.blogbanner {
+  height: size(420);
+  position: relative;
+  margin-top: size(64);
+  @include flex-center-vert;
+
+  @include breakpoint(tab992) {
+    margin-top: size(80);
+  }
+
+  &-detail {
+    position: relative;
+    z-index: 100;
+    @include flex-center-column;
+    gap: size(40);
+    text-align: center;
+
+    .display-1 {
+      font-family: $calista;
+    }
+
+    .section-link {
+      font-size: size(12);
+    }
+  }
+
+  .overlay {
+    background: rgba($overlaybg, 0.6);
+    position: absolute;
+    inset: 0;
+    @include wh100;
+    z-index: 1;
+  }
+}
+
+.blogmain {
+  padding: size(80) size(8) size(120);
+
+  .leftinfo {
+    @include flex-column;
+    gap: size(140);
+
+    .bloglist {
+      @include flex-column;
+      gap: size(40);
+
+      @include breakpoint(tab992) {
+        gap: size(60);
+      }
+    }
+
+    .blogpagination {
+      .pagination {
+        @include flex-center-vert;
+        gap: size(10);
+
+        .page-item {
+          &:not(:first-child) {
+            .page-link {
+              margin-left: 0;
+            }
+          }
+
+          &:first-child,
+          &:last-child {
+            .page-link {
+              @include radius(0);
+            }
+          }
+        }
+        
+        .page-link {
+          @include setBgColor($paginationlinkbg, $radiotext);
+          border: size(0);
+          @include square(32);
+          @include flex-center;
+          @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+          overflow: hidden;
+          padding: size(8);
+
+          &:focus {
+            box-shadow: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+  
+  .rightinfo {
+    @include flex-column;
+    gap: size(48);
+
+    
+  }
+}
