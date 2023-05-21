@@ -38,10 +38,16 @@ body {
 	min-height:100vh;
 	height:auto;
 	width:100%;
+	overflow-x: hidden;
 }
 
 footer, header, section {
 	display:block;
+}
+
+img {
+	max-width: 100%;
+	display: block;
 }
 
 a{ color:#6F6F6F; text-decoration:none; cursor:pointer; font-family: 'Montserrat';}
