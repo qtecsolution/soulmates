@@ -471,8 +471,12 @@
     .blog-thumbnail {
       @include w100;
       max-height: size(573);
-      min-height: size(250);
+      min-height: size(160);
       overflow: hidden;
+
+      @include breakpoint(mobile576) {
+        min-height: size(250);
+      }
 
       @include breakpoint(mobile768) {
         min-height: size(380);
@@ -539,6 +543,118 @@
     .social-list {
       @include flex-center-vert;
       gap: size(8);
+    }
+  }
+}
+
+.infocard {
+  @include flex-column;
+  gap: size(36);
+  background: $white;
+  box-shadow: $cardshadow;
+  padding: size(16);
+
+  @include breakpoint(mobile768) {
+    padding: size(24);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(36);
+  }
+
+  &-header {
+    @include flex-center;
+    
+    .infocard-thumbnail {
+      @include square(240);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(36);
+    text-align: center;
+
+    .infobox {
+      width: size(300);
+      margin-inline: auto;
+
+      .infotext {
+        font-family: $tt-nooks-script-trial;
+        font-size: size(16);
+  
+        @include breakpoint(tab992) {
+          font-size: size(18);
+        }
+      }
+    }
+
+    .social-list {
+      @include flex-center;
+      gap: size(12);
+
+      .social-link {
+        background: $linkbg;
+        @include square(48);
+        @include circle;
+        @include flex-center;
+        padding: size(12);
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+  }
+}
+
+.cardpost {
+  @include flex-center-vert;
+  gap: size(14);
+
+  &-thumb {
+    @include square(80);
+    @include flex-center;
+    overflow: hidden;
+    
+    img {
+      @include wh100;
+    }
+  }
+
+  &-detail {
+    @include flex-column;
+    gap: size(4);
+    width: calc(100% - size(94));
+
+    .title {
+      color: $radiotext;
+      @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+      @include line-clamp;
+
+      @include breakpoint(mobile768) {
+        font-size: size(16);
+      }
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      @include hover {
+        color: $overlaybg;
+      }
+    }
+
+    .publish-date {
+      color: $radiotext;
+      @include font($tt-nooks-script-trial, 14, light, normal, 19.6);
     }
   }
 }

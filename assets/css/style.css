@@ -1149,8 +1149,13 @@ button:not([disabled]):hover,
 .card-blog-header .blog-thumbnail {
   width: 100%;
   max-height: 35.8125rem;
-  min-height: 15.625rem;
+  min-height: 10rem;
   overflow: hidden;
+}
+@media screen and (min-width: 36rem) {
+  .card-blog-header .blog-thumbnail {
+    min-height: 15.625rem;
+  }
 }
 @media screen and (min-width: 48rem) {
   .card-blog-header .blog-thumbnail {
@@ -1216,6 +1221,142 @@ button:not([disabled]):hover,
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.infocard {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  padding: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .infocard {
+    padding: 1.5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .infocard {
+    padding: 2.25rem;
+  }
+}
+.infocard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infocard-header .infocard-thumbnail {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.infocard-header .infocard-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.infocard-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.25rem;
+  text-align: center;
+}
+.infocard-body .infobox {
+  width: 18.75rem;
+  margin-inline: auto;
+}
+.infocard-body .infobox .infotext {
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+}
+@media screen and (min-width: 62rem) {
+  .infocard-body .infobox .infotext {
+    font-size: 1.125rem;
+  }
+}
+.infocard-body .social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.infocard-body .social-list .social-link {
+  background: hsl(210, 23%, 95%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+}
+.infocard-body .social-list .social-link svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cardpost {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.cardpost-thumb {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardpost-thumb img {
+  width: 100%;
+  height: 100%;
+}
+.cardpost-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: calc(100% - 5.875rem);
+}
+.cardpost-detail .title {
+  color: hsl(231, 37%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+@media screen and (min-width: 48rem) {
+  .cardpost-detail .title {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .cardpost-detail .title {
+    font-size: 1.125rem;
+  }
+}
+.cardpost-detail .title:not([disabled]):hover {
+  color: hsl(231, 71%, 15%);
+}
+.cardpost-detail .publish-date {
+  color: hsl(231, 37%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
 }
 
 .header {
@@ -5104,7 +5245,17 @@ a:hover .navbar-setting-button,
 .blogmain .leftinfo {
   display: flex;
   flex-direction: column;
-  gap: 8.75rem;
+  gap: 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .blogmain .leftinfo {
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .blogmain .leftinfo {
+    gap: 8.75rem;
+  }
 }
 .blogmain .leftinfo .bloglist {
   display: flex;
@@ -5153,6 +5304,128 @@ a:hover .navbar-setting-button,
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+.blogmain .rightinfo .rightcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.blogmain .rightinfo .rightcontent-header {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 0.0625rem hsl(231, 37%, 35%);
+  padding-bottom: 0.625rem;
+}
+.blogmain .rightinfo .rightcontent-header .title {
+  color: hsl(231, 37%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 48rem) {
+  .blogmain .rightinfo .rightcontent-header .title {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .blogmain .rightinfo .rightcontent-header .title {
+    font-size: 1.375rem;
+  }
+}
+.blogmain .rightinfo .rightcontent-body .categorylist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.blogmain .rightinfo .rightcontent-body .categorylist-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.blogmain .rightinfo .rightcontent-body .categorylist-link span {
+  color: hsl(231, 37%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 48rem) {
+  .blogmain .rightinfo .rightcontent-body .categorylist-link span {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .blogmain .rightinfo .rightcontent-body .categorylist-link span {
+    font-size: 1.125rem;
+  }
+}
+.blogmain .rightinfo .rightcontent-body .categorylist-link:not([disabled]):hover span {
+  color: hsl(231, 71%, 15%);
+}
+.blogmain .rightinfo .rightcontent-body .relatedposts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.blogmain .rightinfo .rightcontent-body .relatedposts .post {
+  display: block;
+}
+.blogmain .rightinfo .rightcontent-body .instagramlist {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+.blogmain .rightinfo .rightcontent-body .instagramlist .instagramlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 30rem) {
+  .blogmain .rightinfo .rightcontent-body .instagramlist .instagramlink {
+    width: calc(33.3333333333% - 0.625rem);
+    max-height: 7.625rem;
+  }
+}
+.blogmain .rightinfo .rightcontent-body .instagramlist .instagramlink img {
+  width: 100%;
+  height: 100%;
+  transition: all 350ms ease-in-out;
+}
+.blogmain .rightinfo .rightcontent-body .instagramlist .instagramlink img:not([disabled]):hover {
+  transform: scale(1.1);
+}
+.blogmain .rightinfo .rightcontent-body .taglist {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3125rem;
+}
+.blogmain .rightinfo .rightcontent-body .taglist-item {
+  background: hsl(0, 0%, 100%);
+  color: hsl(231, 37%, 35%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  font-family: "TT Nooks Script Trial";
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 48rem) {
+  .blogmain .rightinfo .rightcontent-body .taglist-item {
+    font-size: 1rem;
+  }
 }
 
 /*

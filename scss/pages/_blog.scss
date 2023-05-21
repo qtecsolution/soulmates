@@ -41,7 +41,15 @@
 
   .leftinfo {
     @include flex-column;
-    gap: size(140);
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+
+    @include breakpoint(desktop1200) {
+      gap: size(140);
+    }
 
     .bloglist {
       @include flex-column;
@@ -88,12 +96,117 @@
         }
       }
     }
+
+    
   }
   
   .rightinfo {
     @include flex-column;
     gap: size(48);
 
+    .rightcontent {
+      @include flex-column;
+      gap: size(16);
+      
+      &-header {
+        @include flex-center-vert;
+        @include border-single(bottom, solid, 1, $radiotext);
+        padding-bottom: size(10);
+
+        .title {
+          color: $radiotext;
+          @include font($tt-nooks-script-trial, 16, normal, normal, 22.4);
+
+          @include breakpoint(mobile768) {
+            font-size: size(18);
+          }
+
+          @include breakpoint(tab992) {
+            font-size: size(22);
+          }
+        }
+      }
+
+      &-body {
+        .categorylist {
+          @include list-vertical;
+          gap: size(16);
+
+          &-link {
+            @include flex-center-between;
+
+            span {
+              color: $radiotext;
+              @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+
+              @include breakpoint(mobile768) {
+                font-size: size(16);
+              }
     
+              @include breakpoint(tab992) {
+                font-size: size(18);
+              }
+            }
+
+            @include hover {
+              span {
+                color: $overlaybg;
+              }
+            }
+          }
+        }
+
+        .relatedposts {
+          @include flex-column;
+          gap: size(16);
+
+          .post {
+            display: block;
+          }
+        }
+
+        .instagramlist {
+          @include flex-center-vert;
+          gap: size(10);
+          flex-wrap: wrap;
+
+          .instagramlink {
+            @include flex-center;
+            overflow: hidden;
+
+            @include breakpoint(mobile480) {
+              width: calc((100% / 3) - size(10));
+              max-height: size(122);
+            }
+
+            img {
+              @include wh100;
+              @include transitionsall;
+
+              @include hover {
+                @include scale(1.1);
+              }
+            }
+          }
+        }
+
+        .taglist {
+          @include flex-center-vert;
+          flex-wrap: wrap;
+          gap: size(5);
+
+          &-item {
+            @include setBgColor($white, $radiotext);
+            @include flex-center;
+            padding: size(10) size(20);
+            @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+
+            @include breakpoint(mobile768) {
+              font-size: size(16);
+            }
+          }
+        }
+      }
+    }
   }
 }
