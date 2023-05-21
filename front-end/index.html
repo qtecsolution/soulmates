@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -1225,26 +1225,34 @@
 
     <div class="settings-body">
       <h5 class="settings-title">Template Colors</h5>
-      <div class="settings-buttons">
-        <button type="button" class="btn-switch" id="btn-red">
-          <span class="colorbox colorbox-1"></span>
-        </button>
-        <button type="button" class="btn-switch" id="btn-green">
-          <span class="colorbox colorbox-2"></span>
-        </button>
-        <button type="button" class="btn-switch" id="btn-teal">
-          <span class="colorbox colorbox-3"></span>
-        </button>
-        <button type="button" class="btn-switch" id="btn-tan">
-          <span class="colorbox colorbox-4"></span>
-        </button>
+      <div class="settings-themes">
+        <div class="theme">
+          <input type="radio" name="theme" id="theme-1" value="purple" hidden>
+          <label class="btn-theme theme-1" for="theme-1" data-color="purple"></label>
+        </div>
+
+        <div class="theme">
+          <input type="radio" name="theme" id="theme-2" value="blue" hidden>
+          <label class="btn-theme theme-2" for="theme-2" data-color="blue"></label>
+        </div>
+
+        <div class="theme">
+          <input type="radio" name="theme" id="theme-3" value="red" hidden>
+          <label class="btn-theme theme-3" for="theme-3" data-color="red"></label>
+        </div>
+        
+        <div class="theme">
+          <input type="radio" name="theme" id="theme-4" value="pink" hidden>
+          <label class="btn-theme theme-4" for="theme-4" data-color="pink"></label>
+        </div>
+
         <button type="button" class="btn-reset" id="btn-reset">Reset</button>
       </div>
 
       <div class="template-colors">
         <div class="template-buttons">
-          <button type="button" id="btn-white" class="btn-color white-button">White</button>
-          <button type="button" id="btn-template" class="btn-color template-button">Template Color</button>
+          <button type="button" id="btn-white" class="btn-color active">White</button>
+          <button type="button" id="btn-template" class="btn-color">Template Color</button>
         </div>
 
         <small class="template-text">
@@ -1254,30 +1262,6 @@
     </div>
   </div>
   <!-- SETTINGS-END -->
-
-  <div id="setting" class="move-right d-none"> 
-    <h5>TEMPLATE COLOR</h5>
-    <div class="d-flex align-items-center gap-2">
-      <button type="button" id="coral">
-        <span class="swatches"></span>
-      </button>
-      <button type="button" id="coral-red">
-        <span class="swatches"></span>
-      </button>
-      <button type="button" id="lapis">
-        <span class="swatches"></span>
-      </button>
-      <button type="button" id="light-teal">
-        <span class="swatches"></span>
-      </button>
-      <button type="button" id="tan">
-        <span class="swatches"></span>
-      </button>
-      <button type="button" id="reset-color">
-        <span>Reset</span>
-      </button>
-    </div>
-  </div>
   
   <!-- BOOTSTRAP JS [5.3.0-alpha3] -->
   <script src="../assets/js/bootsrap/bootstrap.bundle.min.js"></script>
@@ -1317,7 +1301,7 @@
   <script src="../assets/js/back-top/backtotop.js"></script>
 
   <!-- SETTINGS-JS -->
-  <script src="../assets/js/settings/setting.js"></script>
+  <script src="../assets/js/settings/settings.js"></script>
 </body>
 
 </html>

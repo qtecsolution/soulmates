@@ -12,7 +12,7 @@
   }
 
   .profile-picture {
-    box-shadow: $cardshadow;
+    box-shadow: var(--cardshadow);
     @include w100;
     min-height: size(260);
     max-height: size(470);
@@ -40,7 +40,7 @@
     }
 
     .name {
-      color: $footertitle;
+      color: var(--footertitle);
       font-weight: 400;
 
       @include breakpoint(tab992) {
@@ -49,7 +49,7 @@
     }
 
     .section-text {
-      color: $textcolor;
+      color: var(--textcolor);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
     
       @include breakpoint(mobile576) {
@@ -78,7 +78,7 @@
     gap: size(12);
 
     .wedding-title {
-      color: $footertitle;
+      color: var(--footertitle);
       font-weight: 400;
 
       @include breakpoint(tab992) {
@@ -87,7 +87,7 @@
     }
 
     .wedding-text {
-      color: $textcolor;
+      color: var(--textcolor);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
 
       @include breakpoint(tab992) {
@@ -129,7 +129,7 @@
     text-align: center;
 
     .title {
-      color: $footertitle;
+      color: var(--footertitle);
       font-weight: 400;
 
       @include breakpoint(tab992) {
@@ -143,7 +143,7 @@
     }
 
     .text {
-      color: $textcolor;
+      color: var(--textcolor);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
     
       @include breakpoint(mobile576) {
@@ -187,7 +187,7 @@
     text-align: center;
 
     .guest-name {
-      color: $footertitle;
+      color: var(--footertitle);
       font-weight: 400;
 
       @include breakpoint(tab992) {
@@ -196,7 +196,7 @@
     }
 
     .guest-relation {
-      color: $textcolor;
+      color: var(--textcolor);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
     
       @include breakpoint(mobile576) {
@@ -235,7 +235,7 @@
   
     .date,
     .lovetext {
-      color: $textcolor;
+      color: var(--textcolor);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
     
       @include breakpoint(mobile576) {
@@ -244,7 +244,7 @@
     }
 
     .lovetitle {
-      color: $footertitle;
+      color: var(--footertitle);
       font-weight: 400;
 
       @include breakpoint(tab992) {
@@ -347,7 +347,7 @@
       @include rotateY(180);
 
       .name {
-        color: $footertitle;
+        color: var(--footertitle);
         font-weight: 400;
   
         @include breakpoint(tab992) {
@@ -356,7 +356,7 @@
       }
 
       .relationship {
-        color: $textcolor;
+        color: var(--textcolor);
         @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
       
         @include breakpoint(mobile576) {
@@ -414,7 +414,7 @@
     .title {
       color: $countdowntext;
       font-size: size(24);
-      color: $footertitle;
+      color: var(--footertitle);
       font-weight: 400;
 
       @include breakpoint(mobile768) {
@@ -536,7 +536,7 @@
       }
 
       @include hover {
-        color: $footertitle;
+        color: var(--footertitle);
       }
     }
 
@@ -551,7 +551,7 @@
   @include flex-column;
   gap: size(36);
   background: $white;
-  box-shadow: $cardshadow;
+  box-shadow: var(--cardshadow);
   padding: size(16);
 
   @include breakpoint(mobile768) {

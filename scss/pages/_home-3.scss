@@ -97,7 +97,7 @@
     }
 
     .profilename {
-      color: $white;
+      color: var(--white);
       font-weight: 400;
 
       @include breakpoint(tab992) {
@@ -106,7 +106,7 @@
     }
 
     .section-text {
-      color: $white;
+      color: var(--white);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
     
       @include breakpoint(mobile576) {
@@ -219,7 +219,7 @@
 
   &-info {
     .title {
-      color: $footertitle;
+      color: var(--footertitle);
       @include font($tt-nooks-script-trial, 20, normal, normal, 28);
       text-align: center;
 
@@ -238,8 +238,8 @@
   }
   
   &-details {
-    background: $white;
-    box-shadow: $cardshadow;
+    background: var(--white);
+    box-shadow: var(--cardshadow);
     flex-grow: 1;
     @include w100;
     padding: size(24);
@@ -261,13 +261,13 @@
         .hours,
         .minutes,
         .seconds {
-          color: $countdowntext;
+          color: var(--countdowntext);
           font-family: $tt-nooks-script-trial;
           font-weight: 700;
         }
 
         .count-title {
-          color: $countdowntext;
+          color: var(--countdowntext);
           @include font($tt-nooks-script-trial, 18, light, normal, 25.2);
 
           @include breakpoint(tab992) {
@@ -353,7 +353,7 @@
 
     .title {
       font-size: size(28);
-      color: $footertitle;
+      color: var(--footertitle);
       font-weight: 400;
 
       @include breakpoint(mobile768) {
@@ -366,7 +366,7 @@
     }
 
     .text {
-      color: $textcolor;
+      color: var(--textcolor);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
 
       @include breakpoint(tab992) {
@@ -376,7 +376,7 @@
   }
 
   &-body {
-    background: $sectionbg;
+    background: var(--sectionbg);
     @include flex-center-column;
     gap: size(80);
     padding: size(64) size(0);
@@ -412,7 +412,7 @@
   }
 
   .title {
-    color: $footertitle;
+    color: var(--footertitle);
     font-family: $tt-nooks-script-trial;
   }
 
@@ -422,7 +422,7 @@
     min-height: size(360);
     max-height: size(530);
     @include border(solid, 20, $mapborder);
-    box-shadow: $cardshadow;
+    box-shadow: var(--cardshadow);
     position: relative;
     z-index: 100;
 
@@ -498,7 +498,7 @@
 
     .display-2,
     .section-text {
-      color: $footertitle;
+      color: var(--footertitle);
     }
 
     .display-2 {
@@ -539,7 +539,7 @@
  CONTACT-3-SECTION START
 */
 .contact-3 {
-  background: $bodybg;
+  background: var(--bodybg);
   padding: size(80) size(8);
 
   @include breakpoint(tab992) {
@@ -558,7 +558,7 @@
     }
 
     .section-title {
-      color: $footertitle;
+      color: var(--footertitle);
       font-family: $vivaldi;
     }
 
@@ -574,7 +574,7 @@
 
       .radio-label {
         position: relative;
-        color: $radiotext;
+        color: var(--radiotext);
         cursor: pointer;
         @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
         padding-left: size(30);
@@ -594,13 +594,13 @@
 
         &::before {
           @include square(18);
-          @include border(solid, 1, $radiotext);
+          @include border(solid, 1, var(--radiotext));
           @include circle;
           @include transitiontransform;
         }
 
         &::after {
-          background: $radiotext;
+          background: var(--radiotext);
           @include square(8);
           @include circle;
           left: size(5);
@@ -621,10 +621,10 @@
     }
 
     .form-control {
-      @include setBgColor(transparent, $radiotext);
+      @include setBgColor(transparent, var(--radiotext));
       @include radius(0);
       border: 0;
-      @include border-single(bottom, solid, 1, $radiotext);
+      @include border-single(bottom, solid, 1, var(--radiotext));
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
       padding: size(14) size(20);
 
@@ -633,15 +633,15 @@
       }
 
       &::placeholder {
-        color: $radiotext;
+        color: var(--radiotext);
       }
     }
 
     .nice-select {
-      @include setBgColor(transparent, $radiotext);
+      @include setBgColor(transparent, var(--radiotext));
       @include radius(0);
       border: 0;
-      @include border-single(bottom, solid, 1, $radiotext);
+      @include border-single(bottom, solid, 1, var(--radiotext));
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
       padding: size(14) size(20);
       height: auto;
@@ -651,7 +651,7 @@
       }
 
       .option {
-        color: $countdowntext;
+        color: var(--countdowntext);
       }
     }
   }

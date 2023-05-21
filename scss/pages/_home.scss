@@ -16,7 +16,7 @@
     @include h100;
 
     .parallax-bg {
-      background: $white;
+      background: var(--white);
       background-size: cover;
       background-position: center;
       position: absolute;
@@ -46,7 +46,7 @@
         z-index: 10;
 
         .slider-title {
-          color: $white;
+          color: var(--white);
           font-family: $calista;
           font-weight: 400;
         }
@@ -62,12 +62,12 @@
 
           .title,
           .slider-text {
-            color: $white;
+            color: var(--white);
             @include font($tt-nooks-script-trial, 14, normal, normal, 19);
           }
 
           .event {
-            background: $white;
+            background: var(--white);
             @include radius(100);
             @include flex-center-column;
             padding: size(24);
@@ -88,7 +88,7 @@
 
               .day,
               .date {
-                color: $footertitle;
+                color: var(--footertitle);
                 @include font($tt-nooks-script-trial, 16, normal, normal, 22.4);
 
                 @include breakpoint(tab992) {
@@ -101,7 +101,7 @@
               @include w100;
               height: size(1);
               margin: size(8) auto;
-              background: $footertitle;
+              background: var(--footertitle);
 
               @include breakpoint(mobile768) {
                 width: size(1);
@@ -120,7 +120,7 @@
               }
 
               .location {
-                color: $footertitle;
+                color: var(--footertitle);
                 @include font($tt-nooks-script-trial, 16, normal, normal, 22.4);
 
                 @include breakpoint(tab992) {
@@ -143,7 +143,7 @@
         z-index: 10;
 
         .slider-title {
-          color: $white;
+          color: var(--white);
           font-family: $alexbrush;
           font-weight: 400;
         }
@@ -159,7 +159,7 @@
           gap: size(24);
 
           .date {
-            color: $white;
+            color: var(--white);
             @include font($tt-nooks-script-trial, 18, normal, normal, 25.2);
             
             @include breakpoint(mobile768) {
@@ -214,10 +214,10 @@
         }
 
         &.swiper-pagination-bullet-active {
-          border-color: $white;
+          border-color: var(--white);
   
           &::after {
-            background: $white;
+            background: var(--white);
           }
         }
       }
@@ -325,7 +325,7 @@
         margin-inline: auto;
   
         .section-text {
-          color: $footertitle;
+          color: var(--footertitle);
         }
       }
     }
@@ -370,7 +370,7 @@
 
     .title {
       font-size: size(28);
-      color: $footertitle;
+      color: var(--footertitle);
       font-weight: 400;
 
       @include breakpoint(mobile768) {
@@ -383,7 +383,7 @@
     }
     
     .text {
-      color: $textcolor;
+      color: var(--textcolor);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
 
       @include breakpoint(tab992) {
@@ -393,8 +393,8 @@
   }
 
   .maplocation {
-    background: $white;
-    box-shadow: $cardshadow;
+    background: var(--white);
+    box-shadow: var(--cardshadow);
     @include flex-center;
     @include w100;
     min-height: size(360);
@@ -470,7 +470,7 @@
     }
 
     .section-title {
-      color: $footertitle;
+      color: var(--footertitle);
       @include font($tt-nooks-script-trial, 32, normal, normal, 44.8);
     
       @include breakpoint(mobile576) {
@@ -483,7 +483,7 @@
     }
 
     .section-text {
-      color: $footertitle;
+      color: var(--footertitle);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
     
       @include breakpoint(mobile576) {
@@ -570,7 +570,7 @@
     text-align: center;
 
     .section-title {
-      color: $footertitle;
+      color: var(--footertitle);
       font-family: $tt-nooks-script-trial;
     }
   }
@@ -643,7 +643,7 @@
     }
 
     .section-title {
-      color: $footertitle;
+      color: var(--footertitle);
       position: relative;
       z-index: 10;
     }
@@ -731,12 +731,12 @@
     gap: size(16);
 
     .section-title {
-      color: $footertitle;
+      color: var(--footertitle);
       font-family: $tt-nooks-script-trial;
     }
 
     .section-text {
-      color: $textcolor;
+      color: var(--textcolor);
     }
   }
 
@@ -771,7 +771,7 @@
     @include w100;
 
     &-slide {
-      box-shadow: $cardshadow;
+      box-shadow: var(--cardshadow);
       @include square(150);
       @include flex-center;
       overflow: hidden;
@@ -842,7 +842,7 @@
         .minutes,
         .seconds {
           @include square(64);
-          @include setBgColor($white, $countdowntext);
+          @include setBgColor(var(--white), var(--countdowntext));
           @include circle;
           @include flex-center;
           @include font($tt-nooks-script-trial, 18, bold, normal, 25.2);
@@ -854,7 +854,7 @@
         }
   
         .count-title {
-          color: $white;
+          color: var(--white);
           @include font($tt-nooks-script-trial, 18, light, normal, 25.2);
 
           @include breakpoint(tab992) {
@@ -903,12 +903,12 @@
     gap: size(16);
 
     .section-title {
-      color: $footertitle;
+      color: var(--footertitle);
       font-family: $tt-nooks-script-trial;
     }
 
     .section-text {
-      color: $textcolor;
+      color: var(--textcolor);
     }
   }
 
@@ -939,7 +939,7 @@
  CONTACT-SECTION START
 */
 .contact {
-  background: $footertitle;
+  background: var(--footertitle);
   padding: size(80) size(8);
 
   @include breakpoint(tab992) {
@@ -967,10 +967,10 @@
     }
 
     .form-control {
-      @include setBgColor(transparent, $white);
+      @include setBgColor(transparent, var(--white));
       @include radius(0);
       border: 0;
-      @include border-single(bottom, solid, 1, $white);
+      @include border-single(bottom, solid, 1, var(--white));
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
       padding: size(14) size(20);
 
@@ -979,15 +979,15 @@
       }
 
       &::placeholder {
-        color: $white;
+        color: var(--white);
       }
     }
 
     .nice-select {
-      @include setBgColor(transparent, $white);
+      @include setBgColor(transparent, var(--white));
       @include radius(0);
       border: 0;
-      @include border-single(bottom, solid, 1, $white);
+      @include border-single(bottom, solid, 1, var(--white));
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
       padding: size(14) size(20);
       height: auto;
@@ -997,7 +997,7 @@
       }
 
       .option {
-        color: $countdowntext;
+        color: var(--countdowntext);
       }
     }
   }

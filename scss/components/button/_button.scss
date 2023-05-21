@@ -44,7 +44,7 @@ button,
     @include w100;
     height: size(2);
     @include radius(4);
-    background: $white;
+    background: var(--white);
     display: block;
     @include transitionsall;
   }
@@ -77,7 +77,7 @@ button,
 
 .btn-submit {
   border: 0;
-  @include setBgColor($white, $countdowntext);
+  @include setBgColor(var(--white), $countdowntext);
   @include radius(50);
   @include flex-center;
   @include font($tt-nooks-script-trial, 16, bold, normal, 22.4);
@@ -92,13 +92,13 @@ button,
   }
 
   @include hover {
-    @include setBgColor($overlaybg, $white);
+    @include setBgColor($overlaybg, var(--white));
   }
 }
 
 .btn-submit-2 {
   border: 0;
-  @include setBgColor($radiotext, $white);
+  @include setBgColor($radiotext, var(--white));
   @include radius(50);
   @include flex-center;
   @include font($tt-nooks-script-trial, 16, bold, normal, 22.4);
@@ -113,7 +113,7 @@ button,
   }
 
   @include hover {
-    @include setBgColor($overlaybg, $white);
+    @include setBgColor($overlaybg, var(--white));
   }
 }
 
@@ -121,7 +121,8 @@ button,
   @include square(40);
   @include flex-center;
   @include transparent-button;
-  background: $white;
+  background: var(--white);
+  @include border(solid, 1, var(--bulletbg));
 
   .icon {
     @include square(20);
@@ -138,30 +139,32 @@ button,
   }
 }
 
-.btn-switch {
+.btn-theme {
   @include transparent-button;
   @include flex-center;
   @include square(24);
+  cursor: pointer;
   overflow: hidden;
 
-  .colorbox {
-    @include wh100
+  &.theme-0 {
+    background: var(--white);
+    @include border(solid, 1, $black);
   }
 
-  .colorbox-1 {
-    background: red;
+  &.theme-1 {
+    background: $theme-1;
   }
 
-  .colorbox-2 {
-    background: green;
+  &.theme-2 {
+    background: $theme-2;
   }
 
-  .colorbox-3 {
-    background: teal;
+  &.theme-3 {
+    background: $theme-3;
   }
 
-  .colorbox-4 {
-    background: tan;
+  &.theme-4 {
+    background: $theme-4;
   }
 }
 
@@ -170,13 +173,13 @@ button,
   @include font($tt-nooks-script-trial, 13, normal, normal, 18.2);
   width: auto;
   padding: size(4) size(10);
-  @include border(solid, 2, $footertitle);
-  @include setBgColor($white, $footertitle);
+  @include border(solid, 1, var(--footertitle));
+  @include setBgColor(var(--white), var(--footertitle));
   @include transitionsall;
   margin-left: auto;
   text-transform: uppercase;
 
   @include hover {
-    @include setBgColor($footertitle, $white);
+    @include setBgColor(var(--footertitle), var(--white));
   }
 }

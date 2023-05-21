@@ -1,5 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
 @import url("https://fonts.cdnfonts.com/css/vivaldi");
+:root,
+:root[data-theme=light] {
+  --bodybg: hsl(0, 33%, 98%);
+  --footertitle: hsl(232, 36%, 35%);
+  --overlaybg: hsl(231, 71%, 15%);
+  --countdowntext: hsl(237, 31%, 41%);
+  --textcolor: hsl(230, 14%, 41%);
+  --cardbackbg: hsl(0, 0%, 95%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --radiotext: hsl(231, 37%, 35%);
+  --cardshadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  --sectionbg: rgba(72, 75, 137, 0.05);
+  --paginationlinkbg: hsl(220, 25%, 95%);
+}
+
+:root[data-theme=purple] {
+  --footertitle: #8e44ad;
+}
+
+:root[data-theme=blue] {
+  --footertitle: #2980b9;
+}
+
+:root[data-theme=red] {
+  --footertitle: #ea2027;
+}
+
+:root[data-theme=pink] {
+  --footertitle: #e84393;
+}
+
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
@@ -501,7 +533,7 @@ button:not([disabled]):hover,
   height: 0.125rem;
   border-radius: 0.25rem;
   border-radius: 0.25rem;
-  background: hsl(0, 0%, 100%);
+  background: var(--white);
   display: block;
   transition: all 350ms ease-in-out;
 }
@@ -532,7 +564,7 @@ button:not([disabled]):hover,
 
 .btn-submit {
   border: 0;
-  background: hsl(0, 0%, 100%);
+  background: var(--white);
   color: hsl(237, 31%, 41%);
   border-radius: 3.125rem;
   border-radius: 3.125rem;
@@ -557,13 +589,13 @@ button:not([disabled]):hover,
 }
 .btn-submit:not([disabled]):hover {
   background: hsl(231, 71%, 15%);
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
 }
 
 .btn-submit-2 {
   border: 0;
   background: hsl(231, 37%, 35%);
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   border-radius: 3.125rem;
   border-radius: 3.125rem;
   display: flex;
@@ -587,7 +619,7 @@ button:not([disabled]):hover,
 }
 .btn-submit-2:not([disabled]):hover {
   background: hsl(231, 71%, 15%);
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
 }
 
 .btn-settings {
@@ -598,7 +630,8 @@ button:not([disabled]):hover,
   justify-content: center;
   background: transparent;
   border: none;
-  background: hsl(0, 0%, 100%);
+  background: var(--white);
+  border: solid 0.0625rem var(--bulletbg);
 }
 .btn-settings .icon {
   width: 1.25rem;
@@ -616,7 +649,7 @@ button:not([disabled]):hover,
   animation: rotation infinite 1s linear;
 }
 
-.btn-switch {
+.btn-theme {
   background: transparent;
   border: none;
   display: flex;
@@ -624,23 +657,24 @@ button:not([disabled]):hover,
   justify-content: center;
   width: 1.5rem;
   height: 1.5rem;
+  cursor: pointer;
   overflow: hidden;
 }
-.btn-switch .colorbox {
-  width: 100%;
-  height: 100%;
+.btn-theme.theme-0 {
+  background: var(--white);
+  border: solid 0.0625rem hsl(0, 0%, 0%);
 }
-.btn-switch .colorbox-1 {
-  background: red;
+.btn-theme.theme-1 {
+  background: #8e44ad;
 }
-.btn-switch .colorbox-2 {
-  background: green;
+.btn-theme.theme-2 {
+  background: #2980b9;
 }
-.btn-switch .colorbox-3 {
-  background: teal;
+.btn-theme.theme-3 {
+  background: #ea2027;
 }
-.btn-switch .colorbox-4 {
-  background: tan;
+.btn-theme.theme-4 {
+  background: #e84393;
 }
 
 .btn-reset {
@@ -652,16 +686,16 @@ button:not([disabled]):hover,
   line-height: 1.4;
   width: auto;
   padding: 0.25rem 0.625rem;
-  border: solid 0.125rem hsl(232, 36%, 35%);
-  background: hsl(0, 0%, 100%);
-  color: hsl(232, 36%, 35%);
+  border: solid 0.0625rem var(--footertitle);
+  background: var(--white);
+  color: var(--footertitle);
   transition: all 350ms ease-in-out;
   margin-left: auto;
   text-transform: uppercase;
 }
 .btn-reset:not([disabled]):hover {
-  background: hsl(232, 36%, 35%);
-  color: hsl(0, 0%, 100%);
+  background: var(--footertitle);
+  color: var(--white);
 }
 
 .card-lovely {
@@ -679,7 +713,7 @@ button:not([disabled]):hover,
   }
 }
 .card-lovely .profile-picture {
-  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  box-shadow: var(--cardshadow);
   width: 100%;
   min-height: 16.25rem;
   max-height: 29.375rem;
@@ -712,7 +746,7 @@ button:not([disabled]):hover,
   }
 }
 .card-lovely-body .name {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 62rem) {
@@ -721,7 +755,7 @@ button:not([disabled]):hover,
   }
 }
 .card-lovely-body .section-text {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -756,7 +790,7 @@ button:not([disabled]):hover,
   gap: 0.75rem;
 }
 .card-wedding .weddinginfo .wedding-title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 62rem) {
@@ -765,7 +799,7 @@ button:not([disabled]):hover,
   }
 }
 .card-wedding .weddinginfo .wedding-text {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -818,7 +852,7 @@ button:not([disabled]):hover,
   text-align: center;
 }
 .card-event-body .title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 62rem) {
@@ -831,7 +865,7 @@ button:not([disabled]):hover,
   margin-inline: auto;
 }
 .card-event-body .text {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -886,7 +920,7 @@ button:not([disabled]):hover,
   text-align: center;
 }
 .card-guest-body .guest-name {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 62rem) {
@@ -895,7 +929,7 @@ button:not([disabled]):hover,
   }
 }
 .card-guest-body .guest-relation {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -940,7 +974,7 @@ button:not([disabled]):hover,
 }
 .love-card-detail .date,
 .love-card-detail .lovetext {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -954,7 +988,7 @@ button:not([disabled]):hover,
   }
 }
 .love-card-detail .lovetitle {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 62rem) {
@@ -1061,7 +1095,7 @@ button:not([disabled]):hover,
   transform: rotateY(180deg);
 }
 .card-flip .content .back .name {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 62rem) {
@@ -1070,7 +1104,7 @@ button:not([disabled]):hover,
   }
 }
 .card-flip .content .back .relationship {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -1132,7 +1166,7 @@ button:not([disabled]):hover,
 .whenwhere-card-detail .title {
   color: hsl(237, 31%, 41%);
   font-size: 1.5rem;
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 48rem) {
@@ -1264,7 +1298,7 @@ button:not([disabled]):hover,
   }
 }
 .card-blog-body .readmore:not([disabled]):hover {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
 }
 .card-blog-body .social-list {
   display: flex;
@@ -1277,7 +1311,7 @@ button:not([disabled]):hover,
   flex-direction: column;
   gap: 2.25rem;
   background: hsl(0, 0%, 100%);
-  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  box-shadow: var(--cardshadow);
   padding: 1rem;
 }
 @media screen and (min-width: 48rem) {
@@ -2612,7 +2646,7 @@ button:not([disabled]):hover,
   top: 50%;
   transform: translateY(-50%);
   left: -15.625rem;
-  z-index: 100;
+  z-index: 999999;
   width: 15.625rem;
   background: hsl(0, 0%, 100%);
   box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
@@ -2644,7 +2678,7 @@ button:not([disabled]):hover,
   line-height: 1.4;
   text-transform: uppercase;
 }
-.settings-body .settings-buttons {
+.settings-body .settings-themes {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -2662,35 +2696,32 @@ button:not([disabled]):hover,
 }
 .settings-body .template-colors .template-buttons .btn-color {
   width: 49%;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "TT Nooks Script Trial";
   font-size: 0.8125rem;
   font-weight: 400;
   font-style: normal;
   line-height: 1.4;
-  background: transparent;
-  border: none;
-  border: solid 0.125rem transparent;
-  padding: 0.25rem;
+  background: hsl(0, 0%, 100%);
+  color: hsl(232, 36%, 35%);
+  border: solid 0.0625rem hsl(232, 36%, 35%);
+  padding: 0.3125rem;
   text-align: center;
   transition: all 350ms ease-in-out;
 }
-.settings-body .template-colors .template-buttons .btn-color.white-button {
+.settings-body .template-colors .template-buttons .btn-color:hover:not(.active) {
+  background: hsl(232, 36%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+.settings-body .template-colors .template-buttons .btn-color.active {
   border-color: hsl(232, 36%, 35%);
   background: hsl(232, 36%, 35%);
   color: hsl(0, 0%, 100%);
 }
-.settings-body .template-colors .template-buttons .btn-color.white-button:not([disabled]):hover {
+.settings-body .template-colors .template-buttons .btn-color.active:not([disabled]):hover {
   background: hsl(231, 37%, 35%);
-  color: hsl(0, 0%, 100%);
-}
-.settings-body .template-colors .template-buttons .btn-color.template-button {
-  border-color: hsl(232, 36%, 35%);
-  background: hsl(0, 0%, 100%);
-  color: hsl(232, 36%, 35%);
-}
-.settings-body .template-colors .template-buttons .btn-color.template-button:not([disabled]):hover {
-  background: hsl(232, 36%, 35%);
   color: hsl(0, 0%, 100%);
 }
 .settings-body .template-colors .template-text {
@@ -2702,98 +2733,6 @@ button:not([disabled]):hover,
 }
 .settings.is-active {
   left: 0rem;
-}
-
-#options-setting {
-  position: fixed;
-  width: 300px;
-  padding: 25px;
-  background-color: #FFF;
-  top: 170px;
-  left: -302px;
-  z-index: 1000;
-  box-shadow: 2px 2px 5px #888888;
-  transition: 0.3s all ease;
-}
-
-#options-setting.move-right {
-  left: 0px;
-  transition: 0.3s all ease;
-}
-
-#setting-button-wrapper {
-  position: absolute;
-  left: 300px;
-  top: -8px;
-}
-
-.swatches {
-  display: inline-block;
-  height: 25px;
-  width: 25px;
-  margin-right: 3px;
-}
-
-#coral span {
-  background-color: #FF7F50;
-}
-
-#coral-red span {
-  background-color: #FF4040;
-}
-
-#lapis span {
-  background-color: #69477A;
-}
-
-#light-teal span {
-  background-color: #18A7B5;
-}
-
-#tan span {
-  background-color: #D2B48C;
-}
-
-#reset-color span {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  border: 3px solid #CCC;
-  padding: 0px 10px;
-}
-
-.navbar-setting-button {
-  display: inline-block;
-  border: 3px solid #CCC;
-  padding: 8px 15px;
-}
-
-.navbar-setting-button {
-  display: inline-block;
-  border: 3px solid #CCC;
-  padding: 8px 15px;
-}
-
-.pattern-setting-button {
-  display: inline-block;
-  border: 3px solid #CCC;
-  padding: 8px 16px;
-}
-
-.setting-info {
-  font-size: 12px;
-  line-height: 16px;
-  margin-top: 10px;
-}
-
-.navbar-setting-button.active,
-.pattern-setting-button.active,
-a:hover .pattern-setting-button,
-a:hover .navbar-setting-button,
-#reset-color:hover span {
-  background-color: #f0394d;
-  color: #FFF;
-  border-color: #f0394d;
 }
 
 .custom-radio .radio-input:checked ~ .radio-label::after {
@@ -2856,7 +2795,7 @@ a:hover .navbar-setting-button,
   height: 100%;
 }
 .home-slider .swiper .parallax-bg {
-  background: hsl(0, 0%, 100%);
+  background: var(--white);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -2889,7 +2828,7 @@ a:hover .navbar-setting-button,
   z-index: 10;
 }
 .home-slider .swiper-slide .slider-caption .slider-title {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-family: "callista";
   font-weight: 400;
 }
@@ -2908,7 +2847,7 @@ a:hover .navbar-setting-button,
 }
 .home-slider .swiper-slide .slider-caption .slider-event .title,
 .home-slider .swiper-slide .slider-caption .slider-event .slider-text {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-family: "TT Nooks Script Trial";
   font-size: 0.875rem;
   font-weight: 400;
@@ -2916,7 +2855,7 @@ a:hover .navbar-setting-button,
   line-height: 1.3571428571;
 }
 .home-slider .swiper-slide .slider-caption .slider-event .event {
-  background: hsl(0, 0%, 100%);
+  background: var(--white);
   border-radius: 6.25rem;
   border-radius: 6.25rem;
   display: flex;
@@ -2946,7 +2885,7 @@ a:hover .navbar-setting-button,
 }
 .home-slider .swiper-slide .slider-caption .slider-event .event .day-date .day,
 .home-slider .swiper-slide .slider-caption .slider-event .event .day-date .date {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 400;
@@ -2963,7 +2902,7 @@ a:hover .navbar-setting-button,
   width: 100%;
   height: 0.0625rem;
   margin: 0.5rem auto;
-  background: hsl(232, 36%, 35%);
+  background: var(--footertitle);
 }
 @media screen and (min-width: 48rem) {
   .home-slider .swiper-slide .slider-caption .slider-event .event .divider {
@@ -2986,7 +2925,7 @@ a:hover .navbar-setting-button,
   }
 }
 .home-slider .swiper-slide .slider-caption .slider-event .event .locationbox .location {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 400;
@@ -3012,7 +2951,7 @@ a:hover .navbar-setting-button,
   z-index: 10;
 }
 .home-slider .swiper-slide .slide-caption .slider-title {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-family: "Alex Brush", cursive;
   font-weight: 400;
 }
@@ -3029,7 +2968,7 @@ a:hover .navbar-setting-button,
   gap: 1.5rem;
 }
 .home-slider .swiper-slide .slide-caption .slide-event .date {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-family: "TT Nooks Script Trial";
   font-size: 1.125rem;
   font-weight: 400;
@@ -3090,10 +3029,10 @@ a:hover .navbar-setting-button,
   background: hsl(233, 22%, 71%);
 }
 .home-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  border-color: hsl(0, 0%, 100%);
+  border-color: var(--white);
 }
 .home-slider .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
-  background: hsl(0, 0%, 100%);
+  background: var(--white);
 }
 .home-slider .swiper .slider-buttons {
   position: absolute;
@@ -3218,7 +3157,7 @@ a:hover .navbar-setting-button,
   margin-inline: auto;
 }
 .copules .lovely-couple-details .textinfo .section-text {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
 }
 
 .copules-1 {
@@ -3262,7 +3201,7 @@ a:hover .navbar-setting-button,
 }
 .whenwhere-header .title {
   font-size: 1.75rem;
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 48rem) {
@@ -3276,7 +3215,7 @@ a:hover .navbar-setting-button,
   }
 }
 .whenwhere-header .text {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -3289,8 +3228,8 @@ a:hover .navbar-setting-button,
   }
 }
 .whenwhere .maplocation {
-  background: hsl(0, 0%, 100%);
-  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  background: var(--white);
+  box-shadow: var(--cardshadow);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3379,7 +3318,7 @@ a:hover .navbar-setting-button,
   }
 }
 .more-events-header .section-title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
   font-size: 2rem;
   font-weight: 400;
@@ -3397,7 +3336,7 @@ a:hover .navbar-setting-button,
   }
 }
 .more-events-header .section-text {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -3495,7 +3434,7 @@ a:hover .navbar-setting-button,
   text-align: center;
 }
 .lovestory-header .section-title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
 }
 .lovestory-body .lovestory-leftcontent,
@@ -3568,7 +3507,7 @@ a:hover .navbar-setting-button,
   }
 }
 .lovestory-footer .section-title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   position: relative;
   z-index: 10;
 }
@@ -3666,11 +3605,11 @@ a:hover .navbar-setting-button,
   gap: 1rem;
 }
 .ourgallery-header .section-title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
 }
 .ourgallery-header .section-text {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
 }
 .ourgallery-body {
   position: relative;
@@ -3707,7 +3646,7 @@ a:hover .navbar-setting-button,
   width: 100%;
 }
 .ourgallery .swiper-slide {
-  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  box-shadow: var(--cardshadow);
   width: 9.375rem;
   height: 9.375rem;
   display: flex;
@@ -3796,8 +3735,8 @@ a:hover .navbar-setting-button,
 .countdown-details .countdown-clock .countdown-time .seconds {
   width: 4rem;
   height: 4rem;
-  background: hsl(0, 0%, 100%);
-  color: hsl(237, 31%, 41%);
+  background: var(--white);
+  color: var(--countdowntext);
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -3819,7 +3758,7 @@ a:hover .navbar-setting-button,
   }
 }
 .countdown-details .countdown-clock .countdown-time .count-title {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-family: "TT Nooks Script Trial";
   font-size: 1.125rem;
   font-weight: 300;
@@ -3877,11 +3816,11 @@ a:hover .navbar-setting-button,
   gap: 1rem;
 }
 .marqueeslider-header .section-title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
 }
 .marqueeslider-header .section-text {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
 }
 .marqueeslider .guests {
   display: flex;
@@ -3912,7 +3851,7 @@ a:hover .navbar-setting-button,
  CONTACT-SECTION START
 */
 .contact {
-  background: hsl(232, 36%, 35%);
+  background: var(--footertitle);
   padding: 5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
@@ -3945,11 +3884,11 @@ a:hover .navbar-setting-button,
 }
 .contact-form .form-control {
   background: transparent;
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   border-radius: 0rem;
   border-radius: 0rem;
   border: 0;
-  border-bottom: solid 0.0625rem hsl(0, 0%, 100%);
+  border-bottom: solid 0.0625rem var(--white);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -3963,18 +3902,18 @@ a:hover .navbar-setting-button,
   }
 }
 .contact-form .form-control::-moz-placeholder {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
 }
 .contact-form .form-control::placeholder {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
 }
 .contact-form .nice-select {
   background: transparent;
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   border-radius: 0rem;
   border-radius: 0rem;
   border: 0;
-  border-bottom: solid 0.0625rem hsl(0, 0%, 100%);
+  border-bottom: solid 0.0625rem var(--white);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -3989,7 +3928,7 @@ a:hover .navbar-setting-button,
   }
 }
 .contact-form .nice-select .option {
-  color: hsl(237, 31%, 41%);
+  color: var(--countdowntext);
 }
 .contact-thumbnail {
   width: 100%;
@@ -4029,7 +3968,7 @@ a:hover .navbar-setting-button,
   }
 }
 .countdown-2-info .title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
   font-size: 1.5rem;
   font-weight: 400;
@@ -4067,12 +4006,12 @@ a:hover .navbar-setting-button,
 .countdown-2-details .countdown-clock .countdown-time .hours,
 .countdown-2-details .countdown-clock .countdown-time .minutes,
 .countdown-2-details .countdown-clock .countdown-time .seconds {
-  color: hsl(237, 31%, 41%);
+  color: var(--countdowntext);
   font-family: "TT Nooks Script Trial";
   font-weight: 700;
 }
 .countdown-2-details .countdown-clock .countdown-time .count-title {
-  color: hsl(237, 31%, 41%);
+  color: var(--countdowntext);
   font-family: "TT Nooks Script Trial";
   font-size: 1.125rem;
   font-weight: 300;
@@ -4161,7 +4100,7 @@ a:hover .navbar-setting-button,
 }
 .couples-2-content .card-lovely-body .name,
 .couples-2-content .card-lovely-body .section-text {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
 }
 .couples-2 .overlay {
   background: rgba(11, 19, 65, 0.5);
@@ -4197,7 +4136,7 @@ a:hover .navbar-setting-button,
   overflow: hidden;
 }
 .empty-banner-2 .empty-info .display-1 {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-family: "Alex Brush", cursive;
 }
 .empty-banner-2 .empty-info .section-text {
@@ -4232,7 +4171,7 @@ a:hover .navbar-setting-button,
 }
 .whenwhere-2-header .title {
   font-size: 1.75rem;
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 48rem) {
@@ -4246,7 +4185,7 @@ a:hover .navbar-setting-button,
   }
 }
 .whenwhere-2-header .text {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -4275,7 +4214,7 @@ a:hover .navbar-setting-button,
   transform: scale(1.1);
 }
 .whenwhere-2 .whenwhere-detail {
-  background: hsl(237, 31%, 41%);
+  background: var(--countdowntext);
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -4295,7 +4234,7 @@ a:hover .navbar-setting-button,
   width: 100%;
 }
 .whenwhere-2 .whenwhere-detail .icon-title .title {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-weight: 400;
 }
 @media screen and (min-width: 62rem) {
@@ -4307,7 +4246,7 @@ a:hover .navbar-setting-button,
   max-width: 26.25rem;
 }
 .whenwhere-2 .whenwhere-detail .text {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -4377,7 +4316,7 @@ a:hover .navbar-setting-button,
 }
 .attending-2 .attending-details .display-2,
 .attending-2 .attending-details .section-text {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
 }
 .attending-2 .attending-details .display-2 {
   font-family: "Alex Brush", cursive;
@@ -4499,7 +4438,7 @@ a:hover .navbar-setting-button,
  CONTACT-2-SECTION START
 */
 .contact-2 {
-  background: hsl(0, 33%, 98%);
+  background: var(--bodybg);
   padding: 5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
@@ -4521,7 +4460,7 @@ a:hover .navbar-setting-button,
   }
 }
 .contact-2 .contact-form .section-title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "Alex Brush", cursive;
 }
 .contact-2 .contact-form .custom-radio .radio-input:checked ~ .radio-label::after {
@@ -4530,7 +4469,7 @@ a:hover .navbar-setting-button,
 }
 .contact-2 .contact-form .custom-radio .radio-label {
   position: relative;
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   cursor: pointer;
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
@@ -4554,12 +4493,12 @@ a:hover .navbar-setting-button,
 .contact-2 .contact-form .custom-radio .radio-label::before {
   width: 1.125rem;
   height: 1.125rem;
-  border: solid 0.0625rem hsl(231, 37%, 35%);
+  border: solid 0.0625rem var(--radiotext);
   border-radius: 100%;
   transition: transform 350ms ease-in-out;
 }
 .contact-2 .contact-form .custom-radio .radio-label::after {
-  background: hsl(231, 37%, 35%);
+  background: var(--radiotext);
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 100%;
@@ -4580,11 +4519,11 @@ a:hover .navbar-setting-button,
 }
 .contact-2 .contact-form .form-control {
   background: transparent;
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   border-radius: 0rem;
   border-radius: 0rem;
   border: 0;
-  border-bottom: solid 0.0625rem hsl(231, 37%, 35%);
+  border-bottom: solid 0.0625rem var(--radiotext);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -4598,18 +4537,18 @@ a:hover .navbar-setting-button,
   }
 }
 .contact-2 .contact-form .form-control::-moz-placeholder {
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
 }
 .contact-2 .contact-form .form-control::placeholder {
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
 }
 .contact-2 .contact-form .nice-select {
   background: transparent;
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   border-radius: 0rem;
   border-radius: 0rem;
   border: 0;
-  border-bottom: solid 0.0625rem hsl(231, 37%, 35%);
+  border-bottom: solid 0.0625rem var(--radiotext);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -4624,7 +4563,7 @@ a:hover .navbar-setting-button,
   }
 }
 .contact-2 .contact-form .nice-select .option {
-  color: hsl(237, 31%, 41%);
+  color: var(--countdowntext);
 }
 .contact-2 .contact-thumbnail {
   width: 100%;
@@ -4733,7 +4672,7 @@ a:hover .navbar-setting-button,
   }
 }
 .couples-3 .profile-info .profilename {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-weight: 400;
 }
 @media screen and (min-width: 62rem) {
@@ -4742,7 +4681,7 @@ a:hover .navbar-setting-button,
   }
 }
 .couples-3 .profile-info .section-text {
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -4872,7 +4811,7 @@ a:hover .navbar-setting-button,
   }
 }
 .countdown-3-info .title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
   font-size: 1.25rem;
   font-weight: 400;
@@ -4896,8 +4835,8 @@ a:hover .navbar-setting-button,
   }
 }
 .countdown-3-details {
-  background: hsl(0, 0%, 100%);
-  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  background: var(--white);
+  box-shadow: var(--cardshadow);
   flex-grow: 1;
   width: 100%;
   padding: 1.5rem;
@@ -4926,12 +4865,12 @@ a:hover .navbar-setting-button,
 .countdown-3-details .countdown-clock .countdown-time .hours,
 .countdown-3-details .countdown-clock .countdown-time .minutes,
 .countdown-3-details .countdown-clock .countdown-time .seconds {
-  color: hsl(237, 31%, 41%);
+  color: var(--countdowntext);
   font-family: "TT Nooks Script Trial";
   font-weight: 700;
 }
 .countdown-3-details .countdown-clock .countdown-time .count-title {
-  color: hsl(237, 31%, 41%);
+  color: var(--countdowntext);
   font-family: "TT Nooks Script Trial";
   font-size: 1.125rem;
   font-weight: 300;
@@ -5028,7 +4967,7 @@ a:hover .navbar-setting-button,
 }
 .whenwhere-3-header .title {
   font-size: 1.75rem;
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-weight: 400;
 }
 @media screen and (min-width: 48rem) {
@@ -5042,7 +4981,7 @@ a:hover .navbar-setting-button,
   }
 }
 .whenwhere-3-header .text {
-  color: hsl(230, 14%, 41%);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -5055,7 +4994,7 @@ a:hover .navbar-setting-button,
   }
 }
 .whenwhere-3-body {
-  background: rgba(72, 75, 137, 0.05);
+  background: var(--sectionbg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5092,7 +5031,7 @@ a:hover .navbar-setting-button,
   text-align: center;
 }
 .locationmap-2 .title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
 }
 .locationmap-2 .locationmap-box {
@@ -5103,7 +5042,7 @@ a:hover .navbar-setting-button,
   min-height: 22.5rem;
   max-height: 33.125rem;
   border: solid 1.25rem rgba(126, 129, 166, 0.2);
-  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  box-shadow: var(--cardshadow);
   position: relative;
   z-index: 100;
 }
@@ -5179,7 +5118,7 @@ a:hover .navbar-setting-button,
 }
 .attending-3 .attending-details .display-2,
 .attending-3 .attending-details .section-text {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
 }
 .attending-3 .attending-details .display-2 {
   font-family: "Vivaldi", sans-serif;
@@ -5220,7 +5159,7 @@ a:hover .navbar-setting-button,
  CONTACT-3-SECTION START
 */
 .contact-3 {
-  background: hsl(0, 33%, 98%);
+  background: var(--bodybg);
   padding: 5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
@@ -5242,7 +5181,7 @@ a:hover .navbar-setting-button,
   }
 }
 .contact-3 .contact-form .section-title {
-  color: hsl(232, 36%, 35%);
+  color: var(--footertitle);
   font-family: "Vivaldi", sans-serif;
 }
 .contact-3 .contact-form .custom-radio .radio-input:checked ~ .radio-label::after {
@@ -5251,7 +5190,7 @@ a:hover .navbar-setting-button,
 }
 .contact-3 .contact-form .custom-radio .radio-label {
   position: relative;
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   cursor: pointer;
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
@@ -5275,12 +5214,12 @@ a:hover .navbar-setting-button,
 .contact-3 .contact-form .custom-radio .radio-label::before {
   width: 1.125rem;
   height: 1.125rem;
-  border: solid 0.0625rem hsl(231, 37%, 35%);
+  border: solid 0.0625rem var(--radiotext);
   border-radius: 100%;
   transition: transform 350ms ease-in-out;
 }
 .contact-3 .contact-form .custom-radio .radio-label::after {
-  background: hsl(231, 37%, 35%);
+  background: var(--radiotext);
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 100%;
@@ -5301,11 +5240,11 @@ a:hover .navbar-setting-button,
 }
 .contact-3 .contact-form .form-control {
   background: transparent;
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   border-radius: 0rem;
   border-radius: 0rem;
   border: 0;
-  border-bottom: solid 0.0625rem hsl(231, 37%, 35%);
+  border-bottom: solid 0.0625rem var(--radiotext);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -5319,18 +5258,18 @@ a:hover .navbar-setting-button,
   }
 }
 .contact-3 .contact-form .form-control::-moz-placeholder {
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
 }
 .contact-3 .contact-form .form-control::placeholder {
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
 }
 .contact-3 .contact-form .nice-select {
   background: transparent;
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   border-radius: 0rem;
   border-radius: 0rem;
   border: 0;
-  border-bottom: solid 0.0625rem hsl(231, 37%, 35%);
+  border-bottom: solid 0.0625rem var(--radiotext);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -5345,7 +5284,7 @@ a:hover .navbar-setting-button,
   }
 }
 .contact-3 .contact-form .nice-select .option {
-  color: hsl(237, 31%, 41%);
+  color: var(--countdowntext);
 }
 .contact-3 .contact-thumbnail {
   width: 100%;
@@ -5438,8 +5377,8 @@ a:hover .navbar-setting-button,
   border-radius: 0rem;
 }
 .blogmain .leftinfo .blogpagination .pagination .page-link {
-  background: hsl(220, 25%, 95%);
-  color: hsl(231, 37%, 35%);
+  background: var(--paginationlinkbg);
+  color: var(--radiotext);
   border: 0rem;
   width: 2rem;
   height: 2rem;
@@ -5485,7 +5424,7 @@ a:hover .navbar-setting-button,
   gap: 2rem;
 }
 .blogmain .leftinfo .blog-detail-info .bloginfotext {
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   font-family: "TT Nooks Script Trial";
   font-size: 0.875rem;
   font-weight: 300;
@@ -5503,7 +5442,7 @@ a:hover .navbar-setting-button,
   }
 }
 .blogmain .leftinfo .card-blog-body .section-text {
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   font-family: "TT Nooks Script Trial";
   font-size: 0.875rem;
   font-weight: 300;
@@ -5532,8 +5471,8 @@ a:hover .navbar-setting-button,
   gap: 0.3125rem;
 }
 .blogmain .leftinfo .taginfo .taglist-item {
-  background: hsl(0, 0%, 100%);
-  color: hsl(231, 37%, 35%);
+  background: var(--white);
+  color: var(--radiotext);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5579,11 +5518,11 @@ a:hover .navbar-setting-button,
 .blogmain .rightinfo .rightcontent-header {
   display: flex;
   align-items: center;
-  border-bottom: solid 0.0625rem hsl(231, 37%, 35%);
+  border-bottom: solid 0.0625rem var(--radiotext);
   padding-bottom: 0.625rem;
 }
 .blogmain .rightinfo .rightcontent-header .title {
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 400;
@@ -5615,7 +5554,7 @@ a:hover .navbar-setting-button,
   align-items: center;
 }
 .blogmain .rightinfo .rightcontent-body .categorylist-link span {
-  color: hsl(231, 37%, 35%);
+  color: var(--radiotext);
   font-family: "TT Nooks Script Trial";
   font-size: 0.875rem;
   font-weight: 400;
@@ -5676,8 +5615,8 @@ a:hover .navbar-setting-button,
   gap: 0.3125rem;
 }
 .blogmain .rightinfo .rightcontent-body .taglist-item {
-  background: hsl(0, 0%, 100%);
-  color: hsl(231, 37%, 35%);
+  background: var(--white);
+  color: var(--radiotext);
   display: flex;
   align-items: center;
   justify-content: center;

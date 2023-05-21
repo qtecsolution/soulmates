@@ -81,7 +81,7 @@
         }
         
         .page-link {
-          @include setBgColor($paginationlinkbg, $radiotext);
+          @include setBgColor(var(--paginationlinkbg), var(--radiotext));
           border: size(0);
           @include square(32);
           @include flex-center;
@@ -122,7 +122,7 @@
         gap: size(32);
 
         .bloginfotext {
-          color: $radiotext;
+          color: var(--radiotext);
           @include font($tt-nooks-script-trial, 14, light, normal, 19.6);
 
           @include breakpoint(mobile768) {
@@ -139,7 +139,7 @@
     .card-blog {
       &-body {
         .section-text {
-          color: $radiotext;
+          color: var(--radiotext);
           @include font($tt-nooks-script-trial, 14, light, normal, 19.6);
 
           @include breakpoint(mobile768) {
@@ -163,7 +163,7 @@
         gap: size(5);
 
         &-item {
-          @include setBgColor($white, $radiotext);
+          @include setBgColor(var(--white), var(--radiotext));
           @include flex-center;
           padding: size(10) size(20);
           @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
@@ -201,11 +201,11 @@
       
       &-header {
         @include flex-center-vert;
-        @include border-single(bottom, solid, 1, $radiotext);
+        @include border-single(bottom, solid, 1, var(--radiotext));
         padding-bottom: size(10);
 
         .title {
-          color: $radiotext;
+          color: var(--radiotext);
           @include font($tt-nooks-script-trial, 16, normal, normal, 22.4);
 
           @include breakpoint(mobile768) {
@@ -227,7 +227,7 @@
             @include flex-center-between;
 
             span {
-              color: $radiotext;
+              color: var(--radiotext);
               @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
 
               @include breakpoint(mobile768) {
@@ -287,7 +287,7 @@
           gap: size(5);
 
           &-item {
-            @include setBgColor($white, $radiotext);
+            @include setBgColor(var(--white), var(--radiotext));
             @include flex-center;
             padding: size(10) size(20);
             @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
