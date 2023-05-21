@@ -5,8 +5,85 @@
 .settings {
   position: fixed;
   top: 50%;
-  left: 0;
+	@include translateY(-50%);
+	left: size(-250);
   z-index: 100;
+	width: size(250);
+	background: $white;
+	box-shadow: $cardshadow;
+	@include transitionsall;
+
+	&-header {
+		background: $white;
+		@include square(40);
+		@include flex-center;
+		position: absolute;
+		top: 0;
+		right: size(-40);
+	}
+
+	&-body {
+		padding: size(24);
+		@include flex-column;
+		gap: size(12);
+
+		.settings-title {
+			color: $footertitle;
+			@include font($tt-nooks-script-trial, 16, normal, normal, 22.4);
+			text-transform: uppercase;
+		}
+
+		.settings-buttons {
+			@include flex-center-vert;
+			gap: size(8);
+		}
+
+		.template-colors {
+			@include flex-column;
+			gap: size(8);
+
+			.template-buttons {
+				@include flex-center-between;
+
+				.btn-color {
+					width: 49%;
+					display: inline-block;
+					@include font($tt-nooks-script-trial, 13, normal, normal, 18.2);
+					@include transparent-button;
+					@include border(solid, 2, transparent);
+					padding: size(4);
+					text-align: center;
+					@include transitionsall;
+
+					&.white-button {
+						border-color: $footertitle;
+						@include setBgColor($footertitle, $white);
+					
+						@include hover {
+							@include setBgColor($radiotext, $white);
+						}
+					}
+
+					&.template-button {
+						border-color: $footertitle;
+						@include setBgColor($white, $footertitle);
+					
+						@include hover {
+							@include setBgColor($footertitle, $white);
+						}
+					}
+				}
+			}
+
+			.template-text {
+				@include font($tt-nooks-script-trial, 13, normal, normal, 18.2);
+			}
+		}
+	}
+
+	&.is-active {
+		left: size(0);
+	}
 }
 
 #options-setting{

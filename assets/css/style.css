@@ -598,7 +598,6 @@ button:not([disabled]):hover,
   justify-content: center;
   background: transparent;
   border: none;
-  border: solid 0.0625rem #ccc;
   background: hsl(0, 0%, 100%);
 }
 .btn-settings .icon {
@@ -607,12 +606,62 @@ button:not([disabled]):hover,
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: rotation infinite 1s linear;
   overflow: hidden;
 }
 .btn-settings .icon svg {
   width: 100%;
   height: 100%;
+}
+.btn-settings #settingicon {
+  animation: rotation infinite 1s linear;
+}
+
+.btn-switch {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+.btn-switch .colorbox {
+  width: 100%;
+  height: 100%;
+}
+.btn-switch .colorbox-1 {
+  background: red;
+}
+.btn-switch .colorbox-2 {
+  background: green;
+}
+.btn-switch .colorbox-3 {
+  background: teal;
+}
+.btn-switch .colorbox-4 {
+  background: tan;
+}
+
+.btn-reset {
+  display: inline-block;
+  font-family: "TT Nooks Script Trial";
+  font-size: 0.8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  width: auto;
+  padding: 0.25rem 0.625rem;
+  border: solid 0.125rem hsl(232, 36%, 35%);
+  background: hsl(0, 0%, 100%);
+  color: hsl(232, 36%, 35%);
+  transition: all 350ms ease-in-out;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+.btn-reset:not([disabled]):hover {
+  background: hsl(232, 36%, 35%);
+  color: hsl(0, 0%, 100%);
 }
 
 .card-lovely {
@@ -2561,8 +2610,98 @@ button:not([disabled]):hover,
 .settings {
   position: fixed;
   top: 50%;
-  left: 0;
+  transform: translateY(-50%);
+  left: -15.625rem;
   z-index: 100;
+  width: 15.625rem;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  transition: all 350ms ease-in-out;
+}
+.settings-header {
+  background: hsl(0, 0%, 100%);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -2.5rem;
+}
+.settings-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.settings-body .settings-title {
+  color: hsl(232, 36%, 35%);
+  font-family: "TT Nooks Script Trial";
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.settings-body .settings-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.settings-body .template-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.settings-body .template-colors .template-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.settings-body .template-colors .template-buttons .btn-color {
+  width: 49%;
+  display: inline-block;
+  font-family: "TT Nooks Script Trial";
+  font-size: 0.8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  background: transparent;
+  border: none;
+  border: solid 0.125rem transparent;
+  padding: 0.25rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.settings-body .template-colors .template-buttons .btn-color.white-button {
+  border-color: hsl(232, 36%, 35%);
+  background: hsl(232, 36%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+.settings-body .template-colors .template-buttons .btn-color.white-button:not([disabled]):hover {
+  background: hsl(231, 37%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+.settings-body .template-colors .template-buttons .btn-color.template-button {
+  border-color: hsl(232, 36%, 35%);
+  background: hsl(0, 0%, 100%);
+  color: hsl(232, 36%, 35%);
+}
+.settings-body .template-colors .template-buttons .btn-color.template-button:not([disabled]):hover {
+  background: hsl(232, 36%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+.settings-body .template-colors .template-text {
+  font-family: "TT Nooks Script Trial";
+  font-size: 0.8125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+.settings.is-active {
+  left: 0rem;
 }
 
 #options-setting {

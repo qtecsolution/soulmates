@@ -1207,9 +1207,9 @@
   <!-- FOOTER-SECTION END -->
 
   <!-- SETTINGS-START -->
-  <div class="settings">
+  <div class="settings" id="mysettings">
     <div class="settings-header">
-      <button type="button" class="btn-settings">
+      <button type="button" class="btn-settings" id="btn-settings">
         <span class="icon">
           <svg id="settingicon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
             <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
@@ -1224,12 +1224,38 @@
     </div>
 
     <div class="settings-body">
+      <h5 class="settings-title">Template Colors</h5>
+      <div class="settings-buttons">
+        <button type="button" class="btn-switch" id="btn-red">
+          <span class="colorbox colorbox-1"></span>
+        </button>
+        <button type="button" class="btn-switch" id="btn-green">
+          <span class="colorbox colorbox-2"></span>
+        </button>
+        <button type="button" class="btn-switch" id="btn-teal">
+          <span class="colorbox colorbox-3"></span>
+        </button>
+        <button type="button" class="btn-switch" id="btn-tan">
+          <span class="colorbox colorbox-4"></span>
+        </button>
+        <button type="button" class="btn-reset" id="btn-reset">Reset</button>
+      </div>
 
+      <div class="template-colors">
+        <div class="template-buttons">
+          <button type="button" id="btn-white" class="btn-color white-button">White</button>
+          <button type="button" id="btn-template" class="btn-color template-button">Template Color</button>
+        </div>
+
+        <small class="template-text">
+          For Transparent NavBar, this option will only works on sticky mode.
+        </small>
+      </div>
     </div>
   </div>
   <!-- SETTINGS-END -->
 
-  <div id="setting" class="move-right"> 
+  <div id="setting" class="move-right d-none"> 
     <h5>TEMPLATE COLOR</h5>
     <div class="d-flex align-items-center gap-2">
       <button type="button" id="coral">
@@ -1289,6 +1315,9 @@
   <!-- BACK-TO-TOP JS -->
   <script src="../assets/js/back-top/back-top.js"></script>
   <script src="../assets/js/back-top/backtotop.js"></script>
+
+  <!-- SETTINGS-JS -->
+  <script src="../assets/js/settings/setting.js"></script>
 </body>
 
 </html>

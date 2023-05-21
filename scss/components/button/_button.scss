@@ -121,17 +121,62 @@ button,
   @include square(40);
   @include flex-center;
   @include transparent-button;
-  @include border(solid, 1, #ccc);
   background: $white;
 
   .icon {
     @include square(20);
     @include flex-center;
-    animation: rotation infinite 1s linear;
     overflow: hidden;
 
     svg {
       @include wh100;
     }
+  }
+
+  #settingicon {
+    animation: rotation infinite 1s linear;
+  }
+}
+
+.btn-switch {
+  @include transparent-button;
+  @include flex-center;
+  @include square(24);
+  overflow: hidden;
+
+  .colorbox {
+    @include wh100
+  }
+
+  .colorbox-1 {
+    background: red;
+  }
+
+  .colorbox-2 {
+    background: green;
+  }
+
+  .colorbox-3 {
+    background: teal;
+  }
+
+  .colorbox-4 {
+    background: tan;
+  }
+}
+
+.btn-reset {
+  display: inline-block;
+  @include font($tt-nooks-script-trial, 13, normal, normal, 18.2);
+  width: auto;
+  padding: size(4) size(10);
+  @include border(solid, 2, $footertitle);
+  @include setBgColor($white, $footertitle);
+  @include transitionsall;
+  margin-left: auto;
+  text-transform: uppercase;
+
+  @include hover {
+    @include setBgColor($footertitle, $white);
   }
 }
