@@ -97,7 +97,98 @@
       }
     }
 
-    
+    .blog-detail {
+      @include flex-column;
+      gap: size(40);
+
+      &-thumb {
+        min-height: size(250);
+        max-height: size(570);
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+          @include transitiontransform;
+
+          @include hover {
+            @include scale(1.1);
+          }
+        }
+      }
+
+      &-info {
+        @include flex-column;
+        gap: size(32);
+
+        .bloginfotext {
+          color: $radiotext;
+          @include font($tt-nooks-script-trial, 14, light, normal, 19.6);
+
+          @include breakpoint(mobile768) {
+            font-size: size(16);
+          }
+
+          @include breakpoint(tab992) {
+            font-size: size(18);
+          }
+        }
+      }
+    }
+
+    .card-blog {
+      &-body {
+        .section-text {
+          color: $radiotext;
+          @include font($tt-nooks-script-trial, 14, light, normal, 19.6);
+
+          @include breakpoint(mobile768) {
+            font-size: size(16);
+          }
+
+          @include breakpoint(tab992) {
+            font-size: size(18);
+          }
+        }
+      }
+    }
+
+    .taginfo {
+      @include flex-center-vert;
+      gap: size(8);
+
+      .taglist {
+        @include flex-center-vert;
+        flex-wrap: wrap;
+        gap: size(5);
+
+        &-item {
+          @include setBgColor($white, $radiotext);
+          @include flex-center;
+          padding: size(10) size(20);
+          @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+
+          @include breakpoint(mobile768) {
+            font-size: size(16);
+          }
+        }
+      }
+
+      .social-list {
+        @include flex-center-vert;
+        gap: size(8);
+
+        .social-link {
+          @include square(24);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
   }
   
   .rightinfo {
