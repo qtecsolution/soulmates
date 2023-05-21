@@ -2539,6 +2539,25 @@ button:not([disabled]):hover,
   height: 100%;
 }
 
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 10000;
+  background: hsl(0, 0%, 100%);
+}
+.preloader .loader {
+  width: 15.625rem;
+  height: 15.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .settings {
   position: fixed;
   top: 50%;
