@@ -496,9 +496,12 @@
   .attending-details {
     gap: size(32);
 
-    .display-2,
-    .section-text {
+    .display-2 {
       color: var(--footertitle);
+    }
+
+    .section-text {
+      color: var(--textcolor);
     }
 
     .display-2 {

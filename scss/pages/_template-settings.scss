@@ -67,7 +67,145 @@ html {
         }
       }
     }
+
+    .home-slider {
+      .section-link {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
     
+    .countdown-3 {
+      .section-link-4 {
+        @include setBgColor(var(--white), var(--footertitle));
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .empty-banner-2 {
+      .section-link-2 {
+        border-color: var(--footertitle);
+        color: var(--white);
+
+        @include hover {
+          background: var(--footertitle);
+        }
+      }
+    }
+
+    .whenwhere-2 {
+      .whenwhere-detail {
+        background: var(--footertitle);
+      }
+    }
+
+    .whenwhere-3 {
+      .section-link-4 {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+          border-color: var(--footertitle);
+        }
+      }
+    }
+
+    .attending {
+      .section-link {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .countdown {
+      &-details {
+        .countdown-clock {    
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .more-events {
+      .link-outline {
+        border-color: var(--footertitle);
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .footer {
+      &-info {
+        .info-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .up-btn {
+      background: var(--footertitle) !important;
+    }
+
+    .offcanvas {
+      .sidemenu {
+        &-header {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        .sidenav {
+          .sidelist {
+            &-link {
+              color: var(--footertitle);
+            }
+          }
+        }
+      }
+
+      .menu-thumb {
+        .caption {
+          &-event {
+            .event {
+              .day-date {
+                color: var(--footertitle);
+    
+                .day, .date {
+                  color: inherit;
+                }
+              }
+
+              .divider {
+                background: var(--footertitle);
+              }
+
+              .locationbox {
+                .location {
+                  color: var(--footertitle);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   
   &[data-theme="blue"] {
@@ -134,7 +272,145 @@ html {
         }
       }
     }
+
+    .home-slider {
+      .section-link {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
     
+    .countdown-3 {
+      .section-link-4 {
+        @include setBgColor(var(--white), var(--footertitle));
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .empty-banner-2 {
+      .section-link-2 {
+        border-color: var(--footertitle);
+        color: var(--white);
+
+        @include hover {
+          background: var(--footertitle);
+        }
+      }
+    }
+
+    .whenwhere-2 {
+      .whenwhere-detail {
+        background: var(--footertitle);
+      }
+    }
+
+    .whenwhere-3 {
+      .section-link-4 {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+          border-color: var(--footertitle);
+        }
+      }
+    }
+
+    .attending {
+      .section-link {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .countdown {
+      &-details {
+        .countdown-clock {    
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .more-events {
+      .link-outline {
+        border-color: var(--footertitle);
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .footer {
+      &-info {
+        .info-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .up-btn {
+      background: var(--footertitle) !important;
+    }
+
+    .offcanvas {
+      .sidemenu {
+        &-header {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        .sidenav {
+          .sidelist {
+            &-link {
+              color: var(--footertitle);
+            }
+          }
+        }
+      }
+
+      .menu-thumb {
+        .caption {
+          &-event {
+            .event {
+              .day-date {
+                color: var(--footertitle);
+    
+                .day, .date {
+                  color: inherit;
+                }
+              }
+
+              .divider {
+                background: var(--footertitle);
+              }
+
+              .locationbox {
+                .location {
+                  color: var(--footertitle);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   
   &[data-theme="red"] {
@@ -203,7 +479,142 @@ html {
     }
 
     .home-slider {
+      .section-link {
+        @include setBgColor(var(--white), var(--footertitle));
 
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+    
+    .countdown-3 {
+      .section-link-4 {
+        @include setBgColor(var(--white), var(--footertitle));
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .empty-banner-2 {
+      .section-link-2 {
+        border-color: var(--footertitle);
+        color: var(--white);
+
+        @include hover {
+          background: var(--footertitle);
+        }
+      }
+    }
+
+    .whenwhere-2 {
+      .whenwhere-detail {
+        background: var(--footertitle);
+      }
+    }
+
+    .whenwhere-3 {
+      .section-link-4 {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+          border-color: var(--footertitle);
+        }
+      }
+    }
+
+    .attending {
+      .section-link {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .countdown {
+      &-details {
+        .countdown-clock {    
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .more-events {
+      .link-outline {
+        border-color: var(--footertitle);
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .footer {
+      &-info {
+        .info-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .up-btn {
+      background: var(--footertitle) !important;
+    }
+
+    .offcanvas {
+      .sidemenu {
+        &-header {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        .sidenav {
+          .sidelist {
+            &-link {
+              color: var(--footertitle);
+            }
+          }
+        }
+      }
+
+      .menu-thumb {
+        .caption {
+          &-event {
+            .event {
+              .day-date {
+                color: var(--footertitle);
+    
+                .day, .date {
+                  color: inherit;
+                }
+              }
+
+              .divider {
+                background: var(--footertitle);
+              }
+
+              .locationbox {
+                .location {
+                  color: var(--footertitle);
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
   
@@ -271,6 +682,144 @@ html {
         }
       }
     }
+
+    .home-slider {
+      .section-link {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
     
+    .countdown-3 {
+      .section-link-4 {
+        @include setBgColor(var(--white), var(--footertitle));
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .empty-banner-2 {
+      .section-link-2 {
+        border-color: var(--footertitle);
+        color: var(--white);
+
+        @include hover {
+          background: var(--footertitle);
+        }
+      }
+    }
+
+    .whenwhere-2 {
+      .whenwhere-detail {
+        background: var(--footertitle);
+      }
+    }
+
+    .whenwhere-3 {
+      .section-link-4 {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+          border-color: var(--footertitle);
+        }
+      }
+    }
+
+    .attending {
+      .section-link {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .countdown {
+      &-details {
+        .countdown-clock {    
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .more-events {
+      .link-outline {
+        border-color: var(--footertitle);
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .footer {
+      &-info {
+        .info-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .up-btn {
+      background: var(--footertitle) !important;
+    }
+
+    .offcanvas {
+      .sidemenu {
+        &-header {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        .sidenav {
+          .sidelist {
+            &-link {
+              color: var(--footertitle);
+            }
+          }
+        }
+      }
+
+      .menu-thumb {
+        .caption {
+          &-event {
+            .event {
+              .day-date {
+                color: var(--footertitle);
+    
+                .day, .date {
+                  color: inherit;
+                }
+              }
+
+              .divider {
+                background: var(--footertitle);
+              }
+
+              .locationbox {
+                .location {
+                  color: var(--footertitle);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

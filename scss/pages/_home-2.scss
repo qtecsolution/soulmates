@@ -185,11 +185,11 @@
  WHEN-WHERE-2-SECTION START
 */
 .whenwhere-2 {
-  padding: size(80) size(8) size(0);
+  padding: size(80) size(8);
   position: relative;
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8) size(0);
+    padding: size(115) size(8);
   }
   
   &-header {
@@ -294,10 +294,10 @@
   OURGALLERY-2-SECTION START
 */
 .ourgallery-2 {
-  padding: size(80) size(8);
+  padding: size(80) size(8) size(80);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(115) size(8) size(80);
   }
 
   &-body {
@@ -340,9 +340,12 @@
   .attending-details {
     gap: size(32);
 
-    .display-2,
-    .section-text {
+    .display-2 {
       color: var(--footertitle);
+    }
+
+    .section-text {
+      color: var(--textcolor);
     }
 
     .display-2 {

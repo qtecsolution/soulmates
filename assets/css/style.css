@@ -3343,7 +3343,7 @@ button:not([disabled]):hover,
   }
 }
 .more-events-header .section-text {
-  color: var(--footertitle);
+  color: var(--textcolor);
   font-family: "TT Nooks Script Trial";
   font-size: 1rem;
   font-weight: 300;
@@ -4154,12 +4154,12 @@ button:not([disabled]):hover,
  WHEN-WHERE-2-SECTION START
 */
 .whenwhere-2 {
-  padding: 5rem 0.5rem 0rem;
+  padding: 5rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
   .whenwhere-2 {
-    padding: 7.1875rem 0.5rem 0rem;
+    padding: 7.1875rem 0.5rem;
   }
 }
 .whenwhere-2-header {
@@ -4270,11 +4270,11 @@ button:not([disabled]):hover,
   OURGALLERY-2-SECTION START
 */
 .ourgallery-2 {
-  padding: 5rem 0.5rem;
+  padding: 5rem 0.5rem 5rem;
 }
 @media screen and (min-width: 62rem) {
   .ourgallery-2 {
-    padding: 7.1875rem 0.5rem;
+    padding: 7.1875rem 0.5rem 5rem;
   }
 }
 .ourgallery-2-body {
@@ -4321,9 +4321,11 @@ button:not([disabled]):hover,
 .attending-2 .attending-details {
   gap: 2rem;
 }
-.attending-2 .attending-details .display-2,
-.attending-2 .attending-details .section-text {
+.attending-2 .attending-details .display-2 {
   color: var(--footertitle);
+}
+.attending-2 .attending-details .section-text {
+  color: var(--textcolor);
 }
 .attending-2 .attending-details .display-2 {
   font-family: "Alex Brush", cursive;
@@ -5123,9 +5125,11 @@ button:not([disabled]):hover,
 .attending-3 .attending-details {
   gap: 2rem;
 }
-.attending-3 .attending-details .display-2,
-.attending-3 .attending-details .section-text {
+.attending-3 .attending-details .display-2 {
   color: var(--footertitle);
+}
+.attending-3 .attending-details .section-text {
+  color: var(--textcolor);
 }
 .attending-3 .attending-details .display-2 {
   font-family: "Vivaldi", sans-serif;
@@ -5721,6 +5725,87 @@ html[data-theme=purple] .header-3 .desktop-menu .desktoplist-link {
 html[data-theme=purple] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
   color: hsl(210, 23%, 95%);
 }
+html[data-theme=purple] .home-slider .section-link {
+  background: var(--white);
+  color: var(--footertitle);
+}
+html[data-theme=purple] .home-slider .section-link:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .countdown-3 .section-link-4 {
+  background: var(--white);
+  color: var(--footertitle);
+  border-color: var(--footertitle);
+}
+html[data-theme=purple] .countdown-3 .section-link-4:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .empty-banner-2 .section-link-2 {
+  border-color: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .empty-banner-2 .section-link-2:not([disabled]):hover {
+  background: var(--footertitle);
+}
+html[data-theme=purple] .whenwhere-2 .whenwhere-detail {
+  background: var(--footertitle);
+}
+html[data-theme=purple] .whenwhere-3 .section-link-4 {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .whenwhere-3 .section-link-4:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+  border-color: var(--footertitle);
+}
+html[data-theme=purple] .attending .section-link {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .attending .section-link:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .countdown-details .countdown-clock .days,
+html[data-theme=purple] .countdown-details .countdown-clock .hours,
+html[data-theme=purple] .countdown-details .countdown-clock .minutes,
+html[data-theme=purple] .countdown-details .countdown-clock .seconds {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .more-events .link-outline {
+  border-color: var(--footertitle);
+  color: var(--footertitle);
+}
+html[data-theme=purple] .more-events .link-outline:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .footer-info .info-title {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .up-btn {
+  background: var(--footertitle) !important;
+}
+html[data-theme=purple] .offcanvas .sidemenu-header .title {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .offcanvas .sidemenu .sidenav .sidelist-link {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .offcanvas .menu-thumb .caption-event .event .day-date {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .offcanvas .menu-thumb .caption-event .event .day-date .day, html[data-theme=purple] .offcanvas .menu-thumb .caption-event .event .day-date .date {
+  color: inherit;
+}
+html[data-theme=purple] .offcanvas .menu-thumb .caption-event .event .divider {
+  background: var(--footertitle);
+}
+html[data-theme=purple] .offcanvas .menu-thumb .caption-event .event .locationbox .location {
+  color: var(--footertitle);
+}
 html[data-theme=blue] .header .nav-center .couple-name {
   color: var(--white);
 }
@@ -5750,6 +5835,87 @@ html[data-theme=blue] .header-3 .desktop-menu .desktoplist-link {
 }
 html[data-theme=blue] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
   color: hsl(210, 23%, 95%);
+}
+html[data-theme=blue] .home-slider .section-link {
+  background: var(--white);
+  color: var(--footertitle);
+}
+html[data-theme=blue] .home-slider .section-link:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .countdown-3 .section-link-4 {
+  background: var(--white);
+  color: var(--footertitle);
+  border-color: var(--footertitle);
+}
+html[data-theme=blue] .countdown-3 .section-link-4:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .empty-banner-2 .section-link-2 {
+  border-color: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .empty-banner-2 .section-link-2:not([disabled]):hover {
+  background: var(--footertitle);
+}
+html[data-theme=blue] .whenwhere-2 .whenwhere-detail {
+  background: var(--footertitle);
+}
+html[data-theme=blue] .whenwhere-3 .section-link-4 {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .whenwhere-3 .section-link-4:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+  border-color: var(--footertitle);
+}
+html[data-theme=blue] .attending .section-link {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .attending .section-link:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .countdown-details .countdown-clock .days,
+html[data-theme=blue] .countdown-details .countdown-clock .hours,
+html[data-theme=blue] .countdown-details .countdown-clock .minutes,
+html[data-theme=blue] .countdown-details .countdown-clock .seconds {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .more-events .link-outline {
+  border-color: var(--footertitle);
+  color: var(--footertitle);
+}
+html[data-theme=blue] .more-events .link-outline:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .footer-info .info-title {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .up-btn {
+  background: var(--footertitle) !important;
+}
+html[data-theme=blue] .offcanvas .sidemenu-header .title {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .offcanvas .sidemenu .sidenav .sidelist-link {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .offcanvas .menu-thumb .caption-event .event .day-date {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .offcanvas .menu-thumb .caption-event .event .day-date .day, html[data-theme=blue] .offcanvas .menu-thumb .caption-event .event .day-date .date {
+  color: inherit;
+}
+html[data-theme=blue] .offcanvas .menu-thumb .caption-event .event .divider {
+  background: var(--footertitle);
+}
+html[data-theme=blue] .offcanvas .menu-thumb .caption-event .event .locationbox .location {
+  color: var(--footertitle);
 }
 html[data-theme=red] .header .nav-center .couple-name {
   color: var(--white);
@@ -5781,6 +5947,87 @@ html[data-theme=red] .header-3 .desktop-menu .desktoplist-link {
 html[data-theme=red] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
   color: hsl(210, 23%, 95%);
 }
+html[data-theme=red] .home-slider .section-link {
+  background: var(--white);
+  color: var(--footertitle);
+}
+html[data-theme=red] .home-slider .section-link:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .countdown-3 .section-link-4 {
+  background: var(--white);
+  color: var(--footertitle);
+  border-color: var(--footertitle);
+}
+html[data-theme=red] .countdown-3 .section-link-4:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .empty-banner-2 .section-link-2 {
+  border-color: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .empty-banner-2 .section-link-2:not([disabled]):hover {
+  background: var(--footertitle);
+}
+html[data-theme=red] .whenwhere-2 .whenwhere-detail {
+  background: var(--footertitle);
+}
+html[data-theme=red] .whenwhere-3 .section-link-4 {
+  color: var(--footertitle);
+}
+html[data-theme=red] .whenwhere-3 .section-link-4:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+  border-color: var(--footertitle);
+}
+html[data-theme=red] .attending .section-link {
+  color: var(--footertitle);
+}
+html[data-theme=red] .attending .section-link:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .countdown-details .countdown-clock .days,
+html[data-theme=red] .countdown-details .countdown-clock .hours,
+html[data-theme=red] .countdown-details .countdown-clock .minutes,
+html[data-theme=red] .countdown-details .countdown-clock .seconds {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .more-events .link-outline {
+  border-color: var(--footertitle);
+  color: var(--footertitle);
+}
+html[data-theme=red] .more-events .link-outline:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .footer-info .info-title {
+  color: var(--footertitle);
+}
+html[data-theme=red] .up-btn {
+  background: var(--footertitle) !important;
+}
+html[data-theme=red] .offcanvas .sidemenu-header .title {
+  color: var(--footertitle);
+}
+html[data-theme=red] .offcanvas .sidemenu .sidenav .sidelist-link {
+  color: var(--footertitle);
+}
+html[data-theme=red] .offcanvas .menu-thumb .caption-event .event .day-date {
+  color: var(--footertitle);
+}
+html[data-theme=red] .offcanvas .menu-thumb .caption-event .event .day-date .day, html[data-theme=red] .offcanvas .menu-thumb .caption-event .event .day-date .date {
+  color: inherit;
+}
+html[data-theme=red] .offcanvas .menu-thumb .caption-event .event .divider {
+  background: var(--footertitle);
+}
+html[data-theme=red] .offcanvas .menu-thumb .caption-event .event .locationbox .location {
+  color: var(--footertitle);
+}
 html[data-theme=pink] .header .nav-center .couple-name {
   color: var(--white);
 }
@@ -5810,6 +6057,87 @@ html[data-theme=pink] .header-3 .desktop-menu .desktoplist-link {
 }
 html[data-theme=pink] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
   color: hsl(210, 23%, 95%);
+}
+html[data-theme=pink] .home-slider .section-link {
+  background: var(--white);
+  color: var(--footertitle);
+}
+html[data-theme=pink] .home-slider .section-link:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .countdown-3 .section-link-4 {
+  background: var(--white);
+  color: var(--footertitle);
+  border-color: var(--footertitle);
+}
+html[data-theme=pink] .countdown-3 .section-link-4:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .empty-banner-2 .section-link-2 {
+  border-color: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .empty-banner-2 .section-link-2:not([disabled]):hover {
+  background: var(--footertitle);
+}
+html[data-theme=pink] .whenwhere-2 .whenwhere-detail {
+  background: var(--footertitle);
+}
+html[data-theme=pink] .whenwhere-3 .section-link-4 {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .whenwhere-3 .section-link-4:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+  border-color: var(--footertitle);
+}
+html[data-theme=pink] .attending .section-link {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .attending .section-link:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .countdown-details .countdown-clock .days,
+html[data-theme=pink] .countdown-details .countdown-clock .hours,
+html[data-theme=pink] .countdown-details .countdown-clock .minutes,
+html[data-theme=pink] .countdown-details .countdown-clock .seconds {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .more-events .link-outline {
+  border-color: var(--footertitle);
+  color: var(--footertitle);
+}
+html[data-theme=pink] .more-events .link-outline:not([disabled]):hover {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .footer-info .info-title {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .up-btn {
+  background: var(--footertitle) !important;
+}
+html[data-theme=pink] .offcanvas .sidemenu-header .title {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .offcanvas .sidemenu .sidenav .sidelist-link {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .offcanvas .menu-thumb .caption-event .event .day-date {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .offcanvas .menu-thumb .caption-event .event .day-date .day, html[data-theme=pink] .offcanvas .menu-thumb .caption-event .event .day-date .date {
+  color: inherit;
+}
+html[data-theme=pink] .offcanvas .menu-thumb .caption-event .event .divider {
+  background: var(--footertitle);
+}
+html[data-theme=pink] .offcanvas .menu-thumb .caption-event .event .locationbox .location {
+  color: var(--footertitle);
 }
 
 .section-title {
