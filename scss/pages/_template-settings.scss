@@ -401,6 +401,16 @@ html {
         }
       }
     }
+
+    .contact {
+      .btn-submit {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(darken($color: $theme-1, $amount: 20%), var(--white));
+        }
+      }
+    }
   }
   
   &[data-theme="blue"] {
@@ -798,6 +808,16 @@ html {
           &-item {
             @include setBgColor(var(--footertitle), var(--white));
           }
+        }
+      }
+    }
+
+    .contact {
+      .btn-submit {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(darken($color: $theme-2, $amount: 20%), var(--white));
         }
       }
     }
@@ -1201,6 +1221,16 @@ html {
         }
       }
     }
+
+    .contact {
+      .btn-submit {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(darken($color: $theme-3, $amount: 20%), var(--white));
+        }
+      }
+    }
   }
   
   &[data-theme="pink"] {
@@ -1598,6 +1628,16 @@ html {
           &-item {
             @include setBgColor(var(--footertitle), var(--white));
           }
+        }
+      }
+    }
+
+    .contact {
+      .btn-submit {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(darken($color: $theme-4, $amount: 20%), var(--white));
         }
       }
     }

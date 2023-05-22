@@ -5925,6 +5925,14 @@ html[data-theme=purple] .blogmain .taginfo .taglist-item {
   background: var(--footertitle);
   color: var(--white);
 }
+html[data-theme=purple] .contact .btn-submit {
+  background: var(--white);
+  color: var(--footertitle);
+}
+html[data-theme=purple] .contact .btn-submit:not([disabled]):hover {
+  background: #512763;
+  color: var(--white);
+}
 html[data-theme=blue] .header .nav-center .couple-name {
   color: var(--white);
 }
@@ -6136,6 +6144,14 @@ html[data-theme=blue] .blogmain .blogpagination .pagination .page-link.active {
 }
 html[data-theme=blue] .blogmain .taginfo .taglist-item {
   background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .contact .btn-submit {
+  background: var(--white);
+  color: var(--footertitle);
+}
+html[data-theme=blue] .contact .btn-submit:not([disabled]):hover {
+  background: #164564;
   color: var(--white);
 }
 html[data-theme=red] .header .nav-center .couple-name {
@@ -6351,6 +6367,14 @@ html[data-theme=red] .blogmain .taginfo .taglist-item {
   background: var(--footertitle);
   color: var(--white);
 }
+html[data-theme=red] .contact .btn-submit {
+  background: var(--white);
+  color: var(--footertitle);
+}
+html[data-theme=red] .contact .btn-submit:not([disabled]):hover {
+  background: #950e12;
+  color: var(--white);
+}
 html[data-theme=pink] .header .nav-center .couple-name {
   color: var(--white);
 }
@@ -6562,6 +6586,14 @@ html[data-theme=pink] .blogmain .blogpagination .pagination .page-link.active {
 }
 html[data-theme=pink] .blogmain .taginfo .taglist-item {
   background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .contact .btn-submit {
+  background: var(--white);
+  color: var(--footertitle);
+}
+html[data-theme=pink] .contact .btn-submit:not([disabled]):hover {
+  background: #b11661;
   color: var(--white);
 }
 
