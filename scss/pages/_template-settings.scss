@@ -1,0 +1,276 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+html {
+
+  &[data-theme="purple"] {
+    .header {
+      .nav-center {
+        .couple-name {
+          color: var(--white);
+        }
+      }
+
+      &.header-fixed {
+        background: var(--footertitle);
+
+        .logo {
+          &-light {
+            display: block;
+          }
+  
+          &-dark {
+            display: none;
+          }
+        }
+
+        .hamburger-menu {
+          .btn-burger {
+            svg {
+              line {
+                stroke: var(--white);
+              }
+            }
+          }
+        }
+      }
+
+      &.header-2 {
+        .nav-center {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .header-3 {
+      background: var(--footertitle);
+
+      .nav-center {
+        .menulogo {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+
+      .desktop-menu {
+        .desktoplist {
+          &-link {
+            color: var(--white);
+
+            @include hover {
+              color: $linkbg;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  &[data-theme="blue"] {
+    .header {
+      .nav-center {
+        .couple-name {
+          color: var(--white);
+        }
+      }
+
+      &.header-fixed {
+        background: var(--footertitle);
+
+        .logo {
+          &-light {
+            display: block;
+          }
+  
+          &-dark {
+            display: none;
+          }
+        }
+
+        .hamburger-menu {
+          .btn-burger {
+            svg {
+              line {
+                stroke: var(--white);
+              }
+            }
+          }
+        }
+      }
+
+      &.header-2 {
+        .nav-center {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .header-3 {
+      background: var(--footertitle);
+
+      .nav-center {
+        .menulogo {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+
+      .desktop-menu {
+        .desktoplist {
+          &-link {
+            color: var(--white);
+
+            @include hover {
+              color: $linkbg;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  &[data-theme="red"] {
+    .header {
+      .nav-center {
+        .couple-name {
+          color: var(--white);
+        }
+      }
+
+      &.header-fixed {
+        background: var(--footertitle);
+
+        .logo {
+          &-light {
+            display: block;
+          }
+  
+          &-dark {
+            display: none;
+          }
+        }
+
+        .hamburger-menu {
+          .btn-burger {
+            svg {
+              line {
+                stroke: var(--white);
+              }
+            }
+          }
+        }
+      }
+
+      &.header-2 {
+        .nav-center {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .header-3 {
+      background: var(--footertitle);
+
+      .nav-center {
+        .menulogo {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+
+      .desktop-menu {
+        .desktoplist {
+          &-link {
+            color: var(--white);
+
+            @include hover {
+              color: $linkbg;
+            }
+          }
+        }
+      }
+    }
+
+    .home-slider {
+
+    }
+  }
+  
+  &[data-theme="pink"] {
+    .header {
+      .nav-center {
+        .couple-name {
+          color: var(--white);
+        }
+      }
+
+      &.header-fixed {
+        background: var(--footertitle);
+
+        .logo {
+          &-light {
+            display: block;
+          }
+  
+          &-dark {
+            display: none;
+          }
+        }
+
+        .hamburger-menu {
+          .btn-burger {
+            svg {
+              line {
+                stroke: var(--white);
+              }
+            }
+          }
+        }
+      }
+
+      &.header-2 {
+        .nav-center {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .header-3 {
+      background: var(--footertitle);
+
+      .nav-center {
+        .menulogo {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+
+      .desktop-menu {
+        .desktoplist {
+          &-link {
+            color: var(--white);
+
+            @include hover {
+              color: $linkbg;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}

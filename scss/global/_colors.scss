@@ -51,10 +51,10 @@ $cardshadow: .25rem .25rem 1rem .1875rem $shade-1;
 $specing-1: size(0.24);
 $time: 350ms;
 
-$theme-1: #8e44ad;
-$theme-2: #2980b9;
-$theme-3: #ea2027;
-$theme-4: #e84393;
+$theme-1: hsl(282, 44%, 47%); //#8e44ad
+$theme-2: hsl(204, 64%, 44%); //#2980b9
+$theme-3: hsl(358, 83%, 52%); //#ea2027
+$theme-4: hsl(331, 78%, 59%); //#e84393
 
 :root,
 :root[data-theme="light"] {

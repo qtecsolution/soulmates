@@ -24,19 +24,19 @@
 }
 
 :root[data-theme=purple] {
-  --footertitle: #8e44ad;
+  --footertitle: hsl(282, 44%, 47%);
 }
 
 :root[data-theme=blue] {
-  --footertitle: #2980b9;
+  --footertitle: hsl(204, 64%, 44%);
 }
 
 :root[data-theme=red] {
-  --footertitle: #ea2027;
+  --footertitle: hsl(358, 83%, 52%);
 }
 
 :root[data-theme=pink] {
-  --footertitle: #e84393;
+  --footertitle: hsl(331, 78%, 59%);
 }
 
 /**=====================================================**
@@ -192,6 +192,7 @@ html {
 html:focus-within {
   scroll-behavior: inherit;
 }
+
 * {
   box-sizing: inherit;
 }
@@ -671,16 +672,16 @@ button:not([disabled]):hover,
   border: solid 0.0625rem hsl(0, 0%, 0%);
 }
 .btn-theme.theme-1 {
-  background: #8e44ad;
+  background: hsl(282, 44%, 47%);
 }
 .btn-theme.theme-2 {
-  background: #2980b9;
+  background: hsl(204, 64%, 44%);
 }
 .btn-theme.theme-3 {
-  background: #ea2027;
+  background: hsl(358, 83%, 52%);
 }
 .btn-theme.theme-4 {
-  background: #e84393;
+  background: hsl(331, 78%, 59%);
 }
 
 .btn-reset {
@@ -5688,6 +5689,127 @@ button:not([disabled]):hover,
 .error-thumbnail .st5::selection {
   background: transparent;
   color: hsl(1, 71%, 54%);
+}
+
+html[data-theme=purple] .header .nav-center .couple-name {
+  color: var(--white);
+}
+html[data-theme=purple] .header.header-fixed {
+  background: var(--footertitle);
+}
+html[data-theme=purple] .header.header-fixed .logo-light {
+  display: block;
+}
+html[data-theme=purple] .header.header-fixed .logo-dark {
+  display: none;
+}
+html[data-theme=purple] .header.header-fixed .hamburger-menu .btn-burger svg line {
+  stroke: var(--white);
+}
+html[data-theme=purple] .header.header-2 .nav-center .section-title {
+  color: var(--white);
+}
+html[data-theme=purple] .header-3 {
+  background: var(--footertitle);
+}
+html[data-theme=purple] .header-3 .nav-center .menulogo .section-title {
+  color: var(--white);
+}
+html[data-theme=purple] .header-3 .desktop-menu .desktoplist-link {
+  color: var(--white);
+}
+html[data-theme=purple] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
+  color: hsl(210, 23%, 95%);
+}
+html[data-theme=blue] .header .nav-center .couple-name {
+  color: var(--white);
+}
+html[data-theme=blue] .header.header-fixed {
+  background: var(--footertitle);
+}
+html[data-theme=blue] .header.header-fixed .logo-light {
+  display: block;
+}
+html[data-theme=blue] .header.header-fixed .logo-dark {
+  display: none;
+}
+html[data-theme=blue] .header.header-fixed .hamburger-menu .btn-burger svg line {
+  stroke: var(--white);
+}
+html[data-theme=blue] .header.header-2 .nav-center .section-title {
+  color: var(--white);
+}
+html[data-theme=blue] .header-3 {
+  background: var(--footertitle);
+}
+html[data-theme=blue] .header-3 .nav-center .menulogo .section-title {
+  color: var(--white);
+}
+html[data-theme=blue] .header-3 .desktop-menu .desktoplist-link {
+  color: var(--white);
+}
+html[data-theme=blue] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
+  color: hsl(210, 23%, 95%);
+}
+html[data-theme=red] .header .nav-center .couple-name {
+  color: var(--white);
+}
+html[data-theme=red] .header.header-fixed {
+  background: var(--footertitle);
+}
+html[data-theme=red] .header.header-fixed .logo-light {
+  display: block;
+}
+html[data-theme=red] .header.header-fixed .logo-dark {
+  display: none;
+}
+html[data-theme=red] .header.header-fixed .hamburger-menu .btn-burger svg line {
+  stroke: var(--white);
+}
+html[data-theme=red] .header.header-2 .nav-center .section-title {
+  color: var(--white);
+}
+html[data-theme=red] .header-3 {
+  background: var(--footertitle);
+}
+html[data-theme=red] .header-3 .nav-center .menulogo .section-title {
+  color: var(--white);
+}
+html[data-theme=red] .header-3 .desktop-menu .desktoplist-link {
+  color: var(--white);
+}
+html[data-theme=red] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
+  color: hsl(210, 23%, 95%);
+}
+html[data-theme=pink] .header .nav-center .couple-name {
+  color: var(--white);
+}
+html[data-theme=pink] .header.header-fixed {
+  background: var(--footertitle);
+}
+html[data-theme=pink] .header.header-fixed .logo-light {
+  display: block;
+}
+html[data-theme=pink] .header.header-fixed .logo-dark {
+  display: none;
+}
+html[data-theme=pink] .header.header-fixed .hamburger-menu .btn-burger svg line {
+  stroke: var(--white);
+}
+html[data-theme=pink] .header.header-2 .nav-center .section-title {
+  color: var(--white);
+}
+html[data-theme=pink] .header-3 {
+  background: var(--footertitle);
+}
+html[data-theme=pink] .header-3 .nav-center .menulogo .section-title {
+  color: var(--white);
+}
+html[data-theme=pink] .header-3 .desktop-menu .desktoplist-link {
+  color: var(--white);
+}
+html[data-theme=pink] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
+  color: hsl(210, 23%, 95%);
 }
 
 .section-title {

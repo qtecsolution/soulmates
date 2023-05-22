@@ -32,9 +32,3 @@ const resetBtn = document.querySelector('#btn-reset');
 resetBtn.addEventListener('click', () => {
   document.querySelector('html').setAttribute('data-theme', 'light');
 })
-
-const whiteBtn = document.querySelector('#btn-white');
-
-whiteBtn.addEventListener('click', () => {
-  document.querySelector('html').setAttribute('data-theme', 'light');
-})
