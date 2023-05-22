@@ -1708,3 +1708,9 @@ ul.tabs li.current {
   background-color: var(--theme-color);
   border-color: var(--theme-color);
 }
+
+.header {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
