@@ -20,6 +20,7 @@
 
     .display-1 {
       font-family: $calista;
+      margin-top: size(-40);
     }
 
     .section-link {
@@ -37,7 +38,7 @@
 }
 
 .blogmain {
-  padding: size(80) size(8) size(120);
+  padding: size(80) size(8) size(480);
 
   .leftinfo {
     @include flex-column;
@@ -72,10 +73,22 @@
             }
           }
 
+          &:hover {
+            .page-link {
+              @include setBgColor(var(--footertitle), var(--white));
+            }
+          }
+
           &:first-child,
           &:last-child {
             .page-link {
               @include radius(0);
+            }
+
+            &:hover {
+              .page-link {
+                @include setBgColor(var(--paginationlinkbg), var(--radiotext));
+              }
             }
           }
         }
@@ -92,6 +105,10 @@
           &:focus {
             box-shadow: none;
             outline: none;
+          }
+
+          &.active {
+            @include setBgColor(var(--footertitle), var(--white));
           }
         }
       }

@@ -4,10 +4,11 @@
 .preloader {
 	@include flex-center;
 	position: fixed;
+	inset: size(0);
 	@include w100;
 	min-height: 100vh;
 	overflow: hidden;
-	z-index: 10000;
+	z-index: 9999999999;
 	background: $white;
 
 	.loader {

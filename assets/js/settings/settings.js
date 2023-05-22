@@ -12,18 +12,14 @@ function toggleSettings() {
   settings.classList.toggle('is-active');
 }
 
-let radios = document.getElementsByName('theme');
+let radios = Array.from(document.getElementsByName('theme'));
 
-Array.from(radios).forEach( (el, i) => {
-	el.addEventListener('change', e => {
-			if(e.target.checked) {
-				let value = e.target.getAttribute('value');
-				document.querySelector('html').setAttribute('data-theme', value);
-				document.documentElement.classList.add('in-transition');
-        window.setTimeout(function() {
-          document.documentElement.classList.remove('color-theme-in-transition')
-        }, 1000);
-			}
+radios.forEach((radio) => {
+	radio.addEventListener('change', e => {
+    if(e.target.checked) {
+      let value = e.target.getAttribute('value');
+      document.querySelector('html').setAttribute('data-theme', value);
+    }
 	});
 });
 

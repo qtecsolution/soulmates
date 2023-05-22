@@ -1285,6 +1285,9 @@ button:not([disabled]):hover,
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.card-blog-body .blog-title:not([disabled]):hover {
+  color: #181c34;
+}
 .card-blog-body .section-text {
   color: hsl(231, 37%, 35%);
 }
@@ -2384,20 +2387,20 @@ button:not([disabled]):hover,
   transform: rotate(90deg);
 }
 .tooltip-inner {
-  background: hsl(232, 36%, 35%);
+  background: var(--footertitle);
   font-size: 0.75rem;
 }
 .tooltip.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
-  border-top-color: hsl(232, 36%, 35%);
+  border-top-color: var(--footertitle);
 }
 .tooltip.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
-  border-bottom-color: hsl(232, 36%, 35%);
+  border-bottom-color: var(--footertitle);
 }
 .tooltip.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
-  border-left-color: hsl(232, 36%, 35%);
+  border-left-color: var(--footertitle);
 }
 .tooltip.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
-  border-right-color: hsl(232, 36%, 35%);
+  border-right-color: var(--footertitle);
 }
 
 .footer {
@@ -2634,10 +2637,11 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
   position: fixed;
+  inset: 0rem;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  z-index: 10000;
+  z-index: 9999999999;
   background: hsl(0, 0%, 100%);
 }
 .preloader .loader {
@@ -5334,6 +5338,7 @@ button:not([disabled]):hover,
 }
 .blogbanner-detail .display-1 {
   font-family: "callista";
+  margin-top: -2.5rem;
 }
 .blogbanner-detail .section-link {
   font-size: 0.75rem;
@@ -5348,7 +5353,7 @@ button:not([disabled]):hover,
 }
 
 .blogmain {
-  padding: 5rem 0.5rem 7.5rem;
+  padding: 5rem 0.5rem 30rem;
 }
 .blogmain .leftinfo {
   display: flex;
@@ -5383,9 +5388,17 @@ button:not([disabled]):hover,
 .blogmain .leftinfo .blogpagination .pagination .page-item:not(:first-child) .page-link {
   margin-left: 0;
 }
+.blogmain .leftinfo .blogpagination .pagination .page-item:hover .page-link {
+  background: var(--footertitle);
+  color: var(--white);
+}
 .blogmain .leftinfo .blogpagination .pagination .page-item:first-child .page-link, .blogmain .leftinfo .blogpagination .pagination .page-item:last-child .page-link {
   border-radius: 0rem;
   border-radius: 0rem;
+}
+.blogmain .leftinfo .blogpagination .pagination .page-item:first-child:hover .page-link, .blogmain .leftinfo .blogpagination .pagination .page-item:last-child:hover .page-link {
+  background: var(--paginationlinkbg);
+  color: var(--radiotext);
 }
 .blogmain .leftinfo .blogpagination .pagination .page-link {
   background: var(--paginationlinkbg);
@@ -5407,6 +5420,10 @@ button:not([disabled]):hover,
 .blogmain .leftinfo .blogpagination .pagination .page-link:focus {
   box-shadow: none;
   outline: none;
+}
+.blogmain .leftinfo .blogpagination .pagination .page-link.active {
+  background: var(--footertitle);
+  color: var(--white);
 }
 .blogmain .leftinfo .blog-detail {
   display: flex;
@@ -5725,12 +5742,34 @@ html[data-theme=purple] .header-3 .desktop-menu .desktoplist-link {
 html[data-theme=purple] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
   color: hsl(210, 23%, 95%);
 }
+html[data-theme=purple] .header-3 .btn-burger svg line {
+  stroke: var(--white);
+}
 html[data-theme=purple] .home-slider .section-link {
   background: var(--white);
   color: var(--footertitle);
 }
 html[data-theme=purple] .home-slider .section-link:not([disabled]):hover {
   background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .countdown-details .countdown-clock .days,
+html[data-theme=purple] .countdown-details .countdown-clock .hours,
+html[data-theme=purple] .countdown-details .countdown-clock .minutes,
+html[data-theme=purple] .countdown-details .countdown-clock .seconds {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .countdown-3-details {
+  background: var(--footertitle);
+}
+html[data-theme=purple] .countdown-3-details .countdown-clock .countdown-time .days,
+html[data-theme=purple] .countdown-3-details .countdown-clock .countdown-time .hours,
+html[data-theme=purple] .countdown-3-details .countdown-clock .countdown-time .minutes,
+html[data-theme=purple] .countdown-3-details .countdown-clock .countdown-time .seconds {
+  color: var(--white);
+}
+html[data-theme=purple] .countdown-3-details .countdown-clock .countdown-time .count-title {
   color: var(--white);
 }
 html[data-theme=purple] .countdown-3 .section-link-4 {
@@ -5767,10 +5806,13 @@ html[data-theme=purple] .attending .section-link:not([disabled]):hover {
   background: var(--footertitle);
   color: var(--white);
 }
-html[data-theme=purple] .countdown-details .countdown-clock .days,
-html[data-theme=purple] .countdown-details .countdown-clock .hours,
-html[data-theme=purple] .countdown-details .countdown-clock .minutes,
-html[data-theme=purple] .countdown-details .countdown-clock .seconds {
+html[data-theme=purple] .attending-2 .section-link-3,
+html[data-theme=purple] .attending-3 .section-link-3 {
+  color: var(--footertitle);
+  border-color: var(--footertitle);
+}
+html[data-theme=purple] .attending-2 .section-link-3:not([disabled]):hover,
+html[data-theme=purple] .attending-3 .section-link-3:not([disabled]):hover {
   background: var(--footertitle);
   color: var(--white);
 }
@@ -5785,14 +5827,24 @@ html[data-theme=purple] .more-events .link-outline:not([disabled]):hover {
 html[data-theme=purple] .footer-info .info-title {
   color: var(--footertitle);
 }
+html[data-theme=purple] .footer-2 .footer-info .section-title,
+html[data-theme=purple] .footer-3 .footer-info .section-title {
+  color: var(--footertitle);
+}
 html[data-theme=purple] .up-btn {
   background: var(--footertitle) !important;
 }
 html[data-theme=purple] .offcanvas .sidemenu-header .title {
   color: var(--footertitle);
 }
+html[data-theme=purple] .offcanvas .sidemenu-top .title {
+  color: var(--footertitle);
+}
 html[data-theme=purple] .offcanvas .sidemenu .sidenav .sidelist-link {
   color: var(--footertitle);
+}
+html[data-theme=purple] .offcanvas .sidemenu .sidenav .sidelist-link:not([disabled]):hover {
+  color: #512763;
 }
 html[data-theme=purple] .offcanvas .menu-thumb .caption-event .event .day-date {
   color: var(--footertitle);
@@ -5805,6 +5857,73 @@ html[data-theme=purple] .offcanvas .menu-thumb .caption-event .event .divider {
 }
 html[data-theme=purple] .offcanvas .menu-thumb .caption-event .event .locationbox .location {
   color: var(--footertitle);
+}
+html[data-theme=purple] .contact-2 .btn-submit-2,
+html[data-theme=purple] .contact-3 .btn-submit-2 {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .contact-2 .btn-submit-2:not([disabled]):hover,
+html[data-theme=purple] .contact-3 .btn-submit-2:not([disabled]):hover {
+  background: #512763;
+}
+html[data-theme=purple] .blog-header {
+  background: var(--footertitle);
+}
+html[data-theme=purple] .blog-header .nav-center .homelink .couple-name {
+  color: var(--white);
+}
+html[data-theme=purple] .blogbanner .text-white {
+  color: var(--footertitle) !important;
+}
+html[data-theme=purple] .blogmain .infocard {
+  background: var(--footertitle);
+}
+html[data-theme=purple] .blogmain .infocard-body .infobox .infotext {
+  color: var(--white);
+}
+html[data-theme=purple] .blogmain .card-blog .bloglist-link .blog-title {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .blogmain .card-blog .bloglist-link .blog-title:not([disabled]):hover {
+  color: #512763;
+}
+html[data-theme=purple] .blogmain .card-blog-body .blog-title {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .blogmain .rightinfo .rightcontent-header .title {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .blogmain .rightinfo .rightcontent-body .categorylist-link:not([disabled]):hover span {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .blogmain .rightinfo .rightcontent-body .cardpost-detail .title:not([disabled]):hover {
+  color: var(--footertitle);
+}
+html[data-theme=purple] .blogmain .rightinfo .rightcontent-body .taglist-item {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .blogmain .blogpagination .pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+html[data-theme=purple] .blogmain .blogpagination .pagination .page-item:hover .page-link {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .blogmain .blogpagination .pagination .page-item:first-child:hover .page-link, html[data-theme=purple] .blogmain .blogpagination .pagination .page-item:last-child:hover .page-link {
+  background: var(--paginationlinkbg);
+  color: var(--radiotext);
+}
+html[data-theme=purple] .blogmain .blogpagination .pagination .page-link.active {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=purple] .blogmain .taginfo .taglist-item {
+  background: var(--footertitle);
+  color: var(--white);
 }
 html[data-theme=blue] .header .nav-center .couple-name {
   color: var(--white);
@@ -5836,12 +5955,34 @@ html[data-theme=blue] .header-3 .desktop-menu .desktoplist-link {
 html[data-theme=blue] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
   color: hsl(210, 23%, 95%);
 }
+html[data-theme=blue] .header-3 .btn-burger svg line {
+  stroke: var(--white);
+}
 html[data-theme=blue] .home-slider .section-link {
   background: var(--white);
   color: var(--footertitle);
 }
 html[data-theme=blue] .home-slider .section-link:not([disabled]):hover {
   background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .countdown-details .countdown-clock .days,
+html[data-theme=blue] .countdown-details .countdown-clock .hours,
+html[data-theme=blue] .countdown-details .countdown-clock .minutes,
+html[data-theme=blue] .countdown-details .countdown-clock .seconds {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .countdown-3-details {
+  background: var(--footertitle);
+}
+html[data-theme=blue] .countdown-3-details .countdown-clock .countdown-time .days,
+html[data-theme=blue] .countdown-3-details .countdown-clock .countdown-time .hours,
+html[data-theme=blue] .countdown-3-details .countdown-clock .countdown-time .minutes,
+html[data-theme=blue] .countdown-3-details .countdown-clock .countdown-time .seconds {
+  color: var(--white);
+}
+html[data-theme=blue] .countdown-3-details .countdown-clock .countdown-time .count-title {
   color: var(--white);
 }
 html[data-theme=blue] .countdown-3 .section-link-4 {
@@ -5878,10 +6019,13 @@ html[data-theme=blue] .attending .section-link:not([disabled]):hover {
   background: var(--footertitle);
   color: var(--white);
 }
-html[data-theme=blue] .countdown-details .countdown-clock .days,
-html[data-theme=blue] .countdown-details .countdown-clock .hours,
-html[data-theme=blue] .countdown-details .countdown-clock .minutes,
-html[data-theme=blue] .countdown-details .countdown-clock .seconds {
+html[data-theme=blue] .attending-2 .section-link-3,
+html[data-theme=blue] .attending-3 .section-link-3 {
+  color: var(--footertitle);
+  border-color: var(--footertitle);
+}
+html[data-theme=blue] .attending-2 .section-link-3:not([disabled]):hover,
+html[data-theme=blue] .attending-3 .section-link-3:not([disabled]):hover {
   background: var(--footertitle);
   color: var(--white);
 }
@@ -5896,14 +6040,24 @@ html[data-theme=blue] .more-events .link-outline:not([disabled]):hover {
 html[data-theme=blue] .footer-info .info-title {
   color: var(--footertitle);
 }
+html[data-theme=blue] .footer-2 .footer-info .section-title,
+html[data-theme=blue] .footer-3 .footer-info .section-title {
+  color: var(--footertitle);
+}
 html[data-theme=blue] .up-btn {
   background: var(--footertitle) !important;
 }
 html[data-theme=blue] .offcanvas .sidemenu-header .title {
   color: var(--footertitle);
 }
+html[data-theme=blue] .offcanvas .sidemenu-top .title {
+  color: var(--footertitle);
+}
 html[data-theme=blue] .offcanvas .sidemenu .sidenav .sidelist-link {
   color: var(--footertitle);
+}
+html[data-theme=blue] .offcanvas .sidemenu .sidenav .sidelist-link:not([disabled]):hover {
+  color: #164564;
 }
 html[data-theme=blue] .offcanvas .menu-thumb .caption-event .event .day-date {
   color: var(--footertitle);
@@ -5916,6 +6070,73 @@ html[data-theme=blue] .offcanvas .menu-thumb .caption-event .event .divider {
 }
 html[data-theme=blue] .offcanvas .menu-thumb .caption-event .event .locationbox .location {
   color: var(--footertitle);
+}
+html[data-theme=blue] .contact-2 .btn-submit-2,
+html[data-theme=blue] .contact-3 .btn-submit-2 {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .contact-2 .btn-submit-2:not([disabled]):hover,
+html[data-theme=blue] .contact-3 .btn-submit-2:not([disabled]):hover {
+  background: #164564;
+}
+html[data-theme=blue] .blog-header {
+  background: var(--footertitle);
+}
+html[data-theme=blue] .blog-header .nav-center .homelink .couple-name {
+  color: var(--white);
+}
+html[data-theme=blue] .blogbanner .text-white {
+  color: var(--footertitle) !important;
+}
+html[data-theme=blue] .blogmain .infocard {
+  background: var(--footertitle);
+}
+html[data-theme=blue] .blogmain .infocard-body .infobox .infotext {
+  color: var(--white);
+}
+html[data-theme=blue] .blogmain .card-blog .bloglist-link .blog-title {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .blogmain .card-blog .bloglist-link .blog-title:not([disabled]):hover {
+  color: #164564;
+}
+html[data-theme=blue] .blogmain .card-blog-body .blog-title {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .blogmain .rightinfo .rightcontent-header .title {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .blogmain .rightinfo .rightcontent-body .categorylist-link:not([disabled]):hover span {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .blogmain .rightinfo .rightcontent-body .cardpost-detail .title:not([disabled]):hover {
+  color: var(--footertitle);
+}
+html[data-theme=blue] .blogmain .rightinfo .rightcontent-body .taglist-item {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .blogmain .blogpagination .pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+html[data-theme=blue] .blogmain .blogpagination .pagination .page-item:hover .page-link {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .blogmain .blogpagination .pagination .page-item:first-child:hover .page-link, html[data-theme=blue] .blogmain .blogpagination .pagination .page-item:last-child:hover .page-link {
+  background: var(--paginationlinkbg);
+  color: var(--radiotext);
+}
+html[data-theme=blue] .blogmain .blogpagination .pagination .page-link.active {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=blue] .blogmain .taginfo .taglist-item {
+  background: var(--footertitle);
+  color: var(--white);
 }
 html[data-theme=red] .header .nav-center .couple-name {
   color: var(--white);
@@ -5947,12 +6168,34 @@ html[data-theme=red] .header-3 .desktop-menu .desktoplist-link {
 html[data-theme=red] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
   color: hsl(210, 23%, 95%);
 }
+html[data-theme=red] .header-3 .btn-burger svg line {
+  stroke: var(--white);
+}
 html[data-theme=red] .home-slider .section-link {
   background: var(--white);
   color: var(--footertitle);
 }
 html[data-theme=red] .home-slider .section-link:not([disabled]):hover {
   background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .countdown-details .countdown-clock .days,
+html[data-theme=red] .countdown-details .countdown-clock .hours,
+html[data-theme=red] .countdown-details .countdown-clock .minutes,
+html[data-theme=red] .countdown-details .countdown-clock .seconds {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .countdown-3-details {
+  background: var(--footertitle);
+}
+html[data-theme=red] .countdown-3-details .countdown-clock .countdown-time .days,
+html[data-theme=red] .countdown-3-details .countdown-clock .countdown-time .hours,
+html[data-theme=red] .countdown-3-details .countdown-clock .countdown-time .minutes,
+html[data-theme=red] .countdown-3-details .countdown-clock .countdown-time .seconds {
+  color: var(--white);
+}
+html[data-theme=red] .countdown-3-details .countdown-clock .countdown-time .count-title {
   color: var(--white);
 }
 html[data-theme=red] .countdown-3 .section-link-4 {
@@ -5989,10 +6232,13 @@ html[data-theme=red] .attending .section-link:not([disabled]):hover {
   background: var(--footertitle);
   color: var(--white);
 }
-html[data-theme=red] .countdown-details .countdown-clock .days,
-html[data-theme=red] .countdown-details .countdown-clock .hours,
-html[data-theme=red] .countdown-details .countdown-clock .minutes,
-html[data-theme=red] .countdown-details .countdown-clock .seconds {
+html[data-theme=red] .attending-2 .section-link-3,
+html[data-theme=red] .attending-3 .section-link-3 {
+  color: var(--footertitle);
+  border-color: var(--footertitle);
+}
+html[data-theme=red] .attending-2 .section-link-3:not([disabled]):hover,
+html[data-theme=red] .attending-3 .section-link-3:not([disabled]):hover {
   background: var(--footertitle);
   color: var(--white);
 }
@@ -6007,14 +6253,24 @@ html[data-theme=red] .more-events .link-outline:not([disabled]):hover {
 html[data-theme=red] .footer-info .info-title {
   color: var(--footertitle);
 }
+html[data-theme=red] .footer-2 .footer-info .section-title,
+html[data-theme=red] .footer-3 .footer-info .section-title {
+  color: var(--footertitle);
+}
 html[data-theme=red] .up-btn {
   background: var(--footertitle) !important;
 }
 html[data-theme=red] .offcanvas .sidemenu-header .title {
   color: var(--footertitle);
 }
+html[data-theme=red] .offcanvas .sidemenu-top .title {
+  color: var(--footertitle);
+}
 html[data-theme=red] .offcanvas .sidemenu .sidenav .sidelist-link {
   color: var(--footertitle);
+}
+html[data-theme=red] .offcanvas .sidemenu .sidenav .sidelist-link:not([disabled]):hover {
+  color: #950e12;
 }
 html[data-theme=red] .offcanvas .menu-thumb .caption-event .event .day-date {
   color: var(--footertitle);
@@ -6027,6 +6283,73 @@ html[data-theme=red] .offcanvas .menu-thumb .caption-event .event .divider {
 }
 html[data-theme=red] .offcanvas .menu-thumb .caption-event .event .locationbox .location {
   color: var(--footertitle);
+}
+html[data-theme=red] .contact-2 .btn-submit-2,
+html[data-theme=red] .contact-3 .btn-submit-2 {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .contact-2 .btn-submit-2:not([disabled]):hover,
+html[data-theme=red] .contact-3 .btn-submit-2:not([disabled]):hover {
+  background: #950e12;
+}
+html[data-theme=red] .blog-header {
+  background: var(--footertitle);
+}
+html[data-theme=red] .blog-header .nav-center .homelink .couple-name {
+  color: var(--white);
+}
+html[data-theme=red] .blogbanner .text-white {
+  color: var(--footertitle) !important;
+}
+html[data-theme=red] .blogmain .infocard {
+  background: var(--footertitle);
+}
+html[data-theme=red] .blogmain .infocard-body .infobox .infotext {
+  color: var(--white);
+}
+html[data-theme=red] .blogmain .card-blog .bloglist-link .blog-title {
+  color: var(--footertitle);
+}
+html[data-theme=red] .blogmain .card-blog .bloglist-link .blog-title:not([disabled]):hover {
+  color: #950e12;
+}
+html[data-theme=red] .blogmain .card-blog-body .blog-title {
+  color: var(--footertitle);
+}
+html[data-theme=red] .blogmain .rightinfo .rightcontent-header .title {
+  color: var(--footertitle);
+}
+html[data-theme=red] .blogmain .rightinfo .rightcontent-body .categorylist-link:not([disabled]):hover span {
+  color: var(--footertitle);
+}
+html[data-theme=red] .blogmain .rightinfo .rightcontent-body .cardpost-detail .title:not([disabled]):hover {
+  color: var(--footertitle);
+}
+html[data-theme=red] .blogmain .rightinfo .rightcontent-body .taglist-item {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .blogmain .blogpagination .pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+html[data-theme=red] .blogmain .blogpagination .pagination .page-item:hover .page-link {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .blogmain .blogpagination .pagination .page-item:first-child:hover .page-link, html[data-theme=red] .blogmain .blogpagination .pagination .page-item:last-child:hover .page-link {
+  background: var(--paginationlinkbg);
+  color: var(--radiotext);
+}
+html[data-theme=red] .blogmain .blogpagination .pagination .page-link.active {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=red] .blogmain .taginfo .taglist-item {
+  background: var(--footertitle);
+  color: var(--white);
 }
 html[data-theme=pink] .header .nav-center .couple-name {
   color: var(--white);
@@ -6058,12 +6381,34 @@ html[data-theme=pink] .header-3 .desktop-menu .desktoplist-link {
 html[data-theme=pink] .header-3 .desktop-menu .desktoplist-link:not([disabled]):hover {
   color: hsl(210, 23%, 95%);
 }
+html[data-theme=pink] .header-3 .btn-burger svg line {
+  stroke: var(--white);
+}
 html[data-theme=pink] .home-slider .section-link {
   background: var(--white);
   color: var(--footertitle);
 }
 html[data-theme=pink] .home-slider .section-link:not([disabled]):hover {
   background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .countdown-details .countdown-clock .days,
+html[data-theme=pink] .countdown-details .countdown-clock .hours,
+html[data-theme=pink] .countdown-details .countdown-clock .minutes,
+html[data-theme=pink] .countdown-details .countdown-clock .seconds {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .countdown-3-details {
+  background: var(--footertitle);
+}
+html[data-theme=pink] .countdown-3-details .countdown-clock .countdown-time .days,
+html[data-theme=pink] .countdown-3-details .countdown-clock .countdown-time .hours,
+html[data-theme=pink] .countdown-3-details .countdown-clock .countdown-time .minutes,
+html[data-theme=pink] .countdown-3-details .countdown-clock .countdown-time .seconds {
+  color: var(--white);
+}
+html[data-theme=pink] .countdown-3-details .countdown-clock .countdown-time .count-title {
   color: var(--white);
 }
 html[data-theme=pink] .countdown-3 .section-link-4 {
@@ -6100,10 +6445,13 @@ html[data-theme=pink] .attending .section-link:not([disabled]):hover {
   background: var(--footertitle);
   color: var(--white);
 }
-html[data-theme=pink] .countdown-details .countdown-clock .days,
-html[data-theme=pink] .countdown-details .countdown-clock .hours,
-html[data-theme=pink] .countdown-details .countdown-clock .minutes,
-html[data-theme=pink] .countdown-details .countdown-clock .seconds {
+html[data-theme=pink] .attending-2 .section-link-3,
+html[data-theme=pink] .attending-3 .section-link-3 {
+  color: var(--footertitle);
+  border-color: var(--footertitle);
+}
+html[data-theme=pink] .attending-2 .section-link-3:not([disabled]):hover,
+html[data-theme=pink] .attending-3 .section-link-3:not([disabled]):hover {
   background: var(--footertitle);
   color: var(--white);
 }
@@ -6118,14 +6466,24 @@ html[data-theme=pink] .more-events .link-outline:not([disabled]):hover {
 html[data-theme=pink] .footer-info .info-title {
   color: var(--footertitle);
 }
+html[data-theme=pink] .footer-2 .footer-info .section-title,
+html[data-theme=pink] .footer-3 .footer-info .section-title {
+  color: var(--footertitle);
+}
 html[data-theme=pink] .up-btn {
   background: var(--footertitle) !important;
 }
 html[data-theme=pink] .offcanvas .sidemenu-header .title {
   color: var(--footertitle);
 }
+html[data-theme=pink] .offcanvas .sidemenu-top .title {
+  color: var(--footertitle);
+}
 html[data-theme=pink] .offcanvas .sidemenu .sidenav .sidelist-link {
   color: var(--footertitle);
+}
+html[data-theme=pink] .offcanvas .sidemenu .sidenav .sidelist-link:not([disabled]):hover {
+  color: #b11661;
 }
 html[data-theme=pink] .offcanvas .menu-thumb .caption-event .event .day-date {
   color: var(--footertitle);
@@ -6138,6 +6496,73 @@ html[data-theme=pink] .offcanvas .menu-thumb .caption-event .event .divider {
 }
 html[data-theme=pink] .offcanvas .menu-thumb .caption-event .event .locationbox .location {
   color: var(--footertitle);
+}
+html[data-theme=pink] .contact-2 .btn-submit-2,
+html[data-theme=pink] .contact-3 .btn-submit-2 {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .contact-2 .btn-submit-2:not([disabled]):hover,
+html[data-theme=pink] .contact-3 .btn-submit-2:not([disabled]):hover {
+  background: #b11661;
+}
+html[data-theme=pink] .blog-header {
+  background: var(--footertitle);
+}
+html[data-theme=pink] .blog-header .nav-center .homelink .couple-name {
+  color: var(--white);
+}
+html[data-theme=pink] .blogbanner .text-white {
+  color: var(--footertitle) !important;
+}
+html[data-theme=pink] .blogmain .infocard {
+  background: var(--footertitle);
+}
+html[data-theme=pink] .blogmain .infocard-body .infobox .infotext {
+  color: var(--white);
+}
+html[data-theme=pink] .blogmain .card-blog .bloglist-link .blog-title {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .blogmain .card-blog .bloglist-link .blog-title:not([disabled]):hover {
+  color: #b11661;
+}
+html[data-theme=pink] .blogmain .card-blog-body .blog-title {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .blogmain .rightinfo .rightcontent-header .title {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .blogmain .rightinfo .rightcontent-body .categorylist-link:not([disabled]):hover span {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .blogmain .rightinfo .rightcontent-body .cardpost-detail .title:not([disabled]):hover {
+  color: var(--footertitle);
+}
+html[data-theme=pink] .blogmain .rightinfo .rightcontent-body .taglist-item {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .blogmain .blogpagination .pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+html[data-theme=pink] .blogmain .blogpagination .pagination .page-item:hover .page-link {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .blogmain .blogpagination .pagination .page-item:first-child:hover .page-link, html[data-theme=pink] .blogmain .blogpagination .pagination .page-item:last-child:hover .page-link {
+  background: var(--paginationlinkbg);
+  color: var(--radiotext);
+}
+html[data-theme=pink] .blogmain .blogpagination .pagination .page-link.active {
+  background: var(--footertitle);
+  color: var(--white);
+}
+html[data-theme=pink] .blogmain .taginfo .taglist-item {
+  background: var(--footertitle);
+  color: var(--white);
 }
 
 .section-title {

@@ -515,6 +515,10 @@
       color: $radiotext;
       font-family: $tt-nooks-script-trial;
       @include text-overflow;
+
+      @include hover {
+        color: darken($radiotext, 20%);
+      }
     }
 
     .section-text {
