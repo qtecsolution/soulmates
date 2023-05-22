@@ -9,6 +9,23 @@ html {
   &:focus-within {
     scroll-behavior: inherit;
   }
+
+
+  &[data-theme="purple"] {
+    
+  }
+  
+  &[data-theme="blue"] {
+    
+  }
+  
+  &[data-theme="red"] {
+    
+  }
+  
+  &[data-theme="pink"] {
+    
+  }
 }
 
 * {

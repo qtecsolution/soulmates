@@ -20,6 +20,8 @@ $linkbg: hsl(210, 23%, 95%); //#EFF2F5
 $countoverlay: hsl(346, 77%, 66%); //#EB6684
 $paginationlinkbg: hsl(220, 25%, 95%); //#F0F2F6
 
+
+
 // ICON-BACKGROUNDS
 
 
@@ -57,17 +59,24 @@ $theme-4: #e84393;
 :root,
 :root[data-theme="light"] {
   --bodybg: #{$bodybg};
-  --footertitle: #{$footertitle};
   --overlaybg: #{$overlaybg};
   --countdowntext: #{$countdowntext};
+  --footertitle: #{$footertitle};
   --textcolor: #{$textcolor};
+  --textprimary: #{$textprimary};
+  --bulletbg: #{$bulletbg};
   --cardbackbg: #{$cardbackbg};
-  --black: #{$black};
-  --white: #{$white};
   --radiotext: #{$radiotext};
-  --cardshadow: #{$cardshadow};
+  --mapshadow: #{$mapshadow};
   --sectionbg: #{$sectionbg};
+  --linkbg: #{$linkbg};
+  --countoverlay: #{$countoverlay};
   --paginationlinkbg: #{$paginationlinkbg};
+  --white: #{$white};
+  --black: #{$black};
+  --cardshadow: #{$cardshadow};
+  --dangercolor: #{$dangercolor};
+  --red: #{$red};
 }
 
 :root[data-theme="purple"] {

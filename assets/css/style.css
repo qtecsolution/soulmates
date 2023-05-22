@@ -3,17 +3,24 @@
 :root,
 :root[data-theme=light] {
   --bodybg: hsl(0, 33%, 98%);
-  --footertitle: hsl(232, 36%, 35%);
   --overlaybg: hsl(231, 71%, 15%);
   --countdowntext: hsl(237, 31%, 41%);
+  --footertitle: hsl(232, 36%, 35%);
   --textcolor: hsl(230, 14%, 41%);
+  --textprimary: hsl(231, 15%, 24%);
+  --bulletbg: hsl(233, 22%, 71%);
   --cardbackbg: hsl(0, 0%, 95%);
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
   --radiotext: hsl(231, 37%, 35%);
-  --cardshadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  --mapshadow: hsl(236, 18%, 57%);
   --sectionbg: rgba(72, 75, 137, 0.05);
+  --linkbg: hsl(210, 23%, 95%);
+  --countoverlay: hsl(346, 77%, 66%);
   --paginationlinkbg: hsl(220, 25%, 95%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --cardshadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
+  --dangercolor: hsl(343, 79%, 50%);
+  --red: hsl(1, 71%, 54%);
 }
 
 :root[data-theme=purple] {
@@ -185,7 +192,6 @@ html {
 html:focus-within {
   scroll-behavior: inherit;
 }
-
 * {
   box-sizing: inherit;
 }
