@@ -282,6 +282,7 @@
     .text {
       color: var(--white);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      @include line-clamp;
 
       @include breakpoint(tab992) {
         font-size: size(18);
@@ -443,6 +444,8 @@
   }
 
   &-box {
+    @include border(solid, 20, $mapborder);
+    box-shadow: var(--cardshadow);
     @include flex-center;
     @include w100;
     min-height: size(360);

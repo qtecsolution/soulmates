@@ -812,6 +812,11 @@ button:not([disabled]):hover,
   font-weight: 300;
   font-style: normal;
   line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
 }
 @media screen and (min-width: 62rem) {
   .card-wedding .weddinginfo .wedding-text {
@@ -1196,6 +1201,11 @@ button:not([disabled]):hover,
   font-weight: 300;
   font-style: normal;
   line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
 }
 @media screen and (min-width: 62rem) {
   .whenwhere-card-detail .textbox .text {
@@ -2652,6 +2662,19 @@ button:not([disabled]):hover,
   justify-content: center;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-18.75rem * 5));
+  }
+}
+.slidertrack {
+  animation: scroll 30s linear infinite;
+  width: calc(18.75rem * 15);
+}
+
 .settings {
   position: fixed;
   top: 50%;
@@ -3239,7 +3262,7 @@ button:not([disabled]):hover,
   }
 }
 .whenwhere .maplocation {
-  background: var(--white);
+  border: solid 1.25rem rgba(126, 129, 166, 0.2);
   box-shadow: var(--cardshadow);
   display: flex;
   align-items: center;
@@ -3465,14 +3488,6 @@ button:not([disabled]):hover,
   align-items: center;
   gap: 0.5rem;
   overflow: hidden;
-  width: 100%;
-}
-.lovestory .loveslider .js-marquee {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  overflow: hidden;
-  width: 100%;
 }
 .lovestory .loveslider .love-card {
   min-width: 18.75rem;
@@ -4263,6 +4278,11 @@ button:not([disabled]):hover,
   font-weight: 300;
   font-style: normal;
   line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
 }
 @media screen and (min-width: 62rem) {
   .whenwhere-2 .whenwhere-detail .text {
@@ -4434,6 +4454,8 @@ button:not([disabled]):hover,
   }
 }
 .locationmap-box {
+  border: solid 1.25rem rgba(126, 129, 166, 0.2);
+  box-shadow: var(--cardshadow);
   display: flex;
   align-items: center;
   justify-content: center;

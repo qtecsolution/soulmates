@@ -89,6 +89,7 @@
     .wedding-text {
       color: var(--textcolor);
       @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      @include line-clamp;
 
       @include breakpoint(tab992) {
         font-size: size(18);
@@ -432,6 +433,7 @@
       .text {
         color: $countdowntext;
         @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+        @include line-clamp;
 
         @include breakpoint(tab992) {
           font-size: size(18);

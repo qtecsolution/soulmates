@@ -1,0 +1,16 @@
+@use "../../global"as *;
+@use "../../partials"as *;
+
+@keyframes scroll {
+  0% {
+    @include translateX(0);
+  }
+  100% {
+    @include translateX(calc(size(-300) * 5));
+  }
+}
+
+.slidertrack {
+  animation: scroll 30s linear infinite;
+  width: calc(size(300) * 15);
+}

@@ -393,7 +393,7 @@
   }
 
   .maplocation {
-    background: var(--white);
+    @include border(solid, 20, $mapborder);
     box-shadow: var(--cardshadow);
     @include flex-center;
     @include w100;
@@ -594,14 +594,6 @@
     @include flex-center-vert;
     gap: size(8);
     overflow: hidden;
-    @include w100;
-
-    .js-marquee {
-      @include flex-center-vert;
-      gap: size(8);
-      overflow: hidden;
-      @include w100;
-    }
 
     .love-card {
       min-width: size(300);

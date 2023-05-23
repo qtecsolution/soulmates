@@ -22,5 +22,8 @@ new marquee( document.getElementById( 'marquee' ), {
   // Pause on hover
   pauseOnHover: true,
   // The marquee is visible initially positioned next to the border towards it will be moving
-  startVisible: false
+  startVisible: false,
+  speed: 200,
+  continuous: true,
+  loops: true
 });
