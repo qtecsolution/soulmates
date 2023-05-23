@@ -3,8 +3,9 @@
 :root {
   --theme-color:  #3A437B;
   --hover-color: #0B1341;
-  --white-color: var(--white-color);
+  --white-color: #ffffff;
   --primaryfont: 'TT Nooks Script Trial', sans-serif;
+  --cardshadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
 }
 
 body {
@@ -1713,4 +1714,69 @@ ul.tabs li.current {
   height: 4rem;
   display: flex;
   align-items: center;
+}
+
+.cardtemplate {
+  display: flex;
+  flex-direction: column;
+  background: var(--white-color);
+  box-shadow: var(--cardshadow);
+  padding: 1.5rem;
+}
+
+.cardtemplate .titlelink {
+  height: 4rem;
+  text-align: center;
+  width: auto;
+}
+
+.cardtemplate .titlelink:hover h3 {
+  color: var(--theme-color);
+}
+
+.cardtemplate-thumb {
+  width: 100%;
+  position: relative;
+  height: 8.875rem;
+  overflow: hidden;
+}
+
+.cardtemplate-thumb .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease-in;
+}
+
+.demolink {
+  background: var(--theme-color);
+  color: var(--white-color);
+  display: inline-block;
+  padding: .5rem 1rem;
+  font-size: .75rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .4s ease;
+}
+
+.demolink:hover {
+  background: var(--hover-color);
+  color: var(--white-color);
+}
+
+.cardtemplate-thumb img {
+  width: 100%;
+  height: 100%;
+}
+
+.cardtemplate-thumb:hover .overlay {
+  opacity: 1;
+  visibility: visible;
 }
