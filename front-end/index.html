@@ -1156,7 +1156,7 @@
               <div class="col-12">
                 <div class="confirm-attend">
                   <div class="custom-radio">
-                    <input type="radio" name="radio-stacked" id="will-there" class="radio-input" hidden checked>
+                    <input type="radio" name="radio-stacked" id="will-there" class="radio-input" checked hidden>
                     <label for="will-there" class="radio-label">I will be there</label>
                   </div>
 
@@ -1187,33 +1187,37 @@
                 </div>
               </div>
 
-              <div class="col-lg-6">
-                <select class="nice-select wide" id="numberofguests" autocomplete="off">
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid state.
-                </div>
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
-              </div>
-
-              <div class="col-lg-6">
-                <select class="nice-select wide" id="mealpreferences" autocomplete="off">
-                  <option>Chicken</option>
-                  <option>Beef</option>
-                  <option>Pork</option>
-                  <option>Baked Beans</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid state.
-                </div>
-                <div class="valid-feedback">
-                  Looks good!
+              <div class="col-12">
+                <div class="row g-3 selectboxes">
+                  <div class="col-lg-6">
+                    <select class="nice-select wide" id="numberofguests" autocomplete="off">
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+    
+                  <div class="col-lg-6">
+                    <select class="nice-select wide" id="mealpreferences" autocomplete="off">
+                      <option>Chicken</option>
+                      <option>Beef</option>
+                      <option>Pork</option>
+                      <option>Baked Beans</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1381,7 +1385,8 @@
   <!-- NICE-SELECT-2 JS -->
   <script src="../assets/js/nice-select/nice-select2.js"></script>
   <script src="../assets/js/nice-select/contactselect.js"></script>
-  
+  <!-- NOT-ATTENDING -->
+  <script src="../assets/js/not-attending/not-attending.js"></script>
   <!-- GSAP -->
   <script src="../assets/js/gsap/gsap.min.js"></script>
   <script src="../assets/js/gsap/ScrollTrigger.min.js"></script>
