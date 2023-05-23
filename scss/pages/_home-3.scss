@@ -63,18 +63,14 @@
     }
   }
 
-  &-content {
-    @include flex-column;
-    gap: size(48);
+  // &-content {
+  //   @include flex-column;
+  //   gap: size(48);
     
-    @include breakpoint(tab992) {
-      gap: size(80);
-    }
-    
-    @include breakpoint(desktop1200) {
-      gap: size(120);
-    }
-  }
+  //   @include breakpoint(tab992) {
+  //     gap: size(0);
+  //   }
+  // }
 
   .profile-picture {
     @include w100;
@@ -127,11 +123,6 @@
     @include square(125);
     @include flex-center;
     overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include translate(-50%, -50%);
-    z-index: 10;
 
     @include breakpoint(tab992) {
       @include square(225);

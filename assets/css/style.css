@@ -4668,21 +4668,6 @@ button:not([disabled]):hover,
     padding: 7.1875rem 0.5rem 12rem;
   }
 }
-.couples-3-content {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-@media screen and (min-width: 62rem) {
-  .couples-3-content {
-    gap: 5rem;
-  }
-}
-@media screen and (min-width: 75rem) {
-  .couples-3-content {
-    gap: 7.5rem;
-  }
-}
 .couples-3 .profile-picture {
   width: 100%;
   min-height: 16.25rem;
@@ -4743,11 +4728,6 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
 }
 @media screen and (min-width: 62rem) {
   .couples-3 .icon {
