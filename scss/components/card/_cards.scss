@@ -279,7 +279,7 @@
 }
 
 .card-image {
-  @include w100;
+  @include wh100;
   min-height: size(240);
   max-height: size(540);
   @include flex-center;
