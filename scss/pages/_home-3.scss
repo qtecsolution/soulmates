@@ -176,10 +176,6 @@
         width: calc(100% / 4);
       }
 
-      @include breakpoint(desktop1100) {
-        width: calc(100% / 5);
-      }
-
       @include breakpoint(desktop1400) {
         width: calc(100% / 8);
       }

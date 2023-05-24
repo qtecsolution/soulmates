@@ -4789,11 +4789,6 @@ button:not([disabled]):hover,
     width: 25%;
   }
 }
-@media screen and (min-width: 68.75rem) {
-  .ourgallery-3 .newgallery .card-gallery {
-    width: 20%;
-  }
-}
 @media screen and (min-width: 87.5rem) {
   .ourgallery-3 .newgallery .card-gallery {
     width: 12.5%;
