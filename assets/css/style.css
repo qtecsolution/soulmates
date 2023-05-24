@@ -2707,6 +2707,7 @@ button:not([disabled]):hover,
   position: absolute;
   top: 0;
   right: -2.5rem;
+  z-index: 999999;
 }
 .settings-body {
   padding: 1.5rem;

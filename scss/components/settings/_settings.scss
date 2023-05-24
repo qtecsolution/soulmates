@@ -20,6 +20,7 @@
 		position: absolute;
 		top: 0;
 		right: size(-40);
+		z-index: 999999;
 	}
 
 	&-body {
