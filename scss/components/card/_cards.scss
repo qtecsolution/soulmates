@@ -346,6 +346,7 @@
       padding: size(14);
       text-align: center;
       @include rotateY(180);
+      height: 105%;
 
       .name {
         color: var(--footertitle);

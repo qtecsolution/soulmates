@@ -173,6 +173,7 @@
     .taginfo {
       @include flex-center-vert;
       gap: size(8);
+      flex-wrap: wrap;
 
       .taglist {
         @include flex-center-vert;

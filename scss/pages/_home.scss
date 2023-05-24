@@ -500,7 +500,7 @@
     @include w100;
     @include flex-center;
     position: relative;
-    margin-top: size(64);
+    margin: size(64) size(0);
 
     .section-link {
       position: relative;
@@ -648,6 +648,10 @@
     
     @include breakpoint(desktop1200) {
       padding: size(96) size(0);
+    }
+
+    @media screen and (max-width: size(767)) {
+      margin-bottom: size(128);
     }
 
     .section-title {

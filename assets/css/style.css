@@ -1105,6 +1105,7 @@ button:not([disabled]):hover,
   padding: 0.875rem;
   text-align: center;
   transform: rotateY(180deg);
+  height: 105%;
 }
 .card-flip .content .back .name {
   color: var(--footertitle);
@@ -3393,7 +3394,7 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 4rem;
+  margin: 4rem 0rem;
 }
 .more-events .scheduleinfo .section-link {
   position: relative;
@@ -3550,6 +3551,11 @@ button:not([disabled]):hover,
 @media screen and (min-width: 75rem) {
   .lovestory-footer {
     padding: 6rem 0rem;
+  }
+}
+@media screen and (max-width: 47.9375rem) {
+  .lovestory-footer {
+    margin-bottom: 8rem;
   }
 }
 .lovestory-footer .section-title {
@@ -4326,6 +4332,11 @@ button:not([disabled]):hover,
 @media screen and (min-width: 62rem) {
   .ourgallery-2 {
     padding: 7.1875rem 0.5rem 5rem;
+  }
+}
+@media screen and (max-width: 47.9375rem) {
+  .ourgallery-2 {
+    padding-top: 8rem;
   }
 }
 .ourgallery-2-body {
@@ -5536,6 +5547,7 @@ button:not([disabled]):hover,
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 .blogmain .leftinfo .taginfo .taglist {
   display: flex;
