@@ -450,6 +450,10 @@
     padding: size(96) size(8) size(154);
   }
 
+  @media screen and (max-width: size(767)) {
+    padding-bottom: size(160);
+  }
+
   &-content {
     @include flex-column;
     gap: size(40);
@@ -520,6 +524,7 @@
 .empty-banner {
   position: relative;
   @include w100;
+  height: size(420);
 
   @include breakpoint(mobile768) {
     height: size(420);
@@ -558,6 +563,10 @@
 
   @include breakpoint(tab992) {
     padding: size(115) size(8) size(140);
+  }
+
+  @media screen and (max-width: size(767)) {
+    padding-bottom: size(224);
   }
 
   &-content {
@@ -655,6 +664,10 @@
       top: 50%;
       left: 50%;
       @include translate(-50%, -50%);
+
+      @media screen and (max-width: size(767)) {
+        @include square(226);
+      }
 
       svg {
         @include w100;
