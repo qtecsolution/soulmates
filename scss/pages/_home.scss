@@ -569,10 +569,6 @@
     padding: size(115) size(8) size(140);
   }
 
-  @media screen and (max-width: size(767)) {
-    padding-bottom: size(224);
-  }
-
   &-content {
     @include flex-center-column;
     gap: size(80);
@@ -652,10 +648,6 @@
     
     @include breakpoint(desktop1200) {
       padding: size(96) size(0);
-    }
-
-    @media screen and (max-width: size(767)) {
-      margin-bottom: size(128);
     }
 
     .section-title {

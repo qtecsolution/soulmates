@@ -479,7 +479,7 @@
 */
 .attending-3 {
   position: relative;
-  padding: size(240) size(8) size(48);
+  padding: size(80) size(8) size(48);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);

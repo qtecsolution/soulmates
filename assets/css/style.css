@@ -3476,11 +3476,6 @@ button:not([disabled]):hover,
     padding: 7.1875rem 0.5rem 8.75rem;
   }
 }
-@media screen and (max-width: 47.9375rem) {
-  .lovestory {
-    padding-bottom: 14rem;
-  }
-}
 .lovestory-content {
   display: flex;
   align-items: center;
@@ -3565,11 +3560,6 @@ button:not([disabled]):hover,
 @media screen and (min-width: 75rem) {
   .lovestory-footer {
     padding: 6rem 0rem;
-  }
-}
-@media screen and (max-width: 47.9375rem) {
-  .lovestory-footer {
-    margin-bottom: 8rem;
   }
 }
 .lovestory-footer .section-title {
@@ -5178,7 +5168,7 @@ button:not([disabled]):hover,
 */
 .attending-3 {
   position: relative;
-  padding: 15rem 0.5rem 3rem;
+  padding: 5rem 0.5rem 3rem;
 }
 @media screen and (min-width: 62rem) {
   .attending-3 {
