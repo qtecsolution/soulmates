@@ -281,6 +281,7 @@
           .instagramlink {
             @include flex-center;
             overflow: hidden;
+            width: calc((100% / 2) - size(10));
 
             @include breakpoint(mobile480) {
               width: calc((100% / 3) - size(10));

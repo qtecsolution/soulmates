@@ -5649,6 +5649,7 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: calc(50% - 0.625rem);
 }
 @media screen and (min-width: 30rem) {
   .blogmain .rightinfo .rightcontent-body .instagramlist .instagramlink {
