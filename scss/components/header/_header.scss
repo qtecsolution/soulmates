@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   @include w100;
-  z-index: 1000;
+  z-index: 99999;
 
   &-nav {
     @include flex-center-between;
