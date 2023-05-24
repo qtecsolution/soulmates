@@ -6,7 +6,7 @@
 */
 .home-slider {
   @include w100;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   top: 0;
   left: 0;
@@ -1029,14 +1029,14 @@
   }
 }
 
-#meetus,
-#ourstory,
-#whenwhere,
-#events,
-#ourgallery,
-#groomsmen,
-#bridesmaid,
-#contact {
-  scroll-padding-top: size(167);
-  scroll-margin-top: size(167);
-}
+// #meetus,
+// #ourstory,
+// #whenwhere,
+// #events,
+// #ourgallery,
+// #groomsmen,
+// #bridesmaid,
+// #contact {
+//   scroll-padding-top: size(167);
+//   scroll-margin-top: size(167);
+// }
