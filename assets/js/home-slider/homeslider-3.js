@@ -12,4 +12,5 @@ const homeSlider3 = new Swiper(".homeslider-3", {
     el: ".swiper-pagination",
     clickable: true
   },
+  
 });
