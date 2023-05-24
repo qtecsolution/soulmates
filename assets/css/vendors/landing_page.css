@@ -889,6 +889,7 @@ ul.tabs li.current {
   background: #f9f8f8;
 }
 
+
 .main-feature .key-feature>div {
   margin-top: 70px;
 }
@@ -1779,4 +1780,14 @@ ul.tabs li.current {
 .cardtemplate-thumb:hover .overlay {
   opacity: 1;
   visibility: visible;
+}
+
+@media screen and (max-width: 62rem) {
+  #core {
+    margin-top: 10rem;
+  }
+
+  #footer {
+    padding: 5rem 1rem;
+  }
 }
