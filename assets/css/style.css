@@ -1014,6 +1014,7 @@ button:not([disabled]):hover,
 
 .card-gallery {
   width: 100%;
+  height: 100%;
   min-height: 15.625rem;
   max-height: 30rem;
   display: flex;
@@ -4805,11 +4806,6 @@ button:not([disabled]):hover,
 @media screen and (min-width: 62rem) {
   .ourgallery-3 {
     padding: 7.1875rem 0rem;
-  }
-}
-@media screen and (max-width: 47.9375rem) {
-  .ourgallery-3 {
-    padding-bottom: 24rem;
   }
 }
 .ourgallery-3 .newgallery {

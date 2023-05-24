@@ -260,7 +260,7 @@
 }
 
 .card-gallery {
-  @include w100;
+  @include wh100;
   min-height: size(250);
   max-height: size(480);
   @include flex-center;

@@ -145,10 +145,6 @@
     padding: size(115) size(0);
   }
 
-  @media screen and (max-width: size(767)) {
-    padding-bottom: size(384);
-  }
-
   .newgallery {
     @include flex-center-vert;
     flex-wrap: wrap;
