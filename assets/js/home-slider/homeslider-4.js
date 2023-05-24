@@ -3,6 +3,7 @@ const homeFadeSlider = new Swiper(".homefadeslider", {
     delay: 5000,
     disableOnInteraction: false,
   },
+  direction: 'horizontal',
   centeredSlides: true,
 	effect: 'fade',
   grabCursor: true,
