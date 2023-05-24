@@ -5587,7 +5587,7 @@ button:not([disabled]):hover,
   flex-direction: column;
   gap: 3rem;
 }
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 48rem) {
   .blogmain .rightinfo {
     gap: 5rem;
   }

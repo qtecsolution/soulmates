@@ -213,7 +213,7 @@
     @include flex-column;
     gap: size(48);
 
-    @include breakpoint(tab992) {
+    @include breakpoint(mobile768) {
       gap: size(80);
     }
 
