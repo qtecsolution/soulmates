@@ -4800,6 +4800,7 @@ button:not([disabled]):hover,
 */
 .ourgallery-3 {
   padding: 5rem 0rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 62rem) {
   .ourgallery-3 {
@@ -5134,7 +5135,7 @@ button:not([disabled]):hover,
   position: absolute;
   z-index: 1;
 }
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 87.5rem) {
   .locationmap-2 .lefticon,
   .locationmap-2 .righticon {
     width: 14.875rem;
@@ -5149,6 +5150,11 @@ button:not([disabled]):hover,
 .locationmap-2 .lefticon {
   bottom: 0rem;
   left: -2.625rem;
+}
+@media screen and (max-width: 64rem) {
+  .locationmap-2 .lefticon {
+    z-index: -1;
+  }
 }
 .locationmap-2 .righticon {
   top: -1.25rem;

@@ -139,6 +139,7 @@
 */
 .ourgallery-3 {
   padding: size(80) size(0);
+  overflow: hidden;
 
   @include breakpoint(tab992) {
     padding: size(115) size(0);
@@ -435,7 +436,7 @@
     position: absolute;
     z-index: 1;
 
-    @include breakpoint(tab992) {
+    @include breakpoint(desktop1400) {
       width: size(238);
       height: size(217);
     }
@@ -446,8 +447,12 @@
   }
 
   .lefticon {
-    bottom: size(-0);
+    bottom: size(0);
     left: size(-42);
+
+    @media screen and (max-width: size(1024)){
+      z-index: -1;
+    }
   }
 
   .righticon {
