@@ -4009,6 +4009,12 @@ button:not([disabled]):hover,
   height: 100%;
 }
 
+@media only screen and (max-width: 64rem) and (min-width: 48rem) {
+  .meetus {
+    margin-bottom: 5rem;
+  }
+}
+
 /*
  COUNTDOWN-SECTION-2 START
 */

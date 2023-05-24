@@ -1029,6 +1029,12 @@
   }
 }
 
+.meetus {
+  @media only screen and (max-width: size(1024)) and (min-width: size(768)) {
+    margin-bottom: size(80);
+  }
+}
+
 // #meetus,
 // #ourstory,
 // #whenwhere,
