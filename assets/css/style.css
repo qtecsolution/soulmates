@@ -2196,6 +2196,11 @@ button:not([disabled]):hover,
   flex-direction: column;
   padding: 1.5rem;
 }
+@media screen and (max-width: 68.75rem) {
+  .offcanvas-body .menu-thumb .caption .caption-event .event {
+    width: 86%;
+  }
+}
 @media screen and (min-width: 48rem) {
   .offcanvas-body .menu-thumb .caption .caption-event .event {
     flex-direction: row;

@@ -309,6 +309,10 @@
             @include flex-center-column;
             padding: size(24);
 
+            @media screen and (max-width: size(1100)) {
+              width: 86%;
+            }
+
             @include breakpoint(mobile768) {
               flex-direction: row;
               justify-content: space-between;
