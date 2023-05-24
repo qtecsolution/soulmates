@@ -213,6 +213,10 @@
     @include flex-column;
     gap: size(48);
 
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+
     .rightcontent {
       @include flex-column;
       gap: size(16);
