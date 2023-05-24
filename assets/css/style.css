@@ -3476,7 +3476,7 @@ button:not([disabled]):hover,
 }
 @media screen and (min-width: 62rem) {
   .lovestory {
-    padding: 7.1875rem 0.5rem 8.75rem;
+    padding: 7.1875rem 0.5rem;
   }
 }
 .lovestory-content {
@@ -4323,6 +4323,7 @@ button:not([disabled]):hover,
 */
 .ourgallery-2 {
   padding: 5rem 0.5rem 5rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 62rem) {
   .ourgallery-2 {
@@ -4373,11 +4374,6 @@ button:not([disabled]):hover,
 @media screen and (min-width: 62rem) {
   .attending-2 {
     padding: 7.1875rem 0.5rem;
-  }
-}
-@media screen and (max-width: 47.9375rem) {
-  .attending-2 {
-    padding-top: 15rem;
   }
 }
 .attending-2 .attending-details {

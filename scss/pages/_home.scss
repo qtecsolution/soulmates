@@ -570,7 +570,7 @@
   padding: size(80) size(8) size(96);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8) size(140);
+    padding: size(115) size(8);
   }
 
   &-content {

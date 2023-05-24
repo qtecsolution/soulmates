@@ -297,6 +297,7 @@
 */
 .ourgallery-2 {
   padding: size(80) size(8) size(80);
+  overflow: hidden;
 
   @include breakpoint(tab992) {
     padding: size(115) size(8) size(80);
@@ -341,10 +342,6 @@
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);
-  }
-
-  @media screen and (max-width: size(767)) {
-    padding-top: size(240);
   }
 
   .attending-details {
