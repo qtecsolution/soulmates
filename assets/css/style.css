@@ -1082,6 +1082,9 @@ button:not([disabled]):hover,
   height: 100%;
   backface-visibility: hidden;
 }
+.card-flip .content .front {
+  overflow: hidden;
+}
 .card-flip .content .front img {
   width: 100%;
   min-height: 12.5rem;
