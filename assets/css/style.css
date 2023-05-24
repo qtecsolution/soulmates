@@ -3429,6 +3429,9 @@ button:not([disabled]):hover,
 .empty-banner {
   position: relative;
   width: 100%;
+  height: 11.875rem;
+}
+.empty-banner.empty-banner-2 {
   height: 26.25rem;
 }
 @media screen and (min-width: 48rem) {
