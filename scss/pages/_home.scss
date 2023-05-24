@@ -6,14 +6,18 @@
 */
 .home-slider {
   @include w100;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   top: 0;
   left: 0;
 
+  .homeslider {
+    height: 100vh;
+  }
+
   .swiper {
     position: relative;
-    @include h100;
+    @include wh100;
 
     .parallax-bg {
       background: var(--white);
