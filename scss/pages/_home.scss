@@ -520,7 +520,10 @@
 .empty-banner {
   position: relative;
   @include w100;
-  height: size(420);
+
+  @include breakpoint(mobile768) {
+    height: size(420);
+  }
 
   @include breakpoint(tab992) {
     height: size(540);
@@ -572,6 +575,10 @@
     .section-title {
       color: var(--footertitle);
       font-family: $tt-nooks-script-trial;
+
+      @media screen and (max-width: size(767)) {
+        font-size: size(20);
+      }
     }
   }
 

@@ -108,6 +108,7 @@
   &-content {
     @include flex-center-column;
     gap: size(44);
+    padding-bottom: size(80);
     position: relative;
     z-index: 10;
 
@@ -338,6 +339,10 @@
     padding: size(115) size(8);
   }
 
+  @media screen and (max-width: size(767)) {
+    padding-top: size(240);
+  }
+
   .attending-details {
     gap: size(32);
 
@@ -381,6 +386,11 @@
   .righticon {
     top: size(0);
     right: size(-40);
+
+    @media screen and (max-width: size(767)) {
+      top: auto;
+      bottom: 0;
+    }
   }
 }
 
@@ -441,6 +451,10 @@
 
   @include breakpoint(tab992) {
     padding: size(96) size(8) size(115);
+  }
+
+  @media screen and (max-width: size(767)) {
+    padding-top: size(384);
   }
 
   &-box {
