@@ -5602,6 +5602,7 @@ button:not([disabled]):hover,
   align-items: center;
   border-bottom: solid 0.0625rem var(--radiotext);
   padding-bottom: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 .blogmain .rightinfo .rightcontent-header .title {
   color: var(--radiotext);
@@ -5663,6 +5664,7 @@ button:not([disabled]):hover,
 }
 .blogmain .rightinfo .rightcontent-body .relatedposts .post {
   display: block;
+  margin-bottom: 1rem;
 }
 .blogmain .rightinfo .rightcontent-body .instagramlist {
   display: flex;
@@ -5696,6 +5698,7 @@ button:not([disabled]):hover,
   align-items: center;
   flex-wrap: wrap;
   gap: 0.3125rem;
+  margin-bottom: 0.3125rem;
 }
 .blogmain .rightinfo .rightcontent-body .taglist-item {
   background: var(--white);

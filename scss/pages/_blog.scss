@@ -225,6 +225,7 @@
         @include flex-center-vert;
         @include border-single(bottom, solid, 1, var(--radiotext));
         padding-bottom: size(10);
+        margin-bottom: size(10);
 
         .title {
           color: var(--radiotext);
@@ -275,6 +276,7 @@
 
           .post {
             display: block;
+            margin-bottom: size(16);
           }
         }
 
@@ -308,6 +310,7 @@
           @include flex-center-vert;
           flex-wrap: wrap;
           gap: size(5);
+          margin-bottom: size(5);
 
           &-item {
             @include setBgColor(var(--white), var(--radiotext));
