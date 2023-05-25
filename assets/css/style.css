@@ -3168,7 +3168,7 @@ button:not([disabled]):hover,
 }
 @media screen and (min-width: 62rem) {
   .copules .lovely-couple {
-    padding: 4rem 0.5rem 6rem;
+    padding: 4rem 0.5rem 5rem;
   }
 }
 .copules .lovely-couple-details {
@@ -3180,14 +3180,14 @@ button:not([disabled]):hover,
   gap: 1rem;
 }
 .copules .lovely-couple-details .icon {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3227,13 +3227,12 @@ button:not([disabled]):hover,
  WHEN-WHERE-SECTION START
 */
 .whenwhere {
-  padding: 6rem 0.5rem;
   position: relative;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .whenwhere {
-    padding: 7.1875rem 0.5rem;
-    margin-bottom: 5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .whenwhere-content {
@@ -3341,21 +3340,11 @@ button:not([disabled]):hover,
  MORE-EVENTS-SECTION START
 */
 .more-events {
-  padding: 6rem 0.5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .more-events {
-    padding: 5rem 0.5rem;
-  }
-}
-@media screen and (min-width: 75rem) {
-  .more-events {
-    padding: 6rem 0.5rem 9.625rem;
-  }
-}
-@media screen and (max-width: 47.9375rem) {
-  .more-events {
-    padding-bottom: 10rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .more-events-content {
@@ -3483,12 +3472,11 @@ button:not([disabled]):hover,
  LOVESTORY-SECTION START
 */
 .lovestory {
-  padding: 6rem 0.5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .lovestory {
-    padding: 7.1875rem 0.5rem;
-    margin-bottom: 5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .lovestory-content {
@@ -3511,7 +3499,7 @@ button:not([disabled]):hover,
   color: var(--footertitle);
   font-family: "TT Nooks Script Trial";
 }
-@media screen and (max-width: 47.9375rem) {
+@media screen and (max-width: 30rem) {
   .lovestory-header .section-title {
     font-size: 1.25rem;
   }
@@ -3560,16 +3548,11 @@ button:not([disabled]):hover,
   }
 }
 .lovestory-footer {
+  margin: 7.5rem 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 15.625rem;
-}
-@media screen and (min-width: 62rem) {
-  .lovestory-footer {
-    height: 21.875rem;
-  }
 }
 .lovestory-footer .section-title {
   color: var(--footertitle);
@@ -3602,12 +3585,12 @@ button:not([disabled]):hover,
  ATTENDING-SECTION START
 */
 .attending {
-  padding: 6rem 0.5rem;
   position: relative;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .attending {
-    padding: 7.1875rem 0.5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .attending .attendinginfo {
@@ -3652,11 +3635,11 @@ button:not([disabled]):hover,
  OURGALLERY-SECTION START
 */
 .ourgallery {
-  padding: 6rem 0.5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .ourgallery {
-    padding: 7.1875rem 0.5rem 8.75rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .ourgallery-content {
@@ -3754,12 +3737,12 @@ button:not([disabled]):hover,
  COUNTDOWN-SECTION START
 */
 .countdown {
-  padding: 5rem 0.5rem;
   position: relative;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .countdown {
-    padding: 7.1875rem 0.5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .countdown .countinfo {
@@ -3859,16 +3842,11 @@ button:not([disabled]):hover,
  MARQUEE-SLIDER-SECTION START
 */
 .marqueeslider {
-  padding: 6rem 0.5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .marqueeslider {
-    padding: 6rem 0.5rem 7.1875rem;
-  }
-}
-@media screen and (min-width: 75rem) {
-  .marqueeslider {
-    padding: 6rem 0.5rem 10rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .marqueeslider-content {
@@ -3910,11 +3888,11 @@ button:not([disabled]):hover,
 */
 .contact {
   background: var(--footertitle);
-  padding: 6rem 0.5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .contact {
-    padding: 7.1875rem 0.5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .contact-form {
@@ -4001,12 +3979,6 @@ button:not([disabled]):hover,
   height: 100%;
 }
 
-@media only screen and (max-width: 64rem) and (min-width: 48rem) {
-  .meetus {
-    margin-bottom: 5rem;
-  }
-}
-
 #meetus,
 #ourstory,
 #whenwhere,
@@ -4024,12 +3996,12 @@ button:not([disabled]):hover,
  COUNTDOWN-SECTION-2 START
 */
 .countdown-2 {
-  padding: 6rem 0.5rem;
   position: relative;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .countdown-2 {
-    padding: 7.1875rem 0.5rem 10.3125rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .countdown-2-info .title {
@@ -4128,12 +4100,12 @@ button:not([disabled]):hover,
  COUPLES-SECTION-2 START
 */
 .couples-2 {
-  padding: 6rem 0.5rem;
   position: relative;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .couples-2 {
-    padding: 7.1875rem 0.5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .couples-2-content {
@@ -4213,12 +4185,12 @@ button:not([disabled]):hover,
  WHEN-WHERE-2-SECTION START
 */
 .whenwhere-2 {
-  padding: 6rem 0.5rem;
   position: relative;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .whenwhere-2 {
-    padding: 7.1875rem 0.5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .whenwhere-2-header {
@@ -4334,17 +4306,12 @@ button:not([disabled]):hover,
   OURGALLERY-2-SECTION START
 */
 .ourgallery-2 {
-  padding: 6rem 0.5rem;
   overflow: hidden;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .ourgallery-2 {
-    padding: 7.1875rem 0.5rem 5rem;
-  }
-}
-@media screen and (max-width: 47.9375rem) {
-  .ourgallery-2 {
-    padding-top: 8rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .ourgallery-2-body {
@@ -4381,11 +4348,11 @@ button:not([disabled]):hover,
 */
 .attending-2 {
   position: relative;
-  padding: 6rem 0.5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .attending-2 {
-    padding: 7.1875rem 0.5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .attending-2 .attending-details {
@@ -4442,11 +4409,11 @@ button:not([disabled]):hover,
  OUR-GUESTS-SECTION START
 */
 .ourguests {
-  padding: 6rem 0rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .ourguests {
-    padding: 7.1875rem 0rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .ourguests-content {
@@ -4498,16 +4465,11 @@ button:not([disabled]):hover,
  LOCATION-SECTION START
 */
 .locationmap {
-  padding: 5rem 0.5rem 5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .locationmap {
-    padding: 6rem 0.5rem 7.1875rem;
-  }
-}
-@media screen and (max-width: 47.9375rem) {
-  .locationmap {
-    padding-top: 24rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .locationmap-box {
@@ -4531,11 +4493,11 @@ button:not([disabled]):hover,
 */
 .contact-2 {
   background: var(--bodybg);
-  padding: 6rem 0.5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .contact-2 {
-    padding: 7.1875rem 0.5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .contact-2 .contact-form {
@@ -4804,12 +4766,12 @@ button:not([disabled]):hover,
  OURGALLERY-3-SECTION START
 */
 .ourgallery-3 {
-  padding: 6rem 0rem;
   overflow: hidden;
+  padding: 7.5rem 0rem;
 }
 @media screen and (min-width: 62rem) {
   .ourgallery-3 {
-    padding: 7.1875rem 0rem;
+    padding: 8.125rem 0rem;
   }
 }
 .ourgallery-3 .newgallery {
@@ -4860,12 +4822,12 @@ button:not([disabled]):hover,
  COUNTDOWN-3-SECTION START
 */
 .countdown-3 {
-  padding: 6rem 0.5rem;
   position: relative;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .countdown-3 {
-    padding: 7.1875rem 0.5rem 10.3125rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .countdown-3-content {
@@ -5014,12 +4976,12 @@ button:not([disabled]):hover,
  WHENWHERE-3-SECTION START
 */
 .whenwhere-3 {
-  padding: 6rem 0.5rem 0rem;
   position: relative;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .whenwhere-3 {
-    padding: 7.1875rem 0.5rem 0rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .whenwhere-3-header {
@@ -5085,12 +5047,12 @@ button:not([disabled]):hover,
  LOCATIONMAP-2-SECTION START
 */
 .locationmap-2 {
-  padding: 5rem 0.5rem;
   position: relative;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .locationmap-2 {
-    padding: 6rem 0.5rem 7.1875rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .locationmap-2-content {
@@ -5182,11 +5144,11 @@ button:not([disabled]):hover,
 */
 .attending-3 {
   position: relative;
-  padding: 6rem 0.5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .attending-3 {
-    padding: 7.1875rem 0.5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .attending-3 .attending-details {
@@ -5238,11 +5200,11 @@ button:not([disabled]):hover,
 */
 .contact-3 {
   background: var(--bodybg);
-  padding: 6rem 0.5rem;
+  padding: 7.5rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .contact-3 {
-    padding: 7.1875rem 0.5rem;
+    padding: 8.125rem 0.5rem;
   }
 }
 .contact-3 .contact-form {
@@ -5416,7 +5378,12 @@ button:not([disabled]):hover,
 }
 
 .blogmain {
-  padding: 5rem 0.5rem 30rem;
+  padding: 7.5rem 0.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .blogmain {
+    padding: 8.125rem 0.5rem;
+  }
 }
 .blogmain .leftinfo {
   display: flex;

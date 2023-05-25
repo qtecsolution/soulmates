@@ -38,7 +38,11 @@
 }
 
 .blogmain {
-  padding: size(80) size(8) size(480);
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
 
   .leftinfo {
     @include flex-column;

@@ -290,7 +290,7 @@
     position: relative;
   
     @include breakpoint(tab992) {
-      padding: size(64) size(8) size(96);
+      padding: size(64) size(8) size(80);
     }
   
     &-details {
@@ -299,10 +299,10 @@
       gap: size(16);
   
       .icon {
-        @include square(96);
+        @include square(80);
         @include flex-center;
         overflow: hidden;
-        @include square(96);
+        @include square(80);
         @include flex-center;
         overflow: hidden;
   
@@ -340,13 +340,11 @@
  WHEN-WHERE-SECTION START
 */
 .whenwhere {
-  padding: size(96) size(8);
   position: relative;
-  // margin-bottom: size(160);
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
-    margin-bottom: size(80);
+    padding: size(130) size(8);
   }
 
   &-content {
@@ -442,18 +440,10 @@
  MORE-EVENTS-SECTION START
 */
 .more-events {
-  padding: size(96) size(8);
-  
+  padding: size(120) size(8);
+
   @include breakpoint(tab992) {
-    padding: size(80) size(8);
-  }
-
-  @include breakpoint(desktop1200) {
-    padding: size(96) size(8) size(154);
-  }
-
-  @media screen and (max-width: size(767)) {
-    padding-bottom: size(160);
+    padding: size(130) size(8);
   }
 
   &-content {
@@ -565,12 +555,10 @@
  LOVESTORY-SECTION START
 */
 .lovestory {
-  padding: size(96) size(8);
-  // margin-bottom: size(272);
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
-    margin-bottom: size(80);
+    padding: size(130) size(8);
   }
 
   &-content {
@@ -589,7 +577,7 @@
       color: var(--footertitle);
       font-family: $tt-nooks-script-trial;
 
-      @media screen and (max-width: size(767)) {
+      @media screen and (max-width: size(480)) {
         font-size: size(20);
       }
     }
@@ -641,13 +629,9 @@
   }
 
   &-footer {
+    margin: size(120) size(0);
     @include flex-center;
     position: relative;
-    height: size(250);
-
-    @include breakpoint(tab992) {
-      height: size(350);
-    }
 
     .section-title {
       color: var(--footertitle);
@@ -679,11 +663,11 @@
  ATTENDING-SECTION START
 */
 .attending {
-  padding: size(96) size(8);
   position: relative;
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(130) size(8);
   }
 
   .attendinginfo {
@@ -724,10 +708,10 @@
  OURGALLERY-SECTION START
 */
 .ourgallery {
-  padding: size(96) size(8);
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8) size(140);
+    padding: size(130) size(8);
   }
 
   &-content {
@@ -812,11 +796,11 @@
  COUNTDOWN-SECTION START
 */
 .countdown {
-  padding: size(80) size(8);
   position: relative;
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(130) size(8);
   }
 
   .countinfo {
@@ -893,14 +877,10 @@
  MARQUEE-SLIDER-SECTION START
 */
 .marqueeslider {
-  padding: size(96) size(8);
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(96) size(8) size(115);
-  }
-
-  @include breakpoint(desktop1200) {
-    padding: size(96) size(8) size(160);
+    padding: size(130) size(8);
   }
 
   &-content {
@@ -939,10 +919,10 @@
 */
 .contact {
   background: var(--footertitle);
-  padding: size(96) size(8);
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(130) size(8);
   }
 
   &-form {
@@ -1012,11 +992,11 @@
   }
 }
 
-.meetus {
-  @media only screen and (max-width: size(1024)) and (min-width: size(768)) {
-    margin-bottom: size(80);
-  }
-}
+// .meetus {
+//   @media only screen and (max-width: size(1024)) and (min-width: size(768)) {
+//     margin-bottom: size(80);
+//   }
+// }
 
 #meetus,
 #ourstory,

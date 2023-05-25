@@ -65,15 +65,6 @@
     }
   }
 
-  // &-content {
-  //   @include flex-column;
-  //   gap: size(48);
-    
-  //   @include breakpoint(tab992) {
-  //     gap: size(0);
-  //   }
-  // }
-
   .profile-picture {
     @include w100;
     min-height: size(260);
@@ -140,11 +131,11 @@
  OURGALLERY-3-SECTION START
 */
 .ourgallery-3 {
-  padding: size(96) size(0);
   overflow: hidden;
+  padding: size(120) size(0);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(0);
+    padding: size(130) size(0);
   }
 
   .newgallery {
@@ -190,11 +181,11 @@
  COUNTDOWN-3-SECTION START
 */
 .countdown-3 {
-  padding: size(96) size(8);
   position: relative;
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8) size(165);
+    padding: size(130) size(8);
   }
 
   &-content {
@@ -324,11 +315,11 @@
  WHENWHERE-3-SECTION START
 */
 .whenwhere-3 {
-  padding: size(96) size(8) size(0);
   position: relative;
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8) size(0);
+    padding: size(130) size(8);
   }
   
   &-header {
@@ -388,11 +379,11 @@
  LOCATIONMAP-2-SECTION START
 */
 .locationmap-2 {
-  padding: size(80) size(8);
   position: relative;
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(96) size(8) size(115);
+    padding: size(130) size(8);
   }
 
   &-content {
@@ -481,10 +472,10 @@
 */
 .attending-3 {
   position: relative;
-  padding: size(96) size(8);
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(130) size(8);
   }
 
   .attending-details {
@@ -537,10 +528,10 @@
 */
 .contact-3 {
   background: var(--bodybg);
-  padding: size(96) size(8);
+  padding: size(120) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(115) size(8);
+    padding: size(130) size(8);
   }
 
   .contact-form {
