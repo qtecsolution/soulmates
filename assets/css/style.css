@@ -3220,7 +3220,7 @@ button:not([disabled]):hover,
  WHEN-WHERE-SECTION START
 */
 .whenwhere {
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
@@ -3334,7 +3334,7 @@ button:not([disabled]):hover,
  MORE-EVENTS-SECTION START
 */
 .more-events {
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .more-events {
@@ -3476,7 +3476,7 @@ button:not([disabled]):hover,
  LOVESTORY-SECTION START
 */
 .lovestory {
-  padding: 5rem 0.5rem 6rem;
+  padding: 6rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .lovestory {
@@ -3601,7 +3601,7 @@ button:not([disabled]):hover,
  ATTENDING-SECTION START
 */
 .attending {
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
@@ -3651,7 +3651,7 @@ button:not([disabled]):hover,
  OURGALLERY-SECTION START
 */
 .ourgallery {
-  padding: 5rem 0.5rem 6rem;
+  padding: 6rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .ourgallery {
@@ -3910,7 +3910,7 @@ button:not([disabled]):hover,
 */
 .contact {
   background: var(--footertitle);
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .contact {
@@ -4023,7 +4023,7 @@ button:not([disabled]):hover,
  COUNTDOWN-SECTION-2 START
 */
 .countdown-2 {
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
@@ -4127,7 +4127,7 @@ button:not([disabled]):hover,
  COUPLES-SECTION-2 START
 */
 .couples-2 {
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
@@ -4212,7 +4212,7 @@ button:not([disabled]):hover,
  WHEN-WHERE-2-SECTION START
 */
 .whenwhere-2 {
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
@@ -4333,7 +4333,7 @@ button:not([disabled]):hover,
   OURGALLERY-2-SECTION START
 */
 .ourgallery-2 {
-  padding: 5rem 0.5rem 5rem;
+  padding: 6rem 0.5rem;
   overflow: hidden;
 }
 @media screen and (min-width: 62rem) {
@@ -4380,7 +4380,7 @@ button:not([disabled]):hover,
 */
 .attending-2 {
   position: relative;
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .attending-2 {
@@ -4441,7 +4441,7 @@ button:not([disabled]):hover,
  OUR-GUESTS-SECTION START
 */
 .ourguests {
-  padding: 5rem 0rem;
+  padding: 6rem 0rem;
 }
 @media screen and (min-width: 62rem) {
   .ourguests {
@@ -4530,7 +4530,7 @@ button:not([disabled]):hover,
 */
 .contact-2 {
   background: var(--bodybg);
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .contact-2 {
@@ -4800,7 +4800,7 @@ button:not([disabled]):hover,
  OURGALLERY-3-SECTION START
 */
 .ourgallery-3 {
-  padding: 5rem 0rem;
+  padding: 6rem 0rem;
   overflow: hidden;
 }
 @media screen and (min-width: 62rem) {
@@ -4856,7 +4856,7 @@ button:not([disabled]):hover,
  COUNTDOWN-3-SECTION START
 */
 .countdown-3 {
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
@@ -5010,7 +5010,7 @@ button:not([disabled]):hover,
  WHENWHERE-3-SECTION START
 */
 .whenwhere-3 {
-  padding: 5rem 0.5rem 0rem;
+  padding: 6rem 0.5rem 0rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
@@ -5081,7 +5081,7 @@ button:not([disabled]):hover,
  LOCATIONMAP-2-SECTION START
 */
 .locationmap-2 {
-  padding: 5rem 0.5rem 5rem;
+  padding: 5rem 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 62rem) {
@@ -5178,7 +5178,7 @@ button:not([disabled]):hover,
 */
 .attending-3 {
   position: relative;
-  padding: 5rem 0.5rem 3rem;
+  padding: 6rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .attending-3 {
@@ -5234,7 +5234,7 @@ button:not([disabled]):hover,
 */
 .contact-3 {
   background: var(--bodybg);
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .contact-3 {

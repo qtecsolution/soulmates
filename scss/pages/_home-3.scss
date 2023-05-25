@@ -138,7 +138,7 @@
  OURGALLERY-3-SECTION START
 */
 .ourgallery-3 {
-  padding: size(80) size(0);
+  padding: size(96) size(0);
   overflow: hidden;
 
   @include breakpoint(tab992) {
@@ -188,7 +188,7 @@
  COUNTDOWN-3-SECTION START
 */
 .countdown-3 {
-  padding: size(80) size(8);
+  padding: size(96) size(8);
   position: relative;
 
   @include breakpoint(tab992) {
@@ -322,7 +322,7 @@
  WHENWHERE-3-SECTION START
 */
 .whenwhere-3 {
-  padding: size(80) size(8) size(0);
+  padding: size(96) size(8) size(0);
   position: relative;
 
   @include breakpoint(tab992) {
@@ -386,7 +386,7 @@
  LOCATIONMAP-2-SECTION START
 */
 .locationmap-2 {
-  padding: size(80) size(8) size(80);
+  padding: size(80) size(8);
   position: relative;
 
   @include breakpoint(tab992) {
@@ -479,7 +479,7 @@
 */
 .attending-3 {
   position: relative;
-  padding: size(80) size(8) size(48);
+  padding: size(96) size(8);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);
@@ -535,7 +535,7 @@
 */
 .contact-3 {
   background: var(--bodybg);
-  padding: size(80) size(8);
+  padding: size(96) size(8);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);

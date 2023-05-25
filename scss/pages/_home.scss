@@ -339,7 +339,7 @@
  WHEN-WHERE-SECTION START
 */
 .whenwhere {
-  padding: size(80) size(8);
+  padding: size(96) size(8);
   position: relative;
   // margin-bottom: size(160);
 
@@ -441,7 +441,7 @@
  MORE-EVENTS-SECTION START
 */
 .more-events {
-  padding: size(80) size(8);
+  padding: size(96) size(8);
   
   @include breakpoint(tab992) {
     padding: size(80) size(8);
@@ -564,7 +564,7 @@
  LOVESTORY-SECTION START
 */
 .lovestory {
-  padding: size(80) size(8) size(96);
+  padding: size(96) size(8);
   // margin-bottom: size(272);
 
   @include breakpoint(tab992) {
@@ -683,7 +683,7 @@
  ATTENDING-SECTION START
 */
 .attending {
-  padding: size(80) size(8);
+  padding: size(96) size(8);
   position: relative;
 
   @include breakpoint(tab992) {
@@ -728,7 +728,7 @@
  OURGALLERY-SECTION START
 */
 .ourgallery {
-  padding: size(80) size(8) size(96);
+  padding: size(96) size(8);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8) size(140);
@@ -944,7 +944,7 @@
 */
 .contact {
   background: var(--footertitle);
-  padding: size(80) size(8);
+  padding: size(96) size(8);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);

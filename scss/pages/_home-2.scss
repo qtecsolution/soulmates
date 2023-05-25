@@ -5,7 +5,7 @@
  COUNTDOWN-SECTION-2 START
 */
 .countdown-2 {
-  padding: size(80) size(8);
+  padding: size(96) size(8);
   position: relative;
 
   @include breakpoint(tab992) {
@@ -98,7 +98,7 @@
  COUPLES-SECTION-2 START
 */
 .couples-2 {
-  padding: size(80) size(8);
+  padding: size(96) size(8);
   position: relative;
 
   @include breakpoint(tab992) {
@@ -186,7 +186,7 @@
  WHEN-WHERE-2-SECTION START
 */
 .whenwhere-2 {
-  padding: size(80) size(8);
+  padding: size(96) size(8);
   position: relative;
 
   @include breakpoint(tab992) {
@@ -296,7 +296,7 @@
   OURGALLERY-2-SECTION START
 */
 .ourgallery-2 {
-  padding: size(80) size(8) size(80);
+  padding: size(96) size(8);
   overflow: hidden;
 
   @include breakpoint(tab992) {
@@ -338,7 +338,7 @@
 */
 .attending-2 {
   position: relative;
-  padding: size(80) size(8);
+  padding: size(96) size(8);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);
@@ -399,7 +399,7 @@
  OUR-GUESTS-SECTION START
 */
 .ourguests {
-  padding: size(80) size(0);
+  padding: size(96) size(0);
 
   @include breakpoint(tab992) {
     padding: size(115) size(0);
@@ -479,7 +479,7 @@
 */
 .contact-2 {
   background: var(--bodybg);
-  padding: size(80) size(8);
+  padding: size(96) size(8);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);
