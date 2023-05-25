@@ -341,9 +341,11 @@
 .whenwhere {
   padding: size(80) size(8);
   position: relative;
+  // margin-bottom: size(160);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);
+    margin-bottom: size(80);
   }
 
   &-content {
@@ -563,10 +565,11 @@
 */
 .lovestory {
   padding: size(80) size(8) size(96);
-  margin-bottom: size(80);
+  // margin-bottom: size(272);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);
+    margin-bottom: size(80);
   }
 
   &-content {

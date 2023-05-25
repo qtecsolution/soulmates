@@ -3226,6 +3226,7 @@ button:not([disabled]):hover,
 @media screen and (min-width: 62rem) {
   .whenwhere {
     padding: 7.1875rem 0.5rem;
+    margin-bottom: 5rem;
   }
 }
 .whenwhere-content {
@@ -3476,11 +3477,11 @@ button:not([disabled]):hover,
 */
 .lovestory {
   padding: 5rem 0.5rem 6rem;
-  margin-bottom: 5rem;
 }
 @media screen and (min-width: 62rem) {
   .lovestory {
     padding: 7.1875rem 0.5rem;
+    margin-bottom: 5rem;
   }
 }
 .lovestory-content {
