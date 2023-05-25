@@ -3483,6 +3483,7 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 5rem;
   text-align: center;
 }
 .lovestory-header {

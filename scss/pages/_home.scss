@@ -571,7 +571,7 @@
 
   &-content {
     @include flex-center-column;
-    // gap: size(80);
+    gap: size(80);
     text-align: center;
   }
 
