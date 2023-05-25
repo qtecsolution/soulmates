@@ -444,7 +444,7 @@
           @include font($tt-nooks-script-trial, 18, normal, normal, 25.2);
           
           @include breakpoint(mobile768) {
-            font-family: size(22);
+            font-size: size(22);
           }
 
           @include breakpoint(tab992) {

@@ -5,19 +5,13 @@
  HOME-SLIDER-SECTION START
 */
 .home-slider {
-  @include w100;
-  height: 100vh;
-  position: relative;
+  @include wh100;
   top: 0;
   left: 0;
 
-  .homeslider {
-    height: 100vh;
-  }
-
   .swiper {
     position: relative;
-    @include wh100;
+    @include w100;
 
     .parallax-bg {
       background: var(--white);
@@ -32,6 +26,7 @@
 
     &-slide {
       position: relative;
+      height: 100vh;
   
       img {
         @include wh100;
@@ -167,7 +162,7 @@
             @include font($tt-nooks-script-trial, 18, normal, normal, 25.2);
             
             @include breakpoint(mobile768) {
-              font-family: size(22);
+              font-size: size(22);
             }
 
             @include breakpoint(tab992) {
@@ -568,6 +563,7 @@
 */
 .lovestory {
   padding: size(80) size(8) size(96);
+  margin-bottom: size(80);
 
   @include breakpoint(tab992) {
     padding: size(115) size(8);
@@ -575,7 +571,7 @@
 
   &-content {
     @include flex-center-column;
-    gap: size(80);
+    // gap: size(80);
     text-align: center;
   }
 
@@ -1035,14 +1031,14 @@
   }
 }
 
-// #meetus,
-// #ourstory,
-// #whenwhere,
-// #events,
-// #ourgallery,
-// #groomsmen,
-// #bridesmaid,
-// #contact {
-//   scroll-padding-top: size(167);
-//   scroll-margin-top: size(167);
-// }
+#meetus,
+#ourstory,
+#whenwhere,
+#events,
+#ourgallery,
+#groomsmen,
+#bridesmaid,
+#contact {
+  scroll-padding-top: size(167);
+  scroll-margin-top: size(167);
+}

@@ -8,13 +8,13 @@
   top: 0;
   left: 0;
   @include w100;
-  z-index: 99999;
+  z-index: 999;
 
   &-nav {
     @include flex-center-between;
     
     .logo {
-      max-width: size(64);
+      width: size(64);
       @include flex-center;
       overflow: hidden;
 
@@ -35,6 +35,7 @@
     .nav-center {
       @include flex-center-column;
       text-align: center;
+      width: calc(100% - size(100));
 
       .couple-name {
         color: $white;
@@ -77,7 +78,7 @@
       @include square(36);
       @include flex-center;
       position: relative;
-      z-index: 99999;
+      z-index: 999;
     }
   }
 

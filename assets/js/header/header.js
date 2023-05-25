@@ -7,7 +7,8 @@
 
 const headerEl = document.querySelector('#header');
 
-const fixedHeader = () => {
+const fixedHeader = (e) => {
+  e.preventDefault();
   const scrollHeight = window.scrollY;
   const viewHeight = window.innerHeight * 1;
 
