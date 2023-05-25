@@ -2697,7 +2697,7 @@ button:not([disabled]):hover,
   top: 50%;
   transform: translateY(-50%);
   left: -15.625rem;
-  z-index: 999999;
+  z-index: 888;
   width: 15.625rem;
   background: hsl(0, 0%, 100%);
   box-shadow: 0.25rem 0.25rem 1rem 0.1875rem rgba(72, 75, 137, 0.2);
@@ -2713,7 +2713,7 @@ button:not([disabled]):hover,
   position: absolute;
   top: 0;
   right: -2.5rem;
-  z-index: 999999;
+  z-index: 888;
 }
 .settings-body {
   padding: 1.5rem;

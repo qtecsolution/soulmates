@@ -7,7 +7,7 @@
   top: 50%;
 	@include translateY(-50%);
 	left: size(-250);
-  z-index: 999999;
+  z-index: 888;
 	width: size(250);
 	background: $white;
 	box-shadow: $cardshadow;
@@ -20,7 +20,7 @@
 		position: absolute;
 		top: 0;
 		right: size(-40);
-		z-index: 999999;
+		z-index: 888;
 	}
 
 	&-body {
