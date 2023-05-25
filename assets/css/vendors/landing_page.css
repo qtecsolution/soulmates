@@ -1791,3 +1791,9 @@ ul.tabs li.current {
     padding: 5rem 1rem;
   }
 }
+
+/* @media screen and (max-width: 62rem) {
+  .cardtemplate-thumb .overlay {
+    display: none;
+  }
+} */
