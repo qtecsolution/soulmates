@@ -1885,30 +1885,6 @@ button:not([disabled]):hover,
 
 .offcanvas {
   height: 100vh;
-  width: 18.75rem !important;
-}
-@media screen and (min-width: 36rem) {
-  .offcanvas {
-    width: 25rem !important;
-  }
-}
-@media screen and (min-width: 48rem) {
-  .offcanvas {
-    width: 33rem !important;
-  }
-}
-@media screen and (min-width: 62rem) {
-  .offcanvas {
-    width: 62% !important;
-  }
-}
-@media screen and (min-width: 64rem) {
-  .offcanvas {
-    width: 100% !important;
-  }
-}
-.offcanvas.mobilemenu {
-  width: 100% !important;
 }
 .offcanvas.offcanvas-top {
   border-bottom: 0;

@@ -3,27 +3,6 @@
 
 .offcanvas {
   height: 100vh;
-  width: size(300) !important;
-
-  @include breakpoint(mobile576) {
-    width: size(400) !important;
-  }
-
-  @include breakpoint(mobile768) {
-    width: size(528) !important;
-  }
-
-  @include breakpoint(tab992) {
-    width: 62% !important;
-  }
-
-  @include breakpoint(desktop1024) {
-    width: 100% !important;
-  }
-
-  &.mobilemenu {
-    width: 100% !important;
-  }
 
   &.offcanvas-top {
     border-bottom: 0;
