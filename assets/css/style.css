@@ -3858,11 +3858,11 @@ button:not([disabled]):hover,
  MARQUEE-SLIDER-SECTION START
 */
 .marqueeslider {
-  padding: 5rem 0.5rem;
+  padding: 6rem 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .marqueeslider {
-    padding: 5rem 0.5rem 7.1875rem;
+    padding: 6rem 0.5rem 7.1875rem;
   }
 }
 @media screen and (min-width: 75rem) {

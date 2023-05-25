@@ -897,10 +897,10 @@
  MARQUEE-SLIDER-SECTION START
 */
 .marqueeslider {
-  padding: size(80) size(8);
+  padding: size(96) size(8);
 
   @include breakpoint(tab992) {
-    padding: size(80) size(8) size(115);
+    padding: size(96) size(8) size(115);
   }
 
   @include breakpoint(desktop1200) {
