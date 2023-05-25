@@ -1742,6 +1742,11 @@ ul.tabs li.current {
   overflow: hidden;
 }
 
+.cardtemplate-thumb img {
+  width: 100%;
+  height: 100%;
+}
+
 .cardtemplate-thumb .overlay {
   position: absolute;
   inset: 0;
@@ -1780,6 +1785,24 @@ ul.tabs li.current {
 .cardtemplate-thumb:hover .overlay {
   opacity: 1;
   visibility: visible;
+}
+
+.viewdemolink {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--white-color);
+  box-shadow: var(--cardshadow);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.viewdemotext {
+  display: inline-block;
+  padding: 1rem .875rem;
+  text-align: center;
+  font-size: .875rem;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 62rem) {
