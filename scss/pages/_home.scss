@@ -933,17 +933,6 @@
     @include breakpoint(tab992) {
       gap: size(20);
     }
-
-    .js-marquee {
-      @include flex-center-vert;
-      gap: size(16);
-      overflow: hidden;
-      @include w100;
-  
-      @include breakpoint(tab992) {
-        gap: size(20);
-      }
-    }
   }
 }
 
