@@ -12,9 +12,9 @@ const homeFadeSlider = new Swiper(".homefadeslider", {
   parallax: true,
   speed: 600,
 	slidesPerView: 1,
-  breakpoints: {
-    992: {
-      direction: 'vertical',
-    },
-  }
+  // breakpoints: {
+  //   992: {
+  //     direction: 'vertical',
+  //   },
+  // }
 });

@@ -2845,6 +2845,7 @@ button:not([disabled]):hover,
   height: 100%;
   top: 0;
   left: 0;
+  position: relative;
 }
 .home-slider .swiper {
   position: relative;
@@ -4671,6 +4672,9 @@ button:not([disabled]):hover,
 /*
  HOME-SLIDER-SECTION START
 */
+.home-slider {
+  position: relative;
+}
 .home-slider .homefadeslider {
   position: relative;
 }
