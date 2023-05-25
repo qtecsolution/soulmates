@@ -642,15 +642,10 @@
   &-footer {
     @include flex-center;
     position: relative;
-    text-align: center;
-    padding: size(64) size(0);
+    height: size(250);
 
     @include breakpoint(tab992) {
-      padding: size(80) size(0);
-    }
-    
-    @include breakpoint(desktop1200) {
-      padding: size(96) size(0);
+      height: size(350);
     }
 
     .section-title {
@@ -930,7 +925,6 @@
   .guests {
     @include flex-center-vert;
     gap: size(16);
-    overflow: hidden;
     @include w100;
 
     @include breakpoint(tab992) {
@@ -1033,4 +1027,5 @@
 #contact {
   scroll-padding-top: size(167);
   scroll-margin-top: size(167);
+  overflow: hidden;
 }

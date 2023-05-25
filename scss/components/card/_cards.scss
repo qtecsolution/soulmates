@@ -13,7 +13,7 @@
 
   .profile-picture {
     box-shadow: var(--cardshadow);
-    @include w100;
+    @include wh100;
     min-height: size(260);
     max-height: size(470);
     @include flex-center;
@@ -107,7 +107,7 @@
   }
 
   &-header {
-    @include w100;
+    @include wh100;
     min-height: size(260);
     max-height: size(470);
     @include flex-center;
@@ -165,7 +165,7 @@
   }
 
   &-header {
-    @include w100;
+    @include wh100;
     min-height: size(280);
     max-height: size(400);
     @include flex-center;
@@ -212,7 +212,7 @@
   gap: size(24);
 
   &-thumbnail {
-    @include w100;
+    @include wh100;
     min-height: size(280);
     max-height: size(480);
     @include flex-center;
@@ -387,7 +387,7 @@
   }
 
   &-thumb {
-    @include w100;
+    @include wh100;
     min-height: size(300);
     max-height: size(440);
     @include flex-center;
@@ -474,7 +474,7 @@
     gap: size(16);
 
     .blog-thumbnail {
-      @include w100;
+      @include wh100;
       max-height: size(573);
       min-height: size(160);
       overflow: hidden;

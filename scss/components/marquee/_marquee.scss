@@ -9,7 +9,6 @@
 .slidertrack {
   animation: scroll 30s linear infinite;
   width: calc(size(300) * 15);
-  overflow: hidden;
 }
 
 @keyframes scroll {
