@@ -1,0 +1,30 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.form-control,
+.form-select {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  box-shadow: none;
+  
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.was-validated .form-control:valid {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.contact-form .nice-select {
+  border-color: var(--bs-form-valid-border-color);
+}

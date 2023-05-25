@@ -1,0 +1,1644 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+html {
+  &[data-theme="purple"] {
+    .header {
+      .nav-center {
+        .couple-name {
+          color: var(--white);
+        }
+      }
+
+      &.header-fixed {
+        background: var(--footertitle);
+
+        .logo {
+          &-light {
+            display: block;
+          }
+  
+          &-dark {
+            display: none;
+          }
+        }
+
+        .hamburger-menu {
+          .btn-burger {
+            svg {
+              line {
+                stroke: var(--white);
+              }
+            }
+          }
+        }
+      }
+
+      &.header-2 {
+        .nav-center {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .header-3 {
+      background: var(--footertitle);
+
+      .nav-center {
+        .menulogo {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+
+      .desktop-menu {
+        .desktoplist {
+          &-link {
+            color: var(--white);
+
+            @include hover {
+              color: $linkbg;
+            }
+          }
+        }
+      }
+
+      .btn-burger {
+        svg {
+          line {
+            stroke: var(--white);
+          }
+        }
+      }
+    }
+
+    .home-slider {
+      .section-link {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .countdown {
+      &-details {
+        .countdown-clock {    
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .countdown-3 {
+      &-details {
+        background: var(--footertitle);
+    
+        .countdown-clock {
+          .countdown-time {
+            .days,
+            .hours,
+            .minutes,
+            .seconds {
+              color: var(--white);
+            }
+    
+            .count-title {
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+      .section-link-4 {
+        @include setBgColor(var(--white), var(--footertitle));
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .empty-banner-2 {
+      .section-link-2 {
+        border-color: var(--footertitle);
+        color: var(--white);
+
+        @include hover {
+          background: var(--footertitle);
+        }
+      }
+    }
+
+    .whenwhere-2 {
+      .whenwhere-detail {
+        background: var(--footertitle);
+      }
+    }
+
+    .whenwhere-3 {
+      .section-link-4 {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+          border-color: var(--footertitle);
+        }
+      }
+    }
+
+    .attending {
+      .section-link {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .attending-2,
+    .attending-3 {
+      .section-link-3 {
+        color: var(--footertitle);
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .more-events {
+      .link-outline {
+        border-color: var(--footertitle);
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .footer {
+      &-info {
+        .info-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .footer-2,
+    .footer-3 {
+      .footer-info {
+        .section-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .up-btn {
+      background: var(--footertitle) !important;
+    }
+
+    .offcanvas {
+      .sidemenu {
+        &-header {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        &-top {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        .sidenav {
+          .sidelist {
+            &-link {
+              color: var(--footertitle);
+
+              @include hover {
+                color: darken($color: $theme-1, $amount: 20%);
+              }
+            }
+          }
+        }
+      }
+
+      .menu-thumb {
+        .caption {
+          &-event {
+            .event {
+              .day-date {
+                color: var(--footertitle);
+    
+                .day, .date {
+                  color: inherit;
+                }
+              }
+
+              .divider {
+                background: var(--footertitle);
+              }
+
+              .locationbox {
+                .location {
+                  color: var(--footertitle);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contact-2,
+    .contact-3 {
+      .btn-submit-2 {
+        @include setBgColor(var(--footertitle), var(--white));
+
+        @include hover {
+          background: darken($color: $theme-1, $amount: 20%);
+        }
+      }
+    }
+
+    .blog-header {
+      background: var(--footertitle);
+      
+      .nav-center {
+        .homelink {
+          .couple-name {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .blogbanner {
+      .text-white {
+        color: var(--footertitle) !important;
+      }
+    }
+
+    .blogmain {
+      .infocard {
+        background: var(--footertitle);
+
+        &-body {
+          .infobox {
+            .infotext {
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+      .card-blog {
+        .bloglist-link {
+          .blog-title {
+            color: var(--footertitle);
+
+            @include hover {
+              color: darken($theme-1, 20%);
+            }
+          }
+        }
+
+        &-body {
+          .blog-title {
+            color: var(--footertitle);
+          }
+        }
+      }
+
+      .rightinfo {
+        .rightcontent {
+          &-header {
+            .title {
+              color: var(--footertitle);
+            }
+          }
+
+          &-body {
+            .categorylist {
+              &-link {
+                @include hover {
+                  span {
+                    color: var(--footertitle);
+                  }
+                }
+              }
+            }
+
+            .cardpost {
+              &-detail {
+                .title {
+                  @include hover {
+                    color: var(--footertitle);
+                  }
+                }
+              }
+            }
+
+            .taglist {
+              &-item {
+                @include setBgColor(var(--footertitle), var(--white));
+              }
+            }
+          }
+        }
+      }
+
+      .blogpagination {
+        .pagination {
+          @include flex-center-vert;
+          gap: size(10);
+  
+          .page-item {  
+            &:hover {
+              .page-link {
+                @include setBgColor(var(--footertitle), var(--white));
+              }
+            }
+  
+            &:first-child,
+            &:last-child {  
+              &:hover {
+                .page-link {
+                  @include setBgColor(var(--paginationlinkbg), var(--radiotext));
+                }
+              }
+            }
+          }
+          
+          .page-link {  
+            &.active {
+              @include setBgColor(var(--footertitle), var(--white));
+            }
+          }
+        }
+      }
+
+      .taginfo {
+        .taglist {
+          &-item {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .contact {
+      .btn-submit {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(darken($color: $theme-1, $amount: 20%), var(--white));
+        }
+      }
+    }
+  }
+  
+  &[data-theme="blue"] {
+    .header {
+      .nav-center {
+        .couple-name {
+          color: var(--white);
+        }
+      }
+
+      &.header-fixed {
+        background: var(--footertitle);
+
+        .logo {
+          &-light {
+            display: block;
+          }
+  
+          &-dark {
+            display: none;
+          }
+        }
+
+        .hamburger-menu {
+          .btn-burger {
+            svg {
+              line {
+                stroke: var(--white);
+              }
+            }
+          }
+        }
+      }
+
+      &.header-2 {
+        .nav-center {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .header-3 {
+      background: var(--footertitle);
+
+      .nav-center {
+        .menulogo {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+
+      .desktop-menu {
+        .desktoplist {
+          &-link {
+            color: var(--white);
+
+            @include hover {
+              color: $linkbg;
+            }
+          }
+        }
+      }
+
+      .btn-burger {
+        svg {
+          line {
+            stroke: var(--white);
+          }
+        }
+      }
+    }
+
+    .home-slider {
+      .section-link {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .countdown {
+      &-details {
+        .countdown-clock {    
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .countdown-3 {
+      &-details {
+        background: var(--footertitle);
+    
+        .countdown-clock {
+          .countdown-time {
+            .days,
+            .hours,
+            .minutes,
+            .seconds {
+              color: var(--white);
+            }
+    
+            .count-title {
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+      .section-link-4 {
+        @include setBgColor(var(--white), var(--footertitle));
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .empty-banner-2 {
+      .section-link-2 {
+        border-color: var(--footertitle);
+        color: var(--white);
+
+        @include hover {
+          background: var(--footertitle);
+        }
+      }
+    }
+
+    .whenwhere-2 {
+      .whenwhere-detail {
+        background: var(--footertitle);
+      }
+    }
+
+    .whenwhere-3 {
+      .section-link-4 {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+          border-color: var(--footertitle);
+        }
+      }
+    }
+
+    .attending {
+      .section-link {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .attending-2,
+    .attending-3 {
+      .section-link-3 {
+        color: var(--footertitle);
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .more-events {
+      .link-outline {
+        border-color: var(--footertitle);
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .footer {
+      &-info {
+        .info-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .footer-2,
+    .footer-3 {
+      .footer-info {
+        .section-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .up-btn {
+      background: var(--footertitle) !important;
+    }
+
+    .offcanvas {
+      .sidemenu {
+        &-header {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        &-top {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        .sidenav {
+          .sidelist {
+            &-link {
+              color: var(--footertitle);
+
+              @include hover {
+                color: darken($color: $theme-2, $amount: 20%);
+              }
+            }
+          }
+        }
+      }
+
+      .menu-thumb {
+        .caption {
+          &-event {
+            .event {
+              .day-date {
+                color: var(--footertitle);
+    
+                .day, .date {
+                  color: inherit;
+                }
+              }
+
+              .divider {
+                background: var(--footertitle);
+              }
+
+              .locationbox {
+                .location {
+                  color: var(--footertitle);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contact-2,
+    .contact-3 {
+      .btn-submit-2 {
+        @include setBgColor(var(--footertitle), var(--white));
+
+        @include hover {
+          background: darken($color: $theme-2, $amount: 20%);
+        }
+      }
+    }
+
+    .blog-header {
+      background: var(--footertitle);
+      
+      .nav-center {
+        .homelink {
+          .couple-name {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .blogbanner {
+      .text-white {
+        color: var(--footertitle) !important;
+      }
+    }
+
+    .blogmain {
+      .infocard {
+        background: var(--footertitle);
+
+        &-body {
+          .infobox {
+            .infotext {
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+      .card-blog {
+        .bloglist-link {
+          .blog-title {
+            color: var(--footertitle);
+
+            @include hover {
+              color: darken($theme-2, 20%);
+            }
+          }
+        }
+
+        &-body {
+          .blog-title {
+            color: var(--footertitle);
+          }
+        }
+      }
+
+      .rightinfo {
+        .rightcontent {
+          &-header {
+            .title {
+              color: var(--footertitle);
+            }
+          }
+
+          &-body {
+            .categorylist {
+              &-link {
+                @include hover {
+                  span {
+                    color: var(--footertitle);
+                  }
+                }
+              }
+            }
+
+            .cardpost {
+              &-detail {
+                .title {
+                  @include hover {
+                    color: var(--footertitle);
+                  }
+                }
+              }
+            }
+
+            .taglist {
+              &-item {
+                @include setBgColor(var(--footertitle), var(--white));
+              }
+            }
+          }
+        }
+      }
+
+      .blogpagination {
+        .pagination {
+          @include flex-center-vert;
+          gap: size(10);
+  
+          .page-item {  
+            &:hover {
+              .page-link {
+                @include setBgColor(var(--footertitle), var(--white));
+              }
+            }
+  
+            &:first-child,
+            &:last-child {  
+              &:hover {
+                .page-link {
+                  @include setBgColor(var(--paginationlinkbg), var(--radiotext));
+                }
+              }
+            }
+          }
+          
+          .page-link {  
+            &.active {
+              @include setBgColor(var(--footertitle), var(--white));
+            }
+          }
+        }
+      }
+
+      .taginfo {
+        .taglist {
+          &-item {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .contact {
+      .btn-submit {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(darken($color: $theme-2, $amount: 20%), var(--white));
+        }
+      }
+    }
+  }
+  
+  &[data-theme="red"] {
+    .header {
+      .nav-center {
+        .couple-name {
+          color: var(--white);
+        }
+      }
+
+      &.header-fixed {
+        background: var(--footertitle);
+
+        .logo {
+          &-light {
+            display: block;
+          }
+  
+          &-dark {
+            display: none;
+          }
+        }
+
+        .hamburger-menu {
+          .btn-burger {
+            svg {
+              line {
+                stroke: var(--white);
+              }
+            }
+          }
+        }
+      }
+
+      &.header-2 {
+        .nav-center {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .header-3 {
+      background: var(--footertitle);
+
+      .nav-center {
+        .menulogo {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+
+      .desktop-menu {
+        .desktoplist {
+          &-link {
+            color: var(--white);
+
+            @include hover {
+              color: $linkbg;
+            }
+          }
+        }
+      }
+
+      .btn-burger {
+        svg {
+          line {
+            stroke: var(--white);
+          }
+        }
+      }
+    }
+
+    .home-slider {
+      .section-link {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .countdown {
+      &-details {
+        .countdown-clock {    
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .countdown-3 {
+      &-details {
+        background: var(--footertitle);
+    
+        .countdown-clock {
+          .countdown-time {
+            .days,
+            .hours,
+            .minutes,
+            .seconds {
+              color: var(--white);
+            }
+    
+            .count-title {
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+      .section-link-4 {
+        @include setBgColor(var(--white), var(--footertitle));
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .empty-banner-2 {
+      .section-link-2 {
+        border-color: var(--footertitle);
+        color: var(--white);
+
+        @include hover {
+          background: var(--footertitle);
+        }
+      }
+    }
+
+    .whenwhere-2 {
+      .whenwhere-detail {
+        background: var(--footertitle);
+      }
+    }
+
+    .whenwhere-3 {
+      .section-link-4 {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+          border-color: var(--footertitle);
+        }
+      }
+    }
+
+    .attending {
+      .section-link {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .attending-2,
+    .attending-3 {
+      .section-link-3 {
+        color: var(--footertitle);
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .more-events {
+      .link-outline {
+        border-color: var(--footertitle);
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .footer {
+      &-info {
+        .info-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .footer-2,
+    .footer-3 {
+      .footer-info {
+        .section-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .up-btn {
+      background: var(--footertitle) !important;
+    }
+
+    .offcanvas {
+      .sidemenu {
+        &-header {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        &-top {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        .sidenav {
+          .sidelist {
+            &-link {
+              color: var(--footertitle);
+
+              @include hover {
+                color: darken($color: $theme-3, $amount: 20%);
+              }
+            }
+          }
+        }
+      }
+
+      .menu-thumb {
+        .caption {
+          &-event {
+            .event {
+              .day-date {
+                color: var(--footertitle);
+    
+                .day, .date {
+                  color: inherit;
+                }
+              }
+
+              .divider {
+                background: var(--footertitle);
+              }
+
+              .locationbox {
+                .location {
+                  color: var(--footertitle);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contact-2,
+    .contact-3 {
+      .btn-submit-2 {
+        @include setBgColor(var(--footertitle), var(--white));
+
+        @include hover {
+          background: darken($color: $theme-3, $amount: 20%);
+        }
+      }
+    }
+
+    .blog-header {
+      background: var(--footertitle);
+      
+      .nav-center {
+        .homelink {
+          .couple-name {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .blogbanner {
+      .text-white {
+        color: var(--footertitle) !important;
+      }
+    }
+
+    .blogmain {
+      .infocard {
+        background: var(--footertitle);
+
+        &-body {
+          .infobox {
+            .infotext {
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+      .card-blog {
+        .bloglist-link {
+          .blog-title {
+            color: var(--footertitle);
+
+            @include hover {
+              color: darken($theme-3, 20%);
+            }
+          }
+        }
+
+        &-body {
+          .blog-title {
+            color: var(--footertitle);
+          }
+        }
+      }
+
+      .rightinfo {
+        .rightcontent {
+          &-header {
+            .title {
+              color: var(--footertitle);
+            }
+          }
+
+          &-body {
+            .categorylist {
+              &-link {
+                @include hover {
+                  span {
+                    color: var(--footertitle);
+                  }
+                }
+              }
+            }
+
+            .cardpost {
+              &-detail {
+                .title {
+                  @include hover {
+                    color: var(--footertitle);
+                  }
+                }
+              }
+            }
+
+            .taglist {
+              &-item {
+                @include setBgColor(var(--footertitle), var(--white));
+              }
+            }
+          }
+        }
+      }
+
+      .blogpagination {
+        .pagination {
+          @include flex-center-vert;
+          gap: size(10);
+  
+          .page-item {  
+            &:hover {
+              .page-link {
+                @include setBgColor(var(--footertitle), var(--white));
+              }
+            }
+  
+            &:first-child,
+            &:last-child {  
+              &:hover {
+                .page-link {
+                  @include setBgColor(var(--paginationlinkbg), var(--radiotext));
+                }
+              }
+            }
+          }
+          
+          .page-link {  
+            &.active {
+              @include setBgColor(var(--footertitle), var(--white));
+            }
+          }
+        }
+      }
+
+      .taginfo {
+        .taglist {
+          &-item {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .contact {
+      .btn-submit {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(darken($color: $theme-3, $amount: 20%), var(--white));
+        }
+      }
+    }
+  }
+  
+  &[data-theme="pink"] {
+    .header {
+      .nav-center {
+        .couple-name {
+          color: var(--white);
+        }
+      }
+
+      &.header-fixed {
+        background: var(--footertitle);
+
+        .logo {
+          &-light {
+            display: block;
+          }
+  
+          &-dark {
+            display: none;
+          }
+        }
+
+        .hamburger-menu {
+          .btn-burger {
+            svg {
+              line {
+                stroke: var(--white);
+              }
+            }
+          }
+        }
+      }
+
+      &.header-2 {
+        .nav-center {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .header-3 {
+      background: var(--footertitle);
+
+      .nav-center {
+        .menulogo {
+          .section-title {
+            color: var(--white);
+          }
+        }
+      }
+
+      .desktop-menu {
+        .desktoplist {
+          &-link {
+            color: var(--white);
+
+            @include hover {
+              color: $linkbg;
+            }
+          }
+        }
+      }
+
+      .btn-burger {
+        svg {
+          line {
+            stroke: var(--white);
+          }
+        }
+      }
+    }
+
+    .home-slider {
+      .section-link {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .countdown {
+      &-details {
+        .countdown-clock {    
+          .days,
+          .hours,
+          .minutes,
+          .seconds {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .countdown-3 {
+      &-details {
+        background: var(--footertitle);
+    
+        .countdown-clock {
+          .countdown-time {
+            .days,
+            .hours,
+            .minutes,
+            .seconds {
+              color: var(--white);
+            }
+    
+            .count-title {
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+      .section-link-4 {
+        @include setBgColor(var(--white), var(--footertitle));
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .empty-banner-2 {
+      .section-link-2 {
+        border-color: var(--footertitle);
+        color: var(--white);
+
+        @include hover {
+          background: var(--footertitle);
+        }
+      }
+    }
+
+    .whenwhere-2 {
+      .whenwhere-detail {
+        background: var(--footertitle);
+      }
+    }
+
+    .whenwhere-3 {
+      .section-link-4 {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+          border-color: var(--footertitle);
+        }
+      }
+    }
+
+    .attending {
+      .section-link {
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .attending-2,
+    .attending-3 {
+      .section-link-3 {
+        color: var(--footertitle);
+        border-color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .more-events {
+      .link-outline {
+        border-color: var(--footertitle);
+        color: var(--footertitle);
+
+        @include hover {
+          @include setBgColor(var(--footertitle), var(--white));
+        }
+      }
+    }
+
+    .footer {
+      &-info {
+        .info-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .footer-2,
+    .footer-3 {
+      .footer-info {
+        .section-title {
+          color: var(--footertitle);
+        }
+      }
+    }
+
+    .up-btn {
+      background: var(--footertitle) !important;
+    }
+
+    .offcanvas {
+      .sidemenu {
+        &-header {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        &-top {
+          .title {
+            color: var(--footertitle);
+          }
+        }
+
+        .sidenav {
+          .sidelist {
+            &-link {
+              color: var(--footertitle);
+
+              @include hover {
+                color: darken($color: $theme-4, $amount: 20%);
+              }
+            }
+          }
+        }
+      }
+
+      .menu-thumb {
+        .caption {
+          &-event {
+            .event {
+              .day-date {
+                color: var(--footertitle);
+    
+                .day, .date {
+                  color: inherit;
+                }
+              }
+
+              .divider {
+                background: var(--footertitle);
+              }
+
+              .locationbox {
+                .location {
+                  color: var(--footertitle);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contact-2,
+    .contact-3 {
+      .btn-submit-2 {
+        @include setBgColor(var(--footertitle), var(--white));
+
+        @include hover {
+          background: darken($color: $theme-4, $amount: 20%);
+        }
+      }
+    }
+
+    .blog-header {
+      background: var(--footertitle);
+
+      .nav-center {
+        .homelink {
+          .couple-name {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .blogbanner {
+      .text-white {
+        color: var(--footertitle) !important;
+      }
+    }
+
+    .blogmain {
+      .infocard {
+        background: var(--footertitle);
+
+        &-body {
+          .infobox {
+            .infotext {
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+      .card-blog {
+        .bloglist-link {
+          .blog-title {
+            color: var(--footertitle);
+
+            @include hover {
+              color: darken($theme-4, 20%);
+            }
+          }
+        }
+
+        &-body {
+          .blog-title {
+            color: var(--footertitle);
+          }
+        }
+      }
+
+      .rightinfo {
+        .rightcontent {
+          &-header {
+            .title {
+              color: var(--footertitle);
+            }
+          }
+
+          &-body {
+            .categorylist {
+              &-link {
+                @include hover {
+                  span {
+                    color: var(--footertitle);
+                  }
+                }
+              }
+            }
+
+            .cardpost {
+              &-detail {
+                .title {
+                  @include hover {
+                    color: var(--footertitle);
+                  }
+                }
+              }
+            }
+
+            .taglist {
+              &-item {
+                @include setBgColor(var(--footertitle), var(--white));
+              }
+            }
+          }
+        }
+      }
+
+      .blogpagination {
+        .pagination {
+          @include flex-center-vert;
+          gap: size(10);
+  
+          .page-item {  
+            &:hover {
+              .page-link {
+                @include setBgColor(var(--footertitle), var(--white));
+              }
+            }
+  
+            &:first-child,
+            &:last-child {  
+              &:hover {
+                .page-link {
+                  @include setBgColor(var(--paginationlinkbg), var(--radiotext));
+                }
+              }
+            }
+          }
+          
+          .page-link {  
+            &.active {
+              @include setBgColor(var(--footertitle), var(--white));
+            }
+          }
+        }
+      }
+
+      .taginfo {
+        .taglist {
+          &-item {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .contact {
+      .btn-submit {
+        @include setBgColor(var(--white), var(--footertitle));
+
+        @include hover {
+          @include setBgColor(darken($color: $theme-4, $amount: 20%), var(--white));
+        }
+      }
+    }
+  }
+}

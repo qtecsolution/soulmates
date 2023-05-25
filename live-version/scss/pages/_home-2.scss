@@ -1,0 +1,599 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+/*
+ COUNTDOWN-SECTION-2 START
+*/
+.countdown-2 {
+  position: relative;
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
+
+  &-info {
+    .title {
+      color: var(--footertitle);
+      @include font($tt-nooks-script-trial, 24, normal, normal, 33.6);
+      text-align: center;
+    
+      @include breakpoint(mobile768) {
+        font-size: size(28);
+      }
+    
+      @include breakpoint(tab992) {
+        font-size: size(32);
+        text-align: left;
+      }
+    }
+  }
+  
+  &-details {
+    .countdown-clock {
+      @include flex-center-between;
+      gap: size(20);
+
+      .countdown-time {
+        width: calc(100% / 4);
+        @include flex-center-column;
+        gap: size(4);
+
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+          color: var(--countdowntext);
+          font-family: $tt-nooks-script-trial;
+          font-weight: 700;
+        }
+
+        .count-title {
+          color: var(--countdowntext);
+          @include font($tt-nooks-script-trial, 18, light, normal, 25.2);
+
+          @include breakpoint(tab992) {
+            font-size: size(20);
+          }
+
+          @include breakpoint(desktop1200) {
+            font-size: size(24);
+          }
+        }
+      }
+    }
+  }
+
+  .lefticon,
+  .righticon {
+    width: size(138);
+    height: size(117);
+    @include flex-center;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    @include breakpoint(tab992) {
+      width: size(238);
+      height: size(217);
+    }
+
+    svg {
+      @include w100;
+    }
+  }
+
+  .lefticon {
+    bottom: size(-20);
+    left: size(-20);
+  }
+
+  .righticon {
+    top: size(-20);
+    right: size(-20);
+  }
+}
+
+/*
+ COUPLES-SECTION-2 START
+*/
+.couples-2 {
+  position: relative;
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(44);
+    padding-bottom: size(80);
+    position: relative;
+    z-index: 10;
+
+    .icon {
+      @include square(125);
+      @include flex-center;
+      overflow: hidden;
+
+      @include breakpoint(tab992) {
+        @include square(225);
+      }
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .card-lovely {
+      &-body {
+        .name,
+        .section-text {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .overlay {
+    background: rgba($overlaybg, 0.5);
+    position: absolute;
+    inset: 0;
+    @include wh100;
+    z-index: 1;
+  }
+}
+
+/*
+ LOVE-STORY-SECTION-2 START
+*/
+.lovestory-2 {
+  .lovestory-footer {
+    .section-title {
+      font-family: $alexbrush;
+    }
+  }
+}
+
+/*
+ EMPTY-BANNER-2-SECTION START
+*/
+.empty-banner-2 {
+  .empty-info {
+    @include w100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    @include flex-center-column;
+    gap: size(40);
+    z-index: 100;
+    overflow: hidden;
+
+    .display-1 {
+      color: var(--white);
+      font-family: $alexbrush;
+    }
+
+    .section-text {
+      margin-top: size(-24);
+    }
+  }
+}
+
+/*
+ WHEN-WHERE-2-SECTION START
+*/
+.whenwhere-2 {
+  position: relative;
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
+  
+  &-header {
+    @include flex-center-column;
+    gap: size(32);
+    text-align: center;
+    margin-bottom: size(48);
+
+    @include breakpoint(tab992) {
+      margin-bottom: size(80);
+    }
+
+    .title {
+      font-size: size(28);
+      color: var(--footertitle);
+      font-weight: 400;
+
+      @include breakpoint(mobile768) {
+        font-size: size(32);
+      }
+
+      @include breakpoint(tab992) {
+        font-size: size(42);
+      }
+    }
+
+    .text {
+      color: var(--textcolor);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+    }
+  }
+
+  .whenwhere-thumb {
+    @include w100;
+    min-height: size(430);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include w100;
+      min-height: size(430);
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  .whenwhere-detail {
+    background: var(--countdowntext);
+    padding: size(40);
+    @include flex-column;
+    gap: size(40);
+    @include wh100;
+
+    // @include breakpoint(tab992) {
+      // padding: size(150);
+    // }
+
+    .icon-title {
+      .icon {
+        @include square(150);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include w100;
+        }
+      }
+
+      .title {
+        color: var(--white);
+        font-weight: 400;
+  
+        @include breakpoint(tab992) {
+          font-size: size(24);
+        }
+      }
+    }
+
+    .textinfo {
+      max-width: size(420);
+    }
+
+    .text {
+      color: var(--white);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      @include line-clamp;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+    }
+  }
+}
+
+/*
+  OURGALLERY-2-SECTION START
+*/
+.ourgallery-2 {
+  overflow: hidden;
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
+
+  &-body {
+    @include flex-center-vert;
+    flex-wrap: wrap;
+
+    .card-gallery {
+      @include w100;
+
+      @include breakpoint(mobile576) {
+        width: calc(100% / 2);
+      }
+
+      @include breakpoint(mobile768) {
+        width: calc(100% / 3);
+      }
+
+      @include breakpoint(tab992) {
+        width: calc(100% / 4);
+      }
+
+      @include breakpoint(desktop1100) {
+        width: calc(100% / 5);
+      }
+    }
+  }
+}
+
+/*
+ ATTENDING-2-SECTION START
+*/
+.attending-2 {
+  position: relative;
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
+
+  .attending-details {
+    gap: size(32);
+
+    .display-2 {
+      color: var(--footertitle);
+    }
+
+    .section-text {
+      color: var(--textcolor);
+    }
+
+    .display-2 {
+      font-family: $alexbrush;
+    }
+  }
+
+  .lefticon,
+  .righticon {
+    width: size(138);
+    height: size(117);
+    @include flex-center;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+
+    @include breakpoint(tab992) {
+      width: size(238);
+      height: size(217);
+    }
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .lefticon {
+    bottom: 0;
+    left: size(-40);
+  }
+
+  .righticon {
+    top: size(0);
+    right: size(-40);
+
+    @media screen and (max-width: size(767)) {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+/*
+ OUR-GUESTS-SECTION START
+*/
+.ourguests {
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(80);
+    text-align: center;
+  }
+
+  .guestlist {
+    @include flex-center-vert;
+    gap: size(8);
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding-inline: size(20);
+
+    @include breakpoint(mobile576) {
+      padding-inline: size(0);
+    }
+    
+    .card-flip {
+      @include w100;
+
+      @include breakpoint(mobile576) {
+        width: calc((100% / 2) - size(8));
+      }
+
+      @include breakpoint(mobile768) {
+        width: calc((100% / 3) - size(8));
+      }
+
+      @include breakpoint(tab992) {
+        width: calc((100% / 4) - size(8));
+      }
+
+      @include breakpoint(desktop1100) {
+        width: calc((100% / 5) - size(8));
+      }
+    }
+  }
+}
+
+/*
+ LOCATION-SECTION START
+*/
+.locationmap {
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
+
+  &-box {
+    @include border(solid, 20, $mapborder);
+    box-shadow: var(--cardshadow);
+    @include flex-center;
+    @include w100;
+    min-height: size(360);
+    max-height: size(530);
+
+    iframe {
+      @include w100;
+      min-height: size(350);
+      max-height: size(530);
+    }
+  }
+}
+
+/*
+ CONTACT-2-SECTION START
+*/
+.contact-2 {
+  background: var(--bodybg);
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
+
+  .contact-form {
+    @include flex-column;
+    gap: size(80);
+    padding-left: size(12);
+    padding-right: size(12);
+    
+    @include breakpoint(tab992) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .section-title {
+      color: var(--footertitle);
+      font-family: $alexbrush;
+    }
+
+    .custom-radio {
+      .radio-input {
+        &:checked ~ .radio-label {
+          &::after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      .radio-label {
+        position: relative;
+        color: var(--radiotext);
+        cursor: pointer;
+        @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+        padding-left: size(30);
+
+        @include breakpoint(tab992) {
+          font-size: size(18);
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          @include translateY(-50%);
+          left: 0;
+        }
+
+        &::before {
+          @include square(18);
+          @include border(solid, 1, var(--radiotext));
+          @include circle;
+          @include transitiontransform;
+        }
+
+        &::after {
+          background: var(--radiotext);
+          @include square(8);
+          @include circle;
+          left: size(5);
+          opacity: 0;
+          visibility: hidden;
+          @include transitiontransform;
+        }
+      }
+    }
+
+    .confirm-attend {
+      @include flex-center-vert;
+      gap: size(32);
+
+      @include breakpoint(tab992) {
+        gap: size(80);  
+      }
+    }
+
+    .form-control {
+      @include setBgColor(transparent, var(--radiotext));
+      @include radius(0);
+      border: 0;
+      @include border-single(bottom, solid, 1, var(--radiotext));
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      padding: size(14) size(20);
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      &::placeholder {
+        color: var(--radiotext);
+      }
+    }
+
+    .nice-select {
+      @include setBgColor(transparent, var(--radiotext));
+      @include radius(0);
+      border: 0;
+      @include border-single(bottom, solid, 1, var(--radiotext));
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      padding: size(14) size(20);
+      height: auto;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      .option {
+        color: var(--countdowntext);
+      }
+    }
+  }
+
+  .contact-thumbnail {
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+    
+    img {
+      @include wh100;
+    }
+  }
+}

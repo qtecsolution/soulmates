@@ -1,0 +1,333 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.blogbanner {
+  height: size(420);
+  position: relative;
+  margin-top: size(64);
+  @include flex-center-vert;
+
+  @include breakpoint(tab992) {
+    margin-top: size(80);
+  }
+
+  &-detail {
+    position: relative;
+    z-index: 100;
+    @include flex-center-column;
+    gap: size(40);
+    text-align: center;
+
+    .display-1 {
+      font-family: $calista;
+      margin-top: size(-40);
+    }
+
+    .section-link {
+      font-size: size(12);
+    }
+  }
+
+  .overlay {
+    background: rgba($overlaybg, 0.6);
+    position: absolute;
+    inset: 0;
+    @include wh100;
+    z-index: 1;
+  }
+}
+
+.blogmain {
+  padding: size(120) size(8);
+
+  @include breakpoint(tab992) {
+    padding: size(130) size(8);
+  }
+
+  .leftinfo {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+
+    @include breakpoint(desktop1200) {
+      gap: size(140);
+    }
+
+    .bloglist {
+      @include flex-column;
+      gap: size(40);
+
+      @include breakpoint(tab992) {
+        gap: size(60);
+      }
+    }
+
+    .blogpagination {
+      .pagination {
+        @include flex-center-vert;
+        gap: size(10);
+
+        .page-item {
+          &:not(:first-child) {
+            .page-link {
+              margin-left: 0;
+            }
+          }
+
+          &:hover {
+            .page-link {
+              @include setBgColor(var(--footertitle), var(--white));
+            }
+          }
+
+          &:first-child,
+          &:last-child {
+            .page-link {
+              @include radius(0);
+            }
+
+            &:hover {
+              .page-link {
+                @include setBgColor(var(--paginationlinkbg), var(--radiotext));
+              }
+            }
+          }
+        }
+        
+        .page-link {
+          @include setBgColor(var(--paginationlinkbg), var(--radiotext));
+          border: size(0);
+          @include square(32);
+          @include flex-center;
+          @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+          overflow: hidden;
+          padding: size(8);
+
+          &:focus {
+            box-shadow: none;
+            outline: none;
+          }
+
+          &.active {
+            @include setBgColor(var(--footertitle), var(--white));
+          }
+        }
+      }
+    }
+
+    .blog-detail {
+      @include flex-column;
+      gap: size(40);
+
+      &-thumb {
+        min-height: size(250);
+        max-height: size(570);
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+          @include transitiontransform;
+
+          @include hover {
+            @include scale(1.1);
+          }
+        }
+      }
+
+      &-info {
+        @include flex-column;
+        gap: size(32);
+
+        .bloginfotext {
+          color: var(--radiotext);
+          @include font($tt-nooks-script-trial, 14, light, normal, 19.6);
+
+          @include breakpoint(mobile768) {
+            font-size: size(16);
+          }
+
+          @include breakpoint(tab992) {
+            font-size: size(18);
+          }
+        }
+      }
+    }
+
+    .card-blog {
+      &-body {
+        .section-text {
+          color: var(--radiotext);
+          @include font($tt-nooks-script-trial, 14, light, normal, 19.6);
+
+          @include breakpoint(mobile768) {
+            font-size: size(16);
+          }
+
+          @include breakpoint(tab992) {
+            font-size: size(18);
+          }
+        }
+      }
+    }
+
+    .taginfo {
+      @include flex-center-vert;
+      gap: size(8);
+      flex-wrap: wrap;
+
+      .taglist {
+        @include flex-center-vert;
+        flex-wrap: wrap;
+        gap: size(5);
+
+        &-item {
+          @include setBgColor(var(--white), var(--radiotext));
+          @include flex-center;
+          padding: size(10) size(20);
+          @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+
+          @include breakpoint(mobile768) {
+            font-size: size(16);
+          }
+        }
+      }
+
+      .social-list {
+        @include flex-center-vert;
+        gap: size(8);
+
+        .social-link {
+          @include square(24);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+  }
+  
+  .rightinfo {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(mobile768) {
+      gap: size(80);
+    }
+
+    .rightcontent {
+      @include flex-column;
+      gap: size(16);
+      
+      &-header {
+        @include flex-center-vert;
+        @include border-single(bottom, solid, 1, var(--radiotext));
+        padding-bottom: size(10);
+        margin-bottom: size(10);
+
+        .title {
+          color: var(--radiotext);
+          @include font($tt-nooks-script-trial, 16, normal, normal, 22.4);
+
+          @include breakpoint(mobile768) {
+            font-size: size(18);
+          }
+
+          @include breakpoint(tab992) {
+            font-size: size(22);
+          }
+        }
+      }
+
+      &-body {
+        .categorylist {
+          @include list-vertical;
+          gap: size(16);
+
+          &-link {
+            @include flex-center-between;
+
+            span {
+              color: var(--radiotext);
+              @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+
+              @include breakpoint(mobile768) {
+                font-size: size(16);
+              }
+    
+              @include breakpoint(tab992) {
+                font-size: size(18);
+              }
+            }
+
+            @include hover {
+              span {
+                color: $overlaybg;
+              }
+            }
+          }
+        }
+
+        .relatedposts {
+          @include flex-column;
+          gap: size(16);
+
+          .post {
+            display: block;
+            margin-bottom: size(16);
+          }
+        }
+
+        .instagramlist {
+          @include flex-center-vert;
+          gap: size(10);
+          flex-wrap: wrap;
+
+          .instagramlink {
+            @include flex-center;
+            overflow: hidden;
+            width: calc((100% / 2) - size(10));
+
+            @include breakpoint(mobile480) {
+              width: calc((100% / 3) - size(10));
+              max-height: size(122);
+            }
+
+            img {
+              @include wh100;
+              @include transitionsall;
+
+              @include hover {
+                @include scale(1.1);
+              }
+            }
+          }
+        }
+
+        .taglist {
+          @include flex-center-vert;
+          flex-wrap: wrap;
+          gap: size(5);
+          margin-bottom: size(5);
+
+          &-item {
+            @include setBgColor(var(--white), var(--radiotext));
+            @include flex-center;
+            padding: size(10) size(20);
+            @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+
+            @include breakpoint(mobile768) {
+              font-size: size(16);
+            }
+          }
+        }
+      }
+    }
+  }
+}

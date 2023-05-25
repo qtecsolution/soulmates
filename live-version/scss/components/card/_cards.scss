@@ -1,0 +1,670 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.card-lovely {
+  @include flex-center-column;
+  gap: size(32);
+  position: relative;
+  z-index: 10;
+
+  @include breakpoint(tab992) {
+    gap: size(48);
+  }
+
+  .profile-picture {
+    box-shadow: var(--cardshadow);
+    @include wh100;
+    min-height: size(260);
+    max-height: size(470);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(20);
+    text-align: center;
+
+    @include breakpoint(tab992) {
+      gap: size(32);
+    }
+
+    .name {
+      color: var(--footertitle);
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .section-text {
+      color: var(--textcolor);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+    }
+  }
+}
+
+.card-wedding {
+  @include flex-column;
+  gap: size(4);
+
+  .weddingicon {
+    @include square(88);
+    @include flex-center;
+    overflow: hidden;
+
+    svg {
+      @include w100;
+    }
+  }
+
+  .weddinginfo {
+    @include flex-column;
+    gap: size(12);
+
+    .wedding-title {
+      color: var(--footertitle);
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .wedding-text {
+      color: var(--textcolor);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      @include line-clamp;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+    }
+  }
+}
+
+.card-event {
+  @include flex-center-column;
+  gap: size(24);
+
+  @include breakpoint(tab992) {
+    gap: size(44);
+  }
+
+  &-header {
+    @include wh100;
+    min-height: size(260);
+    max-height: size(470);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(20);
+    text-align: center;
+
+    .title {
+      color: var(--footertitle);
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .textinfo {
+      max-width: size(360);
+      margin-inline: auto;
+    }
+
+    .text {
+      color: var(--textcolor);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+    }
+  }
+}
+
+.card-guest {
+  @include flex-center-column;
+  gap: size(20);
+  min-width: size(300);
+  max-width: size(360);
+
+  @include breakpoint(tab992) {
+    gap: size(32);
+  }
+
+  &-header {
+    @include wh100;
+    min-height: size(280);
+    max-height: size(400);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(4);
+    text-align: center;
+
+    .guest-name {
+      color: var(--footertitle);
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .guest-relation {
+      color: var(--textcolor);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+    }
+  }
+}
+
+.love-card {
+  @include flex-column;
+  gap: size(24);
+
+  &-thumbnail {
+    @include wh100;
+    min-height: size(280);
+    max-height: size(480);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-detail {
+    @include flex-column;
+    gap: size(8);
+    text-align: left;
+  
+    .date,
+    .lovetext {
+      color: var(--textcolor);
+      @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+    
+      @include breakpoint(mobile576) {
+        font-size: size(18);
+      }
+    }
+
+    .lovetitle {
+      color: var(--footertitle);
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(24);
+      }
+    }
+
+    .info {
+      max-width: size(380);
+    }
+  }
+}
+
+.card-gallery {
+  @include wh100;
+  min-height: size(250);
+  max-height: size(480);
+  @include flex-center;
+  overflow: hidden;
+
+  img {
+    @include w100;
+    min-height: size(250);
+    object-fit: cover;
+    @include transitiontransform;
+
+    @include hover {
+      @include scale(1.1);
+    }
+  }
+}
+
+.card-image {
+  @include wh100;
+  min-height: size(240);
+  max-height: size(540);
+  @include flex-center;
+  overflow: hidden;
+  padding-inline: size(20);
+
+  @include breakpoint(mobile576) {
+    padding-inline: size(0);
+  }
+
+  img {
+    @include wh100;
+    object-fit: cover;
+    @include transitiontransform;
+
+    @include hover {
+      @include scale(1.1);
+    }
+  }
+}
+
+.card-flip {
+  position: relative;
+  min-height: size(200);
+  max-height: size(420);
+
+  @include breakpoint(desktop1200) {
+    min-height: size(288);
+  }
+
+  .content {
+    position: absolute;
+    @include wh100;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+    .front,
+    .back {
+      position: absolute;
+      @include wh100;
+      backface-visibility: hidden;
+    }
+
+    .front {
+      overflow: hidden;
+
+      img {
+        @include w100;
+        min-height: size(200);
+        @include transitiontransform;
+
+        @include breakpoint(desktop1200) {
+          min-height: size(288);
+        }
+    
+        @include hover {
+          @include scale(1.1);
+        }
+      }
+    }
+    
+    .back {
+      background: $cardbackbg;
+      @include flex-center-column;
+      gap: size(8);
+      padding: size(14);
+      text-align: center;
+      @include rotateY(180);
+      height: 105%;
+
+      .name {
+        color: var(--footertitle);
+        font-weight: 400;
+  
+        @include breakpoint(tab992) {
+          font-size: size(24);
+        }
+      }
+
+      .relationship {
+        color: var(--textcolor);
+        @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+      
+        @include breakpoint(mobile576) {
+          font-size: size(18);
+        }
+      }
+    }
+  }
+
+  @include hover {
+    .content {
+      @include rotateY(180);
+      transition: transform 0.5s;
+    }
+  }
+}
+
+.whenwhere-card {
+  @include flex-column;
+  gap: size(32);
+  
+  @include breakpoint(tab992) {
+    gap: size(44);
+  }
+
+  &-thumb {
+    @include wh100;
+    min-height: size(300);
+    max-height: size(440);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-detail {
+    background: rgba($countdowntext, 0.05);
+    @include flex-column;
+    gap: size(16);
+    position: relative;
+    padding: size(20);
+  
+    @include breakpoint(tab992) {
+      padding: size(32);
+    }
+
+    .title {
+      color: $countdowntext;
+      font-size: size(24);
+      color: var(--footertitle);
+      font-weight: 400;
+
+      @include breakpoint(mobile768) {
+        font-size: size(28);
+      }
+
+      @include breakpoint(tab992) {
+        font-size: size(34);
+      }
+    }
+
+    .textbox {
+      max-width: size(462);
+
+      .text {
+        color: $countdowntext;
+        @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+        @include line-clamp;
+
+        @include breakpoint(tab992) {
+          font-size: size(18);
+        }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      @include translateY(-50%);
+      right: size(32);
+      @include square(100);
+      @include flex-center;
+      overflow: hidden;
+      z-index: -1;
+  
+      @include breakpoint(desktop1400) {
+        @include square(178);
+      }
+
+      svg {
+        @include wh100;
+      }
+    }
+  }
+}
+
+.card-blog {
+  @include flex-column;
+  gap: size(32);
+
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .blog-thumbnail {
+      @include wh100;
+      max-height: size(573);
+      min-height: size(160);
+      overflow: hidden;
+
+      @include breakpoint(mobile576) {
+        min-height: size(250);
+      }
+
+      @include breakpoint(mobile768) {
+        min-height: size(380);
+      }
+
+      img {
+        @include wh100;
+        object-fit: cover;
+        @include transitiontransform;
+    
+        @include hover {
+          @include scale(1.1);
+        }
+      }
+    }
+
+    .date-category {
+      color: $radiotext;
+      
+      span {
+        color: inherit;
+        font: inherit;
+      }
+
+      .date {
+        font-weight: 300;
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(24);
+
+    .blog-title {
+      color: $radiotext;
+      font-family: $tt-nooks-script-trial;
+      @include text-overflow;
+
+      @include hover {
+        color: darken($radiotext, 20%);
+      }
+    }
+
+    .section-text {
+      color: $radiotext;
+    }
+
+    .readmore {
+      color: $radiotext;
+      font-family: $tt-nooks-script-trial;
+      font-size: size(16);
+      @include transitionsall;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      @include breakpoint(desktop1400) {
+        font-size: size(20);
+      }
+
+      @include hover {
+        color: var(--footertitle);
+      }
+    }
+
+    .social-list {
+      @include flex-center-vert;
+      gap: size(8);
+    }
+  }
+}
+
+.infocard {
+  @include flex-column;
+  gap: size(36);
+  background: $white;
+  box-shadow: var(--cardshadow);
+  padding: size(16);
+
+  @include breakpoint(mobile768) {
+    padding: size(24);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(36);
+  }
+
+  &-header {
+    @include flex-center;
+    
+    .infocard-thumbnail {
+      @include square(240);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(36);
+    text-align: center;
+
+    .infobox {
+      width: size(300);
+      margin-inline: auto;
+      padding-inline: size(14);
+
+      .infotext {
+        font-family: $tt-nooks-script-trial;
+        font-size: size(16);
+  
+        @include breakpoint(tab992) {
+          font-size: size(18);
+        }
+      }
+    }
+
+    .social-list {
+      @include flex-center;
+      gap: size(12);
+
+      .social-link {
+        background: $linkbg;
+        @include square(48);
+        @include circle;
+        @include flex-center;
+        padding: size(12);
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+  }
+}
+
+.cardpost {
+  @include flex-center-vert;
+  gap: size(14);
+
+  &-thumb {
+    @include square(80);
+    @include flex-center;
+    overflow: hidden;
+    
+    img {
+      @include wh100;
+    }
+  }
+
+  &-detail {
+    @include flex-column;
+    gap: size(4);
+    width: calc(100% - size(94));
+
+    .title {
+      color: $radiotext;
+      @include font($tt-nooks-script-trial, 14, normal, normal, 19.6);
+      @include line-clamp;
+
+      @include breakpoint(mobile768) {
+        font-size: size(16);
+      }
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      @include hover {
+        color: $overlaybg;
+      }
+    }
+
+    .publish-date {
+      color: $radiotext;
+      @include font($tt-nooks-script-trial, 14, light, normal, 19.6);
+    }
+  }
+}

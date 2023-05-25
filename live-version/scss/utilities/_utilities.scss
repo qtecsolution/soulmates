@@ -1,0 +1,105 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.section-title {
+  color: $white;
+  @include font($calista, 32, normal, normal, 44.8);
+
+  @include breakpoint(mobile576) {
+    font-size: size(36);
+  }
+
+  @include breakpoint(mobile768) {
+    font-size: size(44);
+  }
+
+  @include breakpoint(desktop1200) {
+    font-size: size(53);
+  }
+}
+
+.section-text {
+  color: $white;
+  @include font($tt-nooks-script-trial, 16, light, normal, 22.4);
+
+  @include breakpoint(mobile576) {
+    font-size: size(18);
+  }
+
+  @include breakpoint(mobile768) {
+    font-size: size(20);
+  }
+
+  @include breakpoint(desktop1200) {
+    font-size: size(22);
+  }
+}
+
+.section-link {
+  @include setBgColor($white, $countdowntext);
+  @include radius(50);
+  display: inline-block;
+  @include font($tt-nooks-script-trial, 16, bold, normal, 22.4);
+  padding: size(14) size(40);
+  text-align: center;
+  text-transform: uppercase;
+  @include transitionsall;
+
+  @include breakpoint(tab992) {
+    font-size: size(18);
+  }
+
+  @include hover {
+    @include setBgColor($countdowntext, $white);
+  }
+}
+
+.section-link-2 {
+  @include setBgColor(transparent, $white);
+  @include border(solid, 1, $white);
+
+  @include hover {
+    @include setBgColor($white, $countdowntext);
+  }
+}
+
+.section-link-3 {
+  @include setBgColor(transparent, $footertitle);
+  @include border(solid, 1, $footertitle);
+
+  @include hover {
+    @include setBgColor($footertitle, $white);
+  }
+}
+
+.section-link-4 {
+  @include setBgColor($white, $countdowntext);
+  @include border(solid, 1, rgba($countdowntext, 0.2));
+
+  @include hover {
+    @include setBgColor($countdowntext, $white);
+    border-color: $countdowntext;
+  }
+}
+
+.link-outline {
+  @include border(solid, 1, $countdowntext);
+  width: size(250);
+  height: size(54);
+}
+
+.glopad {
+  margin: size(160) size(0);
+}
+
+.parallax {
+  position: relative;
+  transform: translateY(size(40));
+  opacity: 1;
+  transition: 1s all ease;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

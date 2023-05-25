@@ -1,0 +1,96 @@
+// DEFAULT COLORS
+$bodybg: hsl(0, 33%, 98%); //#FBF7F7
+$white: hsl(0, 0%, 100%); //#ffffff
+$black: hsl(0, 0%, 0%); //#000000
+
+// THEME-COLORS
+
+// BACKGROUND-COLORS
+$overlaybg: hsl(231, 71%, 15%); //#0B1341
+$countdowntext: hsl(237, 31%, 41%); //#484B89
+$footertitle: hsl(232, 36%, 35%); //#3A437B
+$textcolor: hsl(230, 14%, 41%); //#595E77
+$bulletbg: hsl(233, 22%, 71%); //#A5A9C5
+$cardbackbg: hsl(0, 0%, 95%); //#F2F2F2
+$radiotext: hsl(231, 37%, 35%); //#39437B
+$mapshadow: hsl(236, 18%, 57%); //#7E81A6
+$sectionbg: rgba(72, 75, 137, 0.05);
+$linkbg: hsl(210, 23%, 95%); //#EFF2F5
+
+$countoverlay: hsl(346, 77%, 66%); //#EB6684
+$paginationlinkbg: hsl(220, 25%, 95%); //#F0F2F6
+
+
+
+// ICON-BACKGROUNDS
+
+
+// TEXT-COLORS
+$textprimary: hsl(231, 15%, 24%); //#343747
+
+// SUCCESS COLOR
+
+
+// DANGER COLOR
+$dangercolor: hsl(343, 79%, 50%); //#E31B54
+$red: hsl(1, 71%, 54%); //#dd3936
+
+// LINEAR-BACKGROUNDS
+
+
+// BORDER-COLORS
+$mapborder: rgba(126, 129, 166, 0.2);
+
+// SHADOWS
+$shade-1: rgba(72, 75, 137, 0.2);
+
+// BOX-SHADOWS
+$cardshadow: .25rem .25rem 1rem .1875rem $shade-1;
+
+// LETTER-SPECING
+$specing-1: size(0.24);
+$time: 350ms;
+
+$theme-1: hsl(282, 44%, 47%); //#8e44ad
+$theme-2: hsl(204, 64%, 44%); //#2980b9
+$theme-3: hsl(358, 83%, 52%); //#ea2027
+$theme-4: hsl(331, 78%, 59%); //#e84393
+
+:root,
+:root[data-theme="light"] {
+  --bodybg: #{$bodybg};
+  --overlaybg: #{$overlaybg};
+  --countdowntext: #{$countdowntext};
+  --footertitle: #{$footertitle};
+  --textcolor: #{$textcolor};
+  --textprimary: #{$textprimary};
+  --bulletbg: #{$bulletbg};
+  --cardbackbg: #{$cardbackbg};
+  --radiotext: #{$radiotext};
+  --mapshadow: #{$mapshadow};
+  --sectionbg: #{$sectionbg};
+  --linkbg: #{$linkbg};
+  --countoverlay: #{$countoverlay};
+  --paginationlinkbg: #{$paginationlinkbg};
+  --white: #{$white};
+  --black: #{$black};
+  --cardshadow: #{$cardshadow};
+  --dangercolor: #{$dangercolor};
+  --red: #{$red};
+}
+
+:root[data-theme="purple"] {
+  --footertitle: #{$theme-1};
+}
+
+:root[data-theme="blue"] {
+  --footertitle: #{$theme-2};
+}
+
+:root[data-theme="red"] {
+  --footertitle: #{$theme-3};
+}
+
+:root[data-theme="pink"] {
+  --footertitle: #{$theme-4};
+}

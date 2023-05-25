@@ -1,0 +1,357 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.header {
+  background: transparent;
+  padding: size(24) size(8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include w100;
+  z-index: 999;
+
+  &-nav {
+    @include flex-center-between;
+    
+    .logo {
+      width: size(64);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+
+      .logo-light {
+        display: block;
+      }
+
+      .logo-dark {
+        display: none;
+      }
+    }
+
+    .nav-center {
+      @include flex-center-column;
+      text-align: center;
+      width: calc(100% - size(100));
+
+      .couple-name {
+        color: $white;
+        @include font($zagora, 18, normal, normal, 25.2);
+        text-transform: capitalize;
+
+        @include breakpoint(mobile768) {
+          font-size: size(24);
+        }
+      
+        @include breakpoint(tab992) {
+          font-size: size(28);
+        }
+      
+        @include breakpoint(desktop1200) {
+          font-size: size(32);
+        }
+      }
+
+      .center-icons {
+        display: none;
+      
+        @include breakpoint(tab992) {
+          @include flex-center;
+        }
+
+        .center-icon {
+          @include square(75);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+
+    .hamburger-menu {
+      @include square(36);
+      @include flex-center;
+      position: relative;
+      z-index: 999;
+    }
+  }
+
+  &.header-fixed {
+    background: $white;
+    box-shadow: $cardshadow;
+    position: fixed;
+    @extend %animation;
+    @extend %slideDownIn;
+
+    .logo {
+      .logo-light {
+        display: none;
+      }
+      
+      .logo-dark {
+        display: block;
+      }
+    }
+
+    .nav-center {
+      .couple-name {
+        color: $footertitle;
+      }
+
+      .center-icons {
+        display: none;
+      }
+    }
+
+    .hamburger-menu {
+      .btn-hamburger {
+        .line {
+          background: $footertitle;
+        }
+      }
+      
+      .btn-burger {
+        svg {
+          line {
+            stroke: $footertitle;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-2 {
+  padding: size(12) size(8);
+
+  .header-nav {
+    @include flex-center-between;
+    
+    @include breakpoint(tab992) {
+      justify-content: center;
+    }
+
+    .logo {
+      .logo-light {
+        @include breakpoint(tab992) {
+          display: none;
+        }
+      }
+    }
+
+    .nav-center {
+      @include flex-center;
+      
+      @include breakpoint(tab992) {
+        display: none;
+      }
+
+      .section-title {
+        color: $white;
+        font-family: $alexbrush;
+        font-size: size(24);
+
+        @include breakpoint(mobile576) {
+          font-size: size(36);
+        }
+      
+        @include breakpoint(mobile768) {
+          font-size: size(44);
+        }
+      
+        @include breakpoint(desktop1200) {
+          font-size: size(53);
+        }
+      }
+    }
+
+    .desktop-menu {
+      display: none;
+
+      @include breakpoint(tab992) {
+        @include flex-center;
+        padding-top: size(20);
+      }
+      
+      .desktoplist {
+        @include list-horizontal;
+        justify-content: center;
+        gap: size(32);
+    
+        @include breakpoint(desktop1024) {
+          gap: size(40);
+        }
+    
+        @include breakpoint(desktop1200) {
+          gap: size(48);
+        }
+
+        &-link {
+          color: $white;
+          font-weight: 400;
+          font-size: size(18);
+    
+          @include breakpoint(desktop1200) {
+            font-size: size(22);
+          }
+        }
+      }
+    }
+
+    .hamburger-menu {
+      @include flex-center;
+
+      @include breakpoint(tab992) {
+        display: none;
+      }
+    }
+  }
+
+  &.header-fixed {
+    .header-nav {
+      @include breakpoint(tab992) {
+        justify-content: space-between;
+      }
+
+      .nav-center {
+        @include flex-center-column;
+        text-align: center;
+  
+        .section-title {
+          color: $footertitle;
+        }
+      }
+  
+      .desktop-menu {
+        display: none;
+      }
+  
+      .hamburger-menu {
+        @include flex-center;
+      }
+    }
+  }
+}
+
+.header-3 {
+  background: $white;
+  height: size(80);
+  @include flex-center-vert;
+
+  .header-nav {
+    @include flex-center-between;
+
+    .nav-center {
+      .menulogo {
+        @include flex-center;
+
+        .section-title {
+          color: $footertitle;
+          @include font($vivaldi, 24, normal, normal, 25.2);
+          text-transform: capitalize;
+  
+          @include breakpoint(mobile768) {
+            font-size: size(24);
+          }
+        
+          @include breakpoint(tab992) {
+            font-size: size(28);
+          }
+        
+          @include breakpoint(desktop1200) {
+            font-size: size(32);
+          }
+        }
+      }
+    }
+
+    .desktop-menu {
+      display: none;
+
+      @include breakpoint(tab992) {
+        @include flex-center;
+      }
+
+      .desktoplist {
+        @include list-horizontal;
+        justify-content: flex-end;
+
+        @include breakpoint(desktop1600) {
+          gap: size(32);
+        }
+
+        &-link {
+          color: $footertitle;
+          font-weight: 400;
+          font-size: size(16);
+          padding: size(8) size(16);
+
+          @include breakpoint(desktop1400) {
+            font-size: size(18);
+          }
+        }
+      }
+    }
+
+    .hamburger-menu {
+      @include flex-center;
+
+      @include breakpoint(tab992) {
+        display: none;
+      }
+    }
+  }
+}
+
+.sticky-header {
+  box-shadow: $cardshadow;
+  position: fixed;
+  top: 0;
+  @include w100;
+  z-index: 1030;
+  @extend %animation;
+  @extend %slideDownIn;
+}
+
+.blog-header {
+  background: $white;
+  height: size(64);
+  @include flex-center-vert;
+
+  @include breakpoint(tab992) {
+    height: size(80);
+  }
+
+  &-nav {
+    @include flex-center;
+
+    .nav-center {
+      @include flex-center;
+      text-align: center;
+
+      .couple-name {
+        color: $footertitle;
+        @include font($zagora, 18, normal, normal, 25.2);
+        text-transform: capitalize;
+
+        @include breakpoint(mobile768) {
+          font-size: size(24);
+        }
+      
+        @include breakpoint(tab992) {
+          font-size: size(28);
+        }
+      
+        @include breakpoint(desktop1200) {
+          font-size: size(32);
+        }
+      }
+    }
+  }
+}
