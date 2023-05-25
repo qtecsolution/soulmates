@@ -594,6 +594,7 @@
     .infobox {
       width: size(300);
       margin-inline: auto;
+      padding-inline: size(14);
 
       .infotext {
         font-family: $tt-nooks-script-trial;

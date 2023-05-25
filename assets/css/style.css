@@ -1385,6 +1385,7 @@ button:not([disabled]):hover,
 .infocard-body .infobox {
   width: 18.75rem;
   margin-inline: auto;
+  padding-inline: 0.875rem;
 }
 .infocard-body .infobox .infotext {
   font-family: "TT Nooks Script Trial";
