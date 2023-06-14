@@ -1,15 +1,15 @@
 function parallax() {
   let parallaxes = document.querySelectorAll(".parallax");
 
-  for (let i = 0; i < parallaxes.length; i++) {
+  for (let parallax of parallaxes) {
     let windowHeight = window.innerHeight;
-    let elementTop = parallaxes[i].getBoundingClientRect().top;
+    let elementTop = parallax.getBoundingClientRect().top;
     let elementVisible = 10;
 
     if (elementTop < (windowHeight - elementVisible)) {
-      parallaxes[i].classList.add("active");
+      parallax.classList.add("active");
     } else {
-      parallaxes[i].classList.remove("active");
+      parallax.classList.remove("active");
     }
   }
 }

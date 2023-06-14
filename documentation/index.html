@@ -409,21 +409,10 @@
 
 	<script>
 		$('.collapse-block-title').on('click', function (e) {
-			e.preventDefault;
-			let speed = 300;
 			$(".collection-collapse-block").removeClass("open");
 			let thisItem = $(this).parent();
-			let thisItem2 = $(".collection-collapse-block");
 			thisItem.addClass("open");
-			//$('.collection-collapse-block-content').slideDown(speed);
-			nextLevel = $('.collection-collapse-block-content');
-
-			if (thisItem2.hasClass('open')) {
-				// nextLevel.slideUp(speed);
-			}
-			else {
-				// nextLevel.slideDown(speed);
-			}
+			e.preventDefault();
 		})
 	</script>
 

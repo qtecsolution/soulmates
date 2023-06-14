@@ -1,7 +1,7 @@
 
 import marquee from './vanilla-marquee.min.js';
 
-new marquee(document.querySelector('.loveslider'), {
+const loveslide = new marquee(document.querySelector('.loveslider'), {
   // Set to false if you want to use jQuery animate method
   allowCss3Support: true,
   // CSS3 easing function
